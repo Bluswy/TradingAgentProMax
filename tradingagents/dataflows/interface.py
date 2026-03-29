@@ -1,16 +1,5 @@
 from typing import Annotated
 
-# Import from vendor-specific modules
-from .y_finance import (
-    get_YFin_data_online,
-    get_stock_stats_indicators_window,
-    get_fundamentals as get_yfinance_fundamentals,
-    get_balance_sheet as get_yfinance_balance_sheet,
-    get_cashflow as get_yfinance_cashflow,
-    get_income_statement as get_yfinance_income_statement,
-    get_insider_transactions as get_yfinance_insider_transactions,
-)
-from .yfinance_news import get_news_yfinance, get_global_news_yfinance
 from .alpha_vantage import (
     get_stock as get_alpha_vantage_stock,
     get_indicator as get_alpha_vantage_indicator,
@@ -22,7 +11,19 @@ from .alpha_vantage import (
     get_news as get_alpha_vantage_news,
     get_global_news as get_alpha_vantage_global_news,
 )
+from .mx_search_provider import (
+    get_mx_search_news,
+    get_mx_search_global_news,
+)
 from .alpha_vantage_common import AlphaVantageRateLimitError
+from .tushare_provider import (
+    get_tushare_stock_data,
+    get_tushare_indicator,
+    get_tushare_fundamentals,
+    get_tushare_balance_sheet,
+    get_tushare_cashflow,
+    get_tushare_income_statement,
+)
 
 # Configuration and routing logic
 from .config import get_config
@@ -61,8 +62,9 @@ TOOLS_CATEGORIES = {
 }
 
 VENDOR_LIST = [
-    "yfinance",
     "alpha_vantage",
+    "tushare",
+    "mx_search",
 ]
 
 # Mapping of methods to their vendor-specific implementations
@@ -70,42 +72,41 @@ VENDOR_METHODS = {
     # core_stock_apis
     "get_stock_data": {
         "alpha_vantage": get_alpha_vantage_stock,
-        "yfinance": get_YFin_data_online,
+        "tushare": get_tushare_stock_data,
     },
     # technical_indicators
     "get_indicators": {
         "alpha_vantage": get_alpha_vantage_indicator,
-        "yfinance": get_stock_stats_indicators_window,
+        "tushare": get_tushare_indicator,
     },
     # fundamental_data
     "get_fundamentals": {
         "alpha_vantage": get_alpha_vantage_fundamentals,
-        "yfinance": get_yfinance_fundamentals,
+        "tushare": get_tushare_fundamentals,
     },
     "get_balance_sheet": {
         "alpha_vantage": get_alpha_vantage_balance_sheet,
-        "yfinance": get_yfinance_balance_sheet,
+        "tushare": get_tushare_balance_sheet,
     },
     "get_cashflow": {
         "alpha_vantage": get_alpha_vantage_cashflow,
-        "yfinance": get_yfinance_cashflow,
+        "tushare": get_tushare_cashflow,
     },
     "get_income_statement": {
         "alpha_vantage": get_alpha_vantage_income_statement,
-        "yfinance": get_yfinance_income_statement,
+        "tushare": get_tushare_income_statement,
     },
     # news_data
     "get_news": {
         "alpha_vantage": get_alpha_vantage_news,
-        "yfinance": get_news_yfinance,
+        "mx_search": get_mx_search_news,
     },
     "get_global_news": {
-        "yfinance": get_global_news_yfinance,
         "alpha_vantage": get_alpha_vantage_global_news,
+        "mx_search": get_mx_search_global_news,
     },
     "get_insider_transactions": {
         "alpha_vantage": get_alpha_vantage_insider_transactions,
-        "yfinance": get_yfinance_insider_transactions,
     },
 }
 

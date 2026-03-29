@@ -48,6 +48,28 @@ VALID_MODELS = {
         "grok-4-fast-reasoning",
         "grok-4-fast-non-reasoning",
     ],
+    "bailian": [
+        "qwen-max",
+        "qwen-plus",
+        "qwen-flash",
+        "qwen-max-latest",
+        "qwen-plus-latest",
+        "qwen-flash-latest",
+        "qwen3-max",
+        "qwen3.5-plus",
+        "qwen3.5-flash",
+    ],
+    "dashscope": [
+        "qwen-max",
+        "qwen-plus",
+        "qwen-flash",
+        "qwen-max-latest",
+        "qwen-plus-latest",
+        "qwen-flash-latest",
+        "qwen3-max",
+        "qwen3.5-plus",
+        "qwen3.5-flash",
+    ],
 }
 
 

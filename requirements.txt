@@ -3,8 +3,7 @@ langchain-core
 langchain-openai
 langchain-experimental
 pandas
-yfinance
-stockstats
+tushare
 langgraph
 rank-bm25
 setuptools

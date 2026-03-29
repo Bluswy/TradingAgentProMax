@@ -150,6 +150,12 @@ def select_shallow_thinking_agent(provider) -> str:
             ("Gemini 3.1 Flash Lite - Most cost-efficient", "gemini-3.1-flash-lite-preview"),
             ("Gemini 2.5 Flash Lite - Fast, low-cost", "gemini-2.5-flash-lite"),
         ],
+        "bailian": [
+            ("Qwen3.5-Flash - Latest fast model", "qwen3.5-flash"),
+            ("Qwen3.5-Plus - Latest balanced flagship", "qwen3.5-plus"),
+            ("Qwen-Flash - Fastest and most cost-effective", "qwen-flash"),
+            ("Qwen-Plus - Balanced performance and cost", "qwen-plus"),
+        ],
         "xai": [
             ("Grok 4.1 Fast (Non-Reasoning) - Speed optimized, 2M ctx", "grok-4-1-fast-non-reasoning"),
             ("Grok 4 Fast (Non-Reasoning) - Speed optimized", "grok-4-fast-non-reasoning"),
@@ -216,6 +222,12 @@ def select_deep_thinking_agent(provider) -> str:
             ("Gemini 2.5 Pro - Stable pro model", "gemini-2.5-pro"),
             ("Gemini 2.5 Flash - Balanced, stable", "gemini-2.5-flash"),
         ],
+        "bailian": [
+            ("Qwen3.5-Plus - Latest balanced flagship", "qwen3.5-plus"),
+            ("Qwen-Max - Most capable general model", "qwen-max"),
+            ("Qwen-Plus - Balanced performance and cost", "qwen-plus"),
+            ("Qwen-Flash - Fast low-cost fallback", "qwen-flash"),
+        ],
         "xai": [
             ("Grok 4 - Flagship model", "grok-4-0709"),
             ("Grok 4.1 Fast (Reasoning) - High-performance, 2M ctx", "grok-4-1-fast-reasoning"),
@@ -256,9 +268,9 @@ def select_deep_thinking_agent(provider) -> str:
     return choice
 
 def select_llm_provider() -> tuple[str, str]:
-    """Select the OpenAI api url using interactive selection."""
-    # Define OpenAI api options with their corresponding endpoints
+    """Select the LLM provider and endpoint using interactive selection."""
     BASE_URLS = [
+        ("Bailian", "https://dashscope.aliyuncs.com/compatible-mode/v1"),
         ("OpenAI", "https://api.openai.com/v1"),
         ("Google", "https://generativelanguage.googleapis.com/v1"),
         ("Anthropic", "https://api.anthropic.com/"),
@@ -284,7 +296,7 @@ def select_llm_provider() -> tuple[str, str]:
     ).ask()
     
     if choice is None:
-        console.print("\n[red]no OpenAI backend selected. Exiting...[/red]")
+        console.print("\n[red]No LLM provider selected. Exiting...[/red]")
         exit(1)
     
     display_name, url = choice

@@ -1,4 +1,6 @@
 import os
+import re
+from pathlib import Path
 from typing import Any, Optional
 
 from langchain_openai import ChatOpenAI
@@ -26,8 +28,25 @@ class UnifiedChatOpenAI(ChatOpenAI):
         super().__init__(**kwargs)
 
 
+def _load_project_bailian_api_key(project_dir: Optional[str]) -> str | None:
+    if not project_dir:
+        return None
+
+    config_path = Path(project_dir).parent / "config" / "bailian.toml"
+    if not config_path.exists():
+        return None
+
+    content = config_path.read_text(encoding="utf-8")
+    match = re.search(r'^\s*api_key\s*=\s*["\']([^"\']+)["\']\s*$', content, flags=re.MULTILINE)
+    if not match:
+        return None
+
+    api_key = match.group(1).strip()
+    return api_key or None
+
+
 class OpenAIClient(BaseLLMClient):
-    """Client for OpenAI, Ollama, OpenRouter, and xAI providers."""
+    """Client for OpenAI-compatible providers."""
 
     def __init__(
         self,
@@ -56,6 +75,27 @@ class OpenAIClient(BaseLLMClient):
         elif self.provider == "ollama":
             llm_kwargs["base_url"] = "http://localhost:11434/v1"
             llm_kwargs["api_key"] = "ollama"  # Ollama doesn't require auth
+        elif self.provider in ("bailian", "dashscope"):
+            llm_kwargs["base_url"] = self.base_url or "https://dashscope.aliyuncs.com/compatible-mode/v1"
+            api_key = (
+                self.kwargs.get("api_key")
+                or _load_project_bailian_api_key(self.kwargs.get("project_dir"))
+                or os.environ.get("BAILIAN_API_KEY")
+                or os.environ.get("DASHSCOPE_API_KEY")
+            )
+            if not api_key:
+                raise RuntimeError(
+                    "Missing Bailian API key. Set config/bailian.toml, config['bailian_api_key'], "
+                    "or BAILIAN_API_KEY / DASHSCOPE_API_KEY."
+                )
+            llm_kwargs["api_key"] = api_key
+            extra_body = dict(self.kwargs.get("extra_body", {}) or {})
+            if self.kwargs.get("bailian_enable_thinking") is not None:
+                extra_body["enable_thinking"] = bool(self.kwargs.get("bailian_enable_thinking"))
+            if self.kwargs.get("bailian_thinking_budget") is not None:
+                extra_body["thinking_budget"] = int(self.kwargs.get("bailian_thinking_budget"))
+            if extra_body:
+                llm_kwargs["extra_body"] = extra_body
         elif self.base_url:
             llm_kwargs["base_url"] = self.base_url
 

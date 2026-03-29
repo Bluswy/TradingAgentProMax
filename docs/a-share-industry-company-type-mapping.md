@@ -1,0 +1,123 @@
+# A股行业标签到 company_type 映射
+
+- 行业标签总数: `110`
+- 行业标签覆盖数: `110`
+- 行业标签覆盖率: `100.00%`
+- 股票总数: `5493`
+- 可分类股票数: `5492`
+- 股票覆盖率: `99.98%`
+
+说明: 当前唯一未命中的股票是 `industry` 为空值，不属于行业规则缺失。
+
+| 行业标签 | company_type |
+| --- | --- |
+| IT设备 | tmt_growth |
+| 专用机械 | industrial_manufacturing |
+| 中成药 | consumer_healthcare_growth |
+| 乳制品 | consumer_healthcare_growth |
+| 互联网 | tmt_growth |
+| 仓储物流 | utilities_transport_infrastructure |
+| 供气供热 | utilities_transport_infrastructure |
+| 保险 | financials |
+| 元器件 | tmt_growth |
+| 全国地产 | real_estate_construction |
+| 公共交通 | utilities_transport_infrastructure |
+| 公路 | utilities_transport_infrastructure |
+| 其他商业 | consumer_services_retail |
+| 其他建材 | cyclical_resources |
+| 农业综合 | consumer_healthcare_growth |
+| 农用机械 | industrial_manufacturing |
+| 农药化肥 | cyclical_resources |
+| 出版业 | tmt_growth |
+| 化学制药 | consumer_healthcare_growth |
+| 化工原料 | cyclical_resources |
+| 化工机械 | industrial_manufacturing |
+| 化纤 | cyclical_resources |
+| 区域地产 | real_estate_construction |
+| 医疗保健 | consumer_healthcare_growth |
+| 医药商业 | consumer_healthcare_growth |
+| 半导体 | tmt_growth |
+| 商品城 | consumer_services_retail |
+| 商贸代理 | consumer_services_retail |
+| 啤酒 | consumer_healthcare_growth |
+| 园区开发 | real_estate_construction |
+| 塑料 | cyclical_resources |
+| 多元金融 | financials |
+| 家居用品 | industrial_manufacturing |
+| 家用电器 | industrial_manufacturing |
+| 小金属 | cyclical_resources |
+| 工程机械 | industrial_manufacturing |
+| 广告包装 | industrial_manufacturing |
+| 建筑工程 | real_estate_construction |
+| 影视音像 | tmt_growth |
+| 房产服务 | real_estate_construction |
+| 批发业 | consumer_services_retail |
+| 摩托车 | industrial_manufacturing |
+| 文教休闲 | consumer_healthcare_growth |
+| 新型电力 | industrial_manufacturing |
+| 旅游景点 | consumer_services_retail |
+| 旅游服务 | consumer_services_retail |
+| 日用化工 | consumer_healthcare_growth |
+| 普钢 | cyclical_resources |
+| 服饰 | consumer_healthcare_growth |
+| 机场 | utilities_transport_infrastructure |
+| 机床制造 | industrial_manufacturing |
+| 机械基件 | industrial_manufacturing |
+| 林业 | consumer_healthcare_growth |
+| 染料涂料 | cyclical_resources |
+| 橡胶 | cyclical_resources |
+| 水力发电 | utilities_transport_infrastructure |
+| 水务 | utilities_transport_infrastructure |
+| 水泥 | cyclical_resources |
+| 水运 | utilities_transport_infrastructure |
+| 汽车整车 | industrial_manufacturing |
+| 汽车服务 | consumer_services_retail |
+| 汽车配件 | industrial_manufacturing |
+| 渔业 | consumer_healthcare_growth |
+| 港口 | utilities_transport_infrastructure |
+| 火力发电 | utilities_transport_infrastructure |
+| 焦炭加工 | cyclical_resources |
+| 煤炭开采 | cyclical_resources |
+| 特种钢 | cyclical_resources |
+| 环境保护 | utilities_transport_infrastructure |
+| 玻璃 | cyclical_resources |
+| 生物制药 | consumer_healthcare_growth |
+| 电信运营 | tmt_growth |
+| 电器仪表 | industrial_manufacturing |
+| 电器连锁 | consumer_services_retail |
+| 电气设备 | industrial_manufacturing |
+| 白酒 | consumer_healthcare_growth |
+| 百货 | consumer_services_retail |
+| 石油加工 | cyclical_resources |
+| 石油开采 | cyclical_resources |
+| 石油贸易 | cyclical_resources |
+| 矿物制品 | cyclical_resources |
+| 种植业 | consumer_healthcare_growth |
+| 空运 | utilities_transport_infrastructure |
+| 红黄酒 | consumer_healthcare_growth |
+| 纺织 | industrial_manufacturing |
+| 纺织机械 | industrial_manufacturing |
+| 综合类 | general_corporate |
+| 航空 | industrial_manufacturing |
+| 船舶 | industrial_manufacturing |
+| 装修装饰 | real_estate_construction |
+| 证券 | financials |
+| 超市连锁 | consumer_services_retail |
+| 路桥 | utilities_transport_infrastructure |
+| 软件服务 | tmt_growth |
+| 软饮料 | consumer_healthcare_growth |
+| 轻工机械 | industrial_manufacturing |
+| 运输设备 | industrial_manufacturing |
+| 通信设备 | tmt_growth |
+| 造纸 | cyclical_resources |
+| 酒店餐饮 | consumer_services_retail |
+| 钢加工 | cyclical_resources |
+| 铁路 | utilities_transport_infrastructure |
+| 铅锌 | cyclical_resources |
+| 铜 | cyclical_resources |
+| 铝 | cyclical_resources |
+| 银行 | financials |
+| 陶瓷 | cyclical_resources |
+| 食品 | consumer_healthcare_growth |
+| 饲料 | consumer_healthcare_growth |
+| 黄金 | cyclical_resources |

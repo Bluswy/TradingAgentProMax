@@ -148,6 +148,15 @@ class TradingAgentsGraph:
             if reasoning_effort:
                 kwargs["reasoning_effort"] = reasoning_effort
 
+        kwargs["project_dir"] = self.config.get("project_dir")
+
+        if provider in ("bailian", "dashscope") and self.config.get("bailian_api_key"):
+            kwargs["api_key"] = self.config.get("bailian_api_key")
+        if provider in ("bailian", "dashscope"):
+            kwargs["bailian_enable_thinking"] = self.config.get("bailian_enable_thinking")
+            if self.config.get("bailian_thinking_budget") is not None:
+                kwargs["bailian_thinking_budget"] = self.config.get("bailian_thinking_budget")
+
         return kwargs
 
     def _create_tool_nodes(self) -> Dict[str, ToolNode]:
