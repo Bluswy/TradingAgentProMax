@@ -7,13 +7,6 @@ from .alpha_vantage import (
     get_balance_sheet as get_alpha_vantage_balance_sheet,
     get_cashflow as get_alpha_vantage_cashflow,
     get_income_statement as get_alpha_vantage_income_statement,
-    get_insider_transactions as get_alpha_vantage_insider_transactions,
-    get_news as get_alpha_vantage_news,
-    get_global_news as get_alpha_vantage_global_news,
-)
-from .mx_search_provider import (
-    get_mx_search_news,
-    get_mx_search_global_news,
 )
 from .alpha_vantage_common import AlphaVantageRateLimitError
 from .tushare_provider import (
@@ -50,21 +43,12 @@ TOOLS_CATEGORIES = {
             "get_cashflow",
             "get_income_statement"
         ]
-    },
-    "news_data": {
-        "description": "News and insider data",
-        "tools": [
-            "get_news",
-            "get_global_news",
-            "get_insider_transactions",
-        ]
     }
 }
 
 VENDOR_LIST = [
     "alpha_vantage",
     "tushare",
-    "mx_search",
 ]
 
 # Mapping of methods to their vendor-specific implementations
@@ -95,18 +79,6 @@ VENDOR_METHODS = {
     "get_income_statement": {
         "alpha_vantage": get_alpha_vantage_income_statement,
         "tushare": get_tushare_income_statement,
-    },
-    # news_data
-    "get_news": {
-        "alpha_vantage": get_alpha_vantage_news,
-        "mx_search": get_mx_search_news,
-    },
-    "get_global_news": {
-        "alpha_vantage": get_alpha_vantage_global_news,
-        "mx_search": get_mx_search_global_news,
-    },
-    "get_insider_transactions": {
-        "alpha_vantage": get_alpha_vantage_insider_transactions,
     },
 }
 

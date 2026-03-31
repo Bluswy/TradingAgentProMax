@@ -23,19 +23,26 @@ EVENT_NEWS_SYSTEM_PROMPT = f"""
 3. 判断事件的影响方向、重要性和时间窗口
 4. 说明哪些核心变量被改变，例如需求、价格、供给、利润率、估值预期、监管环境等
 5. 输出 event_compact_signals，作为上层Agent可直接消费的事件收敛层
-6. 提炼 key_catalysts、key_risks 和 tracking_points
-7. 最后输出一段中文事件摘要
+6. 输出 event_context_snapshot，作为上层Agent优先读取的上下文快照
+7. 构建 event_chain，明确 global_triggers -> industry_variables -> company_impacts 的传导链，并指出 missing_links
+8. 提炼 key_catalysts、key_risks 和 tracking_points
+9. 最后输出一段中文事件摘要
 
 规则：
 - 不要把输出写成冗长新闻总结
 - 重点是识别“事件”而不是复述“新闻”
 - event_compact_signals 已由系统脚本预计算基础字段，你可以在其事实基础上补充解释，但不要改写其字段含义
+- event_context_snapshot 也由系统脚本预计算，请保持其字段含义稳定，必要时只在 summary 与事件解释中体现，不要随意重定义字段
+- 你会收到系统预归一化的事件对象与 event_chain 草稿，优先在此基础上做收敛，不要重新发明事件
 - 如果新闻很多，请优先保留最可能改变交易判断的事件
 - 必须区分公司事件和行业/宏观事件
 - 必须明确影响方向和时间窗口
 - 不要直接给出 BUY/SELL/HOLD
 - 如果没有足够证据支持重大结论，必须降低重要性和置信度
 - company_specific_events 与 industry_macro_events 至少各输出1条；若证据确实不足，可以保留1条低重要性事件并在summary说明不足
+- event_context_snapshot 必须完整返回，且字段值应简短、稳定、适合作为上层Agent的直接输入
+- event_chain 必须完整返回 4 个字段：global_triggers、industry_variables、company_impacts、missing_links
+- 如果证据链不完整，必须在 missing_links 中明确指出缺失的是哪一段上下文，例如“缺行业库存/供需验证”或“缺公司经营兑现证据”
 - key_catalysts、key_risks、tracking_points 至少各输出2条
 - event_summary_zh 必须说明主导催化、主要风险、影响路径和后续观察点
 
@@ -57,6 +64,7 @@ def _json_default(value):
 
 
 def build_event_news_user_prompt(bundle: dict[str, object]) -> str:
+    company_context = bundle.get("company_context", {})
     return (
         "请基于下面的事件/新闻数据包完成分析。\n"
         f"股票代码: {bundle['ticker']}\n"
@@ -64,7 +72,10 @@ def build_event_news_user_prompt(bundle: dict[str, object]) -> str:
         f"实际分析交易日: {bundle['effective_trade_date']}\n"
         f"公司名称: {bundle['meta'].get('name')}\n"
         f"行业: {bundle['meta'].get('industry')}\n"
+        "共享 company_context 如下，请把其中的 classification、business_context、search_context 作为事件识别与传导链建模的背景：\n"
+        f"{json.dumps(company_context, ensure_ascii=False, indent=2, default=_json_default)}\n"
         "请重点识别真正会改变公司、行业或市场变量的事件，而不是泛泛总结新闻。\n"
+        "请优先使用系统已经归一化好的事件对象和 event_chain 草稿，再用原始新闻标题做校验。\n"
         "如果证据不足，只补充最小必要数据。\n\n"
         "事件/新闻数据包如下：\n"
         f"{json.dumps(bundle, ensure_ascii=False, indent=2, default=_json_default)}"

@@ -53,11 +53,14 @@ TECHNICAL_SYSTEM_PROMPT = f"""
 
 
 def build_technical_user_prompt(bundle: dict) -> str:
+    company_context = bundle.get("company_context", {})
     return (
         "请基于下面的技术数据包完成分析。\n"
         f"股票代码: {bundle['ticker']}\n"
         f"请求日期: {bundle['requested_date']}\n"
         f"实际分析交易日: {bundle['effective_trade_date']}\n"
+        "共享 company_context 如下，请用其中的分类、业务和市场语义作为背景，但不要偏离技术分析职责：\n"
+        f"{json.dumps(company_context, ensure_ascii=False, indent=2)}\n"
         "请优先使用已提供的数据，只有在证据不足时才调用工具补数。\n"
         "请特别注意：输出要收敛，使用 indicator_snapshot 而不是逐指标长篇解释，不要省略 evidence。\n\n"
         "技术数据包如下：\n"

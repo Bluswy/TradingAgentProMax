@@ -12,7 +12,6 @@ config["data_vendors"] = {
     "core_stock_apis": "tushare",            # Options: alpha_vantage, tushare
     "technical_indicators": "tushare",       # Options: alpha_vantage, tushare
     "fundamental_data": "tushare",           # Options: alpha_vantage, tushare
-    "news_data": "alpha_vantage",            # Options: alpha_vantage
 }
 
 # Initialize with custom config

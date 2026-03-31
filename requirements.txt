@@ -1,4 +1,7 @@
 typing-extensions
+langsmith
+opentelemetry-api
+opentelemetry-sdk
 langchain-core
 langchain-openai
 langchain-experimental

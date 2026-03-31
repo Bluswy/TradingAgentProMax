@@ -94,6 +94,50 @@ def _text_contains_any(text: str, keywords: list[str]) -> bool:
     return any(keyword.lower() in lowered for keyword in keywords if keyword)
 
 
+def _count_keyword_hits(text: str, keywords: list[str]) -> int:
+    lowered = text.lower()
+    return sum(1 for keyword in keywords if keyword and keyword.lower() in lowered)
+
+
+def _extract_query_keywords(queries: list[str], industry: str = "") -> list[str]:
+    stopwords = {
+        "近期", "最近", "最近10天", "最近30天", "行业", "公司", "相关", "影响", "变化",
+        "供需", "景气", "政策", "需求", "供给", "价格", "成本", "库存", "技术", "进展",
+        "竞争格局", "资本开支", "分析", "动态", "资讯", "新闻", "事件", "风险",
+        "a股", "最新", "当前", "跟踪",
+    }
+    if industry:
+        stopwords.add(industry.lower())
+        stopwords.add(industry)
+
+    keywords: list[str] = []
+    seen: set[str] = set()
+    for query in queries:
+        for token in re.split(r"[\s,，/｜|]+", query):
+            text = token.strip()
+            if not text:
+                continue
+            lowered = text.lower()
+            if lowered in seen or text in stopwords or lowered in stopwords:
+                continue
+            if len(text) <= 1 and not re.search(r"[A-Za-z0-9]{2,}", text):
+                continue
+            seen.add(lowered)
+            keywords.append(text)
+    return keywords
+
+
+def _is_company_document_like(item: dict[str, Any], text: str) -> bool:
+    secu_list = item.get("secu_list") or []
+    if not secu_list:
+        return False
+    doc_keywords = [
+        "公告", "年度报告", "年度报告摘要", "年报", "季报", "半年报", "净利",
+        "营收", "分红", "回购", "减持", "增持", "募资", "问询函",
+    ]
+    return _text_contains_any(text, doc_keywords)
+
+
 def _rerank_company_results(
     results: list[dict[str, Any]],
     ticker: str,
@@ -104,7 +148,7 @@ def _rerank_company_results(
         "业绩", "预增", "预减", "快报", "年报", "季报", "一季报", "半年报",
         "中标", "订单", "合同", "回购", "增持", "减持", "质押", "收购", "并购",
         "重组", "产能", "扩产", "停产", "诉讼", "处罚", "监管", "问询", "解禁",
-        "募投", "分红", "激励", "新品", "客户", "涨价", "降价", "AI", "CPO",
+        "募投", "分红", "激励", "新品", "客户", "涨价", "降价", "项目", "签约",
     ]
     weak_keywords = [
         "浮亏", "基金重仓", "盘前要闻", "ETF", "选哪个", "概念股", "收评", "午评", "龙虎榜复盘",
@@ -119,8 +163,9 @@ def _rerank_company_results(
         score = 0
         if _text_contains_any(text, company_aliases):
             score += 5
-        if _text_contains_any(text, strong_keywords):
-            score += 4
+        strong_hits = _count_keyword_hits(text, strong_keywords)
+        if strong_hits:
+            score += min(6, 2 + strong_hits)
         if "公告" in title:
             score += 2
         if "研报" in title:
@@ -140,31 +185,61 @@ def _rerank_company_results(
 def _rerank_macro_results(
     results: list[dict[str, Any]],
     industry: str,
+    queries: list[str],
     limit: int,
 ) -> list[dict[str, Any]]:
     strong_keywords = [
         "政策", "规划", "产业", "景气", "涨价", "降价", "供给", "需求", "出口", "进口",
-        "补贴", "关税", "算力", "AI", "光通信", "5G", "6G", "资本开支", "景气度",
-        "价格", "周期", "创新高", "刷新纪录", "爆发", "预期",
+        "补贴", "关税", "资本开支", "景气度", "价格", "周期", "创新高", "刷新纪录",
+        "库存", "开工率", "产量", "产能", "竞争格局", "技术", "突破", "渗透率",
+    ]
+    sector_report_keywords = [
+        "行业", "产业", "专题", "周报", "月报", "点评", "跟踪", "观察", "策略",
     ]
     weak_keywords = [
         "盘前要闻", "ETF", "选哪个", "周报", "收评", "午评", "快讯汇总",
     ]
+    hard_exclude_keywords = [
+        "募集说明书", "债券", "融资券", "超短期融资券", "公司债", "中期票据",
+        "上会稿", "招股说明书", "募集书", "发行说明书",
+    ]
     industry_aliases = [industry] if industry else []
+    query_keywords = _extract_query_keywords(queries, industry=industry)
+    core_variable_keywords = [
+        "价格", "价差", "加工费", "库存", "开工率", "产量", "产能", "需求", "供给",
+        "资本开支", "出口", "进口", "渗透率", "技术", "国产替代", "先进封装",
+        "订单", "拆船", "交付", "运价", "tc", "rc", "tce", "bdti", "bdi",
+    ]
 
     scored: list[tuple[int, dict[str, Any]]] = []
     for item in results:
         title = item.get("title", "") or ""
         trunk = item.get("trunk", "") or ""
         text = f"{title} {trunk}"
+        if _text_contains_any(text, hard_exclude_keywords):
+            continue
+        if _is_company_document_like(item, text) and _count_keyword_hits(text, core_variable_keywords) == 0:
+            continue
         score = 0
         if _text_contains_any(text, industry_aliases):
-            score += 4
-        if _text_contains_any(text, strong_keywords):
-            score += 3
+            score += 2
+        query_hits = _count_keyword_hits(text, query_keywords)
+        if query_hits:
+            score += min(8, query_hits * 2)
+        strong_hits = _count_keyword_hits(text, strong_keywords)
+        if strong_hits:
+            score += min(6, strong_hits)
+        if _count_keyword_hits(text, ["政策", "供给", "需求", "价格", "库存", "资本开支", "开工率", "产量"]) >= 2:
+            score += 2
+        if _count_keyword_hits(text, core_variable_keywords) >= 2:
+            score += 2
+        if _text_contains_any(text, sector_report_keywords) and (query_hits >= 1 or strong_hits >= 2):
+            score += 1
         if _text_contains_any(text, weak_keywords):
             score -= 3
-        if score > 0:
+        if _is_company_document_like(item, text):
+            score -= 2
+        if score > 1:
             scored.append((score, item))
 
     scored.sort(key=lambda x: x[0], reverse=True)
@@ -172,6 +247,45 @@ def _rerank_macro_results(
     if ranked:
         return ranked
     return results[:limit]
+
+
+def _rerank_global_results(
+    results: list[dict[str, Any]],
+    final_limit: int,
+) -> list[dict[str, Any]]:
+    trigger_keywords = [
+        "霍尔木兹", "原油", "油价", "OPEC", "红海", "航运", "美元指数", "汇率",
+        "关税", "地缘", "冲突", "封锁", "天然气", "铜价", "金价", "能源", "中东",
+    ]
+    transmission_keywords = [
+        "供给", "需求", "库存", "运价", "保险", "成本", "供应链", "价格", "断供", "溢价", "风险溢价",
+    ]
+    weak_keywords = [
+        "收评", "午评", "复盘", "ETF", "选哪个", "盘前要闻",
+    ]
+    scored: list[tuple[int, dict[str, Any]]] = []
+    for item in results:
+        title = item.get("title", "") or ""
+        trunk = item.get("trunk", "") or ""
+        text = f"{title} {trunk}"
+        score = 0
+        trigger_hits = _count_keyword_hits(text, trigger_keywords)
+        transmission_hits = _count_keyword_hits(text, transmission_keywords)
+        if trigger_hits:
+            score += min(5, 2 + trigger_hits)
+        if transmission_hits:
+            score += min(5, 2 + transmission_hits)
+        if trigger_hits and transmission_hits:
+            score += 3
+        if _text_contains_any(text, weak_keywords):
+            score -= 3
+        if score > 0:
+            scored.append((score, item))
+    scored.sort(key=lambda x: x[0], reverse=True)
+    ranked = [item for _, item in scored[:final_limit]]
+    if ranked:
+        return ranked
+    return results[:final_limit]
 
 
 def _dedupe_results(results: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -283,7 +397,7 @@ def search_mx_macro_event_news(industry: str, analysis_date: str, look_back_days
     raw["query"] = " || ".join(queries)
     deduped_results = raw.get("results", [])
     raw["deduped_results_count"] = len(deduped_results)
-    raw["results"] = _rerank_macro_results(deduped_results, industry=industry, limit=limit)
+    raw["results"] = _rerank_macro_results(deduped_results, industry=industry, queries=queries, limit=limit)
     raw["reranked_results_count"] = len(raw["results"])
     return raw
 
@@ -311,7 +425,13 @@ def search_mx_queries(
         raw["results"] = _rerank_macro_results(
             deduped_results,
             industry=industry,
+            queries=queries,
             limit=final_limit,
+        )
+    elif rerank_mode == "global":
+        raw["results"] = _rerank_global_results(
+            deduped_results,
+            final_limit=final_limit,
         )
     else:
         raw["results"] = deduped_results[:final_limit]

@@ -6,9 +6,14 @@ from typing import Any
 from langchain_core.messages import HumanMessage, SystemMessage, ToolMessage
 
 from tradingagents.dataflows.config import set_config
+from tradingagents.dataflows.company_context_service import (
+    build_company_context,
+    update_company_context_with_technical,
+)
 from tradingagents.dataflows.technical_bundle_service import build_technical_data_bundle
 from tradingagents.default_config import DEFAULT_CONFIG
 from tradingagents.llm_clients import create_llm_client
+from tradingagents.tracing import AgentTraceBuilder
 
 from .prompts import TECHNICAL_SYSTEM_PROMPT, build_technical_user_prompt
 from .schema import TECHNICAL_OUTPUT_TEMPLATE
@@ -19,6 +24,7 @@ class TechnicalAgent:
     def __init__(self, config: dict[str, Any] | None = None, debug: bool = False):
         self.config = config or DEFAULT_CONFIG.copy()
         self.debug = debug
+        self.last_trace: dict[str, Any] | None = None
         set_config(self.config)
 
         llm_kwargs: dict[str, Any] = {}
@@ -43,59 +49,174 @@ class TechnicalAgent:
         self.llm = llm_client.get_llm()
         self.tool_map = {tool.name: tool for tool in TECHNICAL_TOOLS}
 
-    def analyze(self, ticker: str, analysis_date: str) -> dict[str, Any]:
-        bundle = build_technical_data_bundle(
-            ticker=ticker,
-            analysis_date=analysis_date,
-            lookback_trading_days=90,
+    def analyze(self, ticker: str, analysis_date: str, company_context: dict[str, Any] | None = None) -> dict[str, Any]:
+        self.last_trace = None
+        trace = AgentTraceBuilder(
+            agent_name="TechnicalAgent",
+            agent_type="agent",
+            config=self.config,
+            input_summary={
+                "ticker": ticker,
+                "analysis_date": analysis_date,
+                "has_company_context": company_context is not None,
+            },
         )
-
-        messages = [
-            SystemMessage(content=TECHNICAL_SYSTEM_PROMPT),
-            HumanMessage(content=build_technical_user_prompt(bundle)),
-        ]
-
-        bound_llm = self.llm.bind_tools(TECHNICAL_TOOLS)
-        repair_attempted = False
-        for _ in range(3):
-            response = bound_llm.invoke(messages)
-            messages.append(response)
-
-            if getattr(response, "tool_calls", None):
-                for tool_call in response.tool_calls:
-                    tool = self.tool_map[tool_call["name"]]
-                    tool_result = tool.invoke(tool_call["args"])
-                    messages.append(
-                        ToolMessage(
-                            content=tool_result,
-                            tool_call_id=tool_call["id"],
-                        )
-                    )
-                continue
-
-            parsed = self._parse_json_response(response.content)
-            if self._is_sparse_output(parsed) and not repair_attempted:
-                repair_attempted = True
-                messages.append(
-                    HumanMessage(
-                        content=(
-                            "你的上一版JSON过于稀疏，未满足输出要求。请重新输出完整JSON，并遵守以下硬性约束：\n"
-                            "1. trend、momentum、volatility、volume_confirmation、relative_strength 都必须包含非空 summary；\n"
-                            "2. 上述各部分都必须包含至少2条 evidence；\n"
-                            "3. indicator_snapshot 必须填写足够多的关键数值字段，至少10个非空字段；\n"
-                            "4. signals 至少2条，每条都必须有 description 和 evidence；\n"
-                            "5. 不要输出任何解释文字，只输出一个完整JSON对象。"
-                        )
-                    )
+        try:
+            if company_context is None:
+                step_id = trace.start_step(
+                    name="build_company_context",
+                    step_type="context",
+                    input_payload={"ticker": ticker, "analysis_date": analysis_date, "date_mode": "trade_day"},
                 )
-                continue
-            return {
-                "technical_data_bundle": bundle,
-                "analysis_result": parsed,
-                "raw_response": response.content,
-            }
+                company_context = build_company_context(
+                    ticker=ticker,
+                    analysis_date=analysis_date,
+                    date_mode="trade_day",
+                )
+                trace.end_step(
+                    step_id,
+                    output_payload={
+                        "market": company_context.get("identity", {}).get("market"),
+                        "exchange": company_context.get("identity", {}).get("exchange"),
+                    },
+                )
 
-        raise RuntimeError("TechnicalAgent exceeded max 3 iterations without producing a final result.")
+            step_id = trace.start_step(
+                name="build_technical_bundle",
+                step_type="bundle",
+                input_payload={"ticker": ticker, "analysis_date": analysis_date, "lookback_trading_days": 90},
+            )
+            bundle = build_technical_data_bundle(
+                ticker=ticker,
+                analysis_date=analysis_date,
+                lookback_trading_days=90,
+                company_context=company_context,
+            )
+            bundle["company_context"] = company_context
+            trace.end_step(
+                step_id,
+                output_payload={
+                    "effective_trade_date": bundle.get("effective_trade_date"),
+                    "indicator_snapshot_keys": len((bundle.get("indicator_snapshot") or {}).keys()),
+                    "signal_count": len(bundle.get("signals") or []),
+                },
+            )
+
+            messages = [
+                SystemMessage(content=TECHNICAL_SYSTEM_PROMPT),
+                HumanMessage(content=build_technical_user_prompt(bundle)),
+            ]
+
+            bound_llm = self.llm.bind_tools(TECHNICAL_TOOLS)
+            repair_attempted = False
+            for round_idx in range(3):
+                llm_step = trace.start_step(
+                    name=f"llm_invoke_round_{round_idx + 1}",
+                    step_type="llm",
+                    input_payload={"round": round_idx + 1, "message_count": len(messages)},
+                )
+                response = bound_llm.invoke(messages)
+                messages.append(response)
+                trace.end_step(
+                    llm_step,
+                    output_payload={
+                        "has_tool_calls": bool(getattr(response, "tool_calls", None)),
+                        "content_preview": str(response.content)[:500],
+                    },
+                )
+
+                if getattr(response, "tool_calls", None):
+                    for tool_call in response.tool_calls:
+                        tool_step = trace.start_step(
+                            name=f"tool_call_{tool_call['name']}",
+                            step_type="tool_call",
+                            input_payload={"tool_name": tool_call["name"], "args": tool_call["args"]},
+                        )
+                        tool = self.tool_map[tool_call["name"]]
+                        tool_result = tool.invoke(tool_call["args"])
+                        messages.append(
+                            ToolMessage(
+                                content=tool_result,
+                                tool_call_id=tool_call["id"],
+                            )
+                        )
+                        trace.end_step(
+                            tool_step,
+                            output_payload={"result_preview": str(tool_result)[:800]},
+                        )
+                    continue
+
+                parse_step = trace.start_step(
+                    name="parse_json_response",
+                    step_type="parse",
+                    input_payload={"content_preview": str(response.content)[:500]},
+                )
+                parsed = self._parse_json_response(response.content)
+                trace.end_step(
+                    parse_step,
+                    output_payload={
+                        "trend": parsed.get("trend", {}).get("short_term"),
+                        "momentum": parsed.get("momentum", {}).get("state"),
+                        "confidence": parsed.get("confidence"),
+                    },
+                )
+
+                quality_step = trace.start_step(
+                    name="quality_gate",
+                    step_type="quality_gate",
+                    input_payload={"round": round_idx + 1},
+                )
+                is_sparse = self._is_sparse_output(parsed)
+                trace.end_step(
+                    quality_step,
+                    output_payload={"is_sparse": is_sparse},
+                    metrics={"signal_count": len(parsed.get("signals", []))},
+                )
+                if is_sparse and not repair_attempted:
+                    repair_attempted = True
+                    repair_step = trace.start_step(
+                        name="repair_prompt",
+                        step_type="repair",
+                        input_payload={"reason": "sparse_output"},
+                    )
+                    messages.append(
+                        HumanMessage(
+                            content=(
+                                "你的上一版JSON过于稀疏，未满足输出要求。请重新输出完整JSON，并遵守以下硬性约束：\n"
+                                "1. trend、momentum、volatility、volume_confirmation、relative_strength 都必须包含非空 summary；\n"
+                                "2. 上述各部分都必须包含至少2条 evidence；\n"
+                                "3. indicator_snapshot 必须填写足够多的关键数值字段，至少10个非空字段；\n"
+                                "4. signals 至少2条，每条都必须有 description 和 evidence；\n"
+                                "5. 不要输出任何解释文字，只输出一个完整JSON对象。"
+                            )
+                        )
+                    )
+                    trace.end_step(repair_step, output_payload={"repair_attempted": True})
+                    continue
+                updated_company_context = update_company_context_with_technical(company_context, parsed)
+                self.last_trace = trace.finish(
+                    output_summary={
+                        "effective_trade_date": parsed.get("effective_trade_date"),
+                        "trend": parsed.get("trend", {}).get("short_term"),
+                        "momentum": parsed.get("momentum", {}).get("state"),
+                        "confidence": parsed.get("confidence"),
+                    }
+                )
+                return {
+                    "technical_data_bundle": bundle,
+                    "analysis_result": parsed,
+                    "raw_response": response.content,
+                    "company_context": updated_company_context,
+                    "trace": self.last_trace,
+                }
+
+            error = RuntimeError("TechnicalAgent exceeded max 3 iterations without producing a final result.")
+            self.last_trace = trace.finish(error=error)
+            raise error
+        except Exception as error:
+            if self.last_trace is None or self.last_trace.get("status") == "running":
+                self.last_trace = trace.finish(error=error)
+            raise
 
     def _parse_json_response(self, content: str) -> dict[str, Any]:
         text = content.strip()

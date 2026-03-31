@@ -558,12 +558,36 @@ def _build_fundamental_compact_signals(
     }
 
 
-def build_fundamental_data_bundle(ticker: str, analysis_date: str) -> dict[str, Any]:
+def build_fundamental_data_bundle(
+    ticker: str,
+    analysis_date: str,
+    company_context: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     ts_code = _normalize_symbol(ticker)
     normalized = normalize_trade_date(analysis_date)
+    if company_context:
+        analysis_time = company_context.get("analysis_time", {})
+        if str(analysis_time.get("date_mode") or "") == "trade_day":
+            normalized["requested_date"] = str(analysis_time.get("requested_date") or normalized["requested_date"])
+            normalized["effective_trade_date"] = str(
+                analysis_time.get("effective_date") or normalized["effective_trade_date"]
+            )
     effective_date = normalized["effective_trade_date"]
 
     basic_row = _fetch_stock_basic(ts_code)
+    business_context: dict[str, Any] = {}
+    if company_context:
+        identity = company_context.get("identity", {})
+        classification = company_context.get("classification", {})
+        business_context = company_context.get("business_context", {})
+        basic_row = basic_row.copy()
+        if "name" in basic_row.index:
+            basic_row["name"] = identity.get("company_name") or basic_row.get("name")
+        if "industry" in basic_row.index:
+            basic_row["industry"] = classification.get("industry") or basic_row.get("industry")
+        if "market" in basic_row.index:
+            basic_row["market"] = identity.get("market") or basic_row.get("market")
+
     company_profile = _detect_company_profile(basic_row.get("industry"))
     report_periods = _resolve_report_periods(company_profile["company_type"])
 
@@ -651,7 +675,10 @@ def build_fundamental_data_bundle(ticker: str, analysis_date: str) -> dict[str, 
             "industry": basic_row.get("industry"),
             "market": basic_row.get("market"),
             "list_date": basic_row.get("list_date"),
+            "sub_industry": business_context.get("sub_industry") or "",
+            "business_model": business_context.get("business_model") or "",
         },
+        "company_context": company_context or {},
         "company_profile": company_profile,
         "valuation_snapshot": valuation_snapshot,
         "financial_snapshot_raw": {

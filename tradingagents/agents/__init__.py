@@ -4,8 +4,6 @@ from .utils.memory import FinancialSituationMemory
 
 from .analysts.fundamentals_analyst import create_fundamentals_analyst
 from .analysts.market_analyst import create_market_analyst
-from .analysts.news_analyst import create_news_analyst
-from .analysts.social_media_analyst import create_social_media_analyst
 
 from .researchers.bear_researcher import create_bear_researcher
 from .researchers.bull_researcher import create_bull_researcher
@@ -21,6 +19,10 @@ from .trader.trader import create_trader
 from .fundamental import FundamentalAgent
 from .technical import TechnicalAgent
 from .event_news import EventNewsAgent
+from .sector_flow import SectorFlowAgent
+from .investment_debate import InvestmentDebateAgent
+from .strategy_style import StrategyStyleAgent
+from .trading_analysis import TradingAnalysisAgent
 
 __all__ = [
     "FinancialSituationMemory",
@@ -34,13 +36,15 @@ __all__ = [
     "create_fundamentals_analyst",
     "create_market_analyst",
     "create_neutral_debator",
-    "create_news_analyst",
     "create_aggressive_debator",
     "create_risk_manager",
     "create_conservative_debator",
-    "create_social_media_analyst",
     "create_trader",
     "FundamentalAgent",
     "TechnicalAgent",
     "EventNewsAgent",
+    "SectorFlowAgent",
+    "InvestmentDebateAgent",
+    "StrategyStyleAgent",
+    "TradingAnalysisAgent",
 ]

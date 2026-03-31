@@ -6,21 +6,17 @@ from typing import Any
 from langchain_core.messages import HumanMessage, SystemMessage, ToolMessage
 
 from tradingagents.dataflows.config import set_config
-from tradingagents.dataflows.company_context_service import (
-    build_company_context,
-    update_company_context_with_fundamental,
-)
-from tradingagents.dataflows.fundamental_bundle_service import build_fundamental_data_bundle
+from tradingagents.dataflows.sector_flow_bundle_service import build_sector_flow_data_bundle
 from tradingagents.default_config import DEFAULT_CONFIG
 from tradingagents.llm_clients import create_llm_client
 from tradingagents.tracing import AgentTraceBuilder
 
-from .prompts import FUNDAMENTAL_SYSTEM_PROMPT, build_fundamental_user_prompt
-from .schema import FUNDAMENTAL_OUTPUT_TEMPLATE
-from .tools import FUNDAMENTAL_TOOLS
+from .prompts import SECTOR_FLOW_SYSTEM_PROMPT, build_sector_flow_user_prompt
+from .schema import SECTOR_FLOW_OUTPUT_TEMPLATE
+from .tools import SECTOR_FLOW_TOOLS
 
 
-class FundamentalAgent:
+class SectorFlowAgent:
     def __init__(self, config: dict[str, Any] | None = None, debug: bool = False):
         self.config = config or DEFAULT_CONFIG.copy()
         self.debug = debug
@@ -47,66 +43,37 @@ class FundamentalAgent:
             **llm_kwargs,
         )
         self.llm = llm_client.get_llm()
-        self.tool_map = {tool.name: tool for tool in FUNDAMENTAL_TOOLS}
+        self.tool_map = {tool.name: tool for tool in SECTOR_FLOW_TOOLS}
 
-    def analyze(self, ticker: str, analysis_date: str, company_context: dict[str, Any] | None = None) -> dict[str, Any]:
+    def analyze(self, ticker: str, analysis_date: str) -> dict[str, Any]:
         self.last_trace = None
         trace = AgentTraceBuilder(
-            agent_name="FundamentalAgent",
+            agent_name="SectorFlowAgent",
             agent_type="agent",
             config=self.config,
-            input_summary={
-                "ticker": ticker,
-                "analysis_date": analysis_date,
-                "has_company_context": company_context is not None,
-            },
+            input_summary={"ticker": ticker, "analysis_date": analysis_date},
         )
         try:
-            if company_context is None:
-                step_id = trace.start_step(
-                    name="build_company_context",
-                    step_type="context",
-                    input_payload={"ticker": ticker, "analysis_date": analysis_date, "date_mode": "trade_day"},
-                )
-                company_context = build_company_context(
-                    ticker=ticker,
-                    analysis_date=analysis_date,
-                    date_mode="trade_day",
-                )
-                trace.end_step(
-                    step_id,
-                    output_payload={
-                        "market": company_context.get("identity", {}).get("market"),
-                        "exchange": company_context.get("identity", {}).get("exchange"),
-                    },
-                )
-
             bundle_step = trace.start_step(
-                name="build_fundamental_bundle",
+                name="build_sector_flow_bundle",
                 step_type="bundle",
                 input_payload={"ticker": ticker, "analysis_date": analysis_date},
             )
-            bundle = build_fundamental_data_bundle(
-                ticker=ticker,
-                analysis_date=analysis_date,
-                company_context=company_context,
-            )
-            bundle["company_context"] = company_context
+            bundle = build_sector_flow_data_bundle(ticker=ticker, analysis_date=analysis_date)
             trace.end_step(
                 bundle_step,
                 output_payload={
                     "effective_trade_date": bundle.get("effective_trade_date"),
-                    "company_type": bundle.get("company_profile", {}).get("company_type"),
-                    "report_periods_used": bundle.get("data_quality", {}).get("report_periods_used"),
+                    "sector_name": bundle.get("meta", {}).get("sector_name"),
+                    "sector_member_count": bundle.get("meta", {}).get("sector_member_count"),
                 },
             )
-
             messages = [
-                SystemMessage(content=FUNDAMENTAL_SYSTEM_PROMPT),
-                HumanMessage(content=build_fundamental_user_prompt(bundle)),
+                SystemMessage(content=SECTOR_FLOW_SYSTEM_PROMPT),
+                HumanMessage(content=build_sector_flow_user_prompt(bundle)),
             ]
 
-            bound_llm = self.llm.bind_tools(FUNDAMENTAL_TOOLS)
+            bound_llm = self.llm.bind_tools(SECTOR_FLOW_TOOLS)
             repair_attempted = False
             for round_idx in range(3):
                 llm_step = trace.start_step(
@@ -146,9 +113,9 @@ class FundamentalAgent:
                 trace.end_step(
                     parse_step,
                     output_payload={
-                        "growth": parsed.get("growth", {}).get("state"),
-                        "valuation": parsed.get("valuation", {}).get("state"),
-                        "confidence": parsed.get("confidence"),
+                        "theme_strength": parsed.get("theme_strength", {}).get("state"),
+                        "theme_heat": parsed.get("theme_heat", {}).get("state"),
+                        "stock_role": parsed.get("stock_role_in_theme", {}).get("state"),
                     },
                 )
 
@@ -161,10 +128,7 @@ class FundamentalAgent:
                 trace.end_step(
                     quality_step,
                     output_payload={"is_sparse": is_sparse},
-                    metrics={
-                        "core_risks_count": len(parsed.get("core_risks", [])),
-                        "signals_count": len(parsed.get("fundamental_signals", [])),
-                    },
+                    metrics={"key_risks_count": len(parsed.get("key_risks", []))},
                 )
                 if is_sparse and not repair_attempted:
                     repair_attempted = True
@@ -177,38 +141,34 @@ class FundamentalAgent:
                         HumanMessage(
                             content=(
                                 "你的上一版JSON过于稀疏，未满足输出要求。请重新输出完整JSON，并遵守以下硬性约束：\n"
-                                "1. growth、profitability、cashflow_quality、balance_sheet_health、valuation 都必须包含非空 summary；\n"
+                                "1. theme_strength、theme_heat、crowding、stock_role_in_theme、flow_persistence 都必须包含非空 summary；\n"
                                 "2. 上述各部分都必须包含至少2条 evidence；\n"
-                                "3. core_risks 至少2条；\n"
-                                "4. fundamental_compact_signals 的6个字段都必须填写非空短标签；\n"
-                                "5. fundamental_signals 至少2条，每条都必须有 description 和 evidence；\n"
-                                "6. financial_snapshot.common 至少8个非空字段；\n"
-                                "7. 不要输出任何解释文字，只输出一个完整JSON对象。"
+                                "3. sector_flow_compact_signals 的6个字段都必须填写非空短标签；\n"
+                                "4. key_risks 和 tracking_points 至少各2条；\n"
+                                "5. flow_summary_zh 必须非空；\n"
+                                "6. 不要输出任何解释文字，只输出一个完整JSON对象。"
                             )
                         )
                     )
                     trace.end_step(repair_step, output_payload={"repair_attempted": True})
                     continue
 
-                updated_company_context = update_company_context_with_fundamental(company_context, parsed)
                 self.last_trace = trace.finish(
                     output_summary={
                         "effective_trade_date": parsed.get("effective_trade_date"),
-                        "growth": parsed.get("growth", {}).get("state"),
-                        "valuation": parsed.get("valuation", {}).get("state"),
-                        "company_type": parsed.get("company_profile", {}).get("company_type"),
-                        "confidence": parsed.get("confidence"),
+                        "theme_strength": parsed.get("theme_strength", {}).get("state"),
+                        "theme_heat": parsed.get("theme_heat", {}).get("state"),
+                        "stock_role": parsed.get("stock_role_in_theme", {}).get("state"),
                     }
                 )
                 return {
-                    "fundamental_data_bundle": bundle,
+                    "sector_flow_data_bundle": bundle,
                     "analysis_result": parsed,
                     "raw_response": response.content,
-                    "company_context": updated_company_context,
                     "trace": self.last_trace,
                 }
 
-            error = RuntimeError("FundamentalAgent exceeded max 3 iterations without producing a final result.")
+            error = RuntimeError("SectorFlowAgent exceeded max 3 iterations without producing a final result.")
             self.last_trace = trace.finish(error=error)
             raise error
         except Exception as error:
@@ -228,46 +188,32 @@ class FundamentalAgent:
             start = text.find("{")
             end = text.rfind("}")
             if start == -1 or end == -1 or end <= start:
-                raise ValueError(f"FundamentalAgent did not return valid JSON:\n{text}")
+                raise ValueError(f"SectorFlowAgent did not return valid JSON:\n{text}")
             parsed = json.loads(text[start : end + 1])
 
-        normalized = json.loads(json.dumps(FUNDAMENTAL_OUTPUT_TEMPLATE, ensure_ascii=False))
-        bundle_company_profile = bundle.get("company_profile", {})
-        bundle_financial_snapshot = bundle.get("financial_snapshot", {})
+        normalized = json.loads(json.dumps(SECTOR_FLOW_OUTPUT_TEMPLATE, ensure_ascii=False))
         normalized.update(
             {
                 "ticker": parsed.get("ticker", normalized["ticker"]),
                 "effective_trade_date": parsed.get("effective_trade_date", normalized["effective_trade_date"]),
-                "company_profile": bundle_company_profile or parsed.get("company_profile", normalized["company_profile"]),
-                "core_risks": parsed.get("core_risks", normalized["core_risks"]),
-                "fundamental_compact_signals": bundle.get(
-                    "fundamental_compact_signals", normalized["fundamental_compact_signals"]
+                "sector_flow_compact_signals": bundle.get(
+                    "sector_flow_compact_signals",
+                    normalized["sector_flow_compact_signals"],
                 ),
-                "fundamental_signals": parsed.get("fundamental_signals", normalized["fundamental_signals"]),
-                "confidence": parsed.get("confidence", normalized["confidence"]),
-                "fundamental_summary_zh": parsed.get("fundamental_summary_zh", normalized["fundamental_summary_zh"]),
+                "key_risks": parsed.get("key_risks", normalized["key_risks"]),
+                "tracking_points": parsed.get("tracking_points", normalized["tracking_points"]),
+                "flow_summary_zh": parsed.get("flow_summary_zh", normalized["flow_summary_zh"]),
             }
         )
-        for section in ("growth", "profitability", "cashflow_quality", "balance_sheet_health", "valuation"):
+        for section in ("theme_strength", "theme_heat", "crowding", "stock_role_in_theme", "flow_persistence"):
             if isinstance(parsed.get(section), dict):
                 normalized[section].update(parsed[section])
-
-        if isinstance(bundle_financial_snapshot, dict):
-            if isinstance(bundle_financial_snapshot.get("common"), dict):
-                normalized["financial_snapshot"]["common"].update(bundle_financial_snapshot["common"])
-            if isinstance(bundle_financial_snapshot.get("profile_specific"), dict):
-                normalized["financial_snapshot"]["profile_specific"].update(bundle_financial_snapshot["profile_specific"])
-
-        if isinstance(parsed.get("financial_snapshot"), dict):
-            if isinstance(parsed["financial_snapshot"].get("common"), dict):
-                normalized["financial_snapshot"]["common"].update(parsed["financial_snapshot"]["common"])
-            if isinstance(parsed["financial_snapshot"].get("profile_specific"), dict):
-                normalized["financial_snapshot"]["profile_specific"].update(parsed["financial_snapshot"]["profile_specific"])
-
+        if isinstance(parsed.get("sector_flow_compact_signals"), dict):
+            normalized["sector_flow_compact_signals"].update(parsed["sector_flow_compact_signals"])
         return normalized
 
     def _is_sparse_output(self, parsed: dict[str, Any]) -> bool:
-        for section in ("growth", "profitability", "cashflow_quality", "balance_sheet_health", "valuation"):
+        for section in ("theme_strength", "theme_heat", "crowding", "stock_role_in_theme", "flow_persistence"):
             value = parsed.get(section, {})
             if not isinstance(value, dict):
                 return True
@@ -276,36 +222,19 @@ class FundamentalAgent:
             if not isinstance(value.get("evidence"), list) or len(value["evidence"]) < 2:
                 return True
 
-        snapshot = parsed.get("financial_snapshot", {})
-        if not isinstance(snapshot, dict) or not isinstance(snapshot.get("common"), dict):
-            return True
-        filled_common = sum(1 for value in snapshot["common"].values() if value is not None)
-        if filled_common < 8:
-            return True
-
-        compact_signals = parsed.get("fundamental_compact_signals", {})
+        compact_signals = parsed.get("sector_flow_compact_signals", {})
         if not isinstance(compact_signals, dict):
             return True
-        for key in FUNDAMENTAL_OUTPUT_TEMPLATE["fundamental_compact_signals"].keys():
+        for key in SECTOR_FLOW_OUTPUT_TEMPLATE["sector_flow_compact_signals"].keys():
             if not str(compact_signals.get(key, "")).strip():
                 return True
 
-        core_risks = parsed.get("core_risks", [])
-        if not isinstance(core_risks, list) or len(core_risks) < 2:
-            return True
-
-        signals = parsed.get("fundamental_signals", [])
-        if not isinstance(signals, list) or len(signals) < 2:
-            return True
-        for signal in signals:
-            if not isinstance(signal, dict):
-                return True
-            if not str(signal.get("description", "")).strip():
-                return True
-            if not isinstance(signal.get("evidence"), list) or len(signal["evidence"]) < 1:
+        for key in ("key_risks", "tracking_points"):
+            values = parsed.get(key, [])
+            if not isinstance(values, list) or len(values) < 2:
                 return True
 
-        if not str(parsed.get("fundamental_summary_zh", "")).strip():
+        if not str(parsed.get("flow_summary_zh", "")).strip():
             return True
 
         return False

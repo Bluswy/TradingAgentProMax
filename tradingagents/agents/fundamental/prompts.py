@@ -102,6 +102,7 @@ def _json_default(value):
 def build_fundamental_user_prompt(bundle: dict) -> str:
     company_type = bundle["company_profile"]["company_type"]
     profile_hint = PROFILE_PROMPT_HINTS.get(company_type, PROFILE_PROMPT_HINTS["general_corporate"])
+    company_context = bundle.get("company_context", {})
     return (
         "请基于下面的基本面数据包完成分析。\n"
         f"股票代码: {bundle['ticker']}\n"
@@ -110,6 +111,8 @@ def build_fundamental_user_prompt(bundle: dict) -> str:
         f"公司类型: {bundle['company_profile']['company_type']}\n"
         f"行业: {bundle['company_profile']['industry']}\n"
         f"行业分析提示: {profile_hint}\n"
+        "共享 company_context 如下，请把其中的分类、业务语义和市场语义作为背景，并保持与你输出的基本面结论一致：\n"
+        f"{json.dumps(company_context, ensure_ascii=False, indent=2, default=_json_default)}\n"
         "请优先使用已提供的数据，只有在证据不足时才调用工具补数。\n"
         "请特别注意：输出要收敛，保留 financial_snapshot，不要输出冗长逐项目财报解读。\n\n"
         "基本面数据包如下：\n"

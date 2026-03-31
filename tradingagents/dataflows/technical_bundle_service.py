@@ -240,9 +240,17 @@ def build_technical_data_bundle(
     analysis_date: str,
     lookback_trading_days: int = DEFAULT_LOOKBACK_TRADING_DAYS,
     benchmark_code: str = DEFAULT_BENCHMARK,
+    company_context: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     ts_code = _normalize_symbol(ticker)
     normalized = normalize_trade_date(analysis_date)
+    if company_context:
+        analysis_time = company_context.get("analysis_time", {})
+        if str(analysis_time.get("date_mode") or "") == "trade_day":
+            normalized["requested_date"] = str(analysis_time.get("requested_date") or normalized["requested_date"])
+            normalized["effective_trade_date"] = str(
+                analysis_time.get("effective_date") or normalized["effective_trade_date"]
+            )
     effective_date = normalized["effective_trade_date"]
     effective_dt = datetime.strptime(effective_date, "%Y-%m-%d")
     start_dt = effective_dt - timedelta(days=max(lookback_trading_days * 2, 180))
@@ -256,6 +264,16 @@ def build_technical_data_bundle(
     benchmark = _fetch_benchmark_series(benchmark_code, start_dt.strftime("%Y%m%d"), effective_dt.strftime("%Y%m%d"))
     benchmark = benchmark[benchmark["trade_date"] <= effective_dt].tail(lookback_trading_days).reset_index(drop=True)
     meta = _fetch_security_meta(ts_code)
+    business_context = {}
+    if company_context:
+        identity = company_context.get("identity", {})
+        classification = company_context.get("classification", {})
+        business_context = company_context.get("business_context", {})
+        meta = {
+            "name": identity.get("company_name") or meta.get("name"),
+            "industry": classification.get("industry") or meta.get("industry"),
+            "market": identity.get("market") or meta.get("market"),
+        }
     latest = enriched.iloc[-1]
 
     return {
@@ -266,9 +284,12 @@ def build_technical_data_bundle(
             "name": meta.get("name"),
             "industry": meta.get("industry"),
             "market": meta.get("market"),
+            "sub_industry": business_context.get("sub_industry") or "",
+            "business_model": business_context.get("business_model") or "",
             "benchmark": benchmark_code,
             "sector_index": None,
         },
+        "company_context": company_context or {},
         "price_series": {
             "frequency": "1d",
             "adjustment": "qfq",
