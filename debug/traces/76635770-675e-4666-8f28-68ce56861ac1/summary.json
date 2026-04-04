@@ -1,9 +1,0 @@
-{
-  "ticker": "9926.HK",
-  "analysis_date": "2026-03-29",
-  "failure": {
-    "node": "sector_flow",
-    "message": "No sector flow data found for 9926.HK up to 2026-03-27"
-  },
-  "trace_steps": 6
-}
