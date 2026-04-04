@@ -69,4 +69,6 @@ class TraceArtifactManifest(TypedDict, total=False):
     run_id: str
     root_dir: str
     run_trace: TraceArtifactRef
+    summary: TraceArtifactRef
+    final_state: TraceArtifactRef
     nodes: dict[str, dict[str, TraceArtifactRef]]

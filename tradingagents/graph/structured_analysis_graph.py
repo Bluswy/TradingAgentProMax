@@ -9,15 +9,17 @@ from langgraph.graph import END, START, StateGraph
 from typing_extensions import Annotated, TypedDict
 
 from tradingagents.agents import (
+    CompanyAnalysisReportAgent,
     EventNewsAgent,
     FundamentalAgent,
     SectorFlowAgent,
+    StrategyDecisionAgent,
     StrategyStyleAgent,
     TechnicalAgent,
 )
 from tradingagents.dataflows.company_context_service import build_company_context
 from tradingagents.default_config import DEFAULT_CONFIG
-from tradingagents.tracing import AgentTraceBuilder, TraceArtifactStore
+from tradingagents.tracing import AgentTraceBuilder, TraceArtifactStore, trace_parent_scope
 
 
 class StructuredAnalysisState(TypedDict, total=False):
@@ -32,6 +34,9 @@ class StructuredAnalysisState(TypedDict, total=False):
     event_news_result: dict[str, Any] | None
     sector_flow_result: dict[str, Any] | None
     strategy_style_result: dict[str, Any] | None
+    strategy_decision_result: dict[str, Any] | None
+    company_report_result: dict[str, Any] | None
+    final_report_result: dict[str, Any] | None
     run_trace: dict[str, Any] | None
     trace_artifacts: dict[str, Any] | None
 
@@ -69,11 +74,14 @@ def _node_input_summary(state: dict[str, Any], node_name: str) -> dict[str, Any]
     }
     if node_name in {"technical", "fundamental", "event_news", "sector_flow"}:
         summary["company_context_keys"] = sorted((state.get("company_context") or {}).keys())
-    elif node_name == "strategy_style":
+    elif node_name in {"strategy_style", "dispatch_post_strategy", "company_report", "strategy_decision", "collect_postprocess", "final_report"}:
         summary["has_technical"] = state.get("technical_result") is not None
         summary["has_fundamental"] = state.get("fundamental_result") is not None
         summary["has_event_news"] = state.get("event_news_result") is not None
         summary["has_sector_flow"] = state.get("sector_flow_result") is not None
+        summary["has_strategy_style"] = state.get("strategy_style_result") is not None
+        summary["has_strategy_decision"] = state.get("strategy_decision_result") is not None
+        summary["has_company_report"] = state.get("company_report_result") is not None
     return summary
 
 
@@ -150,6 +158,28 @@ def _build_output_summary(node_name: str, result: dict[str, Any]) -> dict[str, A
             "holding_horizon": analysis_result.get("holding_horizon", {}).get("type"),
             "secondary_count": len(analysis_result.get("secondary_strategies", [])),
         }
+    if node_name == "company_report":
+        return {
+            "effective_date": analysis_result.get("effective_date"),
+            "report_title": analysis_result.get("report_title"),
+            "executive_summary_count": len(analysis_result.get("executive_summary", [])),
+            "markdown_length": len(analysis_result.get("report_markdown", "")),
+        }
+    if node_name == "strategy_decision":
+        return {
+            "effective_date": analysis_result.get("effective_date"),
+            "action": analysis_result.get("decision", {}).get("action"),
+            "priority": analysis_result.get("execution_plan", {}).get("priority"),
+            "horizon": analysis_result.get("execution_plan", {}).get("horizon"),
+        }
+    if node_name == "final_report":
+        return {
+            "effective_date": result.get("effective_date"),
+            "report_title": result.get("report_title"),
+            "action": result.get("decision", {}).get("action"),
+            "executive_summary_count": len(result.get("executive_summary", [])),
+            "markdown_length": len(result.get("report_markdown", "")),
+        }
     return {"keys": sorted(result.keys())}
 
 
@@ -162,6 +192,8 @@ class StructuredAnalysisGraph:
         self.event_news_agent = EventNewsAgent(config=self.config, debug=debug)
         self.sector_flow_agent = SectorFlowAgent(config=self.config, debug=debug)
         self.strategy_style_agent = StrategyStyleAgent(config=self.config, debug=debug)
+        self.strategy_decision_agent = StrategyDecisionAgent(config=self.config, debug=debug)
+        self.company_report_agent = CompanyAnalysisReportAgent(config=self.config, debug=debug)
         self._graph_trace: AgentTraceBuilder | None = None
         self._artifact_store = TraceArtifactStore(self.config)
         self.graph = self._build_graph()
@@ -173,6 +205,8 @@ class StructuredAnalysisGraph:
             "event_news": self.event_news_agent,
             "sector_flow": self.sector_flow_agent,
             "strategy_style": self.strategy_style_agent,
+            "strategy_decision": self.strategy_decision_agent,
+            "company_report": self.company_report_agent,
         }
         agent = agent_map.get(node_name)
         return getattr(agent, "last_trace", None) if agent is not None else None
@@ -218,6 +252,11 @@ class StructuredAnalysisGraph:
         workflow.add_node("sector_flow", self._sector_flow_node)
         workflow.add_node("collect_results", self._collect_results_node)
         workflow.add_node("strategy_style", self._strategy_style_node)
+        workflow.add_node("dispatch_post_strategy", self._dispatch_post_strategy_node)
+        workflow.add_node("strategy_decision", self._strategy_decision_node)
+        workflow.add_node("company_report", self._company_report_node)
+        workflow.add_node("collect_postprocess", self._collect_postprocess_node)
+        workflow.add_node("final_report", self._final_report_node)
 
         workflow.add_edge(START, "company_context")
         workflow.add_conditional_edges("company_context", self._route_after_node, {"continue": "technical", "end": END})
@@ -226,7 +265,12 @@ class StructuredAnalysisGraph:
         workflow.add_edge("company_context", "sector_flow")
         workflow.add_edge(["technical", "fundamental", "event_news", "sector_flow"], "collect_results")
         workflow.add_conditional_edges("collect_results", self._route_after_node, {"continue": "strategy_style", "end": END})
-        workflow.add_edge("strategy_style", END)
+        workflow.add_conditional_edges("strategy_style", self._route_after_node, {"continue": "dispatch_post_strategy", "end": END})
+        workflow.add_edge("dispatch_post_strategy", "strategy_decision")
+        workflow.add_edge("dispatch_post_strategy", "company_report")
+        workflow.add_edge(["strategy_decision", "company_report"], "collect_postprocess")
+        workflow.add_conditional_edges("collect_postprocess", self._route_after_node, {"continue": "final_report", "end": END})
+        workflow.add_edge("final_report", END)
         return workflow.compile()
 
     def _route_after_node(self, state: dict[str, Any]) -> str:
@@ -333,6 +377,54 @@ class StructuredAnalysisGraph:
             context_key=None,
         )
 
+    def _company_report_node(self, state: dict[str, Any]) -> dict[str, Any]:
+        return self._run_agent_node(
+            state=state,
+            node_name="company_report",
+            call=lambda: self.company_report_agent.analyze(
+                ticker=state["ticker"],
+                analysis_date=state["analysis_date"],
+                company_context=state["company_context"],
+                technical_analysis_result=state["technical_result"]["analysis_result"],
+                fundamental_analysis_result=state["fundamental_result"]["analysis_result"],
+                event_analysis_result=state["event_news_result"]["analysis_result"],
+                sector_flow_analysis_result=state["sector_flow_result"]["analysis_result"],
+                strategy_style_result=state["strategy_style_result"]["analysis_result"],
+            ),
+            result_key="company_report_result",
+            context_key=None,
+        )
+
+    def _strategy_decision_node(self, state: dict[str, Any]) -> dict[str, Any]:
+        return self._run_agent_node(
+            state=state,
+            node_name="strategy_decision",
+            call=lambda: self.strategy_decision_agent.analyze(
+                ticker=state["ticker"],
+                analysis_date=state["analysis_date"],
+                company_context=state["company_context"],
+                technical_analysis_result=state["technical_result"]["analysis_result"],
+                fundamental_analysis_result=state["fundamental_result"]["analysis_result"],
+                event_analysis_result=state["event_news_result"]["analysis_result"],
+                sector_flow_analysis_result=state["sector_flow_result"]["analysis_result"],
+                strategy_style_result=state["strategy_style_result"]["analysis_result"],
+            ),
+            result_key="strategy_decision_result",
+            context_key=None,
+        )
+
+    def _dispatch_post_strategy_node(self, state: dict[str, Any]) -> dict[str, Any]:
+        node_name = "dispatch_post_strategy"
+        started_at = _now_ts()
+        input_summary = _node_input_summary(state, node_name)
+        graph_step_id = self._start_graph_step(node_name, input_summary)
+        output_summary = {"ready_for_postprocess": state.get("strategy_style_result") is not None}
+        trace_entry = _trace_success(node_name, started_at, input_summary, output_summary)
+        self._end_graph_step(graph_step_id, output_summary=output_summary)
+        updates: dict[str, Any] = {}
+        updates.update(_append_trace(trace_entry))
+        return updates
+
     def _collect_results_node(self, state: dict[str, Any]) -> dict[str, Any]:
         node_name = "collect_results"
         started_at = _now_ts()
@@ -361,6 +453,94 @@ class StructuredAnalysisGraph:
         updates.update(_append_trace(trace_entry))
         return updates
 
+    def _collect_postprocess_node(self, state: dict[str, Any]) -> dict[str, Any]:
+        node_name = "collect_postprocess"
+        started_at = _now_ts()
+        input_summary = _node_input_summary(state, node_name)
+        graph_step_id = self._start_graph_step(node_name, input_summary)
+        missing = [
+            key
+            for key in ("strategy_decision_result", "company_report_result")
+            if state.get(key) is None
+        ]
+        failures = list(state.get("failures", []))
+        failure = failures[0] if failures else None
+        if failure is None and missing:
+            failure = {"node": node_name, "message": f"Missing required postprocess results: {', '.join(missing)}"}
+        output_summary = {"missing_results": missing, "selected_failure": failure}
+        trace_entry = _trace_success(node_name, started_at, input_summary, output_summary)
+        self._end_graph_step(graph_step_id, output_summary=output_summary)
+        updates: dict[str, Any] = {"failure": failure}
+        updates.update(_append_trace(trace_entry))
+        return updates
+
+    def _final_report_node(self, state: dict[str, Any]) -> dict[str, Any]:
+        node_name = "final_report"
+        started_at = _now_ts()
+        input_summary = _node_input_summary(state, node_name)
+        graph_step_id = self._start_graph_step(node_name, input_summary)
+        try:
+            company_report = (state["company_report_result"] or {}).get("analysis_result") or {}
+            strategy_decision = (state["strategy_decision_result"] or {}).get("analysis_result") or {}
+            decision = strategy_decision.get("decision", {})
+            execution_plan = strategy_decision.get("execution_plan", {})
+
+            report_markdown = str(company_report.get("report_markdown", "")).rstrip()
+            report_markdown += (
+                "\n\n## 策略决策\n"
+                f"- 当前动作：{decision.get('label_zh') or decision.get('action', '')}\n"
+                f"- 决策置信度：{decision.get('confidence', '')}\n"
+                f"- 决策摘要：{decision.get('summary', '')}\n"
+                f"- 执行优先级：{execution_plan.get('priority', '')}\n"
+                f"- 持有周期：{execution_plan.get('horizon', '')}\n"
+                f"- 偏好 setup：{execution_plan.get('preferred_setup', '')}\n"
+                f"- 仓位倾向：{execution_plan.get('positioning_bias', '')}\n"
+            )
+            if strategy_decision.get("trigger_conditions"):
+                report_markdown += "\n### 触发条件\n"
+                report_markdown += "\n".join(f"- {item}" for item in strategy_decision["trigger_conditions"])
+                report_markdown += "\n"
+            if strategy_decision.get("invalidations"):
+                report_markdown += "\n### 失效条件\n"
+                report_markdown += "\n".join(f"- {item}" for item in strategy_decision["invalidations"])
+                report_markdown += "\n"
+            if strategy_decision.get("risk_flags"):
+                report_markdown += "\n### 风险提示\n"
+                report_markdown += "\n".join(f"- {item}" for item in strategy_decision["risk_flags"])
+                report_markdown += "\n"
+
+            executive_summary = list(company_report.get("executive_summary", []))
+            decision_summary = str(strategy_decision.get("decision_summary_zh", "")).strip()
+            if decision_summary:
+                executive_summary.append(decision_summary)
+            key_takeaways = list(company_report.get("key_takeaways", []))
+            if decision.get("label_zh") or decision.get("summary"):
+                key_takeaways.append(
+                    f"策略决策：{decision.get('label_zh') or decision.get('action', '')}，{decision.get('summary', '')}".strip("，")
+                )
+
+            final_report = {
+                "ticker": state["ticker"],
+                "effective_date": company_report.get("effective_date") or strategy_decision.get("effective_date") or state["analysis_date"],
+                "report_title": company_report.get("report_title") or f"{state['ticker']} 综合分析报告",
+                "executive_summary": executive_summary[:6],
+                "key_takeaways": key_takeaways[:10],
+                "decision": decision,
+                "execution_plan": execution_plan,
+                "report_markdown": report_markdown,
+            }
+            output_summary = _build_output_summary(node_name, final_report)
+            trace_entry = _trace_success(node_name, started_at, input_summary, output_summary)
+            self._end_graph_step(graph_step_id, output_summary=output_summary)
+            updates: dict[str, Any] = {"final_report_result": final_report, "failure": None}
+        except Exception as error:
+            trace_entry = _trace_error(node_name, started_at, input_summary, error)
+            self._end_graph_step(graph_step_id, error=error)
+            updates = {"failure": {"node": node_name, "message": str(error)}}
+            updates.update(_append_failure(node_name, str(error)))
+        updates.update(_append_trace(trace_entry))
+        return updates
+
     def _run_agent_node(
         self,
         *,
@@ -374,7 +554,8 @@ class StructuredAnalysisGraph:
         input_summary = _node_input_summary(state, node_name)
         graph_step_id = self._start_graph_step(node_name, input_summary)
         try:
-            result = call()
+            with trace_parent_scope(self._graph_trace.run_id if self._graph_trace else None, node_name):
+                result = call()
             updates: dict[str, Any] = {result_key: result}
             if context_key and result.get("company_context") is not None:
                 updates[context_key] = result["company_context"]
@@ -417,6 +598,9 @@ class StructuredAnalysisGraph:
             "event_news_result": None,
             "sector_flow_result": None,
             "strategy_style_result": None,
+            "strategy_decision_result": None,
+            "company_report_result": None,
+            "final_report_result": None,
             "run_trace": None,
             "trace_artifacts": None,
         }
@@ -431,6 +615,9 @@ class StructuredAnalysisGraph:
             "has_event_news": final_state.get("event_news_result") is not None,
             "has_sector_flow": final_state.get("sector_flow_result") is not None,
             "has_strategy_style": final_state.get("strategy_style_result") is not None,
+            "has_strategy_decision": final_state.get("strategy_decision_result") is not None,
+            "has_company_report": final_state.get("company_report_result") is not None,
+            "has_final_report": final_state.get("final_report_result") is not None,
         }
         run_trace = self._graph_trace.finish(output_summary=output_summary, error=run_error)
         trace_artifacts = self._artifact_store.persist_run(run_trace, final_state)

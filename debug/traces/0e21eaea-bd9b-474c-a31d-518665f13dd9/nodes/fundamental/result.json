@@ -1,0 +1,944 @@
+{
+  "fundamental_data_bundle": {
+    "ticker": "600873.SH",
+    "requested_date": "2026-04-02",
+    "effective_trade_date": "2026-04-02",
+    "meta": {
+      "name": "梅花生物",
+      "industry": "食品",
+      "market": "A_share",
+      "list_date": 19950217,
+      "sub_industry": "食品及饲料添加剂",
+      "business_model": "味精,氨基酸,有机肥等生物发酵产品的生产及销售."
+    },
+    "company_context": {
+      "identity": {
+        "ticker": "600873.SH",
+        "company_name": "梅花生物",
+        "exchange": "SH",
+        "market": "A_share"
+      },
+      "analysis_time": {
+        "requested_date": "2026-04-02",
+        "effective_date": "2026-04-02",
+        "date_mode": "natural_day"
+      },
+      "classification": {
+        "industry": "食品",
+        "company_type": "consumer_healthcare_growth",
+        "style_tag": "consumer_healthcare_growth",
+        "size_bucket": "small_cap",
+        "liquidity_bucket": "low"
+      },
+      "business_context": {
+        "sub_industry": "食品及饲料添加剂",
+        "business_model": "味精,氨基酸,有机肥等生物发酵产品的生产及销售.",
+        "company_intro": "公司是全球领先的氨基酸营养健康解决方案提供商。公司通过为全球100多个国家和地区多家知名客户提供各类氨基酸产品及使用解决方案，让全世界用户享有技术的全方位沟通。梅花集团拥有生物发酵行业中最完整的、最长的产业链和配套设施，通过全系列的研、产、供、销服务，灵活满足全球不同客户的差异化需求以及快速创新的追求，专注于打造生物发酵和生物制药的高端产业平台。",
+        "core_products": [
+          "动物营养氨基酸",
+          "食品味觉性状优化产品",
+          "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+          "味精及谷氨酸",
+          "氨基酸产品"
+        ],
+        "main_business_items": [
+          "动物营养氨基酸",
+          "食品味觉性状优化产品",
+          "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+          "味精及谷氨酸",
+          "氨基酸产品",
+          "大原料副产品(肥料、蛋白粉、胚芽、玉米皮粉、饲料纤维等)",
+          "综合产品及其他",
+          "食品添加剂"
+        ],
+        "demand_drivers": [],
+        "cost_drivers": [],
+        "policy_drivers": [],
+        "global_risk_drivers": []
+      },
+      "market_context": {
+        "valuation_style": "growth",
+        "market_attention_points": [],
+        "trading_sensitivity": []
+      },
+      "technical_context": {
+        "trend": {},
+        "momentum": {},
+        "volatility": {},
+        "volume_confirmation": {},
+        "relative_strength": {},
+        "technical_compact_signals": {},
+        "key_levels": {},
+        "signals": [],
+        "confidence": null,
+        "technical_summary_zh": ""
+      },
+      "fundamental_context": {
+        "company_profile": {},
+        "growth": {},
+        "profitability": {},
+        "cashflow_quality": {},
+        "balance_sheet_health": {},
+        "valuation": {},
+        "fundamental_compact_signals": {},
+        "financial_snapshot": {},
+        "core_risks": [],
+        "fundamental_signals": [],
+        "confidence": null,
+        "fundamental_summary_zh": ""
+      },
+      "event_context": {
+        "event_overview": {},
+        "event_compact_signals": {},
+        "event_context_snapshot": {},
+        "event_chain": {},
+        "key_catalysts": [],
+        "key_risks": [],
+        "tracking_points": [],
+        "confidence": null,
+        "event_summary_zh": ""
+      },
+      "search_context": {
+        "search_aliases": [
+          "梅花生物",
+          "梅花生物科技集团股份有限公司",
+          "动物营养氨基酸",
+          "食品味觉性状优化产品",
+          "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+          "味精及谷氨酸",
+          "基础化工",
+          "化学制品",
+          "食品及饲料添加剂"
+        ],
+        "seed_titles": [],
+        "ths_member_codes": [
+          "700001.TI",
+          "700002.TI",
+          "700003.TI",
+          "700004.TI",
+          "700008.TI",
+          "700009.TI",
+          "700010.TI",
+          "700021.TI",
+          "700023.TI",
+          "700031.TI",
+          "700032.TI",
+          "700035.TI"
+        ],
+        "ths_concepts": [
+          "日常消费品(A股)",
+          "食品、饮料与烟草(A股)",
+          "食品(A股)",
+          "农产品与服务(A股)",
+          "化学制品",
+          "西藏",
+          "增持计划",
+          "高股息股",
+          "回购计划",
+          "食品及饲料添加剂",
+          "融资融券",
+          "参股银行"
+        ],
+        "index_memberships": [
+          "基础化工",
+          "化学制品",
+          "食品及饲料添加剂"
+        ],
+        "preferred_query_style": "keyword_cluster",
+        "language_bias": "cn_finance_media"
+      },
+      "data_quality": {
+        "missing_sections": [],
+        "stale_sections": [],
+        "source_summary": {
+          "stock_basic": true,
+          "stock_company": true,
+          "fina_mainbz": true,
+          "ths_member": true,
+          "index_member_all": true
+        }
+      }
+    },
+    "company_profile": {
+      "company_type": "consumer_healthcare_growth",
+      "industry": "食品",
+      "analysis_focus": [
+        "growth_stability",
+        "brand_or_channel_efficiency",
+        "margin_quality",
+        "cashflow_conversion",
+        "valuation_premium"
+      ],
+      "deprioritized_metrics": [
+        "capital_adequacy"
+      ]
+    },
+    "valuation_snapshot": {
+      "pe_ttm": 8.6057,
+      "pb": 2.0132,
+      "ps_ttm": 1.3187,
+      "dv_ratio": 3.6986,
+      "total_mv": 3244507.5891,
+      "circ_mv": 3244507.5891,
+      "turnover_rate": 0.9408
+    },
+    "financial_snapshot_raw": {
+      "revenue": 18215447345.0,
+      "net_profit": 3025092355.05,
+      "operating_cashflow": 4711159998.34,
+      "roe": 19.7134,
+      "roa": 13.8151,
+      "gross_margin": 21.2636,
+      "net_margin": 16.6073,
+      "debt_to_assets": 37.9954
+    },
+    "financial_trends": {
+      "revenue_yoy": -2.491,
+      "net_profit_yoy": 51.6093,
+      "deducted_net_profit_yoy": 14.15,
+      "ocf_to_net_profit": 1.557361,
+      "gross_margin": 21.2636,
+      "net_margin": 16.6073,
+      "roe": 19.7134,
+      "roa": 13.8151,
+      "debt_to_assets": 37.9954,
+      "current_ratio": 1.2898,
+      "quick_ratio": 1.0052,
+      "receivables_ratio": 0.021946,
+      "inventory_ratio": 0.083726
+    },
+    "financial_snapshot": {
+      "common": {
+        "revenue_yoy": -2.491,
+        "net_profit_yoy": 51.6093,
+        "profit_minus_revenue_growth": 54.1003,
+        "roe": 19.7134,
+        "gross_margin": 21.2636,
+        "net_margin": 16.6073,
+        "debt_to_assets": 37.9954,
+        "ocf_to_net_profit": 1.557361,
+        "pe_ttm": 8.6057,
+        "pb": 2.0132,
+        "ps_ttm": 1.3187
+      },
+      "profile_specific": {
+        "current_ratio": 1.2898,
+        "quick_ratio": 1.0052,
+        "receivables_ratio": 0.021946,
+        "inventory_ratio": 0.083726,
+        "roa": 13.8151,
+        "grossprofit_margin": 21.2636,
+        "netprofit_margin": 16.6073,
+        "revenue_yoy": -2.491,
+        "net_profit_yoy": 51.6093
+      }
+    },
+    "statement_summary": {
+      "income": {
+        "revenue": 18215447345.0,
+        "operating_profit": 2658930345.81,
+        "net_profit": 3025092355.05,
+        "basic_eps": 1.06,
+        "fin_exp": -13954389.44,
+        "rd_exp": 296016607.21
+      },
+      "balance_sheet": {
+        "total_assets": 25991339903.1,
+        "total_liab": 9875505133.65,
+        "money_cap": 4543402233.92,
+        "accounts_receiv": 570400254.37,
+        "inventories": 2176152704.15,
+        "fixed_assets": 11325954551.42,
+        "total_hldr_eqy_exc_min_int": 16115834769.45
+      },
+      "cashflow": {
+        "operate_cashflow": 4711159998.34,
+        "invest_cashflow": -3574682070.63,
+        "finance_cashflow": null,
+        "cash_end_period": 4252718307.19
+      }
+    },
+    "fundamental_compact_signals": {
+      "growth_quality": "mixed_growth",
+      "profit_quality": "high_cash_conversion",
+      "cashflow_support": "strong_ocf_high_capex",
+      "leverage_risk": "manageable_balance_sheet",
+      "valuation_pressure": "valuation_tolerable",
+      "cyclical_exposure": "moderate_sensitivity"
+    },
+    "data_quality": {
+      "latest_report_period": "2025-09-30",
+      "report_periods_used": 8,
+      "missing_fields": [],
+      "source": "tushare"
+    }
+  },
+  "analysis_result": {
+    "ticker": "600873.SH",
+    "effective_trade_date": "2026-04-02",
+    "company_profile": {
+      "company_type": "consumer_healthcare_growth",
+      "industry": "食品",
+      "analysis_focus": [
+        "growth_stability",
+        "brand_or_channel_efficiency",
+        "margin_quality",
+        "cashflow_conversion",
+        "valuation_premium"
+      ],
+      "deprioritized_metrics": [
+        "capital_adequacy"
+      ]
+    },
+    "growth": {
+      "state": "improving",
+      "strength": 0.6,
+      "summary": "利润端显著改善，但收入端承压。扣非净利润同比增长14.15%，净利润同比大增51.61%，显示盈利能力提升；但营收同比下滑2.49%，反映需求端或价格端压力。增长质量呈现分化，利润改善主要源于成本优化和效率提升而非规模扩张。",
+      "evidence": [
+        "扣非净利润同比增长14.15%",
+        "净利润同比增长51.61%",
+        "营收同比下滑2.49%",
+        "利润增长远超收入增长，利润-收入增长差达54.1个百分点"
+      ]
+    },
+    "profitability": {
+      "state": "strong",
+      "summary": "盈利能力处于行业优秀水平。ROE达19.71%，ROA达13.82%，净利率16.61%，毛利率21.26%，均显示公司具备较强的盈利能力和资本回报效率。作为生物发酵行业龙头，规模效应和产业链整合优势显现。",
+      "evidence": [
+        "ROE 19.71%，处于优秀水平",
+        "ROA 13.82%，资产利用效率高",
+        "净利率16.61%，盈利能力突出",
+        "毛利率21.26%，成本控制能力良好"
+      ]
+    },
+    "cashflow_quality": {
+      "state": "strong",
+      "summary": "现金流质量优异，经营现金流对净利润覆盖充分。经营现金流/净利润达1.56倍，显示利润含金量高，应收账款占比仅2.19%，回款效率极佳。但投资现金流流出35.75亿元，显示公司处于产能扩张期，需关注资本开支回报。",
+      "evidence": [
+        "经营现金流/净利润=1.56倍，利润现金含量高",
+        "应收账款占总资产比例仅2.19%，回款效率优秀",
+        "经营现金流47.11亿元，远超净利润30.25亿元",
+        "投资现金流净流出35.75亿元，处于扩张期"
+      ]
+    },
+    "balance_sheet_health": {
+      "state": "healthy",
+      "summary": "资产负债结构稳健。资产负债率38%，处于合理区间；流动比率1.29、速动比率1.01，短期偿债能力充足；固定资产占比43.6%，符合制造业特征；货币资金45.43亿元，现金储备充裕。整体财务风险可控。",
+      "evidence": [
+        "资产负债率37.99%，杠杆水平适中",
+        "流动比率1.29，速动比率1.01，短期偿债能力良好",
+        "货币资金45.43亿元，现金储备充足",
+        "存货占比8.37%，库存管理效率较高"
+      ]
+    },
+    "valuation": {
+      "state": "cheap",
+      "summary": "估值处于偏低水平。PE-TTM仅8.6倍，PB 2.01倍，PS 1.32倍，对于ROE近20%的成长型消费企业而言明显偏低。股息率3.7%提供安全边际。估值偏低可能反映市场对氨基酸行业周期性、原材料价格波动及需求端的担忧。",
+      "evidence": [
+        "PE-TTM 8.6倍，显著低于消费成长板块平均水平",
+        "PB 2.01倍，与ROE 19.7%相比估值合理偏低",
+        "股息率3.7%，提供现金流回报",
+        "PS 1.32倍，收入估值处于低位"
+      ]
+    },
+    "core_risks": [
+      "营收负增长风险：收入同比下滑2.49%，若需求持续疲软，利润增长难以持续，当前高利润增速可能面临基数效应压力",
+      "行业周期性风险：氨基酸、味精等产品价格受原材料（玉米等）和供需关系影响较大，当前盈利能力可能处于周期高位，存在回调风险",
+      "资本开支回报风险：投资现金流大额流出显示扩张激进，若新增产能利用率不足或行业竞争加剧，ROE有下行压力"
+    ],
+    "fundamental_compact_signals": {
+      "growth_quality": "mixed_growth",
+      "profit_quality": "high_cash_conversion",
+      "cashflow_support": "strong_ocf_high_capex",
+      "leverage_risk": "manageable_balance_sheet",
+      "valuation_pressure": "valuation_tolerable",
+      "cyclical_exposure": "moderate_sensitivity"
+    },
+    "fundamental_signals": [
+      {
+        "type": "quality",
+        "direction": "bullish",
+        "strength": 0.75,
+        "description": "高利润现金转化率支撑盈利质量",
+        "evidence": [
+          "经营现金流/净利润=1.56倍",
+          "应收账款占比仅2.19%",
+          "ROE 19.71%配合强现金流显示盈利真实可靠"
+        ]
+      },
+      {
+        "type": "valuation",
+        "direction": "bullish",
+        "strength": 0.65,
+        "description": "低估值提供安全边际",
+        "evidence": [
+          "PE-TTM 8.6倍显著低于行业平均",
+          "股息率3.7%提供现金回报",
+          "PB 2.01倍与ROE 19.7%不匹配，存在估值修复空间"
+        ]
+      },
+      {
+        "type": "risk",
+        "direction": "bearish",
+        "strength": 0.55,
+        "description": "收入下滑与周期高位利润隐忧",
+        "evidence": [
+          "营收同比下滑2.49%",
+          "净利润增速51.61%远超扣非增速14.15%，存在非经常性损益贡献",
+          "氨基酸行业价格波动大，当前利润率可能处于周期高点"
+        ]
+      }
+    ],
+    "financial_snapshot": {
+      "common": {
+        "revenue_yoy": -2.491,
+        "net_profit_yoy": 51.6093,
+        "roe": 19.7134,
+        "gross_margin": 21.2636,
+        "net_margin": 16.6073,
+        "debt_to_assets": 37.9954,
+        "ocf_to_net_profit": 1.557361,
+        "pe_ttm": 8.6057,
+        "pb": 2.0132,
+        "ps_ttm": 1.3187,
+        "profit_minus_revenue_growth": 54.1003
+      },
+      "profile_specific": {
+        "current_ratio": 1.2898,
+        "quick_ratio": 1.0052,
+        "receivables_ratio": 0.021946,
+        "inventory_ratio": 0.083726,
+        "roa": 13.8151,
+        "grossprofit_margin": 21.2636,
+        "netprofit_margin": 16.6073,
+        "revenue_yoy": -2.491,
+        "net_profit_yoy": 51.6093,
+        "deducted_net_profit_yoy": 14.15,
+        "dv_ratio": 3.6986,
+        "total_mv": 3244507.5891
+      }
+    },
+    "confidence": 0.72,
+    "fundamental_summary_zh": "梅花生物作为氨基酸行业龙头，当前基本面呈现\"盈利强但增长分化\"特征。利润端表现亮眼（ROE 19.7%、净利率16.6%），现金流质量优异（经营现金流/净利润1.56倍），估值处于偏低水平（PE 8.6倍）。但需警惕收入端压力（营收同比-2.5%）和行业周期性风险——当前高利润率可能处于周期高位，且净利润增速（51.6%）与扣非增速（14.2%）差异较大，存在非经常性损益贡献。公司正处于产能扩张期（投资现金流流出35.7亿），若下游需求疲软，新增产能利用率将成为关键变量。对上层Agent而言，最值得跟踪的变化方向是：1）营收增速能否转正；2）氨基酸产品价格走势；3）资本开支进度及产能消化情况。"
+  },
+  "raw_response": "```json\n{\n  \"ticker\": \"600873.SH\",\n  \"effective_trade_date\": \"2026-04-02\",\n  \"company_profile\": {\n    \"company_type\": \"consumer_healthcare_growth\",\n    \"industry\": \"食品\",\n    \"analysis_focus\": [\n      \"growth_stability\",\n      \"brand_or_channel_efficiency\",\n      \"margin_quality\",\n      \"cashflow_conversion\",\n      \"valuation_premium\"\n    ],\n    \"deprioritized_metrics\": [\n      \"capital_adequacy\"\n    ]\n  },\n  \"growth\": {\n    \"state\": \"improving\",\n    \"strength\": 0.6,\n    \"summary\": \"利润端显著改善，但收入端承压。扣非净利润同比增长14.15%，净利润同比大增51.61%，显示盈利能力提升；但营收同比下滑2.49%，反映需求端或价格端压力。增长质量呈现分化，利润改善主要源于成本优化和效率提升而非规模扩张。\",\n    \"evidence\": [\n      \"扣非净利润同比增长14.15%\",\n      \"净利润同比增长51.61%\",\n      \"营收同比下滑2.49%\",\n      \"利润增长远超收入增长，利润-收入增长差达54.1个百分点\"\n    ]\n  },\n  \"profitability\": {\n    \"state\": \"strong\",\n    \"summary\": \"盈利能力处于行业优秀水平。ROE达19.71%，ROA达13.82%，净利率16.61%，毛利率21.26%，均显示公司具备较强的盈利能力和资本回报效率。作为生物发酵行业龙头，规模效应和产业链整合优势显现。\",\n    \"evidence\": [\n      \"ROE 19.71%，处于优秀水平\",\n      \"ROA 13.82%，资产利用效率高\",\n      \"净利率16.61%，盈利能力突出\",\n      \"毛利率21.26%，成本控制能力良好\"\n    ]\n  },\n  \"cashflow_quality\": {\n    \"state\": \"strong\",\n    \"summary\": \"现金流质量优异，经营现金流对净利润覆盖充分。经营现金流/净利润达1.56倍，显示利润含金量高，应收账款占比仅2.19%，回款效率极佳。但投资现金流流出35.75亿元，显示公司处于产能扩张期，需关注资本开支回报。\",\n    \"evidence\": [\n      \"经营现金流/净利润=1.56倍，利润现金含量高\",\n      \"应收账款占总资产比例仅2.19%，回款效率优秀\",\n      \"经营现金流47.11亿元，远超净利润30.25亿元\",\n      \"投资现金流净流出35.75亿元，处于扩张期\"\n    ]\n  },\n  \"balance_sheet_health\": {\n    \"state\": \"healthy\",\n    \"summary\": \"资产负债结构稳健。资产负债率38%，处于合理区间；流动比率1.29、速动比率1.01，短期偿债能力充足；固定资产占比43.6%，符合制造业特征；货币资金45.43亿元，现金储备充裕。整体财务风险可控。\",\n    \"evidence\": [\n      \"资产负债率37.99%，杠杆水平适中\",\n      \"流动比率1.29，速动比率1.01，短期偿债能力良好\",\n      \"货币资金45.43亿元，现金储备充足\",\n      \"存货占比8.37%，库存管理效率较高\"\n    ]\n  },\n  \"valuation\": {\n    \"state\": \"cheap\",\n    \"summary\": \"估值处于偏低水平。PE-TTM仅8.6倍，PB 2.01倍，PS 1.32倍，对于ROE近20%的成长型消费企业而言明显偏低。股息率3.7%提供安全边际。估值偏低可能反映市场对氨基酸行业周期性、原材料价格波动及需求端的担忧。\",\n    \"evidence\": [\n      \"PE-TTM 8.6倍，显著低于消费成长板块平均水平\",\n      \"PB 2.01倍，与ROE 19.7%相比估值合理偏低\",\n      \"股息率3.7%，提供现金流回报\",\n      \"PS 1.32倍，收入估值处于低位\"\n    ]\n  },\n  \"core_risks\": [\n    \"营收负增长风险：收入同比下滑2.49%，若需求持续疲软，利润增长难以持续，当前高利润增速可能面临基数效应压力\",\n    \"行业周期性风险：氨基酸、味精等产品价格受原材料（玉米等）和供需关系影响较大，当前盈利能力可能处于周期高位，存在回调风险\",\n    \"资本开支回报风险：投资现金流大额流出显示扩张激进，若新增产能利用率不足或行业竞争加剧，ROE有下行压力\"\n  ],\n  \"fundamental_compact_signals\": {\n    \"growth_quality\": \"mixed_growth\",\n    \"profit_quality\": \"high_cash_conversion\",\n    \"cashflow_support\": \"strong_ocf_high_capex\",\n    \"leverage_risk\": \"manageable_balance_sheet\",\n    \"valuation_pressure\": \"valuation_tolerable\",\n    \"cyclical_exposure\": \"moderate_sensitivity\"\n  },\n  \"fundamental_signals\": [\n    {\n      \"type\": \"quality\",\n      \"direction\": \"bullish\",\n      \"strength\": 0.75,\n      \"description\": \"高利润现金转化率支撑盈利质量\",\n      \"evidence\": [\n        \"经营现金流/净利润=1.56倍\",\n        \"应收账款占比仅2.19%\",\n        \"ROE 19.71%配合强现金流显示盈利真实可靠\"\n      ]\n    },\n    {\n      \"type\": \"valuation\",\n      \"direction\": \"bullish\",\n      \"strength\": 0.65,\n      \"description\": \"低估值提供安全边际\",\n      \"evidence\": [\n        \"PE-TTM 8.6倍显著低于行业平均\",\n        \"股息率3.7%提供现金回报\",\n        \"PB 2.01倍与ROE 19.7%不匹配，存在估值修复空间\"\n      ]\n    },\n    {\n      \"type\": \"risk\",\n      \"direction\": \"bearish\",\n      \"strength\": 0.55,\n      \"description\": \"收入下滑与周期高位利润隐忧\",\n      \"evidence\": [\n        \"营收同比下滑2.49%\",\n        \"净利润增速51.61%远超扣非增速14.15%，存在非经常性损益贡献\",\n        \"氨基酸行业价格波动大，当前利润率可能处于周期高点\"\n      ]\n    }\n  ],\n  \"financial_snapshot\": {\n    \"common\": {\n      \"revenue_yoy\": -2.491,\n      \"net_profit_yoy\": 51.6093,\n      \"roe\": 19.7134,\n      \"gross_margin\": 21.2636,\n      \"net_margin\": 16.6073,\n      \"debt_to_assets\": 37.9954,\n      \"ocf_to_net_profit\": 1.557361,\n      \"pe_ttm\": 8.6057,\n      \"pb\": 2.0132,\n      \"ps_ttm\": 1.3187\n    },\n    \"profile_specific\": {\n      \"current_ratio\": 1.2898,\n      \"quick_ratio\": 1.0052,\n      \"receivables_ratio\": 0.021946,\n      \"inventory_ratio\": 0.083726,\n      \"roa\": 13.8151,\n      \"deducted_net_profit_yoy\": 14.15,\n      \"dv_ratio\": 3.6986,\n      \"total_mv\": 3244507.5891\n    }\n  },\n  \"confidence\": 0.72,\n  \"fundamental_summary_zh\": \"梅...<truncated>",
+  "company_context": {
+    "identity": {
+      "ticker": "600873.SH",
+      "company_name": "梅花生物",
+      "exchange": "SH",
+      "market": "A_share"
+    },
+    "analysis_time": {
+      "requested_date": "2026-04-02",
+      "effective_date": "2026-04-02",
+      "date_mode": "natural_day"
+    },
+    "classification": {
+      "industry": "食品",
+      "company_type": "consumer_healthcare_growth",
+      "style_tag": "consumer_healthcare_growth",
+      "size_bucket": "small_cap",
+      "liquidity_bucket": "low"
+    },
+    "business_context": {
+      "sub_industry": "食品及饲料添加剂",
+      "business_model": "味精,氨基酸,有机肥等生物发酵产品的生产及销售.",
+      "company_intro": "公司是全球领先的氨基酸营养健康解决方案提供商。公司通过为全球100多个国家和地区多家知名客户提供各类氨基酸产品及使用解决方案，让全世界用户享有技术的全方位沟通。梅花集团拥有生物发酵行业中最完整的、最长的产业链和配套设施，通过全系列的研、产、供、销服务，灵活满足全球不同客户的差异化需求以及快速创新的追求，专注于打造生物发酵和生物制药的高端产业平台。",
+      "core_products": [
+        "动物营养氨基酸",
+        "食品味觉性状优化产品",
+        "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+        "味精及谷氨酸",
+        "氨基酸产品"
+      ],
+      "main_business_items": [
+        "动物营养氨基酸",
+        "食品味觉性状优化产品",
+        "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+        "味精及谷氨酸",
+        "氨基酸产品",
+        "大原料副产品(肥料、蛋白粉、胚芽、玉米皮粉、饲料纤维等)",
+        "综合产品及其他",
+        "食品添加剂"
+      ],
+      "demand_drivers": [],
+      "cost_drivers": [],
+      "policy_drivers": [],
+      "global_risk_drivers": []
+    },
+    "market_context": {
+      "valuation_style": "growth",
+      "market_attention_points": [],
+      "trading_sensitivity": []
+    },
+    "technical_context": {
+      "trend": {},
+      "momentum": {},
+      "volatility": {},
+      "volume_confirmation": {},
+      "relative_strength": {},
+      "technical_compact_signals": {},
+      "key_levels": {},
+      "signals": [],
+      "confidence": null,
+      "technical_summary_zh": ""
+    },
+    "fundamental_context": {
+      "company_profile": {
+        "company_type": "consumer_healthcare_growth",
+        "industry": "食品",
+        "analysis_focus": [
+          "growth_stability",
+          "brand_or_channel_efficiency",
+          "margin_quality",
+          "cashflow_conversion",
+          "valuation_premium"
+        ],
+        "deprioritized_metrics": [
+          "capital_adequacy"
+        ]
+      },
+      "growth": {
+        "state": "improving",
+        "strength": 0.6,
+        "summary": "利润端显著改善，但收入端承压。扣非净利润同比增长14.15%，净利润同比大增51.61%，显示盈利能力提升；但营收同比下滑2.49%，反映需求端或价格端压力。增长质量呈现分化，利润改善主要源于成本优化和效率提升而非规模扩张。",
+        "evidence": [
+          "扣非净利润同比增长14.15%",
+          "净利润同比增长51.61%",
+          "营收同比下滑2.49%",
+          "利润增长远超收入增长，利润-收入增长差达54.1个百分点"
+        ]
+      },
+      "profitability": {
+        "state": "strong",
+        "summary": "盈利能力处于行业优秀水平。ROE达19.71%，ROA达13.82%，净利率16.61%，毛利率21.26%，均显示公司具备较强的盈利能力和资本回报效率。作为生物发酵行业龙头，规模效应和产业链整合优势显现。",
+        "evidence": [
+          "ROE 19.71%，处于优秀水平",
+          "ROA 13.82%，资产利用效率高",
+          "净利率16.61%，盈利能力突出",
+          "毛利率21.26%，成本控制能力良好"
+        ]
+      },
+      "cashflow_quality": {
+        "state": "strong",
+        "summary": "现金流质量优异，经营现金流对净利润覆盖充分。经营现金流/净利润达1.56倍，显示利润含金量高，应收账款占比仅2.19%，回款效率极佳。但投资现金流流出35.75亿元，显示公司处于产能扩张期，需关注资本开支回报。",
+        "evidence": [
+          "经营现金流/净利润=1.56倍，利润现金含量高",
+          "应收账款占总资产比例仅2.19%，回款效率优秀",
+          "经营现金流47.11亿元，远超净利润30.25亿元",
+          "投资现金流净流出35.75亿元，处于扩张期"
+        ]
+      },
+      "balance_sheet_health": {
+        "state": "healthy",
+        "summary": "资产负债结构稳健。资产负债率38%，处于合理区间；流动比率1.29、速动比率1.01，短期偿债能力充足；固定资产占比43.6%，符合制造业特征；货币资金45.43亿元，现金储备充裕。整体财务风险可控。",
+        "evidence": [
+          "资产负债率37.99%，杠杆水平适中",
+          "流动比率1.29，速动比率1.01，短期偿债能力良好",
+          "货币资金45.43亿元，现金储备充足",
+          "存货占比8.37%，库存管理效率较高"
+        ]
+      },
+      "valuation": {
+        "state": "cheap",
+        "summary": "估值处于偏低水平。PE-TTM仅8.6倍，PB 2.01倍，PS 1.32倍，对于ROE近20%的成长型消费企业而言明显偏低。股息率3.7%提供安全边际。估值偏低可能反映市场对氨基酸行业周期性、原材料价格波动及需求端的担忧。",
+        "evidence": [
+          "PE-TTM 8.6倍，显著低于消费成长板块平均水平",
+          "PB 2.01倍，与ROE 19.7%相比估值合理偏低",
+          "股息率3.7%，提供现金流回报",
+          "PS 1.32倍，收入估值处于低位"
+        ]
+      },
+      "fundamental_compact_signals": {
+        "growth_quality": "mixed_growth",
+        "profit_quality": "high_cash_conversion",
+        "cashflow_support": "strong_ocf_high_capex",
+        "leverage_risk": "manageable_balance_sheet",
+        "valuation_pressure": "valuation_tolerable",
+        "cyclical_exposure": "moderate_sensitivity"
+      },
+      "financial_snapshot": {
+        "common": {
+          "revenue_yoy": -2.491,
+          "net_profit_yoy": 51.6093,
+          "roe": 19.7134,
+          "gross_margin": 21.2636,
+          "net_margin": 16.6073,
+          "debt_to_assets": 37.9954,
+          "ocf_to_net_profit": 1.557361,
+          "pe_ttm": 8.6057,
+          "pb": 2.0132,
+          "ps_ttm": 1.3187,
+          "profit_minus_revenue_growth": 54.1003
+        },
+        "profile_specific": {
+          "current_ratio": 1.2898,
+          "quick_ratio": 1.0052,
+          "receivables_ratio": 0.021946,
+          "inventory_ratio": 0.083726,
+          "roa": 13.8151,
+          "grossprofit_margin": 21.2636,
+          "netprofit_margin": 16.6073,
+          "revenue_yoy": -2.491,
+          "net_profit_yoy": 51.6093,
+          "deducted_net_profit_yoy": 14.15,
+          "dv_ratio": 3.6986,
+          "total_mv": 3244507.5891
+        }
+      },
+      "core_risks": [
+        "营收负增长风险：收入同比下滑2.49%，若需求持续疲软，利润增长难以持续，当前高利润增速可能面临基数效应压力",
+        "行业周期性风险：氨基酸、味精等产品价格受原材料（玉米等）和供需关系影响较大，当前盈利能力可能处于周期高位，存在回调风险",
+        "资本开支回报风险：投资现金流大额流出显示扩张激进，若新增产能利用率不足或行业竞争加剧，ROE有下行压力"
+      ],
+      "fundamental_signals": [
+        {
+          "type": "quality",
+          "direction": "bullish",
+          "strength": 0.75,
+          "description": "高利润现金转化率支撑盈利质量",
+          "evidence": [
+            "经营现金流/净利润=1.56倍",
+            "应收账款占比仅2.19%",
+            "ROE 19.71%配合强现金流显示盈利真实可靠"
+          ]
+        },
+        {
+          "type": "valuation",
+          "direction": "bullish",
+          "strength": 0.65,
+          "description": "低估值提供安全边际",
+          "evidence": [
+            "PE-TTM 8.6倍显著低于行业平均",
+            "股息率3.7%提供现金回报",
+            "PB 2.01倍与ROE 19.7%不匹配，存在估值修复空间"
+          ]
+        },
+        {
+          "type": "risk",
+          "direction": "bearish",
+          "strength": 0.55,
+          "description": "收入下滑与周期高位利润隐忧",
+          "evidence": [
+            "营收同比下滑2.49%",
+            "净利润增速51.61%远超扣非增速14.15%，存在非经常性损益贡献",
+            "氨基酸行业价格波动大，当前利润率可能处于周期高点"
+          ]
+        }
+      ],
+      "confidence": 0.72,
+      "fundamental_summary_zh": "梅花生物作为氨基酸行业龙头，当前基本面呈现\"盈利强但增长分化\"特征。利润端表现亮眼（ROE 19.7%、净利率16.6%），现金流质量优异（经营现金流/净利润1.56倍），估值处于偏低水平（PE 8.6倍）。但需警惕收入端压力（营收同比-2.5%）和行业周期性风险——当前高利润率可能处于周期高位，且净利润增速（51.6%）与扣非增速（14.2%）差异较大，存在非经常性损益贡献。公司正处于产能扩张期（投资现金流流出35.7亿），若下游需求疲软，新增产能利用率将成为关键变量。对上层Agent而言，最值得跟踪的变化方向是：1）营收增速能否转正；2）氨基酸产品价格走势；3）资本开支进度及产能消化情况。"
+    },
+    "event_context": {
+      "event_overview": {},
+      "event_compact_signals": {},
+      "event_context_snapshot": {},
+      "event_chain": {},
+      "key_catalysts": [],
+      "key_risks": [],
+      "tracking_points": [],
+      "confidence": null,
+      "event_summary_zh": ""
+    },
+    "search_context": {
+      "search_aliases": [
+        "梅花生物",
+        "梅花生物科技集团股份有限公司",
+        "动物营养氨基酸",
+        "食品味觉性状优化产品",
+        "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+        "味精及谷氨酸",
+        "基础化工",
+        "化学制品",
+        "食品及饲料添加剂"
+      ],
+      "seed_titles": [],
+      "ths_member_codes": [
+        "700001.TI",
+        "700002.TI",
+        "700003.TI",
+        "700004.TI",
+        "700008.TI",
+        "700009.TI",
+        "700010.TI",
+        "700021.TI",
+        "700023.TI",
+        "700031.TI",
+        "700032.TI",
+        "700035.TI"
+      ],
+      "ths_concepts": [
+        "日常消费品(A股)",
+        "食品、饮料与烟草(A股)",
+        "食品(A股)",
+        "农产品与服务(A股)",
+        "化学制品",
+        "西藏",
+        "增持计划",
+        "高股息股",
+        "回购计划",
+        "食品及饲料添加剂",
+        "融资融券",
+        "参股银行"
+      ],
+      "index_memberships": [
+        "基础化工",
+        "化学制品",
+        "食品及饲料添加剂"
+      ],
+      "preferred_query_style": "keyword_cluster",
+      "language_bias": "cn_finance_media"
+    },
+    "data_quality": {
+      "missing_sections": [],
+      "stale_sections": [],
+      "source_summary": {
+        "stock_basic": true,
+        "stock_company": true,
+        "fina_mainbz": true,
+        "ths_member": true,
+        "index_member_all": true
+      }
+    }
+  },
+  "trace": {
+    "run_id": "86ab66a1-b87f-4d27-b7d7-8b30d7473386",
+    "agent_name": "FundamentalAgent",
+    "agent_type": "agent",
+    "status": "success",
+    "started_at": 1775063612.589709,
+    "finished_at": 1775063657.583832,
+    "duration_ms": 44994,
+    "input_summary": {
+      "ticker": "600873.SH",
+      "analysis_date": "2026-04-02",
+      "has_company_context": true
+    },
+    "output_summary": {
+      "effective_trade_date": "2026-04-02",
+      "growth": "improving",
+      "valuation": "cheap",
+      "company_type": "consumer_healthcare_growth",
+      "confidence": 0.72
+    },
+    "error": null,
+    "steps": [
+      {
+        "step_id": "7eca9193-11d4-4a66-95aa-d8dbb3b5324b",
+        "step_type": "bundle",
+        "name": "build_fundamental_bundle",
+        "status": "success",
+        "started_at": 1775063612.5897212,
+        "input": {
+          "ticker": "600873.SH",
+          "analysis_date": "2026-04-02"
+        },
+        "output": {
+          "effective_trade_date": "2026-04-02",
+          "company_type": "consumer_healthcare_growth",
+          "report_periods_used": 8
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775063612.878218,
+        "duration_ms": 288
+      },
+      {
+        "step_id": "644f04ca-564b-43eb-9374-2989dc15bd0f",
+        "step_type": "llm",
+        "name": "llm_invoke_round_1",
+        "status": "success",
+        "started_at": 1775063612.8867462,
+        "input": {
+          "round": 1,
+          "message_count": 2
+        },
+        "output": {
+          "has_tool_calls": true,
+          "content_preview": ""
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775063616.383383,
+        "duration_ms": 3496
+      },
+      {
+        "step_id": "8eeed090-24e9-4596-a7ea-7b59ebd9bbb7",
+        "step_type": "tool_call",
+        "name": "tool_call_get_income_statement_summary",
+        "status": "success",
+        "started_at": 1775063616.383418,
+        "input": {
+          "tool_name": "get_income_statement_summary",
+          "args": {
+            "ticker": "600873.SH",
+            "analysis_date": "2026-04-02"
+          }
+        },
+        "output": {
+          "result_preview": "{\"ticker\": \"600873.SH\", \"effective_trade_date\": \"2026-04-02\", \"income\": {\"revenue\": 18215447345.0, \"operating_profit\": 2658930345.81, \"net_profit\": 3025092355.05, \"basic_eps\": 1.06, \"fin_exp\": -13954389.44, \"rd_exp\": 296016607.21}}"
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775063616.500615,
+        "duration_ms": 117
+      },
+      {
+        "step_id": "eb8791ae-d11b-4543-a073-c41d0e5f49ab",
+        "step_type": "tool_call",
+        "name": "tool_call_get_balance_sheet_summary",
+        "status": "success",
+        "started_at": 1775063616.5006459,
+        "input": {
+          "tool_name": "get_balance_sheet_summary",
+          "args": {
+            "ticker": "600873.SH",
+            "analysis_date": "2026-04-02"
+          }
+        },
+        "output": {
+          "result_preview": "{\"ticker\": \"600873.SH\", \"effective_trade_date\": \"2026-04-02\", \"balance_sheet\": {\"total_assets\": 25991339903.1, \"total_liab\": 9875505133.65, \"money_cap\": 4543402233.92, \"accounts_receiv\": 570400254.37, \"inventories\": 2176152704.15, \"fixed_assets\": 11325954551.42, \"total_hldr_eqy_exc_min_int\": 16115834769.45}}"
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775063616.62816,
+        "duration_ms": 127
+      },
+      {
+        "step_id": "5b84431b-4959-454f-b4a1-3a063a48eefa",
+        "step_type": "tool_call",
+        "name": "tool_call_get_cashflow_summary",
+        "status": "success",
+        "started_at": 1775063616.628191,
+        "input": {
+          "tool_name": "get_cashflow_summary",
+          "args": {
+            "ticker": "600873.SH",
+            "analysis_date": "2026-04-02"
+          }
+        },
+        "output": {
+          "result_preview": "{\"ticker\": \"600873.SH\", \"effective_trade_date\": \"2026-04-02\", \"cashflow\": {\"operate_cashflow\": 4711159998.34, \"invest_cashflow\": -3574682070.63, \"finance_cashflow\": null, \"cash_end_period\": 4252718307.19}}"
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775063616.7380748,
+        "duration_ms": 109
+      },
+      {
+        "step_id": "9dc938ce-601f-408e-9f93-4bbfbbbf2797",
+        "step_type": "llm",
+        "name": "llm_invoke_round_2",
+        "status": "success",
+        "started_at": 1775063616.738104,
+        "input": {
+          "round": 2,
+          "message_count": 6
+        },
+        "output": {
+          "has_tool_calls": true,
+          "content_preview": ""
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775063618.1002738,
+        "duration_ms": 1362
+      },
+      {
+        "step_id": "1a14dcd7-919e-480a-9bef-5eea6e2c0d5f",
+        "step_type": "tool_call",
+        "name": "tool_call_get_multi_period_financial_trends",
+        "status": "success",
+        "started_at": 1775063618.100364,
+        "input": {
+          "tool_name": "get_multi_period_financial_trends",
+          "args": {
+            "ticker": "600873.SH",
+            "analysis_date": "2026-04-02"
+          }
+        },
+        "output": {
+          "result_preview": "{\"ticker\": \"600873.SH\", \"effective_trade_date\": \"2026-04-02\", \"financial_trends\": {\"revenue_yoy\": -2.491, \"net_profit_yoy\": 51.6093, \"deducted_net_profit_yoy\": 14.15, \"ocf_to_net_profit\": 1.557361, \"gross_margin\": 21.2636, \"net_margin\": 16.6073, \"roe\": 19.7134, \"roa\": 13.8151, \"debt_to_assets\": 37.9954, \"current_ratio\": 1.2898, \"quick_ratio\": 1.0052, \"receivables_ratio\": 0.021946, \"inventory_ratio\": 0.083726}, \"company_profile\": {\"company_type\": \"consumer_healthcare_growth\", \"industry\": \"食品\", \"analysis_focus\": [\"growth_stability\", \"brand_or_channel_efficiency\", \"margin_quality\", \"cashflow_conversion\", \"valuation_premium\"], \"deprioritized_metrics\": [\"capital_adequacy\"]}}"
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775063618.221567,
+        "duration_ms": 121
+      },
+      {
+        "step_id": "ad5199db-a8d8-4ed7-bdd9-3635acb8f4c2",
+        "step_type": "llm",
+        "name": "llm_invoke_round_3",
+        "status": "success",
+        "started_at": 1775063618.2215948,
+        "input": {
+          "round": 3,
+          "message_count": 8
+        },
+        "output": {
+          "has_tool_calls": false,
+          "content_preview": "```json\n{\n  \"ticker\": \"600873.SH\",\n  \"effective_trade_date\": \"2026-04-02\",\n  \"company_profile\": {\n    \"company_type\": \"consumer_healthcare_growth\",\n    \"industry\": \"食品\",\n    \"analysis_focus\": [\n      \"growth_stability\",\n      \"brand_or_channel_efficiency\",\n      \"margin_quality\",\n      \"cashflow_conversion\",\n      \"valuation_premium\"\n    ],\n    \"deprioritized_metrics\": [\n      \"capital_adequacy\"\n    ]\n  },\n  \"growth\": {\n    \"state\": \"improving\",\n    \"strength\": 0.6,\n    \"summary\": \"利润端显著改善，但收入端承"
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775063657.5830982,
+        "duration_ms": 39361
+      },
+      {
+        "step_id": "aaa0af7e-4f97-4fde-90a2-60ec86889d33",
+        "step_type": "parse",
+        "name": "parse_json_response",
+        "status": "success",
+        "started_at": 1775063657.583207,
+        "input": {
+          "content_preview": "```json\n{\n  \"ticker\": \"600873.SH\",\n  \"effective_trade_date\": \"2026-04-02\",\n  \"company_profile\": {\n    \"company_type\": \"consumer_healthcare_growth\",\n    \"industry\": \"食品\",\n    \"analysis_focus\": [\n      \"growth_stability\",\n      \"brand_or_channel_efficiency\",\n      \"margin_quality\",\n      \"cashflow_conversion\",\n      \"valuation_premium\"\n    ],\n    \"deprioritized_metrics\": [\n      \"capital_adequacy\"\n    ]\n  },\n  \"growth\": {\n    \"state\": \"improving\",\n    \"strength\": 0.6,\n    \"summary\": \"利润端显著改善，但收入端承"
+        },
+        "output": {
+          "growth": "improving",
+          "valuation": "cheap",
+          "confidence": 0.72
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775063657.58351,
+        "duration_ms": 0
+      },
+      {
+        "step_id": "32c27329-0b5b-45b0-b24d-53c97a32a241",
+        "step_type": "quality_gate",
+        "name": "quality_gate",
+        "status": "success",
+        "started_at": 1775063657.583528,
+        "input": {
+          "round": 3
+        },
+        "output": {
+          "is_sparse": false
+        },
+        "metrics": {
+          "core_risks_count": 3,
+          "signals_count": 3
+        },
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775063657.5835788,
+        "duration_ms": 0
+      }
+    ],
+    "observability": {
+      "langsmith_enabled": false,
+      "langsmith_project_name": null,
+      "otel_enabled": false
+    }
+  }
+}

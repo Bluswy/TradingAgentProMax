@@ -1,0 +1,277 @@
+{
+  "ticker": "601872.SH",
+  "analysis_date": "2026-03-29",
+  "company_name": "招商轮船",
+  "industry": "水运",
+  "query_plan": {
+    "sensitivity_variables": [
+      "油轮运价 (VLCC)",
+      "干散货运价 (BDI)",
+      "红海/霍尔木兹地缘风险",
+      "原油价格/供需",
+      "战争险与绕航成本",
+      "美元指数/汇率"
+    ],
+    "company_query": "招商轮船 近期 公告 业绩 VLCC 干散货 LNG 新船交付 长协 融资 风险",
+    "industry_query": "航运 近期 油运 干散货 LNG 运价 BDTI BDI 供需 交付 拆船 绕航 成本",
+    "global_event_query": "近期 红海 霍尔木兹 OPEC 原油 运价 战争险 绕航 美元指数",
+    "query_rationale": {
+      "company": "覆盖业绩、核心船队 (VLCC/散货/LNG) 运营、交付与合同风险。",
+      "industry": "覆盖航运细分赛道运价、供需、交付、拆船及绕航成本等中观变量。",
+      "global": "覆盖地缘触发 (红海/霍尔木兹)、供给政策 (OPEC) 与运价/成本/汇率传导。"
+    }
+  },
+  "evaluation_standard": {
+    "高标准定义": "高质量召回不是新闻越多越好，而是用尽可能少的结果覆盖足够完整的事件上下文和传导路径。",
+    "公司层": "高质量结果应优先是公司硬事件，例如业绩、订单/项目、资本运作、监管/诉讼、重大经营变化。",
+    "行业层": "高质量结果应覆盖会改变板块基本面的变量，例如政策、供给、需求、价格/景气、资本开支/库存、技术/竞争格局。",
+    "全球层": "高质量结果应同时覆盖全球触发因素和传导变量，例如地缘/OPEC/汇率/利率 与 供给、价格、运价、保险、库存、成本。",
+    "传导链": "三层结果需要能拼成从全球/行业到公司的事件传导链，而不是各层各说各话。",
+    "输出目标": "召回结果应足以让上层 Agent 回答：发生了什么、改变了哪些变量、影响哪一层、接下来该跟踪什么。"
+  },
+  "rule_based_evaluation": {
+    "layer_evaluation": {
+      "company": {
+        "queries": [
+          "招商轮船 近期 公告 业绩 VLCC 干散货 LNG 新船交付 长协 融资 风险"
+        ],
+        "result_count": 0,
+        "deduped_results_count": 0,
+        "reranked_results_count": 0,
+        "avg_item_score": 0.0,
+        "actionable_count": 0,
+        "noise_count": 0,
+        "dimension_coverage": [],
+        "quality_grade": "poor",
+        "coverage_hint": "公司层应覆盖业绩、订单/项目、资本运作、监管/诉讼等硬事件，至少命中两个维度。",
+        "items": []
+      },
+      "industry": {
+        "queries": [
+          "航运 近期 油运 干散货 LNG 运价 BDTI BDI 供需 交付 拆船 绕航 成本"
+        ],
+        "result_count": 2,
+        "deduped_results_count": 13,
+        "reranked_results_count": 2,
+        "avg_item_score": 0.5,
+        "actionable_count": 1,
+        "noise_count": 0,
+        "dimension_coverage": [
+          "price_cycle"
+        ],
+        "quality_grade": "poor",
+        "coverage_hint": "行业层应覆盖政策、供给、需求、价格/景气、资本开支/库存、技术/竞争格局中的多个维度。",
+        "items": [
+          {
+            "title": "交通运输产业行业研究：化工物流景气度有望改善 唐山港2025年业绩同比增长",
+            "score": 1,
+            "reasons": [
+              "命中行业变量维度: ['price_cycle']"
+            ],
+            "dimensions": {
+              "price_cycle": [
+                "景气",
+                "景气度"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "交通运输行业定期报告：快递涨价区域蔓延，避险推荐高速公路",
+            "score": 0,
+            "reasons": [],
+            "dimensions": {},
+            "is_noise": false,
+            "is_actionable": false
+          }
+        ]
+      },
+      "global": {
+        "queries": [
+          "近期 红海 霍尔木兹 OPEC 原油 运价 战争险 绕航 美元指数"
+        ],
+        "result_count": 8,
+        "deduped_results_count": 14,
+        "reranked_results_count": 8,
+        "avg_item_score": 6.5,
+        "actionable_count": 4,
+        "noise_count": 2,
+        "dimension_coverage": [
+          "commodity",
+          "cost_margin",
+          "geopolitics",
+          "logistics",
+          "macro_policy",
+          "pricing"
+        ],
+        "quality_grade": "usable",
+        "coverage_hint": "全球层应同时命中全球触发因素与传导变量，不能只有泛宏观叙事。",
+        "items": [
+          {
+            "title": "供应链专题分析报告：霍尔木兹海峡冲突下的原油供应冲击与油价路径",
+            "score": 11,
+            "reasons": [
+              "命中全球触发维度: ['commodity', 'geopolitics']",
+              "命中传导变量维度: ['pricing']",
+              "同时覆盖全球触发与传导变量"
+            ],
+            "dimensions": {
+              "trigger": [
+                "commodity",
+                "geopolitics"
+              ],
+              "transmission": [
+                "pricing"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "石油价格飙升 伊朗危机扰乱霍尔木兹海峡运输-金融界7*24小时",
+            "score": 11,
+            "reasons": [
+              "命中全球触发维度: ['commodity', 'geopolitics']",
+              "命中传导变量维度: ['pricing']",
+              "同时覆盖全球触发与传导变量"
+            ],
+            "dimensions": {
+              "trigger": [
+                "commodity",
+                "geopolitics"
+              ],
+              "transmission": [
+                "pricing"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "【华安证券·石油石化】行业专题：原油四轮周期复盘，地缘冲突下桶油成本中枢的三种情形预测|美元_新浪财经_新浪网",
+            "score": 7,
+            "reasons": [
+              "命中全球触发维度: ['commodity', 'geopolitics']",
+              "命中传导变量维度: ['cost_margin']",
+              "同时覆盖全球触发与传导变量",
+              "命中噪声词: ['复盘']"
+            ],
+            "dimensions": {
+              "trigger": [
+                "commodity",
+                "geopolitics"
+              ],
+              "transmission": [
+                "cost_margin"
+              ]
+            },
+            "is_noise": true,
+            "is_actionable": true
+          },
+          {
+            "title": "石油石化行业专题：原油四轮周期复盘：地缘冲突下桶油成本中枢的三种情形预测_中东_全球",
+            "score": 7,
+            "reasons": [
+              "命中全球触发维度: ['commodity', 'geopolitics']",
+              "命中传导变量维度: ['cost_margin']",
+              "同时覆盖全球触发与传导变量",
+              "命中噪声词: ['复盘']"
+            ],
+            "dimensions": {
+              "trigger": [
+                "commodity",
+                "geopolitics"
+              ],
+              "transmission": [
+                "cost_margin"
+              ]
+            },
+            "is_noise": true,
+            "is_actionable": true
+          },
+          {
+            "title": "中东战火点燃！霍尔木兹海峡或再成全球航运“风暴眼”！",
+            "score": 4,
+            "reasons": [
+              "命中全球触发维度: ['geopolitics', 'logistics']"
+            ],
+            "dimensions": {
+              "trigger": [
+                "geopolitics",
+                "logistics"
+              ],
+              "transmission": []
+            },
+            "is_noise": false,
+            "is_actionable": false
+          },
+          {
+            "title": "原油100美元和美元指数100背景下的大类资产反馈：“100+100”情绪分水岭效应",
+            "score": 4,
+            "reasons": [
+              "命中全球触发维度: ['commodity', 'macro_policy']"
+            ],
+            "dimensions": {
+              "trigger": [
+                "commodity",
+                "macro_policy"
+              ],
+              "transmission": []
+            },
+            "is_noise": false,
+            "is_actionable": false
+          },
+          {
+            "title": "海湾石油运输绕不开霍尔木兹海峡",
+            "score": 4,
+            "reasons": [
+              "命中全球触发维度: ['geopolitics']"
+            ],
+            "dimensions": {
+              "trigger": [
+                "geopolitics"
+              ],
+              "transmission": []
+            },
+            "is_noise": false,
+            "is_actionable": false
+          },
+          {
+            "title": "油市噩梦！霍尔木兹战火未熄，另一石油关键航道也要关了",
+            "score": 4,
+            "reasons": [
+              "命中全球触发维度: ['geopolitics']"
+            ],
+            "dimensions": {
+              "trigger": [
+                "geopolitics"
+              ],
+              "transmission": []
+            },
+            "is_noise": false,
+            "is_actionable": false
+          }
+        ]
+      }
+    },
+    "chain_closure": {
+      "satisfied": {
+        "company_impact": false,
+        "industry_variables": true,
+        "global_trigger": true,
+        "global_transmission": true
+      },
+      "satisfied_count": 3,
+      "quality_grade": "usable",
+      "summary": "事件传导链应至少覆盖：全球触发、全球传导变量、行业变量、公司影响。 当前满足 3/4。"
+    },
+    "overall": {
+      "non_empty_layers": 2,
+      "actionable_layers": 2,
+      "strong_layers": 0,
+      "quality_grade": "usable",
+      "summary": "三层中有 2/3 层有结果，2/3 层包含可执行事件线索，0/3 层达到 strong，传导链评估为 usable。"
+    }
+  }
+}

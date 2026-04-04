@@ -1,0 +1,444 @@
+{
+  "generated_at": "2026-03-30T23:44:15",
+  "report_type": "event_news_recall_evaluation",
+  "report_scope": "fresh_runtime_bundle",
+  "design_basis": "latest_event_news_agent_company_context_design",
+  "ticker": "600183.SH",
+  "analysis_date": "2026-03-30",
+  "company_name": "生益科技",
+  "industry": "元器件",
+  "query_plan": {
+    "sensitivity_variables": [
+      "覆铜板价格",
+      "铜箔/树脂/玻纤布成本",
+      "PCB 下游需求",
+      "产能稼动率",
+      "高频高速材料",
+      "出口/关税政策"
+    ],
+    "company_query": "生益科技 近期 公告 业绩 订单 产能扩张 客户验证 新品 高频高速 融资 风险",
+    "industry_query": "覆铜板 PCB 近期 价格 价差 铜箔 树脂 玻纤布 需求 产能 稼动率 库存 竞争格局",
+    "global_event_query": "近期 铜价 原油 树脂 美元指数 关税 出口 AI 服务器 汽车电子 需求 成本",
+    "query_rationale": {
+      "company": "覆盖业绩、订单、产能扩张、客户验证及高频高速新品进展，兼顾经营风险。",
+      "industry": "覆盖覆铜板/PCB 链的价格、原材料成本、需求、产能稼动率和竞争格局等中观变量。",
+      "global": "覆盖大宗商品价格、汇率、关税及下游需求对覆铜板盈利和出口的传导。"
+    }
+  },
+  "retrieval_runtime_snapshot": {
+    "company": {
+      "queries": [
+        "生益科技 近期 公告 业绩 订单 产能扩张 客户验证 新品 高频高速 融资 风险"
+      ],
+      "deduped_results_count": 8,
+      "reranked_results_count": 8
+    },
+    "industry": {
+      "queries": [
+        "覆铜板 PCB 近期 价格 价差 铜箔 树脂 玻纤布 需求 产能 稼动率 库存 竞争格局"
+      ],
+      "deduped_results_count": 14,
+      "reranked_results_count": 6
+    },
+    "global": {
+      "queries": [
+        "近期 铜价 原油 树脂 美元指数 关税 出口 AI 服务器 汽车电子 需求 成本"
+      ],
+      "deduped_results_count": 14,
+      "reranked_results_count": 5
+    }
+  },
+  "evaluation_standard": {
+    "高标准定义": "高质量召回不是新闻越多越好，而是用尽可能少的结果覆盖足够完整的事件上下文和传导路径。",
+    "公司层": "高质量结果应优先是公司硬事件，例如业绩、订单/项目、资本运作、监管/诉讼、重大经营变化。",
+    "行业层": "高质量结果应覆盖会改变板块基本面的变量，例如政策、供给、需求、价格/景气、资本开支/库存、技术/竞争格局。",
+    "全球层": "高质量结果应同时覆盖全球触发因素和传导变量，例如地缘/OPEC/汇率/利率 与 供给、价格、运价、保险、库存、成本。",
+    "传导链": "三层结果需要能拼成从全球/行业到公司的事件传导链，而不是各层各说各话。",
+    "输出目标": "召回结果应足以让上层 Agent 回答：发生了什么、改变了哪些变量、影响哪一层、接下来该跟踪什么。"
+  },
+  "rule_based_evaluation": {
+    "layer_evaluation": {
+      "company": {
+        "queries": [
+          "生益科技 近期 公告 业绩 订单 产能扩张 客户验证 新品 高频高速 融资 风险"
+        ],
+        "result_count": 8,
+        "deduped_results_count": 8,
+        "reranked_results_count": 8,
+        "avg_item_score": 5.0,
+        "actionable_count": 6,
+        "noise_count": 0,
+        "dimension_coverage": [
+          "earnings",
+          "orders_projects"
+        ],
+        "quality_grade": "strong",
+        "coverage_hint": "公司层应覆盖业绩、订单/项目、资本运作、监管/诉讼等硬事件，至少命中两个维度。",
+        "items": [
+          {
+            "title": "【招商电子】生益科技:拟45亿扩产高性能CCL,AI订单放量叠加涨价驱动高增长",
+            "score": 6,
+            "reasons": [
+              "命中公司标识: ['生益科技']",
+              "命中公司事件维度: ['orders_projects']"
+            ],
+            "dimensions": {
+              "orders_projects": [
+                "订单",
+                "扩产"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "研报掘金丨招商证券：维持生益科技“强烈推荐”评级，中长线业绩有望超预期兑现",
+            "score": 6,
+            "reasons": [
+              "命中公司标识: ['生益科技']",
+              "命中公司事件维度: ['earnings']"
+            ],
+            "dimensions": {
+              "earnings": [
+                "业绩"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": " AI算力核心材料！生益科技，拿下海外大厂订单的全球龙头_极致说股_市值风云",
+            "score": 6,
+            "reasons": [
+              "命中公司标识: ['生益科技']",
+              "命中公司事件维度: ['orders_projects']"
+            ],
+            "dimensions": {
+              "orders_projects": [
+                "订单"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "【招商电子】生益科技:25年业绩预告高增,AI高速业务长线结构性升级趋势仍明确",
+            "score": 6,
+            "reasons": [
+              "命中公司标识: ['生益科技']",
+              "命中公司事件维度: ['earnings']"
+            ],
+            "dimensions": {
+              "earnings": [
+                "业绩",
+                "预告"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "生益科技(600183)：25年业绩预告高增 AI高速业务长线结构性升级趋势仍明确",
+            "score": 6,
+            "reasons": [
+              "命中公司标识: ['生益科技', '600183']",
+              "命中公司事件维度: ['earnings']"
+            ],
+            "dimensions": {
+              "earnings": [
+                "业绩",
+                "预告"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "生益科技：连续急跌后动能衰减，低位震荡筑底，下周超跌修复可期 - 今日头条Loading.",
+            "score": 4,
+            "reasons": [
+              "命中公司标识: ['生益科技']"
+            ],
+            "dimensions": {},
+            "is_noise": false,
+            "is_actionable": false
+          },
+          {
+            "title": "生益科技基本面全面分析（含AI+汽车电子+数据中心三核心驱动） - 今日头条Loading.",
+            "score": 4,
+            "reasons": [
+              "命中公司标识: ['生益科技']"
+            ],
+            "dimensions": {},
+            "is_noise": false,
+            "is_actionable": false
+          },
+          {
+            "title": "25年业绩预告高增，AI高速业务长线结构性升级趋势仍明确",
+            "score": 2,
+            "reasons": [
+              "命中公司事件维度: ['earnings']"
+            ],
+            "dimensions": {
+              "earnings": [
+                "业绩",
+                "预告"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          }
+        ]
+      },
+      "industry": {
+        "queries": [
+          "覆铜板 PCB 近期 价格 价差 铜箔 树脂 玻纤布 需求 产能 稼动率 库存 竞争格局"
+        ],
+        "result_count": 6,
+        "deduped_results_count": 14,
+        "reranked_results_count": 6,
+        "avg_item_score": 1.67,
+        "actionable_count": 6,
+        "noise_count": 0,
+        "dimension_coverage": [
+          "demand",
+          "price_cycle",
+          "supply",
+          "technology_competition"
+        ],
+        "quality_grade": "usable",
+        "coverage_hint": "行业层应覆盖政策、供给、需求、价格/景气、资本开支/库存、技术/竞争格局中的多个维度。",
+        "items": [
+          {
+            "title": "AI算力驱动市场需求暴增：PCB全产业链迎来大涨价！",
+            "score": 2,
+            "reasons": [
+              "命中行业变量维度: ['demand', 'technology_competition']"
+            ],
+            "dimensions": {
+              "demand": [
+                "需求"
+              ],
+              "technology_competition": [
+                "算力"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "GTC大会释放PCB需求！PCB厂商望迎新一轮增长周期",
+            "score": 2,
+            "reasons": [
+              "命中行业变量维度: ['demand', 'price_cycle']"
+            ],
+            "dimensions": {
+              "demand": [
+                "需求"
+              ],
+              "price_cycle": [
+                "周期"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "PCB行业迎AI驱动高增长 技术升级与供给缺口成主线",
+            "score": 2,
+            "reasons": [
+              "命中行业变量维度: ['supply', 'technology_competition']"
+            ],
+            "dimensions": {
+              "supply": [
+                "供给"
+              ],
+              "technology_competition": [
+                "技术",
+                "升级"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "周度产业链高价值观点：从猪周期到PCB，拆解多产业投资逻辑与数据密码",
+            "score": 1,
+            "reasons": [
+              "命中行业变量维度: ['price_cycle']"
+            ],
+            "dimensions": {
+              "price_cycle": [
+                "周期"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "2026年玻纤布与覆铜板供应紧张，AI算力需求激增 - 知乎",
+            "score": 2,
+            "reasons": [
+              "命中行业变量维度: ['demand', 'technology_competition']"
+            ],
+            "dimensions": {
+              "demand": [
+                "需求"
+              ],
+              "technology_competition": [
+                "算力"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "铜箔、电子布“一货难求”，CCL行业超级周期已至",
+            "score": 1,
+            "reasons": [
+              "命中行业变量维度: ['price_cycle']"
+            ],
+            "dimensions": {
+              "price_cycle": [
+                "周期"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          }
+        ]
+      },
+      "global": {
+        "queries": [
+          "近期 铜价 原油 树脂 美元指数 关税 出口 AI 服务器 汽车电子 需求 成本"
+        ],
+        "result_count": 5,
+        "deduped_results_count": 14,
+        "reranked_results_count": 5,
+        "avg_item_score": 8.2,
+        "actionable_count": 3,
+        "noise_count": 0,
+        "dimension_coverage": [
+          "commodity",
+          "cost_margin",
+          "geopolitics",
+          "pricing",
+          "supply_demand"
+        ],
+        "quality_grade": "strong",
+        "coverage_hint": "全球层应同时命中全球触发因素与传导变量，不能只有泛宏观叙事。",
+        "items": [
+          {
+            "title": "华安证券：地缘冲突延续油价温和上行 成本传导下能化产品价格跳涨_市值风云",
+            "score": 11,
+            "reasons": [
+              "命中全球触发维度: ['commodity', 'geopolitics']",
+              "命中传导变量维度: ['cost_margin', 'pricing']",
+              "同时覆盖全球触发与传导变量"
+            ],
+            "dimensions": {
+              "trigger": [
+                "commodity",
+                "geopolitics"
+              ],
+              "transmission": [
+                "cost_margin",
+                "pricing"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "铜日报：地缘预期迎来短期修正，电解铜价格或阶段性修复",
+            "score": 11,
+            "reasons": [
+              "命中全球触发维度: ['commodity', 'geopolitics']",
+              "命中传导变量维度: ['pricing']",
+              "同时覆盖全球触发与传导变量"
+            ],
+            "dimensions": {
+              "trigger": [
+                "commodity",
+                "geopolitics"
+              ],
+              "transmission": [
+                "pricing"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "沪铜周报：铜价承压下行，下游需求回暖",
+            "score": 11,
+            "reasons": [
+              "命中全球触发维度: ['commodity']",
+              "命中传导变量维度: ['supply_demand']",
+              "同时覆盖全球触发与传导变量"
+            ],
+            "dimensions": {
+              "trigger": [
+                "commodity"
+              ],
+              "transmission": [
+                "supply_demand"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "董秘您好，目前高端电子树脂处于卖方市场，下游AI算力，AI服务器/高频高速PCB需求旺盛，而近期上游原料涨价，公司在高端电子树脂具有高壁垒价值，相同类型的可比公司市值目前均成长到200亿以上，请问公司提价能否完全覆盖成本上涨、甚至扩大单位毛利以提升公司价值？麻烦正面回复，谢谢。",
+            "score": 4,
+            "reasons": [
+              "命中传导变量维度: ['cost_margin', 'supply_demand']"
+            ],
+            "dimensions": {
+              "trigger": [],
+              "transmission": [
+                "cost_margin",
+                "supply_demand"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": false
+          },
+          {
+            "title": "2026年玻纤布与覆铜板供应紧张，AI算力需求激增 - 知乎",
+            "score": 4,
+            "reasons": [
+              "命中传导变量维度: ['supply_demand']"
+            ],
+            "dimensions": {
+              "trigger": [],
+              "transmission": [
+                "supply_demand"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": false
+          }
+        ]
+      }
+    },
+    "chain_closure": {
+      "satisfied": {
+        "company_impact": true,
+        "industry_variables": true,
+        "global_trigger": true,
+        "global_transmission": true
+      },
+      "satisfied_count": 4,
+      "quality_grade": "strong",
+      "summary": "事件传导链应至少覆盖：全球触发、全球传导变量、行业变量、公司影响。 当前满足 4/4。"
+    },
+    "overall": {
+      "non_empty_layers": 3,
+      "actionable_layers": 3,
+      "strong_layers": 2,
+      "quality_grade": "production_ready",
+      "summary": "三层中有 3/3 层有结果，3/3 层包含可执行事件线索，2/3 层达到 strong，传导链评估为 strong。"
+    }
+  }
+}

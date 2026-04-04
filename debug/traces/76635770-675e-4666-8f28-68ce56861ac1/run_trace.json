@@ -1,0 +1,258 @@
+{
+  "run_id": "76635770-675e-4666-8f28-68ce56861ac1",
+  "agent_name": "StructuredAnalysisGraph",
+  "agent_type": "graph",
+  "status": "failed",
+  "started_at": 1774825047.9183009,
+  "finished_at": 1774835546.300452,
+  "duration_ms": 10498382,
+  "input_summary": {
+    "ticker": "9926.HK",
+    "analysis_date": "2026-03-29"
+  },
+  "output_summary": {
+    "failure": {
+      "node": "sector_flow",
+      "message": "No sector flow data found for 9926.HK up to 2026-03-27"
+    },
+    "has_technical": false,
+    "has_fundamental": true,
+    "has_event_news": true,
+    "has_sector_flow": false,
+    "has_investment_debate": false
+  },
+  "error": {
+    "error_type": "RuntimeError",
+    "error_message": "No sector flow data found for 9926.HK up to 2026-03-27",
+    "traceback": "NoneType: None\n"
+  },
+  "steps": [
+    {
+      "step_id": "d68ec030-cf4a-4acb-bef4-94cb3c02333d",
+      "step_type": "node",
+      "name": "company_context",
+      "status": "success",
+      "started_at": 1774825047.926682,
+      "input": {
+        "ticker": "9926.HK",
+        "analysis_date": "2026-03-29",
+        "has_company_context": false
+      },
+      "output": {
+        "market": "A_share",
+        "exchange": "HK"
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {
+        "result": {
+          "relative_path": "nodes/company_context/result.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/76635770-675e-4666-8f28-68ce56861ac1/nodes/company_context/result.json"
+        }
+      },
+      "finished_at": 1774825048.078322,
+      "duration_ms": 151
+    },
+    {
+      "step_id": "a7ecdfe2-e3b1-4f48-b38e-15d2d6865c53",
+      "step_type": "node",
+      "name": "technical",
+      "status": "failed",
+      "started_at": 1774825048.093431,
+      "input": {
+        "ticker": "9926.HK",
+        "analysis_date": "2026-03-29",
+        "has_company_context": true,
+        "company_context_keys": [
+          "analysis_time",
+          "business_context",
+          "classification",
+          "data_quality",
+          "event_context",
+          "fundamental_context",
+          "identity",
+          "market_context",
+          "search_context",
+          "technical_context"
+        ]
+      },
+      "output": {},
+      "metrics": {},
+      "error": {
+        "error_type": "RuntimeError",
+        "error_message": "No market data found for 9926.HK up to 2026-03-27",
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/graph/structured_analysis_graph.py\", line 375, in _run_agent_node\n    result = call()\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/graph/structured_analysis_graph.py\", line 271, in <lambda>\n    call=lambda: self.technical_agent.analyze(\n                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\n        state[\"ticker\"],\n        ^^^^^^^^^^^^^^^^\n        state[\"analysis_date\"],\n        ^^^^^^^^^^^^^^^^^^^^^^^\n        company_context=state.get(\"company_context\"),\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ),\n    ^\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/agents/technical/technical_agent.py\", line 89, in analyze\n    bundle = build_technical_data_bundle(\n        ticker=ticker,\n    ...<2 lines>...\n        company_context=company_context,\n    )\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/dataflows/technical_bundle_service.py\", line 260, in build_technical_data_bundle\n    raise RuntimeError(f\"No market data found for {ts_code} up to {effective_date}\")\nRuntimeError: No market data found for 9926.HK up to 2026-03-27\n"
+      },
+      "artifacts": {
+        "node_trace": {
+          "relative_path": "nodes/technical/node_trace.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/76635770-675e-4666-8f28-68ce56861ac1/nodes/technical/node_trace.json"
+        }
+      },
+      "finished_at": 1774825048.556082,
+      "duration_ms": 462
+    },
+    {
+      "step_id": "4a510a0a-3087-4d3a-b5e8-d927a5602317",
+      "step_type": "node",
+      "name": "sector_flow",
+      "status": "failed",
+      "started_at": 1774825048.092511,
+      "input": {
+        "ticker": "9926.HK",
+        "analysis_date": "2026-03-29",
+        "has_company_context": true,
+        "company_context_keys": [
+          "analysis_time",
+          "business_context",
+          "classification",
+          "data_quality",
+          "event_context",
+          "fundamental_context",
+          "identity",
+          "market_context",
+          "search_context",
+          "technical_context"
+        ]
+      },
+      "output": {},
+      "metrics": {},
+      "error": {
+        "error_type": "RuntimeError",
+        "error_message": "No sector flow data found for 9926.HK up to 2026-03-27",
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/graph/structured_analysis_graph.py\", line 375, in _run_agent_node\n    result = call()\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/graph/structured_analysis_graph.py\", line 310, in <lambda>\n    call=lambda: self.sector_flow_agent.analyze(\n                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\n        state[\"ticker\"],\n        ^^^^^^^^^^^^^^^^\n        state[\"analysis_date\"],\n        ^^^^^^^^^^^^^^^^^^^^^^^\n    ),\n    ^\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/agents/sector_flow/sector_flow_agent.py\", line 62, in analyze\n    bundle = build_sector_flow_data_bundle(ticker=ticker, analysis_date=analysis_date)\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/dataflows/sector_flow_bundle_service.py\", line 478, in build_sector_flow_data_bundle\n    raise RuntimeError(f\"No sector flow data found for {ts_code} up to {effective_date}\")\nRuntimeError: No sector flow data found for 9926.HK up to 2026-03-27\n"
+      },
+      "artifacts": {
+        "node_trace": {
+          "relative_path": "nodes/sector_flow/node_trace.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/76635770-675e-4666-8f28-68ce56861ac1/nodes/sector_flow/node_trace.json"
+        }
+      },
+      "finished_at": 1774825048.96803,
+      "duration_ms": 875
+    },
+    {
+      "step_id": "6a958f03-c2b7-44e5-92ee-98b570b52a4d",
+      "step_type": "node",
+      "name": "event_news",
+      "status": "success",
+      "started_at": 1774825048.087081,
+      "input": {
+        "ticker": "9926.HK",
+        "analysis_date": "2026-03-29",
+        "has_company_context": true,
+        "company_context_keys": [
+          "analysis_time",
+          "business_context",
+          "classification",
+          "data_quality",
+          "event_context",
+          "fundamental_context",
+          "identity",
+          "market_context",
+          "search_context",
+          "technical_context"
+        ]
+      },
+      "output": {
+        "effective_trade_date": "2026-03-29",
+        "event_state": "mixed",
+        "company_events": 2,
+        "industry_events": 2
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {
+        "node_trace": {
+          "relative_path": "nodes/event_news/node_trace.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/76635770-675e-4666-8f28-68ce56861ac1/nodes/event_news/node_trace.json"
+        },
+        "result": {
+          "relative_path": "nodes/event_news/result.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/76635770-675e-4666-8f28-68ce56861ac1/nodes/event_news/result.json"
+        }
+      },
+      "finished_at": 1774835535.011043,
+      "duration_ms": 10486923
+    },
+    {
+      "step_id": "2e39d9fe-662d-4f77-ae1f-39e2033bd0e3",
+      "step_type": "node",
+      "name": "fundamental",
+      "status": "success",
+      "started_at": 1774825048.09044,
+      "input": {
+        "ticker": "9926.HK",
+        "analysis_date": "2026-03-29",
+        "has_company_context": true,
+        "company_context_keys": [
+          "analysis_time",
+          "business_context",
+          "classification",
+          "data_quality",
+          "event_context",
+          "fundamental_context",
+          "identity",
+          "market_context",
+          "search_context",
+          "technical_context"
+        ]
+      },
+      "output": {
+        "effective_trade_date": "2026-03-27",
+        "growth": "stable",
+        "valuation": "fair",
+        "company_type": "general_corporate",
+        "confidence": 0.4
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {
+        "node_trace": {
+          "relative_path": "nodes/fundamental/node_trace.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/76635770-675e-4666-8f28-68ce56861ac1/nodes/fundamental/node_trace.json"
+        },
+        "result": {
+          "relative_path": "nodes/fundamental/result.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/76635770-675e-4666-8f28-68ce56861ac1/nodes/fundamental/result.json"
+        }
+      },
+      "finished_at": 1774835546.296104,
+      "duration_ms": 10498205
+    },
+    {
+      "step_id": "7c6016e0-47e1-418d-9d5d-01309b65167d",
+      "step_type": "node",
+      "name": "collect_results",
+      "status": "success",
+      "started_at": 1774835546.2981708,
+      "input": {
+        "failures_count": 2,
+        "has_technical": false,
+        "has_fundamental": true,
+        "has_event_news": true,
+        "has_sector_flow": false
+      },
+      "output": {
+        "missing_results": [
+          "technical_result",
+          "sector_flow_result"
+        ],
+        "selected_failure": {
+          "node": "sector_flow",
+          "message": "No sector flow data found for 9926.HK up to 2026-03-27"
+        }
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1774835546.298186,
+      "duration_ms": 0
+    }
+  ],
+  "observability": {
+    "langsmith_enabled": false,
+    "langsmith_project_name": null,
+    "otel_enabled": false
+  }
+}

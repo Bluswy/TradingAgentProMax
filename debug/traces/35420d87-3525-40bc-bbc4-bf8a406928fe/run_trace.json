@@ -1,0 +1,264 @@
+{
+  "run_id": "35420d87-3525-40bc-bbc4-bf8a406928fe",
+  "agent_name": "StructuredAnalysisGraph",
+  "agent_type": "graph",
+  "status": "failed",
+  "started_at": 1775063718.945219,
+  "finished_at": 1775063897.044039,
+  "duration_ms": 178098,
+  "input_summary": {
+    "ticker": "600873.SH",
+    "analysis_date": "2026-04-02"
+  },
+  "output_summary": {
+    "failure": {
+      "node": "fundamental",
+      "message": "No columns to parse from file"
+    },
+    "has_technical": true,
+    "has_fundamental": false,
+    "has_event_news": true,
+    "has_sector_flow": true,
+    "has_strategy_style": false,
+    "has_strategy_decision": false,
+    "has_company_report": false,
+    "has_final_report": false
+  },
+  "error": {
+    "error_type": "RuntimeError",
+    "error_message": "No columns to parse from file",
+    "traceback": "NoneType: None\n"
+  },
+  "steps": [
+    {
+      "step_id": "1785f669-fc67-4717-8976-21a331d0ec4e",
+      "step_type": "node",
+      "name": "company_context",
+      "status": "success",
+      "started_at": 1775063718.9470809,
+      "input": {
+        "ticker": "600873.SH",
+        "analysis_date": "2026-04-02",
+        "has_company_context": false
+      },
+      "output": {
+        "market": "A_share",
+        "exchange": "SH"
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {
+        "result": {
+          "relative_path": "nodes/company_context/result.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/35420d87-3525-40bc-bbc4-bf8a406928fe/nodes/company_context/result.json"
+        }
+      },
+      "finished_at": 1775063718.96895,
+      "duration_ms": 21
+    },
+    {
+      "step_id": "7de8cbb4-bdaf-444e-91f9-4e8b117ed639",
+      "step_type": "node",
+      "name": "fundamental",
+      "status": "failed",
+      "started_at": 1775063718.969882,
+      "input": {
+        "ticker": "600873.SH",
+        "analysis_date": "2026-04-02",
+        "has_company_context": true,
+        "company_context_keys": [
+          "analysis_time",
+          "business_context",
+          "classification",
+          "data_quality",
+          "event_context",
+          "fundamental_context",
+          "identity",
+          "market_context",
+          "search_context",
+          "technical_context"
+        ]
+      },
+      "output": {},
+      "metrics": {},
+      "error": {
+        "error_type": "EmptyDataError",
+        "error_message": "No columns to parse from file",
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/graph/structured_analysis_graph.py\", line 557, in _run_agent_node\n    result = call()\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/graph/structured_analysis_graph.py\", line 329, in <lambda>\n    call=lambda: self.fundamental_agent.analyze(\n                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\n        state[\"ticker\"],\n        ^^^^^^^^^^^^^^^^\n        state[\"analysis_date\"],\n        ^^^^^^^^^^^^^^^^^^^^^^^\n        company_context=state.get(\"company_context\"),\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ),\n    ^\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/agents/fundamental/fundamental_agent.py\", line 89, in analyze\n    bundle = build_fundamental_data_bundle(\n        ticker=ticker,\n        analysis_date=analysis_date,\n        company_context=company_context,\n    )\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/dataflows/fundamental_bundle_service.py\", line 594, in build_fundamental_data_bundle\n    daily_basic = _fetch_daily_basic_window(ts_code, effective_date)\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/dataflows/fundamental_bundle_service.py\", line 325, in _fetch_daily_basic_window\n    pro = _require_tushare()\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/dataflows/tushare_provider.py\", line 51, in _require_tushare\n    return ts.pro_api()\n           ~~~~~~~~~~^^\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/.venv/lib/python3.13/site-packages/tushare/pro/data_pro.py\", line 207, in pro_api\n    token = upass.get_token()\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/.venv/lib/python3.13/site-packages/tushare/util/upass.py\", line 33, in get_token\n    df = pd.read_csv(fp)\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/.venv/lib/python3.13/site-packages/pandas/io/parsers/readers.py\", line 873, in read_csv\n    return _read(filepath_or_buffer, kwds)\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/.venv/lib/python3.13/site-packages/pandas/io/parsers/readers.py\", line 300, in _read\n    parser = TextFileReader(filepath_or_buffer, **kwds)\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/.venv/lib/python3.13/site-packages/pandas/io/parsers/readers.py\", line 1645, in __init__\n    self._engine = self._make_engine(f, self.engine)\n                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/.venv/lib/python3.13/site-packages/pandas/io/parsers/readers.py\", line 1922, in _make_engine\n    return mapping[engine](f, **self.options)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/.venv/lib/python3.13/site-packages/pandas/io/parsers/c_parser_wrapper.py\", line 95, in __init__\n    self._reader = parsers.TextReader(src, **kwds)\n                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^\n  File \"pandas/_libs/parsers.pyx\", line 575, in pandas._libs.parsers.TextReader.__cinit__\npandas.errors.EmptyDataError: No columns to parse from file\n"
+      },
+      "artifacts": {
+        "node_trace": {
+          "relative_path": "nodes/fundamental/node_trace.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/35420d87-3525-40bc-bbc4-bf8a406928fe/nodes/fundamental/node_trace.json"
+        }
+      },
+      "finished_at": 1775063719.230419,
+      "duration_ms": 260
+    },
+    {
+      "step_id": "ffe7a191-1d2d-4b75-8f8f-963c5e552fdd",
+      "step_type": "node",
+      "name": "sector_flow",
+      "status": "success",
+      "started_at": 1775063718.970075,
+      "input": {
+        "ticker": "600873.SH",
+        "analysis_date": "2026-04-02",
+        "has_company_context": true,
+        "company_context_keys": [
+          "analysis_time",
+          "business_context",
+          "classification",
+          "data_quality",
+          "event_context",
+          "fundamental_context",
+          "identity",
+          "market_context",
+          "search_context",
+          "technical_context"
+        ]
+      },
+      "output": {
+        "effective_trade_date": "2026-04-02",
+        "theme_strength": "weak",
+        "theme_heat": "cold",
+        "stock_role": "peripheral"
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {
+        "node_trace": {
+          "relative_path": "nodes/sector_flow/node_trace.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/35420d87-3525-40bc-bbc4-bf8a406928fe/nodes/sector_flow/node_trace.json"
+        },
+        "result": {
+          "relative_path": "nodes/sector_flow/result.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/35420d87-3525-40bc-bbc4-bf8a406928fe/nodes/sector_flow/result.json"
+        }
+      },
+      "finished_at": 1775063736.059314,
+      "duration_ms": 17089
+    },
+    {
+      "step_id": "74182551-e626-4e48-a677-f6a5a030a918",
+      "step_type": "node",
+      "name": "technical",
+      "status": "success",
+      "started_at": 1775063718.970289,
+      "input": {
+        "ticker": "600873.SH",
+        "analysis_date": "2026-04-02",
+        "has_company_context": true,
+        "company_context_keys": [
+          "analysis_time",
+          "business_context",
+          "classification",
+          "data_quality",
+          "event_context",
+          "fundamental_context",
+          "identity",
+          "market_context",
+          "search_context",
+          "technical_context"
+        ]
+      },
+      "output": {
+        "effective_trade_date": "2026-04-02",
+        "trend": "sideways",
+        "momentum": "weakening",
+        "confidence": 0.55
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {
+        "node_trace": {
+          "relative_path": "nodes/technical/node_trace.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/35420d87-3525-40bc-bbc4-bf8a406928fe/nodes/technical/node_trace.json"
+        },
+        "result": {
+          "relative_path": "nodes/technical/result.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/35420d87-3525-40bc-bbc4-bf8a406928fe/nodes/technical/result.json"
+        }
+      },
+      "finished_at": 1775063750.766589,
+      "duration_ms": 31796
+    },
+    {
+      "step_id": "20ab6a48-1f88-494d-b1dd-a2b793b67dfc",
+      "step_type": "node",
+      "name": "event_news",
+      "status": "success",
+      "started_at": 1775063718.9696372,
+      "input": {
+        "ticker": "600873.SH",
+        "analysis_date": "2026-04-02",
+        "has_company_context": true,
+        "company_context_keys": [
+          "analysis_time",
+          "business_context",
+          "classification",
+          "data_quality",
+          "event_context",
+          "fundamental_context",
+          "identity",
+          "market_context",
+          "search_context",
+          "technical_context"
+        ]
+      },
+      "output": {
+        "effective_trade_date": "2026-04-02",
+        "event_state": "catalyst_positive",
+        "company_events": 4,
+        "industry_events": 4
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {
+        "node_trace": {
+          "relative_path": "nodes/event_news/node_trace.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/35420d87-3525-40bc-bbc4-bf8a406928fe/nodes/event_news/node_trace.json"
+        },
+        "result": {
+          "relative_path": "nodes/event_news/result.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/35420d87-3525-40bc-bbc4-bf8a406928fe/nodes/event_news/result.json"
+        }
+      },
+      "finished_at": 1775063897.0410821,
+      "duration_ms": 178071
+    },
+    {
+      "step_id": "5b69ea45-b0f5-40e4-a04e-e448cf4dbb3a",
+      "step_type": "node",
+      "name": "collect_results",
+      "status": "success",
+      "started_at": 1775063897.04299,
+      "input": {
+        "failures_count": 1,
+        "has_technical": true,
+        "has_fundamental": false,
+        "has_event_news": true,
+        "has_sector_flow": true
+      },
+      "output": {
+        "missing_results": [
+          "fundamental_result"
+        ],
+        "selected_failure": {
+          "node": "fundamental",
+          "message": "No columns to parse from file"
+        }
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1775063897.043034,
+      "duration_ms": 0
+    }
+  ],
+  "observability": {
+    "langsmith_enabled": false,
+    "langsmith_project_name": null,
+    "otel_enabled": false
+  }
+}

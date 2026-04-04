@@ -1,0 +1,531 @@
+{
+  "bundle_input": {
+    "ticker": "601872.SH",
+    "requested_date": "2026-03-29",
+    "effective_trade_date": "2026-03-29",
+    "meta": {
+      "name": "招商轮船",
+      "industry": "水运",
+      "market": "主板",
+      "list_date": 20061201.0
+    }
+  },
+  "debug_trace": {
+    "planner_context": {
+      "ticker": "601872.SH",
+      "company_name": "招商轮船",
+      "analysis_date": "2026-03-29",
+      "industry": "水运",
+      "company_type": "utilities_transport_infrastructure",
+      "business_hint": null
+    },
+    "query_plan": {
+      "sensitivity_variables": [
+        "原油运价指数 (BDTI)",
+        "成品油运价指数 (BCTI)",
+        "VLCC 新船订单量",
+        "OPEC+ 产量政策",
+        "地缘政治冲突 (红海/霍尔木兹海峡)",
+        "全球原油贸易流向",
+        "燃油成本",
+        "船队拆解率"
+      ],
+      "company_query": "招商轮船 2026 年近期公告或新闻涉及 VLCC 及油轮长期租约签订、重大资产收购出售、季度业绩快报、船队扩张计划或运营风险事件",
+      "industry_query": "水运行业 2026 年近期原油及成品油轮供需格局变化，重点检索运力交付高峰、老旧船只拆解加速、全球原油贸易航线重构及运价指数 (BDTI/BCTI) 波动驱动因素",
+      "global_event_query": "2026 年近期 OPEC+ 减产协议执行、红海或霍尔木兹海峡地缘冲突、美国对伊朗/委内瑞拉制裁动态通过原油供给中断、航运绕行增加运距及战争险保费上涨对油轮运价和成本的传导影响",
+      "query_rationale": {
+        "company": "作为以油轮运输为核心业务的央企，招商轮船的股价核心驱动力在于即期运价与长协占比的博弈。Query 聚焦于能直接改变未来现金流预期的重大合同（长协）、资本运作（买卖船）及业绩验证，兼顾正向扩张与负向运营风险。",
+        "industry": "油轮行业具有极强的周期性，核心变量是“有效运力供给”与“吨海里需求”。Query 摒弃泛行业新闻，直指供给端的交付/拆解周期和需求端的贸易流向变化，这些是决定运价趋势的中观核心变量。",
+        "global": "油轮是典型的“地缘政治期权”资产。全球层 Query 必须包含具体的地缘断点（红海/海峡）、供给调节者（OPEC+）以及具体的传导机制（绕行导致运距增加、制裁导致贸易重构、战争险推高成本），这些是将宏观事件转化为公司盈利波动的关键链条。"
+      }
+    },
+    "company_search": {
+      "queries": [
+        "招商轮船 2026 年近期公告或新闻涉及 VLCC 及油轮长期租约签订、重大资产收购出售、季度业绩快报、船队扩张计划或运营风险事件"
+      ],
+      "query_results": [
+        {
+          "query": "招商轮船 2026 年近期公告或新闻涉及 VLCC 及油轮长期租约签订、重大资产收购出售、季度业绩快报、船队扩张计划或运营风险事件",
+          "results_count": 14,
+          "results": [
+            {
+              "title": "601872，油轮船队经营业绩创新高",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "招商轮船：新一代节能环保型AFRAMAX油轮“凯珀”轮交付",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "招商轮船(601872.SH)：AFRAMAX油轮新船交付",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "招商轮船新一代节能环保型AFRAMAX油轮在大连交付-上海证券报·中国证券网",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "招商轮船：环保型油轮“凯仪”轮成功交付 服务能力与协同效益双提升",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "招商轮船公告，2026年1月6日，公司在大连船舶重工集团有限公司订造的新一代节能环保型AFRAMAX油轮“凯仪”轮在大连交付。招商轮船称，“凯仪”轮采用最新一代节能环保型设计，配备脱硫洗涤塔。“凯仪”轮等新一批AFRAMAX油轮的交付有利于显著改善公司油轮尤其是AFRAMAX油轮船队结构，公司AFRAMAX船队的规模、服务客户的能力、与VLCC船队的协同、节能降碳指标等均将得以提升。 - 中国金融信息网",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "油轮运价中枢大幅抬升，但波动加剧",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "10艘VLCC，大连造船接单",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "10艘86亿！VLCC订单井喷！两大央企“老搭档”再牵手 - 新签订单 - 国际船舶网",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "2026年招商轮船公司研究报告：招展油散本色，轮启海运新程 - 报告精读 - 未来智库",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "招商轮船: 招商轮船关于AFRAMAX油轮新船交付的公告内容摘要_股票频道_证券之星",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "招商轮船：节能环保油轮“凯珀”交付 目前在手油轮订单14+1艘_公司_船舶_大连",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "招商轮船：节能环保油轮“凯珀”交付  目前在手油轮订单14+1艘-财中社",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "招商轮船年报解码：油轮业绩创新高与地缘避险",
+              "trunk": "",
+              "secu_list": []
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "title": "招商轮船公告，2026年1月6日，公司在大连船舶重工集团有限公司订造的新一代节能环保型AFRAMAX油轮“凯仪”轮在大连交付。招商轮船称，“凯仪”轮采用最新一代节能环保型设计，配备脱硫洗涤塔。“凯仪”轮等新一批AFRAMAX油轮的交付有利于显著改善公司油轮尤其是AFRAMAX油轮船队结构，公司AFRAMAX船队的规模、服务客户的能力、与VLCC船队的协同、节能降碳指标等均将得以提升。 - 中国金融信息网",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "招商轮船年报解码：油轮业绩创新高与地缘避险",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "601872，油轮船队经营业绩创新高",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "招商轮船：节能环保油轮“凯珀”交付 目前在手油轮订单14+1艘_公司_船舶_大连",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "招商轮船：节能环保油轮“凯珀”交付  目前在手油轮订单14+1艘-财中社",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "招商轮船: 招商轮船关于AFRAMAX油轮新船交付的公告内容摘要_股票频道_证券之星",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "招商轮船：新一代节能环保型AFRAMAX油轮“凯珀”轮交付",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "招商轮船(601872.SH)：AFRAMAX油轮新船交付",
+          "trunk": "",
+          "secu_list": []
+        }
+      ],
+      "deduped_results_count": 14,
+      "reranked_results_count": 8
+    },
+    "industry_search": {
+      "queries": [
+        "水运行业 2026 年近期原油及成品油轮供需格局变化，重点检索运力交付高峰、老旧船只拆解加速、全球原油贸易航线重构及运价指数 (BDTI/BCTI) 波动驱动因素"
+      ],
+      "query_results": [
+        {
+          "query": "水运行业 2026 年近期原油及成品油轮供需格局变化，重点检索运力交付高峰、老旧船只拆解加速、全球原油贸易航线重构及运价指数 (BDTI/BCTI) 波动驱动因素",
+          "results_count": 11,
+          "results": [
+            {
+              "title": "机构：预计油运供需将有望继续改善",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "招商轮船:招商轮船2025年年度报告",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "油轮运价中枢大幅抬升，但波动加剧",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "交通运输行业周报：美伊战争下油轮运价跳涨，注意未来不确定性",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "【华创交运|周报】聚焦:地缘因素推升VLCC运价,BDI指数淡季不淡",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "交通运输2026年度策略报告：运输类业务有成长，基础设施业务有股息",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "国金交运郑树明 | 交通运输行业2026年度策略:关注供需格局,布局航空、干散货海运、油运",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "交通运输产业行业研究：2026年度策略：关注供需格局，布局航空、干散货海运、油运",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "航运及碳排放日报",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "国际油轮运输市场2025年回顾及2026年展望",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "招商轮船(601872)：油轮运价中枢大幅抬升 但波动加剧-股票频道-和讯网",
+              "trunk": "",
+              "secu_list": []
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "title": "交通运输产业行业研究：2026年度策略：关注供需格局，布局航空、干散货海运、油运",
+          "trunk": "",
+          "secu_list": []
+        }
+      ],
+      "deduped_results_count": 11,
+      "reranked_results_count": 1
+    },
+    "global_search": {
+      "queries": [
+        "2026 年近期 OPEC+ 减产协议执行、红海或霍尔木兹海峡地缘冲突、美国对伊朗/委内瑞拉制裁动态通过原油供给中断、航运绕行增加运距及战争险保费上涨对油轮运价和成本的传导影响"
+      ],
+      "query_results": [
+        {
+          "query": "2026 年近期 OPEC+ 减产协议执行、红海或霍尔木兹海峡地缘冲突、美国对伊朗/委内瑞拉制裁动态通过原油供给中断、航运绕行增加运距及战争险保费上涨对油轮运价和成本的传导影响",
+          "results_count": 0,
+          "results": []
+        }
+      ],
+      "results": [],
+      "deduped_results_count": 0,
+      "reranked_results_count": 0
+    },
+    "normalized_company_events": [
+      {
+        "event_key": "company:operations",
+        "layer": "company",
+        "event_type": "capacity",
+        "title": "招商轮船公告，2026年1月6日，公司在大连船舶重工集团有限公司订造的新一代节能环保型AFRAMAX油轮“凯仪”轮在大连交付。招商轮船称，“凯仪”轮采用最新一代节能环保型设计，配备脱硫洗涤塔。“凯仪”轮等新一批AFRAMAX油轮的交付有利于显著改善公司油轮尤其是AFRAMAX油轮船队结构，公司AFRAMAX船队的规模、服务客户的能力、与VLCC船队的协同、节能降碳指标等均将得以提升。 - 中国金融信息网",
+        "direction": "neutral",
+        "importance": 1.0,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "operations"
+        ],
+        "dimensions": {
+          "operations": [
+            "交付",
+            "客户"
+          ]
+        },
+        "evidence_titles": [
+          "招商轮船公告，2026年1月6日，公司在大连船舶重工集团有限公司订造的新一代节能环保型AFRAMAX油轮“凯仪”轮在大连交付。招商轮船称，“凯仪”轮采用最新一代节能环保型设计，配备脱硫洗涤塔。“凯仪”轮等新一批AFRAMAX油轮的交付有利于显著改善公司油轮尤其是AFRAMAX油轮船队结构，公司AFRAMAX船队的规模、服务客户的能力、与VLCC船队的协同、节能降碳指标等均将得以提升。 - 中国金融信息网",
+          "招商轮船: 招商轮船关于AFRAMAX油轮新船交付的公告内容摘要_股票频道_证券之星",
+          "招商轮船：新一代节能环保型AFRAMAX油轮“凯珀”轮交付",
+          "招商轮船(601872.SH)：AFRAMAX油轮新船交付"
+        ],
+        "evidence_items": [
+          {
+            "title": "招商轮船公告，2026年1月6日，公司在大连船舶重工集团有限公司订造的新一代节能环保型AFRAMAX油轮“凯仪”轮在大连交付。招商轮船称，“凯仪”轮采用最新一代节能环保型设计，配备脱硫洗涤塔。“凯仪”轮等新一批AFRAMAX油轮的交付有利于显著改善公司油轮尤其是AFRAMAX油轮船队结构，公司AFRAMAX船队的规模、服务客户的能力、与VLCC船队的协同、节能降碳指标等均将得以提升。 - 中国金融信息网",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "招商轮船: 招商轮船关于AFRAMAX油轮新船交付的公告内容摘要_股票频道_证券之星",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "招商轮船：新一代节能环保型AFRAMAX油轮“凯珀”轮交付",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "招商轮船(601872.SH)：AFRAMAX油轮新船交付",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于operations，共聚合 4 条证据。"
+      },
+      {
+        "event_key": "company:operations|orders_projects",
+        "layer": "company",
+        "event_type": "order",
+        "title": "招商轮船：节能环保油轮“凯珀”交付 目前在手油轮订单14+1艘_公司_船舶_大连",
+        "direction": "neutral",
+        "importance": 0.81,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "operations",
+          "orders_projects"
+        ],
+        "dimensions": {
+          "orders_projects": [
+            "订单"
+          ],
+          "operations": [
+            "交付"
+          ]
+        },
+        "evidence_titles": [
+          "招商轮船：节能环保油轮“凯珀”交付 目前在手油轮订单14+1艘_公司_船舶_大连",
+          "招商轮船：节能环保油轮“凯珀”交付  目前在手油轮订单14+1艘-财中社"
+        ],
+        "evidence_items": [
+          {
+            "title": "招商轮船：节能环保油轮“凯珀”交付 目前在手油轮订单14+1艘_公司_船舶_大连",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "招商轮船：节能环保油轮“凯珀”交付  目前在手油轮订单14+1艘-财中社",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于operations、orders_projects，共聚合 2 条证据。"
+      },
+      {
+        "event_key": "company:earnings",
+        "layer": "company",
+        "event_type": "earnings",
+        "title": "招商轮船年报解码：油轮业绩创新高与地缘避险",
+        "direction": "neutral",
+        "importance": 0.73,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "earnings"
+        ],
+        "dimensions": {
+          "earnings": [
+            "业绩",
+            "年报"
+          ]
+        },
+        "evidence_titles": [
+          "招商轮船年报解码：油轮业绩创新高与地缘避险",
+          "601872，油轮船队经营业绩创新高"
+        ],
+        "evidence_items": [
+          {
+            "title": "招商轮船年报解码：油轮业绩创新高与地缘避险",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "601872，油轮船队经营业绩创新高",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于earnings，共聚合 2 条证据。"
+      }
+    ],
+    "normalized_industry_events": [
+      {
+        "event_key": "industry:交通运输产业行业研究 2026年度策略 关注供需格局 布局航空 干散货海运 油运",
+        "layer": "industry",
+        "event_type": "other",
+        "title": "交通运输产业行业研究：2026年度策略：关注供需格局，布局航空、干散货海运、油运",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "交通运输产业行业研究：2026年度策略：关注供需格局，布局航空、干散货海运、油运"
+        ],
+        "evidence_items": [
+          {
+            "title": "交通运输产业行业研究：2026年度策略：关注供需格局，布局航空、干散货海运、油运",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+      }
+    ],
+    "normalized_global_events": [],
+    "event_chain": {
+      "global_triggers": [],
+      "industry_variables": [
+        "全球原油贸易流向重构导致吨海里需求增加",
+        "环保法规（CII/EEXI）限制老旧船航速与运营，压缩有效运力供给",
+        "新船订单交付高峰未至，供给端刚性约束"
+      ],
+      "company_impacts": [
+        "新船交付提升公司市场份额及接单能力",
+        "节能设计降低燃油成本，扩大单船利润空间",
+        "业绩创新高验证盈利弹性，支撑分红或再投资预期"
+      ],
+      "missing_links": [
+        "缺具体的全球地缘突发事件证据（如红海/霍尔木兹海峡最新冲突动态、OPEC+最新减产执行率数据），无法量化短期运价脉冲幅度",
+        "缺BDTI/BCTI运价指数在2026年一季度的具体走势数据，难以精确判断即期市场景气度斜率"
+      ]
+    }
+  },
+  "analysis_result": {
+    "ticker": "601872.SH",
+    "effective_trade_date": "2026-03-29",
+    "event_overview": {
+      "state": "mixed",
+      "summary": "公司层面呈现明确的产能扩张与业绩兑现信号，AFRAMAX新船交付及在手订单充实了中期增长逻辑；行业层面策略报告确认油运供需格局改善趋势。但宏观层面缺乏具体的地缘或供给端突发催化（如红海冲突升级、OPEC+突发减产），导致短期运价爆发力存疑，事件性质偏向基本面稳健而非情绪博弈。",
+      "confidence": 0.75
+    },
+    "company_specific_events": [
+      {
+        "event_type": "capacity",
+        "title": "新一代节能环保型AFRAMAX油轮“凯仪”、“凯珀”陆续交付，优化船队结构",
+        "direction": "bullish",
+        "importance": 0.85,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "supply_capacity",
+          "operating_costs",
+          "compliance"
+        ],
+        "evidence": [
+          "招商轮船公告，2026年1月6日，公司在大连船舶重工集团有限公司订造的新一代节能环保型AFRAMAX油轮“凯仪”轮在大连交付。",
+          "招商轮船：节能环保油轮“凯珀”交付 目前在手油轮订单14+1艘"
+        ],
+        "summary": "公司通过接收配备脱硫塔的最新一代AFRAMAX油轮，直接提升有效运力供给并降低单位能耗与合规成本。此举增强了与VLCC船队的协同效应，提升了在环保法规趋严背景下的长期竞争力与客户承接能力。"
+      },
+      {
+        "event_type": "earnings",
+        "title": "年报披露油轮业绩创新高，验证地缘避险与运价上行逻辑",
+        "direction": "bullish",
+        "importance": 0.8,
+        "time_horizon": "short_term",
+        "affected_variables": [
+          "earnings",
+          "cash_flow"
+        ],
+        "evidence": [
+          "招商轮船年报解码：油轮业绩创新高与地缘避险",
+          "601872，油轮船队经营业绩创新高"
+        ],
+        "summary": "年报数据确认了前期运价上涨及地缘政治带来的绕行需求已转化为实际利润，业绩创新高消除了市场对盈利兑现能力的疑虑，为估值提供安全垫。"
+      }
+    ],
+    "industry_macro_events": [
+      {
+        "event_type": "industry_cycle",
+        "title": "2026年度策略指出油运供需格局有望持续改善，机构建议布局",
+        "direction": "bullish",
+        "importance": 0.6,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "freight_rates",
+          "industry_sentiment"
+        ],
+        "evidence": [
+          "交通运输产业行业研究：2026年度策略：关注供需格局，布局航空、干散货海运、油运",
+          "机构：预计油运供需将有望继续改善"
+        ],
+        "summary": "行业研报共识认为2026年油轮市场处于供给受限（老旧船拆解、新船订单交付周期长）与需求韧性（贸易重构）的共振期，运价中枢抬升具有持续性，为板块提供贝塔收益预期。"
+      }
+    ],
+    "event_compact_signals": {
+      "company_event_bias": "none",
+      "macro_event_bias": "none",
+      "event_density": "medium",
+      "policy_sensitivity": "medium",
+      "earnings_catalyst_state": "none",
+      "risk_event_level": "medium"
+    },
+    "event_chain": {
+      "global_triggers": [],
+      "industry_variables": [
+        "全球原油贸易流向重构导致吨海里需求增加",
+        "环保法规（CII/EEXI）限制老旧船航速与运营，压缩有效运力供给",
+        "新船订单交付高峰未至，供给端刚性约束"
+      ],
+      "company_impacts": [
+        "新船交付提升公司市场份额及接单能力",
+        "节能设计降低燃油成本，扩大单船利润空间",
+        "业绩创新高验证盈利弹性，支撑分红或再投资预期"
+      ],
+      "missing_links": [
+        "缺具体的全球地缘突发事件证据（如红海/霍尔木兹海峡最新冲突动态、OPEC+最新减产执行率数据），无法量化短期运价脉冲幅度",
+        "缺BDTI/BCTI运价指数在2026年一季度的具体走势数据，难以精确判断即期市场景气度斜率"
+      ]
+    },
+    "key_catalysts": [
+      "红海或中东地缘局势升级导致航运绕行距离进一步拉长",
+      "OPEC+维持或深化减产协议，支撑原油贸易活跃度",
+      "老旧油轮拆解加速，超预期收缩行业有效运力"
+    ],
+    "key_risks": [
+      "全球宏观经济衰退导致原油需求意外下滑",
+      "地缘政治局势突然缓和，运距缩短导致运价回落",
+      "新船订单大量涌现，破坏中长期供需平衡预期"
+    ],
+    "tracking_points": [
+      "BDTI（波罗的海原油运价指数）及BCTI指数的周度变化",
+      "公司后续长协合同（COA）签订情况及覆盖率",
+      "全球浮仓油量变化及港口拥堵情况",
+      "OPEC+月度会议关于产量政策的表态"
+    ],
+    "event_summary_zh": "主导催化为公司层面AFRAMAX新船交付带来的运力结构优化与成本优势，叠加年报业绩创新高对盈利逻辑的验证。主要风险在于宏观层面缺乏新的地缘冲突升级证据，若全球原油需求疲软或局势缓和，可能压制运价上行空间。影响路径为：行业供需紧平衡 -> 运价中枢上移 -> 公司新船投放量利齐升。后续需重点跟踪BDTI指数走势、OPEC+产量政策及中东地缘局势演变，以判断运价是否能突破当前区间。"
+  },
+  "raw_response": "{\n  \"ticker\": \"601872.SH\",\n  \"effective_trade_date\": \"2026-03-29\",\n  \"event_overview\": {\n    \"state\": \"mixed\",\n    \"summary\": \"公司层面呈现明确的产能扩张与业绩兑现信号，AFRAMAX新船交付及在手订单充实了中期增长逻辑；行业层面策略报告确认油运供需格局改善趋势。但宏观层面缺乏具体的地缘或供给端突发催化（如红海冲突升级、OPEC+突发减产），导致短期运价爆发力存疑，事件性质偏向基本面稳健而非情绪博弈。\",\n    \"confidence\": 0.75\n  },\n  \"company_specific_events\": [\n    {\n      \"event_type\": \"capacity\",\n      \"title\": \"新一代节能环保型AFRAMAX油轮“凯仪”、“凯珀”陆续交付，优化船队结构\",\n      \"direction\": \"bullish\",\n      \"importance\": 0.85,\n      \"time_horizon\": \"medium_term\",\n      \"affected_variables\": [\n        \"supply_capacity\",\n        \"operating_costs\",\n        \"compliance\"\n      ],\n      \"evidence\": [\n        \"招商轮船公告，2026年1月6日，公司在大连船舶重工集团有限公司订造的新一代节能环保型AFRAMAX油轮“凯仪”轮在大连交付。\",\n        \"招商轮船：节能环保油轮“凯珀”交付 目前在手油轮订单14+1艘\"\n      ],\n      \"summary\": \"公司通过接收配备脱硫塔的最新一代AFRAMAX油轮，直接提升有效运力供给并降低单位能耗与合规成本。此举增强了与VLCC船队的协同效应，提升了在环保法规趋严背景下的长期竞争力与客户承接能力。\"\n    },\n    {\n      \"event_type\": \"earnings\",\n      \"title\": \"年报披露油轮业绩创新高，验证地缘避险与运价上行逻辑\",\n      \"direction\": \"bullish\",\n      \"importance\": 0.8,\n      \"time_horizon\": \"short_term\",\n      \"affected_variables\": [\n        \"earnings\",\n        \"cash_flow\"\n      ],\n      \"evidence\": [\n        \"招商轮船年报解码：油轮业绩创新高与地缘避险\",\n        \"601872，油轮船队经营业绩创新高\"\n      ],\n      \"summary\": \"年报数据确认了前期运价上涨及地缘政治带来的绕行需求已转化为实际利润，业绩创新高消除了市场对盈利兑现能力的疑虑，为估值提供安全垫。\"\n    }\n  ],\n  \"industry_macro_events\": [\n    {\n      \"event_type\": \"industry_cycle\",\n      \"title\": \"2026年度策略指出油运供需格局有望持续改善，机构建议布局\",\n      \"direction\": \"bullish\",\n      \"importance\": 0.6,\n      \"time_horizon\": \"medium_term\",\n      \"affected_variables\": [\n        \"freight_rates\",\n        \"industry_sentiment\"\n      ],\n      \"evidence\": [\n        \"交通运输产业行业研究：2026年度策略：关注供需格局，布局航空、干散货海运、油运\",\n        \"机构：预计油运供需将有望继续改善\"\n      ],\n      \"summary\": \"行业研报共识认为2026年油轮市场处于供给受限（老旧船拆解、新船订单交付周期长）与需求韧性（贸易重构）的共振期，运价中枢抬升具有持续性，为板块提供贝塔收益预期。\"\n    }\n  ],\n  \"event_compact_signals\": {\n    \"company_event_bias\": \"positive\",\n    \"macro_event_bias\": \"neutral\",\n    \"event_density\": \"medium\",\n    \"policy_sensitivity\": \"high\",\n    \"earnings_catalyst_state\": \"confirmed\",\n    \"risk_event_level\": \"medium\"\n  },\n  \"event_chain\": {\n    \"global_triggers\": [],\n    \"industry_variables\": [\n      \"全球原油贸易流向重构导致吨海里需求增加\",\n      \"环保法规（CII/EEXI）限制老旧船航速与运营，压缩有效运力供给\",\n      \"新船订单交付高峰未至，供给端刚性约束\"\n    ],\n    \"company_impacts\": [\n      \"新船交付提升公司市场份额及接单能力\",\n      \"节能设计降低燃油成本，扩大单船利润空间\",\n      \"业绩创新高验证盈利弹性，支撑分红或再投资预期\"\n    ],\n    \"missing_links\": [\n      \"缺具体的全球地缘突发事件证据（如红海/霍尔木兹海峡最新冲突动态、OPEC+最新减产执行率数据），无法量化短期运价脉冲幅度\",\n      \"缺BDTI/BCTI运价指数在2026年一季度的具体走势数据，难以精确判断即期市场景气度斜率\"\n    ]\n  },\n  \"key_catalysts\": [\n    \"红海或中东地缘局势升级导致航运绕行距离进一步拉长\",\n    \"OPEC+维持或深化减产协议，支撑原油贸易活跃度\",\n    \"老旧油轮拆解加速，超预期收缩行业有效运力\"\n  ],\n  \"key_risks\": [\n    \"全球宏观经济衰退导致原油需求意外下滑\",\n    \"地缘政治局势突然缓和，运距缩短导致运价回落\",\n    \"新船订单大量涌现，破坏中长期供需平衡预期\"\n  ],\n  \"tracking_points\": [\n    \"BDTI（波罗的海原油运价指数）及BCTI指数的周度变化\",\n    \"公司后续长协合同（COA）签订情况及覆盖率\",\n    \"全球浮仓油量变化及港口拥堵情况\",\n    \"OPEC+月度会议关于产量政策的表态\"\n  ],\n  \"event_summary_zh\": \"主导催化为公司层面AFRAMAX新船交付带来的运力结构优化与成本优势，叠加年报业绩创新高对盈利逻辑的验证。主要风险在于宏观层面缺乏新的地缘冲突升级证据，若全球原油需求疲软或局势缓和，可能压制运价上行空间。影响路径为：行业供需紧平衡 -> 运价中枢上移 -> 公司新船投放量利齐升。后续需重点跟踪BDTI指数走势、OPEC+产量政策及中东地缘局势演变，以判断运价是否能突破当前区间。\"\n}"
+}

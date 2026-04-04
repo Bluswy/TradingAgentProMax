@@ -1,0 +1,112 @@
+{
+  "run_id": "81d6ff7d-a16d-4b4d-aa84-20e3791d98e3",
+  "agent_name": "EventNewsAgent",
+  "agent_type": "agent",
+  "status": "success",
+  "started_at": 1775143423.0984042,
+  "finished_at": 1775143495.742622,
+  "duration_ms": 72644,
+  "input_summary": {
+    "ticker": "600873.SH",
+    "analysis_date": "2026-04-02",
+    "has_company_context": true
+  },
+  "output_summary": {
+    "effective_trade_date": "2026-04-02",
+    "event_state": "catalyst_positive",
+    "company_events": 3,
+    "industry_events": 2
+  },
+  "error": null,
+  "steps": [
+    {
+      "step_id": "2958008e-6a25-430e-a4f3-dbb8cd05c648",
+      "step_type": "bundle",
+      "name": "build_event_news_bundle",
+      "status": "success",
+      "started_at": 1775143423.098424,
+      "input": {
+        "ticker": "600873.SH",
+        "analysis_date": "2026-04-02"
+      },
+      "output": {
+        "effective_trade_date": "2026-04-02",
+        "company_news_count": 8,
+        "macro_news_count": 8,
+        "has_debug_trace": true,
+        "has_debug_trace_payload": true
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1775143455.0366569,
+      "duration_ms": 31938
+    },
+    {
+      "step_id": "e362fd19-0f90-4f02-bce0-c212c410bc7b",
+      "step_type": "llm",
+      "name": "llm_invoke_round_1",
+      "status": "success",
+      "started_at": 1775143455.047015,
+      "input": {
+        "round": 1,
+        "message_count": 2
+      },
+      "output": {
+        "has_tool_calls": false,
+        "content_preview": "```json\n{\n  \"ticker\": \"600873.SH\",\n  \"effective_trade_date\": \"2026-04-02\",\n  \"event_overview\": {\n    \"state\": \"catalyst_positive\",\n    \"summary\": \"梅花生物当前处于多重正向事件催化期：公司层面76名管理层大额增持计划（3.04-3.50亿元）叠加回购股份进展公告，形成强烈的资本信号；行业层面氨基酸价格持续强势，赖氨酸、苏氨酸等核心产品出口同比增长，价格周期处于上行通道。事件密度高，主导驱动来自公司层资本动作，行业景气提供基本面支撑。\",\n    \"confidence\": 0.82\n  },\n  \"company_specific_events\": [\n    {\n      \"event_type\": \"buyback\",\n      \"title\": \"管理层大额增持与股份回购计划\",\n      \"direction\": \"bullish\",\n      \"importance\": 0.88,\n      \"time_horizon\":"
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1775143495.7418282,
+      "duration_ms": 40694
+    },
+    {
+      "step_id": "81ac70ff-e9d9-4ae7-b9d8-3af2886dddd5",
+      "step_type": "parse",
+      "name": "parse_json_response",
+      "status": "success",
+      "started_at": 1775143495.74194,
+      "input": {
+        "content_preview": "```json\n{\n  \"ticker\": \"600873.SH\",\n  \"effective_trade_date\": \"2026-04-02\",\n  \"event_overview\": {\n    \"state\": \"catalyst_positive\",\n    \"summary\": \"梅花生物当前处于多重正向事件催化期：公司层面76名管理层大额增持计划（3.04-3.50亿元）叠加回购股份进展公告，形成强烈的资本信号；行业层面氨基酸价格持续强势，赖氨酸、苏氨酸等核心产品出口同比增长，价格周期处于上行通道。事件密度高，主导驱动来自公司层资本动作，行业景气提供基本面支撑。\",\n    \"confidence\": 0.82\n  },\n  \"company_specific_events\": [\n    {\n      \"event_type\": \"buyback\",\n      \"title\": \"管理层大额增持与股份回购计划\",\n      \"direction\": \"bullish\",\n      \"importance\": 0.88,\n      \"time_horizon\":"
+      },
+      "output": {
+        "event_state": "catalyst_positive",
+        "company_events": 3,
+        "industry_events": 2
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1775143495.742317,
+      "duration_ms": 0
+    },
+    {
+      "step_id": "295306e1-6b8d-494c-b689-1646b7b0a893",
+      "step_type": "quality_gate",
+      "name": "quality_gate",
+      "status": "success",
+      "started_at": 1775143495.7423291,
+      "input": {
+        "round": 1
+      },
+      "output": {
+        "is_sparse": false
+      },
+      "metrics": {
+        "company_events": 3,
+        "industry_events": 2
+      },
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1775143495.742351,
+      "duration_ms": 0
+    }
+  ],
+  "observability": {
+    "langsmith_enabled": false,
+    "langsmith_project_name": null,
+    "otel_enabled": false
+  }
+}

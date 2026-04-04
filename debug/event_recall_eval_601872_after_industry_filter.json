@@ -1,0 +1,393 @@
+{
+  "generated_at": "2026-03-29T23:36:11",
+  "report_type": "event_news_recall_evaluation",
+  "report_scope": "fresh_runtime_bundle",
+  "design_basis": "latest_event_news_agent_company_context_design",
+  "ticker": "601872.SH",
+  "analysis_date": "2026-03-29",
+  "company_name": "招商轮船",
+  "industry": "水运",
+  "query_plan": {
+    "sensitivity_variables": [
+      "油轮运价 (VLCC/TCE)",
+      "干散货运价 (BDI)",
+      "地缘政治风险 (红海/霍尔木兹)",
+      "燃油成本",
+      "船队供给 (交付/拆船)",
+      "汇率与利率"
+    ],
+    "company_query": "招商轮船 近期 公告 业绩 订单 船队扩张 新船交付 长租合同 融资 减持 风险",
+    "industry_query": "航运 近期 油运 干散货 运价 BDTI BDI VLCC TCE 供需 交付 拆船 环保政策 竞争格局",
+    "global_event_query": "近期 红海 霍尔木兹 海峡 封锁 OPEC 原油 贸易流向 油轮 运价 战争险 绕航 燃油成本 美元指数",
+    "query_rationale": {
+      "company": "覆盖业绩兑现、船队扩张与交付节奏、长租合同锁定率及融资与减持风险，兼顾正负向事件。",
+      "industry": "覆盖油运与干散货双核心赛道，聚焦运价指数、供需平衡、船队交付拆船及环保政策约束。",
+      "global": "覆盖地缘冲突触发点与原油贸易流向，传导至运价、战争险、绕航成本及汇率燃油成本。"
+    }
+  },
+  "retrieval_runtime_snapshot": {
+    "company": {
+      "queries": [
+        "招商轮船 近期 公告 业绩 订单 船队扩张 新船交付 长租合同 融资 减持 风险"
+      ],
+      "deduped_results_count": 12,
+      "reranked_results_count": 8
+    },
+    "industry": {
+      "queries": [
+        "航运 近期 油运 干散货 运价 BDTI BDI VLCC TCE 供需 交付 拆船 环保政策 竞争格局"
+      ],
+      "deduped_results_count": 0,
+      "reranked_results_count": 0
+    },
+    "global": {
+      "queries": [
+        "近期 红海 霍尔木兹 海峡 封锁 OPEC 原油 贸易流向 油轮 运价 战争险 绕航 燃油成本 美元指数"
+      ],
+      "deduped_results_count": 14,
+      "reranked_results_count": 8
+    }
+  },
+  "evaluation_standard": {
+    "高标准定义": "高质量召回不是新闻越多越好，而是用尽可能少的结果覆盖足够完整的事件上下文和传导路径。",
+    "公司层": "高质量结果应优先是公司硬事件，例如业绩、订单/项目、资本运作、监管/诉讼、重大经营变化。",
+    "行业层": "高质量结果应覆盖会改变板块基本面的变量，例如政策、供给、需求、价格/景气、资本开支/库存、技术/竞争格局。",
+    "全球层": "高质量结果应同时覆盖全球触发因素和传导变量，例如地缘/OPEC/汇率/利率 与 供给、价格、运价、保险、库存、成本。",
+    "传导链": "三层结果需要能拼成从全球/行业到公司的事件传导链，而不是各层各说各话。",
+    "输出目标": "召回结果应足以让上层 Agent 回答：发生了什么、改变了哪些变量、影响哪一层、接下来该跟踪什么。"
+  },
+  "rule_based_evaluation": {
+    "layer_evaluation": {
+      "company": {
+        "queries": [
+          "招商轮船 近期 公告 业绩 订单 船队扩张 新船交付 长租合同 融资 减持 风险"
+        ],
+        "result_count": 8,
+        "deduped_results_count": 12,
+        "reranked_results_count": 8,
+        "avg_item_score": 5.5,
+        "actionable_count": 6,
+        "noise_count": 0,
+        "dimension_coverage": [
+          "earnings",
+          "operations",
+          "orders_projects"
+        ],
+        "quality_grade": "strong",
+        "coverage_hint": "公司层应覆盖业绩、订单/项目、资本运作、监管/诉讼等硬事件，至少命中两个维度。",
+        "items": [
+          {
+            "title": "招商轮船年报解码：油轮业绩创新高与地缘避险",
+            "score": 6,
+            "reasons": [
+              "命中公司标识: ['招商轮船']",
+              "命中公司事件维度: ['earnings']"
+            ],
+            "dimensions": {
+              "earnings": [
+                "业绩",
+                "年报"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "601872，油轮船队经营业绩创新高",
+            "score": 6,
+            "reasons": [
+              "命中公司标识: ['601872']",
+              "命中公司事件维度: ['earnings']"
+            ],
+            "dimensions": {
+              "earnings": [
+                "业绩"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "合规风控靠兼职、投资管理请外援，四川东旺基金连踩“四雷”遭责令改正；4艘订单已接3艘：招商轮船“明祺”轮接收，卡姆萨型船队再扩容 - 知乎",
+            "score": 6,
+            "reasons": [
+              "命中公司标识: ['招商轮船']",
+              "命中公司事件维度: ['orders_projects']"
+            ],
+            "dimensions": {
+              "orders_projects": [
+                "订单"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "4艘订单已接3艘：招商轮船“明祺”轮接收，卡姆萨型船队再扩容-财中社",
+            "score": 6,
+            "reasons": [
+              "命中公司标识: ['招商轮船']",
+              "命中公司事件维度: ['orders_projects']"
+            ],
+            "dimensions": {
+              "orders_projects": [
+                "订单"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "招商轮船:招商轮船2025年年度报告",
+            "score": 4,
+            "reasons": [
+              "命中公司标识: ['招商轮船']"
+            ],
+            "dimensions": {},
+            "is_noise": false,
+            "is_actionable": false
+          },
+          {
+            "title": "招商轮船:招商轮船2025年年度报告摘要",
+            "score": 4,
+            "reasons": [
+              "命中公司标识: ['招商轮船']"
+            ],
+            "dimensions": {},
+            "is_noise": false,
+            "is_actionable": false
+          },
+          {
+            "title": "招商轮船：新一代节能环保干散货船“明祺”轮交付",
+            "score": 6,
+            "reasons": [
+              "命中公司标识: ['招商轮船']",
+              "命中公司事件维度: ['operations']"
+            ],
+            "dimensions": {
+              "operations": [
+                "交付"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "招商轮船再迎节能新船交付 干散货板块竞争力持续升级",
+            "score": 6,
+            "reasons": [
+              "命中公司标识: ['招商轮船']",
+              "命中公司事件维度: ['operations']"
+            ],
+            "dimensions": {
+              "operations": [
+                "交付"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          }
+        ]
+      },
+      "industry": {
+        "queries": [
+          "航运 近期 油运 干散货 运价 BDTI BDI VLCC TCE 供需 交付 拆船 环保政策 竞争格局"
+        ],
+        "result_count": 0,
+        "deduped_results_count": 0,
+        "reranked_results_count": 0,
+        "avg_item_score": 0.0,
+        "actionable_count": 0,
+        "noise_count": 0,
+        "dimension_coverage": [],
+        "quality_grade": "poor",
+        "coverage_hint": "行业层应覆盖政策、供给、需求、价格/景气、资本开支/库存、技术/竞争格局中的多个维度。",
+        "items": []
+      },
+      "global": {
+        "queries": [
+          "近期 红海 霍尔木兹 海峡 封锁 OPEC 原油 贸易流向 油轮 运价 战争险 绕航 燃油成本 美元指数"
+        ],
+        "result_count": 8,
+        "deduped_results_count": 14,
+        "reranked_results_count": 8,
+        "avg_item_score": 7.5,
+        "actionable_count": 4,
+        "noise_count": 0,
+        "dimension_coverage": [
+          "commodity",
+          "geopolitics",
+          "logistics",
+          "pricing",
+          "supply_demand"
+        ],
+        "quality_grade": "strong",
+        "coverage_hint": "全球层应同时命中全球触发因素与传导变量，不能只有泛宏观叙事。",
+        "items": [
+          {
+            "title": "石油价格飙升 伊朗危机扰乱霍尔木兹海峡运输-金融界7*24小时",
+            "score": 11,
+            "reasons": [
+              "命中全球触发维度: ['commodity', 'geopolitics']",
+              "命中传导变量维度: ['pricing']",
+              "同时覆盖全球触发与传导变量"
+            ],
+            "dimensions": {
+              "trigger": [
+                "commodity",
+                "geopolitics"
+              ],
+              "transmission": [
+                "pricing"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "避开霍尔木兹封锁 沙特紧急改道红海出口原油",
+            "score": 11,
+            "reasons": [
+              "命中全球触发维度: ['commodity', 'geopolitics']",
+              "命中传导变量维度: ['supply_demand']",
+              "同时覆盖全球触发与传导变量"
+            ],
+            "dimensions": {
+              "trigger": [
+                "commodity",
+                "geopolitics"
+              ],
+              "transmission": [
+                "supply_demand"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "霍尔木兹海峡被封锁对全球石油供应具体造成了多大影响？|伊朗|美元|油价|暴涨|产油国_新浪新闻",
+            "score": 11,
+            "reasons": [
+              "命中全球触发维度: ['commodity', 'geopolitics']",
+              "命中传导变量维度: ['pricing']",
+              "同时覆盖全球触发与传导变量"
+            ],
+            "dimensions": {
+              "trigger": [
+                "commodity",
+                "geopolitics"
+              ],
+              "transmission": [
+                "pricing"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "大量油轮涌向沙特红海港口装运原油 绕开霍尔木兹海峡（财经头条）",
+            "score": 4,
+            "reasons": [
+              "命中全球触发维度: ['commodity', 'geopolitics', 'logistics']"
+            ],
+            "dimensions": {
+              "trigger": [
+                "commodity",
+                "geopolitics",
+                "logistics"
+              ],
+              "transmission": []
+            },
+            "is_noise": false,
+            "is_actionable": false
+          },
+          {
+            "title": "中东军事冲突对原油轮市场影响几何",
+            "score": 4,
+            "reasons": [
+              "命中全球触发维度: ['commodity', 'geopolitics']"
+            ],
+            "dimensions": {
+              "trigger": [
+                "commodity",
+                "geopolitics"
+              ],
+              "transmission": []
+            },
+            "is_noise": false,
+            "is_actionable": false
+          },
+          {
+            "title": "中东冲突致霍尔木兹海峡通航量锐减95%",
+            "score": 4,
+            "reasons": [
+              "命中全球触发维度: ['geopolitics']"
+            ],
+            "dimensions": {
+              "trigger": [
+                "geopolitics"
+              ],
+              "transmission": []
+            },
+            "is_noise": false,
+            "is_actionable": false
+          },
+          {
+            "title": "【银河研报】伊朗战争第四周市场追踪——中东地缘风险对大宗商品走势影响？",
+            "score": 4,
+            "reasons": [
+              "命中全球触发维度: ['commodity', 'geopolitics']"
+            ],
+            "dimensions": {
+              "trigger": [
+                "commodity",
+                "geopolitics"
+              ],
+              "transmission": []
+            },
+            "is_noise": false,
+            "is_actionable": false
+          },
+          {
+            "title": "当霍尔木兹海峡成博弈焦点，普通家庭的油价账单该何去何从？",
+            "score": 11,
+            "reasons": [
+              "命中全球触发维度: ['commodity', 'geopolitics']",
+              "命中传导变量维度: ['pricing']",
+              "同时覆盖全球触发与传导变量"
+            ],
+            "dimensions": {
+              "trigger": [
+                "commodity",
+                "geopolitics"
+              ],
+              "transmission": [
+                "pricing"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          }
+        ]
+      }
+    },
+    "chain_closure": {
+      "satisfied": {
+        "company_impact": true,
+        "industry_variables": false,
+        "global_trigger": true,
+        "global_transmission": true
+      },
+      "satisfied_count": 3,
+      "quality_grade": "usable",
+      "summary": "事件传导链应至少覆盖：全球触发、全球传导变量、行业变量、公司影响。 当前满足 3/4。"
+    },
+    "overall": {
+      "non_empty_layers": 2,
+      "actionable_layers": 2,
+      "strong_layers": 2,
+      "quality_grade": "usable",
+      "summary": "三层中有 2/3 层有结果，2/3 层包含可执行事件线索，2/3 层达到 strong，传导链评估为 usable。"
+    }
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "identity": {
+    "ticker": "601677.SH",
+    "company_name": "明泰铝业",
+    "exchange": "SH",
+    "market": "A_share"
+  },
+  "analysis_time": {
+    "requested_date": "2026-03-29",
+    "effective_date": "2026-03-29",
+    "date_mode": "natural_day"
+  },
+  "classification": {
+    "industry": "铝",
+    "company_type": "cyclical_resources",
+    "style_tag": "cyclical_resources",
+    "size_bucket": "small_cap",
+    "liquidity_bucket": "medium"
+  },
+  "business_context": {
+    "sub_industry": "铝",
+    "business_model": "主要产品:铝板带箔及铝型材两大门类,广泛应用于新能源电池,轨道车体,汽车制造,印刷制版,电子家电,电力设施,建筑装饰,交通运输,食品和医药包装等领域.主营业务:1-8系铝板带箔的生产和销售.",
+    "company_intro": "公司始建于1997年，为国内首家民营铝加工业企业。通过持续的技术创新及前瞻性布局，不断实现高端突破，再生铝战略持续向纵深推进，已形成废铝回收-熔炼再生-精深加工的铝产业链闭环。公司正以绿色智造为笔，书写着可持续发展的新篇章，为制造业绿色转型升级提供可复制经验样本。公司整体实力位居我国铝加工业第一方阵，是铝加工业产品多元化和再生铝保级应用龙头企业。",
+    "core_products": [
+      "铝板带",
+      "铝箔",
+      "铝板带-合金板",
+      "其他业务",
+      "其他主营业务"
+    ],
+    "main_business_items": [
+      "铝板带",
+      "铝箔",
+      "铝板带-合金板",
+      "其他业务",
+      "其他主营业务",
+      "铝板带-普通铝板带材",
+      "铝合金轨道车体",
+      "铝板带-花纹板"
+    ],
+    "demand_drivers": [],
+    "cost_drivers": [],
+    "policy_drivers": [],
+    "global_risk_drivers": []
+  },
+  "market_context": {
+    "valuation_style": "cyclical",
+    "market_attention_points": [],
+    "trading_sensitivity": []
+  },
+  "technical_context": {
+    "trend": {},
+    "momentum": {},
+    "volatility": {},
+    "volume_confirmation": {},
+    "relative_strength": {},
+    "technical_compact_signals": {},
+    "key_levels": {},
+    "signals": [],
+    "confidence": null,
+    "technical_summary_zh": ""
+  },
+  "fundamental_context": {
+    "company_profile": {},
+    "growth": {},
+    "profitability": {},
+    "cashflow_quality": {},
+    "balance_sheet_health": {},
+    "valuation": {},
+    "fundamental_compact_signals": {},
+    "financial_snapshot": {},
+    "core_risks": [],
+    "fundamental_signals": [],
+    "confidence": null,
+    "fundamental_summary_zh": ""
+  },
+  "event_context": {
+    "event_overview": {},
+    "event_compact_signals": {},
+    "event_context_snapshot": {},
+    "event_chain": {},
+    "key_catalysts": [],
+    "key_risks": [],
+    "tracking_points": [],
+    "confidence": null,
+    "event_summary_zh": ""
+  },
+  "search_context": {
+    "search_aliases": [
+      "明泰铝业",
+      "铝板带",
+      "铝箔",
+      "铝板带-合金板",
+      "其他业务",
+      "有色金属",
+      "工业金属",
+      "铝"
+    ],
+    "seed_titles": [],
+    "ths_member_codes": [
+      "700001.TI",
+      "700002.TI",
+      "700003.TI",
+      "700004.TI",
+      "700008.TI",
+      "700009.TI",
+      "700010.TI",
+      "700021.TI",
+      "700023.TI",
+      "700031.TI",
+      "700032.TI",
+      "700035.TI"
+    ],
+    "ths_concepts": [
+      "原材料(A股)",
+      "原材料Ⅱ(A股)",
+      "金属与采矿(A股)",
+      "铝(A股)",
+      "工业金属",
+      "河南",
+      "减持新规(不可减持)",
+      "破净股",
+      "铝",
+      "融资融券",
+      "特高压",
+      "新能源汽车"
+    ],
+    "index_memberships": [
+      "有色金属",
+      "工业金属",
+      "铝"
+    ],
+    "preferred_query_style": "keyword_cluster",
+    "language_bias": "cn_finance_media"
+  },
+  "data_quality": {
+    "missing_sections": [],
+    "stale_sections": [],
+    "source_summary": {
+      "stock_basic": true,
+      "stock_company": true,
+      "fina_mainbz": true,
+      "ths_member": true,
+      "index_member_all": true
+    }
+  }
+}

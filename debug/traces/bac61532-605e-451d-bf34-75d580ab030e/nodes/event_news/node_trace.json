@@ -1,0 +1,48 @@
+{
+  "run_id": "c26e7a62-25cf-461b-a1e5-6efaab4cb90e",
+  "agent_name": "EventNewsAgent",
+  "agent_type": "agent",
+  "status": "failed",
+  "started_at": 1774807302.515033,
+  "finished_at": 1774818383.3582568,
+  "duration_ms": 11080843,
+  "input_summary": {
+    "ticker": "9926.HK",
+    "analysis_date": "2026-03-29",
+    "has_company_context": true
+  },
+  "output_summary": {},
+  "error": {
+    "error_type": "APIConnectionError",
+    "error_message": "Connection error.",
+    "traceback": "Traceback (most recent call last):\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/.venv/lib/python3.13/site-packages/httpx/_transports/default.py\", line 101, in map_httpcore_exceptions\n    yield\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/.venv/lib/python3.13/site-packages/httpx/_transports/default.py\", line 250, in handle_request\n    resp = self._pool.handle_request(req)\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/.venv/lib/python3.13/site-packages/httpcore/_sync/connection_pool.py\", line 256, in handle_request\n    raise exc from None\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/.venv/lib/python3.13/site-packages/httpcore/_sync/connection_pool.py\", line 236, in handle_request\n    response = connection.handle_request(\n        pool_request.request\n    )\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/.venv/lib/python3.13/site-packages/httpcore/_sync/http_proxy.py\", line 343, in handle_request\n    return self._connection.handle_request(request)\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^\n  Fi...<truncated>"
+  },
+  "steps": [
+    {
+      "step_id": "349939c0-bb1d-448c-904e-84a21e701fba",
+      "step_type": "bundle",
+      "name": "build_event_news_bundle",
+      "status": "failed",
+      "started_at": 1774807302.515052,
+      "input": {
+        "ticker": "9926.HK",
+        "analysis_date": "2026-03-29"
+      },
+      "output": {},
+      "metrics": {},
+      "error": {
+        "error_type": "APIConnectionError",
+        "error_message": "Connection error.",
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/.venv/lib/python3.13/site-packages/httpx/_transports/default.py\", line 101, in map_httpcore_exceptions\n    yield\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/.venv/lib/python3.13/site-packages/httpx/_transports/default.py\", line 250, in handle_request\n    resp = self._pool.handle_request(req)\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/.venv/lib/python3.13/site-packages/httpcore/_sync/connection_pool.py\", line 256, in handle_request\n    raise exc from None\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/.venv/lib/python3.13/site-packages/httpcore/_sync/connection_pool.py\", line 236, in handle_request\n    response = connection.handle_request(\n        pool_request.request\n    )\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/.venv/lib/python3.13/site-packages/httpcore/_sync/http_proxy.py\", line 343, in handle_request\n    return self._connection.handle_request(request)\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^\n  Fi...<truncated>"
+      },
+      "artifacts": {},
+      "finished_at": 1774818383.3583,
+      "duration_ms": 11080843
+    }
+  ],
+  "observability": {
+    "langsmith_enabled": false,
+    "langsmith_project_name": null,
+    "otel_enabled": false
+  }
+}

@@ -4,12 +4,13 @@ import json
 import os
 import traceback
 import uuid
-from contextlib import nullcontext
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+from .context import get_trace_parent
 from .schema import AgentTraceRun, AgentTraceStep
+from .sqlite_store import SQLiteTraceStore
 
 
 def _now_ts() -> float:
@@ -246,10 +247,23 @@ class AgentTraceBuilder:
         self.error: dict[str, Any] | None = None
         self.output_summary: dict[str, Any] = {}
         self.input_summary = _coerce_jsonable(input_summary or {})
+        self.parent_context = get_trace_parent()
+        self.parent_run_id: str | None = self.parent_context.get("parent_run_id")
+        self.parent_node_name: str | None = self.parent_context.get("parent_node_name")
         self.langsmith = _LangSmithAdapter(self.config, self.agent_name, self.run_id)
         self.otel = _OpenTelemetryAdapter(self.config, self.agent_name)
+        self.sqlite = SQLiteTraceStore(self.config)
         self.langsmith.start_run(self.input_summary)
         self.otel.start_run(self.run_id, self.input_summary)
+        self.sqlite.run_started(
+            run_id=self.run_id,
+            agent_name=self.agent_name,
+            agent_type=self.agent_type,
+            started_at=self.started_at,
+            input_summary=self.input_summary,
+            parent_run_id=self.parent_run_id,
+            parent_node_name=self.parent_node_name,
+        )
 
     def start_step(
         self,
@@ -280,6 +294,18 @@ class AgentTraceBuilder:
         )
         self.otel.start_step(step_id, name, step_type, payload)
         self._active_steps[step_id] = _StepRuntime(step=step, langsmith_ctx=ctx, langsmith_run=run)
+        node_name = name if self.agent_type == "graph" and step_type == "node" else self.parent_node_name
+        self.sqlite.step_started(
+            run_id=self.run_id,
+            agent_name=self.agent_name,
+            agent_type=self.agent_type,
+            step_id=step_id,
+            step_name=name,
+            step_type=step_type,
+            node_name=node_name,
+            started_at=step["started_at"],
+            input_payload=payload,
+        )
         return step_id
 
     def end_step(
@@ -300,6 +326,14 @@ class AgentTraceBuilder:
         runtime.langsmith_run.end(outputs=_coerce_jsonable(step["output"]))
         runtime.langsmith_ctx.__exit__(None, None, None)
         self.otel.end_step(step_id, outputs=step["output"])
+        node_name = step["name"] if self.agent_type == "graph" and step["step_type"] == "node" else self.parent_node_name
+        self.sqlite.step_finished(
+            run_id=self.run_id,
+            agent_name=self.agent_name,
+            agent_type=self.agent_type,
+            step=step,
+            node_name=node_name,
+        )
         self.steps.append(step)
 
     def fail_step(self, step_id: str, error: Exception) -> None:
@@ -315,6 +349,14 @@ class AgentTraceBuilder:
         }
         runtime.langsmith_ctx.__exit__(type(error), error, error.__traceback__)
         self.otel.end_step(step_id, error=error)
+        node_name = step["name"] if self.agent_type == "graph" and step["step_type"] == "node" else self.parent_node_name
+        self.sqlite.step_failed(
+            run_id=self.run_id,
+            agent_name=self.agent_name,
+            agent_type=self.agent_type,
+            step=step,
+            node_name=node_name,
+        )
         self.steps.append(step)
 
     def finish(self, *, output_summary: dict[str, Any] | None = None, error: Exception | None = None) -> AgentTraceRun:
@@ -355,4 +397,5 @@ class AgentTraceBuilder:
         }
         self.langsmith.end_run(outputs=run["output_summary"], error=error)
         self.otel.end_run(outputs=run["output_summary"], error=error)
+        self.sqlite.run_finished(run)
         return run

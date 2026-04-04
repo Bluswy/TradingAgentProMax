@@ -1,0 +1,172 @@
+{
+  "run_id": "9e82c38d-ee21-4110-98b9-9733695da127",
+  "agent_name": "SectorFlowAgent",
+  "agent_type": "agent",
+  "status": "success",
+  "started_at": 1775063982.47242,
+  "finished_at": 1775064006.582428,
+  "duration_ms": 24110,
+  "input_summary": {
+    "ticker": "600873.SH",
+    "analysis_date": "2026-04-02"
+  },
+  "output_summary": {
+    "effective_trade_date": "2026-04-02",
+    "theme_strength": "weak",
+    "theme_heat": "cold",
+    "stock_role": "peripheral"
+  },
+  "error": null,
+  "steps": [
+    {
+      "step_id": "08353f74-4455-4d36-b9d2-008daf364db1",
+      "step_type": "bundle",
+      "name": "build_sector_flow_bundle",
+      "status": "success",
+      "started_at": 1775063982.4724321,
+      "input": {
+        "ticker": "600873.SH",
+        "analysis_date": "2026-04-02"
+      },
+      "output": {
+        "effective_trade_date": "2026-04-02",
+        "sector_name": "食品",
+        "sector_member_count": 93
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1775063982.70473,
+      "duration_ms": 232
+    },
+    {
+      "step_id": "24af176c-b2b2-4815-a209-1defe2851ad9",
+      "step_type": "llm",
+      "name": "llm_invoke_round_1",
+      "status": "success",
+      "started_at": 1775063982.7070441,
+      "input": {
+        "round": 1,
+        "message_count": 2
+      },
+      "output": {
+        "has_tool_calls": true,
+        "content_preview": ""
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1775063985.200384,
+      "duration_ms": 2493
+    },
+    {
+      "step_id": "2d24c440-0471-49f2-84d0-d1f4758860bb",
+      "step_type": "tool_call",
+      "name": "tool_call_get_sector_activity_context",
+      "status": "success",
+      "started_at": 1775063985.200417,
+      "input": {
+        "tool_name": "get_sector_activity_context",
+        "args": {
+          "ticker": "600873.SH",
+          "analysis_date": "2026-04-02"
+        }
+      },
+      "output": {
+        "result_preview": "{\"ticker\": \"600873.SH\", \"effective_trade_date\": \"2026-04-02\", \"sector_snapshot\": {\"sector_pct_chg\": null, \"sector_volume_change\": null, \"sector_amount_change\": null, \"sector_breadth_up_ratio\": null, \"sector_limit_up_count\": 0, \"sector_limit_down_count\": 0, \"sector_top_inst_count\": 0}, \"theme_activity\": {\"leader_stock_names\": [\"京粮控股\", \"红棉股份\", \"广弘控股\", \"西王食品\", \"黑芝麻\"], \"leader_confirmation\": \"unconfirmed\", \"theme_expansion\": \"narrow\", \"theme_dispersion\": \"unknown\"}, \"sector_series\": [], \"sector_flow_compact_signals\": {\"theme_strength\": \"weak\", \"theme_heat\": \"cold\", \"crowding_level\": \"low\", \"stock_role\": \"peripheral\", \"flow_persistence\": \"fading\", \"rotation_state\": \"rotating_out\"}}"
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1775063985.349899,
+      "duration_ms": 149
+    },
+    {
+      "step_id": "ec5f3a90-134e-4ebe-aec8-2cef65e3ada2",
+      "step_type": "tool_call",
+      "name": "tool_call_get_sector_peer_context",
+      "status": "success",
+      "started_at": 1775063985.349935,
+      "input": {
+        "tool_name": "get_sector_peer_context",
+        "args": {
+          "ticker": "600873.SH",
+          "analysis_date": "2026-04-02"
+        }
+      },
+      "output": {
+        "result_preview": "{\"ticker\": \"600873.SH\", \"effective_trade_date\": \"2026-04-02\", \"meta\": {\"name\": \"梅花生物\", \"industry\": \"食品\", \"market\": \"主板\", \"company_type\": \"consumer_healthcare_growth\", \"sector_index\": null, \"sector_name\": \"食品\", \"sector_level\": \"stock_basic_industry\", \"sector_member_count\": 93}, \"peer_rankings\": [{\"ts_code\": \"000505.SZ\", \"name\": \"京粮控股\", \"pct_chg\": null, \"turnover_rate\": null, \"net_mf_amount\": null}, {\"ts_code\": \"000523.SZ\", \"name\": \"红棉股份\", \"pct_chg\": null, \"turnover_rate\": null, \"net_mf_amount\": null}, {\"ts_code\": \"000529.SZ\", \"name\": \"广弘控股\", \"pct_chg\": null, \"turnover_rate\": null, \"net_mf_amount\": null}, {\"ts_code\": \"000639.SZ\", \"name\": \"西王食品\", \"pct_chg\": null, \"turnover_rate\": null, \"net_mf_amount\": null}, {\"ts_code\": \"000716.SZ\", \"name\": \"黑芝麻\", \"pct_chg\": null, \"turnover_rate\": null, \"net"
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1775063985.563457,
+      "duration_ms": 213
+    },
+    {
+      "step_id": "e2d189e6-5dc4-4b8f-859e-ca42f1096cb9",
+      "step_type": "llm",
+      "name": "llm_invoke_round_2",
+      "status": "success",
+      "started_at": 1775063985.563487,
+      "input": {
+        "round": 2,
+        "message_count": 5
+      },
+      "output": {
+        "has_tool_calls": false,
+        "content_preview": "基于提供的板块资金面数据包和补充数据，完成分析如下：\n\n```json\n{\n  \"ticker\": \"600873.SH\",\n  \"effective_trade_date\": \"2026-04-02\",\n  \"theme_strength\": {\n    \"state\": \"weak\",\n    \"summary\": \"食品板块当前缺乏资金合力，板块整体强度处于弱势状态。板块内涨停家数为0，无机构席位大额买入信号，缺乏明显的板块级催化逻辑。\",\n    \"evidence\": [\n      \"板块涨停家数为0，无资金主动攻击板块龙头\",\n      \"板块机构席位买入数量为0，缺乏机构资金配置意愿\",\n      \"主题扩散度为narrow，板块内资金仅集中在少数个股，未形成板块效应\"\n    ]\n  },\n  \"theme_heat\": {\n    \"state\": \"cold\",\n    \"summary\": \"食品板块当前处于低热度状态，资金参与度极低。板块成交量较20日均线下降约62%，换手率处于近20日5%分位，显示交投清淡。\",\n    \"evidence\": [\n  "
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1775064006.5818481,
+      "duration_ms": 21018
+    },
+    {
+      "step_id": "82818ce7-add4-46b7-b870-a9a0cec94201",
+      "step_type": "parse",
+      "name": "parse_json_response",
+      "status": "success",
+      "started_at": 1775064006.582007,
+      "input": {
+        "content_preview": "基于提供的板块资金面数据包和补充数据，完成分析如下：\n\n```json\n{\n  \"ticker\": \"600873.SH\",\n  \"effective_trade_date\": \"2026-04-02\",\n  \"theme_strength\": {\n    \"state\": \"weak\",\n    \"summary\": \"食品板块当前缺乏资金合力，板块整体强度处于弱势状态。板块内涨停家数为0，无机构席位大额买入信号，缺乏明显的板块级催化逻辑。\",\n    \"evidence\": [\n      \"板块涨停家数为0，无资金主动攻击板块龙头\",\n      \"板块机构席位买入数量为0，缺乏机构资金配置意愿\",\n      \"主题扩散度为narrow，板块内资金仅集中在少数个股，未形成板块效应\"\n    ]\n  },\n  \"theme_heat\": {\n    \"state\": \"cold\",\n    \"summary\": \"食品板块当前处于低热度状态，资金参与度极低。板块成交量较20日均线下降约62%，换手率处于近20日5%分位，显示交投清淡。\",\n    \"evidence\": [\n  "
+      },
+      "output": {
+        "theme_strength": "weak",
+        "theme_heat": "cold",
+        "stock_role": "peripheral"
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1775064006.582361,
+      "duration_ms": 0
+    },
+    {
+      "step_id": "9cf830c9-52c6-43b7-ba39-fb71d2954580",
+      "step_type": "quality_gate",
+      "name": "quality_gate",
+      "status": "success",
+      "started_at": 1775064006.582378,
+      "input": {
+        "round": 2
+      },
+      "output": {
+        "is_sparse": false
+      },
+      "metrics": {
+        "key_risks_count": 3
+      },
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1775064006.5824041,
+      "duration_ms": 0
+    }
+  ],
+  "observability": {
+    "langsmith_enabled": false,
+    "langsmith_project_name": null,
+    "otel_enabled": false
+  }
+}

@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import time
 from pathlib import Path
 from typing import Any
 
@@ -12,6 +13,8 @@ from .config import get_config
 
 
 MX_SEARCH_API_URL = "https://mkapi2.dfcfs.com/finskillshub/api/claw/news-search"
+MX_SEARCH_MAX_ATTEMPTS = 3
+MX_SEARCH_RETRY_SLEEP_SECONDS = 0.6
 
 
 def _load_project_mx_api_key(project_dir: str | None) -> str | None:
@@ -323,37 +326,61 @@ def _multi_query_search(queries: list[str], limit_per_query: int = 12) -> dict[s
 
 def mx_search(query: str, limit: int = 10) -> dict[str, Any]:
     api_key = _require_mx_api_key()
-    response = requests.post(
-        MX_SEARCH_API_URL,
-        headers={
-            "Content-Type": "application/json",
-            "apikey": api_key,
-        },
-        json={"query": query},
-        timeout=30,
-    )
-    response.raise_for_status()
-    payload = response.json()
+    last_payload: dict[str, Any] | None = None
+    last_error: Exception | None = None
 
-    candidates = _extract_candidate_items(payload)
-    results = []
-    seen: set[tuple[str, str]] = set()
-    for item in candidates:
-        normalized = _normalize_result(item)
-        dedupe_key = (normalized["title"], normalized["trunk"])
-        if dedupe_key in seen:
-            continue
-        seen.add(dedupe_key)
-        if not normalized["title"] and not normalized["trunk"]:
-            continue
-        results.append(normalized)
-        if len(results) >= limit:
-            break
+    for attempt in range(1, MX_SEARCH_MAX_ATTEMPTS + 1):
+        try:
+            response = requests.post(
+                MX_SEARCH_API_URL,
+                headers={
+                    "Content-Type": "application/json",
+                    "apikey": api_key,
+                },
+                json={"query": query},
+                timeout=30,
+            )
+            response.raise_for_status()
+            payload = response.json()
+            last_payload = payload
+
+            candidates = _extract_candidate_items(payload)
+            results = []
+            seen: set[tuple[str, str]] = set()
+            for item in candidates:
+                normalized = _normalize_result(item)
+                dedupe_key = (normalized["title"], normalized["trunk"])
+                if dedupe_key in seen:
+                    continue
+                seen.add(dedupe_key)
+                if not normalized["title"] and not normalized["trunk"]:
+                    continue
+                results.append(normalized)
+                if len(results) >= limit:
+                    break
+
+            if results or attempt == MX_SEARCH_MAX_ATTEMPTS:
+                return {
+                    "query": query,
+                    "results": results,
+                    "raw": payload,
+                    "attempts": attempt,
+                }
+        except requests.RequestException as error:
+            last_error = error
+            if attempt == MX_SEARCH_MAX_ATTEMPTS:
+                raise
+
+        time.sleep(MX_SEARCH_RETRY_SLEEP_SECONDS * attempt)
+
+    if last_error is not None:
+        raise last_error
 
     return {
         "query": query,
-        "results": results,
-        "raw": payload,
+        "results": [],
+        "raw": last_payload or {},
+        "attempts": MX_SEARCH_MAX_ATTEMPTS,
     }
 
 

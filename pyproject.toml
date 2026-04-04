@@ -11,6 +11,7 @@ requires-python = ">=3.10"
 dependencies = [
     "langsmith>=0.4.5",
     "langchain-core>=0.3.81",
+    "fastapi>=0.115.0",
     "opentelemetry-api>=1.36.0",
     "opentelemetry-sdk>=1.36.0",
     "backtrader>=1.9.78.123",
@@ -32,6 +33,7 @@ dependencies = [
     "tushare>=1.4.21",
     "tqdm>=4.67.1",
     "typing-extensions>=4.14.0",
+    "uvicorn>=0.34.0",
 ]
 
 [project.scripts]

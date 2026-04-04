@@ -1,0 +1,466 @@
+{
+  "run_id": "5c7b6e5e-0736-4878-b621-e0e0fbd812e6",
+  "agent_name": "StructuredAnalysisGraph",
+  "agent_type": "graph",
+  "status": "success",
+  "started_at": 1775316431.9231071,
+  "finished_at": 1775316793.995848,
+  "duration_ms": 362072,
+  "input_summary": {
+    "ticker": "600873.SH",
+    "analysis_date": "2026-04-02"
+  },
+  "output_summary": {
+    "failure": null,
+    "has_technical": true,
+    "has_fundamental": true,
+    "has_event_news": true,
+    "has_sector_flow": true,
+    "has_strategy_style": true,
+    "has_strategy_decision": true,
+    "has_company_report": true,
+    "has_final_report": true
+  },
+  "error": null,
+  "steps": [
+    {
+      "step_id": "853ff4c1-c7b6-4a11-ba52-02cf532a835b",
+      "step_type": "node",
+      "name": "company_context",
+      "status": "success",
+      "started_at": 1775316431.927382,
+      "input": {
+        "ticker": "600873.SH",
+        "analysis_date": "2026-04-02",
+        "has_company_context": false
+      },
+      "output": {
+        "market": "A_share",
+        "exchange": "SH"
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {
+        "result": {
+          "relative_path": "nodes/company_context/result.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/company_context/result.json"
+        }
+      },
+      "finished_at": 1775316431.953845,
+      "duration_ms": 26
+    },
+    {
+      "step_id": "57fdd090-4c6c-4748-a588-109e7c8af7f5",
+      "step_type": "node",
+      "name": "sector_flow",
+      "status": "success",
+      "started_at": 1775316431.956177,
+      "input": {
+        "ticker": "600873.SH",
+        "analysis_date": "2026-04-02",
+        "has_company_context": true,
+        "company_context_keys": [
+          "analysis_time",
+          "business_context",
+          "classification",
+          "data_quality",
+          "event_context",
+          "fundamental_context",
+          "identity",
+          "market_context",
+          "search_context",
+          "technical_context"
+        ]
+      },
+      "output": {
+        "effective_trade_date": "2026-04-02",
+        "theme_strength": "weak",
+        "theme_heat": "cold",
+        "stock_role": "peripheral"
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {
+        "node_trace": {
+          "relative_path": "nodes/sector_flow/node_trace.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/sector_flow/node_trace.json"
+        },
+        "result": {
+          "relative_path": "nodes/sector_flow/result.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/sector_flow/result.json"
+        }
+      },
+      "finished_at": 1775316456.725419,
+      "duration_ms": 24769
+    },
+    {
+      "step_id": "ee908476-e23d-4dc1-8c4e-bdcabda254a3",
+      "step_type": "node",
+      "name": "technical",
+      "status": "success",
+      "started_at": 1775316431.9564102,
+      "input": {
+        "ticker": "600873.SH",
+        "analysis_date": "2026-04-02",
+        "has_company_context": true,
+        "company_context_keys": [
+          "analysis_time",
+          "business_context",
+          "classification",
+          "data_quality",
+          "event_context",
+          "fundamental_context",
+          "identity",
+          "market_context",
+          "search_context",
+          "technical_context"
+        ]
+      },
+      "output": {
+        "effective_trade_date": "2026-04-02",
+        "trend": "sideways",
+        "momentum": "weakening",
+        "confidence": 0.55
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {
+        "node_trace": {
+          "relative_path": "nodes/technical/node_trace.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/technical/node_trace.json"
+        },
+        "result": {
+          "relative_path": "nodes/technical/result.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/technical/result.json"
+        }
+      },
+      "finished_at": 1775316463.948849,
+      "duration_ms": 31992
+    },
+    {
+      "step_id": "46943a6f-34d9-4b12-bfe9-541e9b27a886",
+      "step_type": "node",
+      "name": "fundamental",
+      "status": "success",
+      "started_at": 1775316431.956047,
+      "input": {
+        "ticker": "600873.SH",
+        "analysis_date": "2026-04-02",
+        "has_company_context": true,
+        "company_context_keys": [
+          "analysis_time",
+          "business_context",
+          "classification",
+          "data_quality",
+          "event_context",
+          "fundamental_context",
+          "identity",
+          "market_context",
+          "search_context",
+          "technical_context"
+        ]
+      },
+      "output": {
+        "effective_trade_date": "2026-04-02",
+        "growth": "weakening",
+        "valuation": "cheap",
+        "company_type": "consumer_healthcare_growth",
+        "confidence": 0.75
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {
+        "node_trace": {
+          "relative_path": "nodes/fundamental/node_trace.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/fundamental/node_trace.json"
+        },
+        "result": {
+          "relative_path": "nodes/fundamental/result.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/fundamental/result.json"
+        }
+      },
+      "finished_at": 1775316481.558788,
+      "duration_ms": 49602
+    },
+    {
+      "step_id": "3fdbfef0-056b-44c9-943f-a46c3b7e466a",
+      "step_type": "node",
+      "name": "event_news",
+      "status": "success",
+      "started_at": 1775316431.955916,
+      "input": {
+        "ticker": "600873.SH",
+        "analysis_date": "2026-04-02",
+        "has_company_context": true,
+        "company_context_keys": [
+          "analysis_time",
+          "business_context",
+          "classification",
+          "data_quality",
+          "event_context",
+          "fundamental_context",
+          "identity",
+          "market_context",
+          "search_context",
+          "technical_context"
+        ]
+      },
+      "output": {
+        "effective_trade_date": "2026-04-02",
+        "event_state": "catalyst_positive",
+        "company_events": 5,
+        "industry_events": 4
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {
+        "node_trace": {
+          "relative_path": "nodes/event_news/node_trace.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/event_news/node_trace.json"
+        },
+        "result": {
+          "relative_path": "nodes/event_news/result.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/event_news/result.json"
+        }
+      },
+      "finished_at": 1775316575.366081,
+      "duration_ms": 143410
+    },
+    {
+      "step_id": "dfaed645-ec57-45ea-8dba-2f81ba04e24a",
+      "step_type": "node",
+      "name": "collect_results",
+      "status": "success",
+      "started_at": 1775316575.376492,
+      "input": {
+        "failures_count": 0,
+        "has_technical": true,
+        "has_fundamental": true,
+        "has_event_news": true,
+        "has_sector_flow": true
+      },
+      "output": {
+        "missing_results": [],
+        "selected_failure": null
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1775316575.377244,
+      "duration_ms": 0
+    },
+    {
+      "step_id": "0788711e-f1b0-4ffb-8398-986a7734b8b7",
+      "step_type": "node",
+      "name": "strategy_style",
+      "status": "success",
+      "started_at": 1775316575.3782122,
+      "input": {
+        "ticker": "600873.SH",
+        "analysis_date": "2026-04-02",
+        "has_company_context": true,
+        "has_technical": true,
+        "has_fundamental": true,
+        "has_event_news": true,
+        "has_sector_flow": true,
+        "has_strategy_style": false,
+        "has_strategy_decision": false,
+        "has_company_report": false
+      },
+      "output": {
+        "effective_date": "2026-04-02",
+        "primary_strategy": "macro_cycle_investing",
+        "holding_horizon": "medium_term",
+        "secondary_count": 2
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {
+        "node_trace": {
+          "relative_path": "nodes/strategy_style/node_trace.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/strategy_style/node_trace.json"
+        },
+        "result": {
+          "relative_path": "nodes/strategy_style/result.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/strategy_style/result.json"
+        }
+      },
+      "finished_at": 1775316635.267883,
+      "duration_ms": 59889
+    },
+    {
+      "step_id": "690d9481-9fe7-4edb-b4f7-9496e8dae3e4",
+      "step_type": "node",
+      "name": "dispatch_post_strategy",
+      "status": "success",
+      "started_at": 1775316635.2723358,
+      "input": {
+        "ticker": "600873.SH",
+        "analysis_date": "2026-04-02",
+        "has_company_context": true,
+        "has_technical": true,
+        "has_fundamental": true,
+        "has_event_news": true,
+        "has_sector_flow": true,
+        "has_strategy_style": true,
+        "has_strategy_decision": false,
+        "has_company_report": false
+      },
+      "output": {
+        "ready_for_postprocess": true
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1775316635.273271,
+      "duration_ms": 0
+    },
+    {
+      "step_id": "f8eab266-dfb8-4d47-9f23-77ac51db746c",
+      "step_type": "node",
+      "name": "strategy_decision",
+      "status": "success",
+      "started_at": 1775316635.276672,
+      "input": {
+        "ticker": "600873.SH",
+        "analysis_date": "2026-04-02",
+        "has_company_context": true,
+        "has_technical": true,
+        "has_fundamental": true,
+        "has_event_news": true,
+        "has_sector_flow": true,
+        "has_strategy_style": true,
+        "has_strategy_decision": false,
+        "has_company_report": false
+      },
+      "output": {
+        "effective_date": "2026-04-02",
+        "action": "wait",
+        "priority": "medium",
+        "horizon": "medium_term"
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {
+        "node_trace": {
+          "relative_path": "nodes/strategy_decision/node_trace.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/strategy_decision/node_trace.json"
+        },
+        "result": {
+          "relative_path": "nodes/strategy_decision/result.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/strategy_decision/result.json"
+        }
+      },
+      "finished_at": 1775316656.710342,
+      "duration_ms": 21433
+    },
+    {
+      "step_id": "1792512e-9540-48a8-a39f-ea34458e8e91",
+      "step_type": "node",
+      "name": "company_report",
+      "status": "success",
+      "started_at": 1775316635.27664,
+      "input": {
+        "ticker": "600873.SH",
+        "analysis_date": "2026-04-02",
+        "has_company_context": true,
+        "has_technical": true,
+        "has_fundamental": true,
+        "has_event_news": true,
+        "has_sector_flow": true,
+        "has_strategy_style": true,
+        "has_strategy_decision": false,
+        "has_company_report": false
+      },
+      "output": {
+        "effective_date": "2026-04-02",
+        "report_title": "梅花生物(600873.SH)深度分析报告",
+        "executive_summary_count": 5,
+        "markdown_length": 6475
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {
+        "node_trace": {
+          "relative_path": "nodes/company_report/node_trace.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/company_report/node_trace.json"
+        },
+        "result": {
+          "relative_path": "nodes/company_report/result.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/company_report/result.json"
+        }
+      },
+      "finished_at": 1775316793.9888089,
+      "duration_ms": 158712
+    },
+    {
+      "step_id": "256c1487-aaa9-4c18-b7fd-397d9cd82f71",
+      "step_type": "node",
+      "name": "collect_postprocess",
+      "status": "success",
+      "started_at": 1775316793.991642,
+      "input": {
+        "ticker": "600873.SH",
+        "analysis_date": "2026-04-02",
+        "has_company_context": true,
+        "has_technical": true,
+        "has_fundamental": true,
+        "has_event_news": true,
+        "has_sector_flow": true,
+        "has_strategy_style": true,
+        "has_strategy_decision": true,
+        "has_company_report": true
+      },
+      "output": {
+        "missing_results": [],
+        "selected_failure": null
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1775316793.992167,
+      "duration_ms": 0
+    },
+    {
+      "step_id": "b5d59050-cf03-4760-b88f-e2bf00ea280b",
+      "step_type": "node",
+      "name": "final_report",
+      "status": "success",
+      "started_at": 1775316793.992853,
+      "input": {
+        "ticker": "600873.SH",
+        "analysis_date": "2026-04-02",
+        "has_company_context": true,
+        "has_technical": true,
+        "has_fundamental": true,
+        "has_event_news": true,
+        "has_sector_flow": true,
+        "has_strategy_style": true,
+        "has_strategy_decision": true,
+        "has_company_report": true
+      },
+      "output": {
+        "effective_date": "2026-04-02",
+        "report_title": "梅花生物(600873.SH)深度分析报告",
+        "action": "wait",
+        "executive_summary_count": 6,
+        "markdown_length": 7284
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {
+        "result": {
+          "relative_path": "nodes/final_report/result.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/final_report/result.json"
+        }
+      },
+      "finished_at": 1775316793.993213,
+      "duration_ms": 0
+    }
+  ],
+  "observability": {
+    "langsmith_enabled": false,
+    "langsmith_project_name": null,
+    "otel_enabled": false
+  }
+}

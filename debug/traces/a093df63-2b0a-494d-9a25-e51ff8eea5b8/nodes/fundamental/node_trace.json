@@ -1,0 +1,111 @@
+{
+  "run_id": "b8828c48-c930-4be4-bbda-d7d059887c10",
+  "agent_name": "FundamentalAgent",
+  "agent_type": "agent",
+  "status": "success",
+  "started_at": 1775062199.3417852,
+  "finished_at": 1775062240.535519,
+  "duration_ms": 41193,
+  "input_summary": {
+    "ticker": "600873.SH",
+    "analysis_date": "2026-04-02",
+    "has_company_context": true
+  },
+  "output_summary": {
+    "effective_trade_date": "2026-04-02",
+    "growth": "stable",
+    "valuation": "cheap",
+    "company_type": "consumer_healthcare_growth",
+    "confidence": 0.72
+  },
+  "error": null,
+  "steps": [
+    {
+      "step_id": "292f4354-2975-467e-8c25-654fde3769bd",
+      "step_type": "bundle",
+      "name": "build_fundamental_bundle",
+      "status": "success",
+      "started_at": 1775062199.341799,
+      "input": {
+        "ticker": "600873.SH",
+        "analysis_date": "2026-04-02"
+      },
+      "output": {
+        "effective_trade_date": "2026-04-02",
+        "company_type": "consumer_healthcare_growth",
+        "report_periods_used": 8
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1775062200.185706,
+      "duration_ms": 843
+    },
+    {
+      "step_id": "b2c588f5-70d4-4acb-b865-c9fbecdc6c7b",
+      "step_type": "llm",
+      "name": "llm_invoke_round_1",
+      "status": "success",
+      "started_at": 1775062200.193579,
+      "input": {
+        "round": 1,
+        "message_count": 2
+      },
+      "output": {
+        "has_tool_calls": false,
+        "content_preview": "```json\n{\n  \"ticker\": \"600873.SH\",\n  \"effective_trade_date\": \"2026-04-02\",\n  \"company_profile\": {\n    \"company_type\": \"consumer_healthcare_growth\",\n    \"industry\": \"食品\",\n    \"analysis_focus\": [\n      \"growth_stability\",\n      \"brand_or_channel_efficiency\",\n      \"margin_quality\",\n      \"cashflow_conversion\",\n      \"valuation_premium\"\n    ],\n    \"deprioritized_metrics\": [\n      \"capital_adequacy\"\n    ]\n  },\n  \"growth\": {\n    \"state\": \"stable\",\n    \"strength\": 0.55,\n    \"summary\": \"增长呈现分化态势：营收同比微降"
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1775062240.5351481,
+      "duration_ms": 40341
+    },
+    {
+      "step_id": "ec508025-aacb-4d53-92b3-952f01a92f69",
+      "step_type": "parse",
+      "name": "parse_json_response",
+      "status": "success",
+      "started_at": 1775062240.535174,
+      "input": {
+        "content_preview": "```json\n{\n  \"ticker\": \"600873.SH\",\n  \"effective_trade_date\": \"2026-04-02\",\n  \"company_profile\": {\n    \"company_type\": \"consumer_healthcare_growth\",\n    \"industry\": \"食品\",\n    \"analysis_focus\": [\n      \"growth_stability\",\n      \"brand_or_channel_efficiency\",\n      \"margin_quality\",\n      \"cashflow_conversion\",\n      \"valuation_premium\"\n    ],\n    \"deprioritized_metrics\": [\n      \"capital_adequacy\"\n    ]\n  },\n  \"growth\": {\n    \"state\": \"stable\",\n    \"strength\": 0.55,\n    \"summary\": \"增长呈现分化态势：营收同比微降"
+      },
+      "output": {
+        "growth": "stable",
+        "valuation": "cheap",
+        "confidence": 0.72
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1775062240.5353448,
+      "duration_ms": 0
+    },
+    {
+      "step_id": "50852998-fd18-40b8-a8f3-aed0bf510b72",
+      "step_type": "quality_gate",
+      "name": "quality_gate",
+      "status": "success",
+      "started_at": 1775062240.5353558,
+      "input": {
+        "round": 1
+      },
+      "output": {
+        "is_sparse": false
+      },
+      "metrics": {
+        "core_risks_count": 3,
+        "signals_count": 3
+      },
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1775062240.535389,
+      "duration_ms": 0
+    }
+  ],
+  "observability": {
+    "langsmith_enabled": false,
+    "langsmith_project_name": null,
+    "otel_enabled": false
+  }
+}

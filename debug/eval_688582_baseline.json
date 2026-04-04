@@ -1,0 +1,297 @@
+{
+  "generated_at": "2026-03-30T23:44:13",
+  "report_type": "event_news_recall_evaluation",
+  "report_scope": "fresh_runtime_bundle",
+  "design_basis": "latest_event_news_agent_company_context_design",
+  "ticker": "688582.SH",
+  "analysis_date": "2026-03-30",
+  "company_name": "芯动联科",
+  "industry": "元器件",
+  "query_plan": {
+    "sensitivity_variables": [
+      "MEMS 传感器需求",
+      "晶圆厂资本开支",
+      "国产替代进度",
+      "自动驾驶/无人系统订单",
+      "半导体出口管制"
+    ],
+    "company_query": "芯动联科 最近 30 天 公告 业绩 订单 客户验证 新品 国产替代 监管 风险",
+    "industry_query": "模拟芯片设计 最近 30 天 MEMS 传感器 资本开支 国产替代 技术进展 供需 竞争格局",
+    "global_event_query": "最近 30 天 芯片 出口管制 供应链 半导体设备 需求 成本 技术封锁",
+    "query_rationale": {
+      "company": "覆盖业绩兑现、客户验证、新品迭代及政策风险。",
+      "industry": "聚焦模拟芯片与 MEMS 赛道的资本开支、国产替代和技术变量。",
+      "global": "覆盖全球半导体政策与供应链对需求/成本的传导。"
+    }
+  },
+  "retrieval_runtime_snapshot": {
+    "company": {
+      "queries": [
+        "芯动联科 最近 30 天 公告 业绩 订单 客户验证 新品 国产替代 监管 风险"
+      ],
+      "deduped_results_count": 0,
+      "reranked_results_count": 0
+    },
+    "industry": {
+      "queries": [
+        "模拟芯片设计 最近 30 天 MEMS 传感器 资本开支 国产替代 技术进展 供需 竞争格局"
+      ],
+      "deduped_results_count": 12,
+      "reranked_results_count": 6
+    },
+    "global": {
+      "queries": [
+        "最近 30 天 芯片 出口管制 供应链 半导体设备 需求 成本 技术封锁"
+      ],
+      "deduped_results_count": 14,
+      "reranked_results_count": 5
+    }
+  },
+  "evaluation_standard": {
+    "高标准定义": "高质量召回不是新闻越多越好，而是用尽可能少的结果覆盖足够完整的事件上下文和传导路径。",
+    "公司层": "高质量结果应优先是公司硬事件，例如业绩、订单/项目、资本运作、监管/诉讼、重大经营变化。",
+    "行业层": "高质量结果应覆盖会改变板块基本面的变量，例如政策、供给、需求、价格/景气、资本开支/库存、技术/竞争格局。",
+    "全球层": "高质量结果应同时覆盖全球触发因素和传导变量，例如地缘/OPEC/汇率/利率 与 供给、价格、运价、保险、库存、成本。",
+    "传导链": "三层结果需要能拼成从全球/行业到公司的事件传导链，而不是各层各说各话。",
+    "输出目标": "召回结果应足以让上层 Agent 回答：发生了什么、改变了哪些变量、影响哪一层、接下来该跟踪什么。"
+  },
+  "rule_based_evaluation": {
+    "layer_evaluation": {
+      "company": {
+        "queries": [
+          "芯动联科 最近 30 天 公告 业绩 订单 客户验证 新品 国产替代 监管 风险"
+        ],
+        "result_count": 0,
+        "deduped_results_count": 0,
+        "reranked_results_count": 0,
+        "avg_item_score": 0.0,
+        "actionable_count": 0,
+        "noise_count": 0,
+        "dimension_coverage": [],
+        "quality_grade": "poor",
+        "coverage_hint": "公司层应覆盖业绩、订单/项目、资本运作、监管/诉讼等硬事件，至少命中两个维度。",
+        "items": []
+      },
+      "industry": {
+        "queries": [
+          "模拟芯片设计 最近 30 天 MEMS 传感器 资本开支 国产替代 技术进展 供需 竞争格局"
+        ],
+        "result_count": 6,
+        "deduped_results_count": 12,
+        "reranked_results_count": 6,
+        "avg_item_score": 0.83,
+        "actionable_count": 5,
+        "noise_count": 0,
+        "dimension_coverage": [
+          "technology_competition"
+        ],
+        "quality_grade": "poor",
+        "coverage_hint": "行业层应覆盖政策、供给、需求、价格/景气、资本开支/库存、技术/竞争格局中的多个维度。",
+        "items": [
+          {
+            "title": "邬贺铨、余晓晖共同等发文：我国新一代信息技术产业重点领域的成就与不足",
+            "score": 1,
+            "reasons": [
+              "命中行业变量维度: ['technology_competition']"
+            ],
+            "dimensions": {
+              "technology_competition": [
+                "技术"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "发行人及中介机构回复意见(江苏展芯半导体技术股份有限公司)",
+            "score": 1,
+            "reasons": [
+              "命中行业变量维度: ['technology_competition']"
+            ],
+            "dimensions": {
+              "technology_competition": [
+                "技术"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "2026年模拟芯片市场格局与国产化进程深度解析_产业分析_市场调查_今日观报网-今日观报媒体中心官网",
+            "score": 1,
+            "reasons": [
+              "命中行业变量维度: ['technology_competition']"
+            ],
+            "dimensions": {
+              "technology_competition": [
+                "芯片"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "中国MEMS产业研究报告",
+            "score": 0,
+            "reasons": [],
+            "dimensions": {},
+            "is_noise": false,
+            "is_actionable": false
+          },
+          {
+            "title": "数控化率仅51%，国产替代加速!2026年数控机床“十五五”产业链全景调研-手机中研网",
+            "score": 1,
+            "reasons": [
+              "命中行业变量维度: ['technology_competition']"
+            ],
+            "dimensions": {
+              "technology_competition": [
+                "国产替代"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "2026年中国风电叶片行业市场竞争格局与痛点拆解展望-手机中研网",
+            "score": 1,
+            "reasons": [
+              "命中行业变量维度: ['technology_competition']"
+            ],
+            "dimensions": {
+              "technology_competition": [
+                "竞争格局"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          }
+        ]
+      },
+      "global": {
+        "queries": [
+          "最近 30 天 芯片 出口管制 供应链 半导体设备 需求 成本 技术封锁"
+        ],
+        "result_count": 5,
+        "deduped_results_count": 14,
+        "reranked_results_count": 5,
+        "avg_item_score": 6.8,
+        "actionable_count": 2,
+        "noise_count": 0,
+        "dimension_coverage": [
+          "cost_margin",
+          "geopolitics",
+          "macro_policy",
+          "pricing",
+          "supply_demand"
+        ],
+        "quality_grade": "usable",
+        "coverage_hint": "全球层应同时命中全球触发因素与传导变量，不能只有泛宏观叙事。",
+        "items": [
+          {
+            "title": "【国金电子】行业周报:ASIC需求强劲,关注霍尔木兹海峡封锁影响",
+            "score": 11,
+            "reasons": [
+              "命中全球触发维度: ['geopolitics']",
+              "命中传导变量维度: ['supply_demand']",
+              "同时覆盖全球触发与传导变量"
+            ],
+            "dimensions": {
+              "trigger": [
+                "geopolitics"
+              ],
+              "transmission": [
+                "supply_demand"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "芯片材料价格翻番，化合物半导体供应链危险",
+            "score": 4,
+            "reasons": [
+              "命中传导变量维度: ['pricing']"
+            ],
+            "dimensions": {
+              "trigger": [],
+              "transmission": [
+                "pricing"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": false
+          },
+          {
+            "title": "战火下的供应链重构已至临界点，Xilinx FPGA交期全面突破40周_Lattice_型号_成本",
+            "score": 4,
+            "reasons": [
+              "命中传导变量维度: ['cost_margin']"
+            ],
+            "dimensions": {
+              "trigger": [],
+              "transmission": [
+                "cost_margin"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": false
+          },
+          {
+            "title": "顾三秋：特朗普终于犯下大错，最致命的错误！美专家：中国什么都没做就会赢特朗普第二任期刚开始，就决定加强针对中国的芯片出口管制并提高关税。他把重点放在限制先进芯片和制造设备上，认为这样能拖慢中国科技脚步。商务部据此发布通知，企业陆续收到相关文件，美国半导体设备企业很快感受到压力。中国大陆2024年设备支出达到495.5亿美元，同比增长35.4%，占全球份额42.3%，已经成为最大半导体设备市.",
+            "score": 11,
+            "reasons": [
+              "命中全球触发维度: ['macro_policy']",
+              "命中传导变量维度: ['supply_demand']",
+              "同时覆盖全球触发与传导变量"
+            ],
+            "dimensions": {
+              "trigger": [
+                "macro_policy"
+              ],
+              "transmission": [
+                "supply_demand"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": true
+          },
+          {
+            "title": "历史知事：中美芯片大战，却让日本发现一个惊天秘密！日媒紧急呼吁：“全球70%的成熟制程订单正源源不断流向中国工厂，价格低到让我们怀疑人生！”美国把EUV光刻机当“核弹”使，中国却用28纳米“板砖”打他们一个措手不及！美国政府几年前加大出口管制，重点限制先进半导体设备对华供应。EUV光刻机是生产7纳米以下芯片的关键设备，被严格管控，只有少数盟国企业能制造。美国协调荷兰等方，ASML公司停止向中国.",
+            "score": 4,
+            "reasons": [
+              "命中传导变量维度: ['pricing', 'supply_demand']"
+            ],
+            "dimensions": {
+              "trigger": [],
+              "transmission": [
+                "pricing",
+                "supply_demand"
+              ]
+            },
+            "is_noise": false,
+            "is_actionable": false
+          }
+        ]
+      }
+    },
+    "chain_closure": {
+      "satisfied": {
+        "company_impact": false,
+        "industry_variables": true,
+        "global_trigger": true,
+        "global_transmission": true
+      },
+      "satisfied_count": 3,
+      "quality_grade": "usable",
+      "summary": "事件传导链应至少覆盖：全球触发、全球传导变量、行业变量、公司影响。 当前满足 3/4。"
+    },
+    "overall": {
+      "non_empty_layers": 2,
+      "actionable_layers": 2,
+      "strong_layers": 0,
+      "quality_grade": "usable",
+      "summary": "三层中有 2/3 层有结果，2/3 层包含可执行事件线索，0/3 层达到 strong，传导链评估为 usable。"
+    }
+  }
+}

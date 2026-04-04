@@ -1,0 +1,49 @@
+{
+  "run_id": "e59f824c-e93a-4d43-89b5-477ceb618a9e",
+  "agent_name": "TechnicalAgent",
+  "agent_type": "agent",
+  "status": "failed",
+  "started_at": 1774807302.515643,
+  "finished_at": 1774807302.655701,
+  "duration_ms": 140,
+  "input_summary": {
+    "ticker": "9926.HK",
+    "analysis_date": "2026-03-29",
+    "has_company_context": true
+  },
+  "output_summary": {},
+  "error": {
+    "error_type": "RuntimeError",
+    "error_message": "No market data found for 9926.HK up to 2026-03-27",
+    "traceback": "Traceback (most recent call last):\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/agents/technical/technical_agent.py\", line 89, in analyze\n    bundle = build_technical_data_bundle(\n        ticker=ticker,\n    ...<2 lines>...\n        company_context=company_context,\n    )\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/dataflows/technical_bundle_service.py\", line 260, in build_technical_data_bundle\n    raise RuntimeError(f\"No market data found for {ts_code} up to {effective_date}\")\nRuntimeError: No market data found for 9926.HK up to 2026-03-27\n"
+  },
+  "steps": [
+    {
+      "step_id": "aa676941-32b9-4897-9053-ffbcb1038c06",
+      "step_type": "bundle",
+      "name": "build_technical_bundle",
+      "status": "failed",
+      "started_at": 1774807302.515657,
+      "input": {
+        "ticker": "9926.HK",
+        "analysis_date": "2026-03-29",
+        "lookback_trading_days": 90
+      },
+      "output": {},
+      "metrics": {},
+      "error": {
+        "error_type": "RuntimeError",
+        "error_message": "No market data found for 9926.HK up to 2026-03-27",
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/agents/technical/technical_agent.py\", line 89, in analyze\n    bundle = build_technical_data_bundle(\n        ticker=ticker,\n    ...<2 lines>...\n        company_context=company_context,\n    )\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/dataflows/technical_bundle_service.py\", line 260, in build_technical_data_bundle\n    raise RuntimeError(f\"No market data found for {ts_code} up to {effective_date}\")\nRuntimeError: No market data found for 9926.HK up to 2026-03-27\n"
+      },
+      "artifacts": {},
+      "finished_at": 1774807302.655714,
+      "duration_ms": 140
+    }
+  ],
+  "observability": {
+    "langsmith_enabled": false,
+    "langsmith_project_name": null,
+    "otel_enabled": false
+  }
+}

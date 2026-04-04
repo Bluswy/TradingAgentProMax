@@ -1,0 +1,47 @@
+{
+  "run_id": "0229f395-31b4-4597-90cd-7d85d2c87dde",
+  "agent_name": "SectorFlowAgent",
+  "agent_type": "agent",
+  "status": "failed",
+  "started_at": 1774807302.515386,
+  "finished_at": 1774807303.552869,
+  "duration_ms": 1037,
+  "input_summary": {
+    "ticker": "9926.HK",
+    "analysis_date": "2026-03-29"
+  },
+  "output_summary": {},
+  "error": {
+    "error_type": "RuntimeError",
+    "error_message": "No sector flow data found for 9926.HK up to 2026-03-27",
+    "traceback": "Traceback (most recent call last):\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/agents/sector_flow/sector_flow_agent.py\", line 62, in analyze\n    bundle = build_sector_flow_data_bundle(ticker=ticker, analysis_date=analysis_date)\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/dataflows/sector_flow_bundle_service.py\", line 478, in build_sector_flow_data_bundle\n    raise RuntimeError(f\"No sector flow data found for {ts_code} up to {effective_date}\")\nRuntimeError: No sector flow data found for 9926.HK up to 2026-03-27\n"
+  },
+  "steps": [
+    {
+      "step_id": "f9c007a1-c124-46a5-8377-e9cabbce1c7d",
+      "step_type": "bundle",
+      "name": "build_sector_flow_bundle",
+      "status": "failed",
+      "started_at": 1774807302.5153978,
+      "input": {
+        "ticker": "9926.HK",
+        "analysis_date": "2026-03-29"
+      },
+      "output": {},
+      "metrics": {},
+      "error": {
+        "error_type": "RuntimeError",
+        "error_message": "No sector flow data found for 9926.HK up to 2026-03-27",
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/agents/sector_flow/sector_flow_agent.py\", line 62, in analyze\n    bundle = build_sector_flow_data_bundle(ticker=ticker, analysis_date=analysis_date)\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/dataflows/sector_flow_bundle_service.py\", line 478, in build_sector_flow_data_bundle\n    raise RuntimeError(f\"No sector flow data found for {ts_code} up to {effective_date}\")\nRuntimeError: No sector flow data found for 9926.HK up to 2026-03-27\n"
+      },
+      "artifacts": {},
+      "finished_at": 1774807303.552875,
+      "duration_ms": 1037
+    }
+  ],
+  "observability": {
+    "langsmith_enabled": false,
+    "langsmith_project_name": null,
+    "otel_enabled": false
+  }
+}

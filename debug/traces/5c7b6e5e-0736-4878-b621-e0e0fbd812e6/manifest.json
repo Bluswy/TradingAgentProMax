@@ -1,0 +1,103 @@
+{
+  "run_id": "5c7b6e5e-0736-4878-b621-e0e0fbd812e6",
+  "root_dir": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6",
+  "nodes": {
+    "company_context": {
+      "result": {
+        "relative_path": "nodes/company_context/result.json",
+        "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/company_context/result.json"
+      }
+    },
+    "sector_flow": {
+      "node_trace": {
+        "relative_path": "nodes/sector_flow/node_trace.json",
+        "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/sector_flow/node_trace.json"
+      },
+      "result": {
+        "relative_path": "nodes/sector_flow/result.json",
+        "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/sector_flow/result.json"
+      }
+    },
+    "technical": {
+      "node_trace": {
+        "relative_path": "nodes/technical/node_trace.json",
+        "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/technical/node_trace.json"
+      },
+      "result": {
+        "relative_path": "nodes/technical/result.json",
+        "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/technical/result.json"
+      }
+    },
+    "fundamental": {
+      "node_trace": {
+        "relative_path": "nodes/fundamental/node_trace.json",
+        "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/fundamental/node_trace.json"
+      },
+      "result": {
+        "relative_path": "nodes/fundamental/result.json",
+        "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/fundamental/result.json"
+      }
+    },
+    "event_news": {
+      "node_trace": {
+        "relative_path": "nodes/event_news/node_trace.json",
+        "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/event_news/node_trace.json"
+      },
+      "result": {
+        "relative_path": "nodes/event_news/result.json",
+        "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/event_news/result.json"
+      }
+    },
+    "collect_results": {},
+    "strategy_style": {
+      "node_trace": {
+        "relative_path": "nodes/strategy_style/node_trace.json",
+        "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/strategy_style/node_trace.json"
+      },
+      "result": {
+        "relative_path": "nodes/strategy_style/result.json",
+        "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/strategy_style/result.json"
+      }
+    },
+    "dispatch_post_strategy": {},
+    "strategy_decision": {
+      "node_trace": {
+        "relative_path": "nodes/strategy_decision/node_trace.json",
+        "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/strategy_decision/node_trace.json"
+      },
+      "result": {
+        "relative_path": "nodes/strategy_decision/result.json",
+        "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/strategy_decision/result.json"
+      }
+    },
+    "company_report": {
+      "node_trace": {
+        "relative_path": "nodes/company_report/node_trace.json",
+        "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/company_report/node_trace.json"
+      },
+      "result": {
+        "relative_path": "nodes/company_report/result.json",
+        "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/company_report/result.json"
+      }
+    },
+    "collect_postprocess": {},
+    "final_report": {
+      "result": {
+        "relative_path": "nodes/final_report/result.json",
+        "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/nodes/final_report/result.json"
+      }
+    }
+  },
+  "run_trace": {
+    "relative_path": "run_trace.json",
+    "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/run_trace.json"
+  },
+  "summary": {
+    "relative_path": "summary.json",
+    "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/summary.json"
+  },
+  "final_state": {
+    "relative_path": "final_state.json",
+    "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/5c7b6e5e-0736-4878-b621-e0e0fbd812e6/final_state.json"
+  }
+}

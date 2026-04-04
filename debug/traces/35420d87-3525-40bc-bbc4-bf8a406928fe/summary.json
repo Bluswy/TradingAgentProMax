@@ -1,0 +1,9 @@
+{
+  "ticker": "600873.SH",
+  "analysis_date": "2026-04-02",
+  "failure": {
+    "node": "fundamental",
+    "message": "No columns to parse from file"
+  },
+  "trace_steps": 6
+}

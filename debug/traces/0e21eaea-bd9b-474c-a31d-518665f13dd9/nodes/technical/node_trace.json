@@ -1,0 +1,49 @@
+{
+  "run_id": "f3ff9c7c-f319-44ac-9a45-b5a8a9ac63b7",
+  "agent_name": "TechnicalAgent",
+  "agent_type": "agent",
+  "status": "failed",
+  "started_at": 1775063612.590245,
+  "finished_at": 1775063612.828449,
+  "duration_ms": 238,
+  "input_summary": {
+    "ticker": "600873.SH",
+    "analysis_date": "2026-04-02",
+    "has_company_context": true
+  },
+  "output_summary": {},
+  "error": {
+    "error_type": "EmptyDataError",
+    "error_message": "No columns to parse from file",
+    "traceback": "Traceback (most recent call last):\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/agents/technical/technical_agent.py\", line 89, in analyze\n    bundle = build_technical_data_bundle(\n        ticker=ticker,\n    ...<2 lines>...\n        company_context=company_context,\n    )\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/dataflows/technical_bundle_service.py\", line 264, in build_technical_data_bundle\n    benchmark = _fetch_benchmark_series(benchmark_code, start_dt.strftime(\"%Y%m%d\"), effective_dt.strftime(\"%Y%m%d\"))\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/dataflows/technical_bundle_service.py\", line 63, in _fetch_benchmark_series\n    pro = _require_tushare()\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/dataflows/tushare_provider.py\", line 51, in _require_tushare\n    return ts.pro_api()\n           ~~~~~~~~~~^^\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/.venv/lib/python3.13/site-packages/tushare/pro/data_pro.py\", line 207, in pro_api\n    token...<truncated>"
+  },
+  "steps": [
+    {
+      "step_id": "a948c7d4-12ce-4543-8684-63060bf1aca8",
+      "step_type": "bundle",
+      "name": "build_technical_bundle",
+      "status": "failed",
+      "started_at": 1775063612.590462,
+      "input": {
+        "ticker": "600873.SH",
+        "analysis_date": "2026-04-02",
+        "lookback_trading_days": 90
+      },
+      "output": {},
+      "metrics": {},
+      "error": {
+        "error_type": "EmptyDataError",
+        "error_message": "No columns to parse from file",
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/agents/technical/technical_agent.py\", line 89, in analyze\n    bundle = build_technical_data_bundle(\n        ticker=ticker,\n    ...<2 lines>...\n        company_context=company_context,\n    )\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/dataflows/technical_bundle_service.py\", line 264, in build_technical_data_bundle\n    benchmark = _fetch_benchmark_series(benchmark_code, start_dt.strftime(\"%Y%m%d\"), effective_dt.strftime(\"%Y%m%d\"))\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/dataflows/technical_bundle_service.py\", line 63, in _fetch_benchmark_series\n    pro = _require_tushare()\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/dataflows/tushare_provider.py\", line 51, in _require_tushare\n    return ts.pro_api()\n           ~~~~~~~~~~^^\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/.venv/lib/python3.13/site-packages/tushare/pro/data_pro.py\", line 207, in pro_api\n    token...<truncated>"
+      },
+      "artifacts": {},
+      "finished_at": 1775063612.828458,
+      "duration_ms": 237
+    }
+  ],
+  "observability": {
+    "langsmith_enabled": false,
+    "langsmith_project_name": null,
+    "otel_enabled": false
+  }
+}

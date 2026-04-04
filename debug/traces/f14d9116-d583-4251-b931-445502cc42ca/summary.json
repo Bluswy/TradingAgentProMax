@@ -1,0 +1,20 @@
+{
+  "ticker": "600873.SH",
+  "analysis_date": "2026-04-02",
+  "failure": {
+    "node": "fundamental",
+    "message": "Expecting ',' delimiter: line 145 column 42 (char 3908)"
+  },
+  "trace_steps": 6,
+  "available_results": {
+    "company_context": true,
+    "technical": true,
+    "fundamental": false,
+    "event_news": true,
+    "sector_flow": true,
+    "strategy_style": false,
+    "strategy_decision": false,
+    "company_report": false,
+    "final_report": false
+  }
+}

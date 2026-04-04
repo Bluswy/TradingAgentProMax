@@ -1,0 +1,489 @@
+{
+  "query_plan": {
+    "sensitivity_variables": [
+      "覆铜板价格",
+      "铜价/环氧树脂成本",
+      "PCB 下游需求",
+      "AI 服务器/汽车电子需求",
+      "产能利用率",
+      "汇率与出口"
+    ],
+    "company_query": "生益科技 近期 公告 业绩 订单 产能扩张 客户验证 新品 高频高速板材 融资 风险",
+    "industry_query": "覆铜板 PCB 印制电路板 近期 价格 需求 产能 开工率 库存 竞争格局 技术进展 AI 服务器 汽车电子",
+    "global_event_query": "近期 铜价 环氧树脂 玻纤布 关税 汇率 出口 原材料 成本 供应链 需求",
+    "query_rationale": {
+      "company": "覆盖业绩、订单、产能扩张、客户验证及新品进展，兼顾经营风险。",
+      "industry": "覆盖覆铜板/PCB 行业核心中观变量：价格、需求、产能、开工率、竞争与技术。",
+      "global": "覆盖原材料成本（铜/树脂/玻纤）、关税汇率及供应链对盈利传导。"
+    }
+  },
+  "company_search": {
+    "queries": [
+      "生益科技 近期 公告 业绩 订单 产能扩张 客户验证 新品 高频高速板材 融资 风险"
+    ],
+    "query_results": [
+      {
+        "query": "生益科技 近期 公告 业绩 订单 产能扩张 客户验证 新品 高频高速板材 融资 风险",
+        "results_count": 0,
+        "results": []
+      }
+    ],
+    "results": [],
+    "deduped_results_count": 0,
+    "reranked_results_count": 0
+  },
+  "industry_search": {
+    "queries": [
+      "覆铜板 PCB 印制电路板 近期 价格 需求 产能 开工率 库存 竞争格局 技术进展 AI 服务器 汽车电子"
+    ],
+    "query_results": [
+      {
+        "query": "覆铜板 PCB 印制电路板 近期 价格 需求 产能 开工率 库存 竞争格局 技术进展 AI 服务器 汽车电子",
+        "results_count": 10,
+        "results": [
+          {
+            "title": "AI PCB需求保持高速增长 机构称供给紧张趋势延续",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "康达新材:关于康达新材料(集团)股份有限公司申请向特定对象发行股票的审核问询函之回复报告",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "PCB市场持续回暖！AI支撑PCB需求高增长",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "覆铜板产业掀起扩产潮 核心材料国产替代加速",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "首次覆盖报告：全球覆铜板王者归来，铜价上行赋能盈利+AI高端材料开启成长新周期",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "2026-2030年印制电路板(PCB)行业：AI服务器HDI板迎来“量价齐升”的黄金五年_中研普华_中研网",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "2026年中国印制电路板行业竞争格局与投资机会分析_中研普华_中研网",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "杨杨有道：政策东风下的PCB赛道：算力基建核心载体的价值重估 在AI算力爆发与算力基建政策双重驱动下，作为电子系统“神经网络”的PCB（印制电路板）正迎来新一轮产业红利。从数据中心到智能汽车，从消费电子到通信基站，PCB的技术迭代与需求扩容，正重塑全球电子制造的竞争格局。 政策层面，国内算力基础设施建设提速，叠加高端制造自主化政策引导，推动高频高速板、封装载板等高端PCB品类加速国产替代。.",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "初见：半导体PCB板块梳理 PCB（印制电路板）是电子信息产业的“神经网络”，2026年AI算力爆发、HBM存储需求激增、汽车电子智能化与通信技术升级成为四大核心驱动力。全球PCB市场规模突破940亿美元，AI服务器PCB单价较传统服务器提升3-5倍，高速高频材料（M9级覆铜板）与先进工艺（CoWoS、CoWoS-Lite、CoWOP）供不应求。国内胜宏科技、沪电股份等龙头在AI服务器、汽车电.",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "受益于AI服务器PCB高速增长 高性能电子布需求激增 电子级玻璃纤维布未来涨价空间巨大",
+            "trunk": "",
+            "secu_list": []
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "title": "杨杨有道：政策东风下的PCB赛道：算力基建核心载体的价值重估 在AI算力爆发与算力基建政策双重驱动下，作为电子系统“神经网络”的PCB（印制电路板）正迎来新一轮产业红利。从数据中心到智能汽车，从消费电子到通信基站，PCB的技术迭代与需求扩容，正重塑全球电子制造的竞争格局。 政策层面，国内算力基础设施建设提速，叠加高端制造自主化政策引导，推动高频高速板、封装载板等高端PCB品类加速国产替代。.",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "AI PCB需求保持高速增长 机构称供给紧张趋势延续",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "初见：半导体PCB板块梳理 PCB（印制电路板）是电子信息产业的“神经网络”，2026年AI算力爆发、HBM存储需求激增、汽车电子智能化与通信技术升级成为四大核心驱动力。全球PCB市场规模突破940亿美元，AI服务器PCB单价较传统服务器提升3-5倍，高速高频材料（M9级覆铜板）与先进工艺（CoWoS、CoWoS-Lite、CoWOP）供不应求。国内胜宏科技、沪电股份等龙头在AI服务器、汽车电.",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "受益于AI服务器PCB高速增长 高性能电子布需求激增 电子级玻璃纤维布未来涨价空间巨大",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "PCB市场持续回暖！AI支撑PCB需求高增长",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "覆铜板产业掀起扩产潮 核心材料国产替代加速",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "首次覆盖报告：全球覆铜板王者归来，铜价上行赋能盈利+AI高端材料开启成长新周期",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "2026年中国印制电路板行业竞争格局与投资机会分析_中研普华_中研网",
+        "trunk": "",
+        "secu_list": []
+      }
+    ],
+    "deduped_results_count": 10,
+    "reranked_results_count": 8
+  },
+  "global_search": {
+    "queries": [
+      "近期 铜价 环氧树脂 玻纤布 关税 汇率 出口 原材料 成本 供应链 需求"
+    ],
+    "query_results": [
+      {
+        "query": "近期 铜价 环氧树脂 玻纤布 关税 汇率 出口 原材料 成本 供应链 需求",
+        "results_count": 12,
+        "results": [
+          {
+            "title": "普林新闻-深圳市普林电路有限公司",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "建滔积层板突发1.3亿股配售 早盘一度跌近8%",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "截至2025年12月31日止年度末期業績公告",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "西部矿业:西部矿业2025年年度报告摘要",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "美伊冲突持续或重创铜企：需求疲软且原料成本还在上涨",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "中国五矿集团有限公司2026年面向专业投资者公开发行公司债券募集说明书(注册稿)",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "全球发售",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "基础化工行业周报：原油价格高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI需求大周期",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "PCB/CCL行业2026年投资策略：电互联：规模、速率、集成",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "涨价函满天飞！覆铜板开启全线涨价，国产替代的决战时刻到了|铜箔|材料|基板|玻纤布|环氧树脂_网易订阅",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "2026年中国玻纤布行业竞争格局与未来趋势分析",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "生死劫！原料暴涨超70%！粉末涂料被逼涨价！_涨幅_成本_环氧树脂",
+            "trunk": "",
+            "secu_list": []
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "title": "基础化工行业周报：原油价格高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI需求大周期",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "美伊冲突持续或重创铜企：需求疲软且原料成本还在上涨",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "生死劫！原料暴涨超70%！粉末涂料被逼涨价！_涨幅_成本_环氧树脂",
+        "trunk": "",
+        "secu_list": []
+      }
+    ],
+    "deduped_results_count": 12,
+    "reranked_results_count": 3
+  },
+  "analysis_result": {
+    "ticker": "600183.SH",
+    "effective_trade_date": "2026-03-29",
+    "event_overview": {
+      "state": "mixed",
+      "summary": "行业处于强景气周期，AI算力与国产替代政策驱动需求高增，供给偏紧支撑价格；但全球地缘冲突导致铜等原材料成本上行，且缺乏公司层面具体经营兑现证据，形成'行业热、个股冷'的背离局面。",
+      "confidence": 0.65
+    },
+    "company_specific_events": [
+      {
+        "event_type": "other",
+        "title": "缺乏公司层面具体订单或业绩公告验证行业红利传导",
+        "direction": "neutral",
+        "importance": 0.4,
+        "time_horizon": "short_term",
+        "affected_variables": [
+          "earnings_visibility",
+          "valuation_premium"
+        ],
+        "evidence": [
+          "系统检索显示近期无生益科技特定公告、订单或产能扩张新闻",
+          "normalized_company_events为空列表"
+        ],
+        "summary": "尽管行业逻辑强劲，但公司作为全球覆铜板龙头（产量全球第二），近期缺乏具体的量价齐升公告或高频高速板材（M9级）通过头部客户验证的公开信息，导致市场对其能否充分受益于本轮AI周期的预期存在不确定性，压制估值弹性。"
+      }
+    ],
+    "industry_macro_events": [
+      {
+        "event_type": "policy",
+        "title": "算力基建政策驱动PCB高端化与国产替代加速",
+        "direction": "bullish",
+        "importance": 0.8,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "demand",
+          "technology_competition",
+          "market_share"
+        ],
+        "evidence": [
+          "杨杨有道：政策东风下的PCB赛道：算力基建核心载体的价值重估",
+          "初见：半导体PCB板块梳理：AI服务器PCB单价提升3-5倍，高速高频材料供不应求"
+        ],
+        "summary": "国内算力基础设施建设提速叠加高端制造自主化政策，明确推动高频高速板、封装载板等高端品类国产替代。AI服务器对M9级覆铜板需求爆发，行业技术壁垒提升，利好具备高端产能的龙头企业。"
+      },
+      {
+        "event_type": "commodity",
+        "title": "地缘冲突推升铜价与化工原料成本，挤压中游利润空间",
+        "direction": "bearish",
+        "importance": 0.7,
+        "time_horizon": "short_term",
+        "affected_variables": [
+          "cost_margin",
+          "pricing_power"
+        ],
+        "evidence": [
+          "美伊冲突持续或重创铜企：需求疲软且原料成本还在上涨",
+          "生死劫！原料暴涨超70！粉末涂料被逼涨价",
+          "基础化工行业周报：原油价格高位运行"
+        ],
+        "summary": "美伊冲突及原油高位运行导致铜价及环氧树脂等关键原材料成本显著上行。虽然覆铜板行业有涨价趋势，但成本传导存在时滞，短期内可能对毛利率造成压力，需观察公司议价能力。"
+      }
+    ],
+    "event_compact_signals": {
+      "company_event_bias": "none",
+      "macro_event_bias": "positive",
+      "event_density": "medium",
+      "policy_sensitivity": "high",
+      "earnings_catalyst_state": "none",
+      "risk_event_level": "high"
+    },
+    "event_context_snapshot": {
+      "company_event_strength": "weak",
+      "industry_context_strength": "strong",
+      "global_context_strength": "strong",
+      "chain_completeness": "partial",
+      "dominant_driver_layer": "industry",
+      "dominant_driver_type": "policy_demand",
+      "primary_bullish_variable": "ai_server_demand",
+      "primary_bearish_variable": "raw_material_cost",
+      "most_actionable_catalyst": "高端覆铜板（M9级）客户验证通过或大额订单公告",
+      "most_critical_risk": "原材料成本涨幅超过产品提价幅度"
+    },
+    "event_chain": {
+      "global_triggers": [
+        "美伊地缘冲突推升铜价",
+        "原油高位运行带动化工原料涨价",
+        "全球AI算力投资大周期"
+      ],
+      "industry_variables": [
+        "AI服务器/汽车电子需求爆发",
+        "高频高速覆铜板（M9级）供给紧张",
+        "国产替代政策加速高端产能落地",
+        "全行业开启涨价潮"
+      ],
+      "company_impacts": [
+        "潜在营收增长（量增）",
+        "潜在毛利波动（价差博弈）",
+        "市场份额提升预期（国产替代）"
+      ],
+      "missing_links": [
+        "缺公司高频高速板材具体出货量或占比数据",
+        "缺公司针对原材料涨价的具体调价函或落地执行情况",
+        "缺一季度业绩预告或经营数据验证"
+      ]
+    },
+    "key_catalysts": [
+      "发布高频高速板材（M9级）通过头部服务器厂商验证的公告",
+      "披露一季度业绩预告超预期或大幅上调全年产能利用率",
+      "宣布新的扩产计划或并购整合动作"
+    ],
+    "key_risks": [
+      "铜价及环氧树脂价格持续暴涨，成本传导受阻",
+      "行业扩产潮导致中低端产品竞争加剧，价格战重燃",
+      "下游AI服务器需求增速不及预期或去库存"
+    ],
+    "tracking_points": [
+      "LME铜价及环氧树脂市场价格走势",
+      "主要竞争对手（如建滔积层板、台光电子）的涨价函及稼动率情况",
+      "公司月度经营数据或投资者调研纪要中关于高端产品占比的表述"
+    ],
+    "event_summary_zh": "生益科技当前处于'强行业、弱个股信号'的混合状态。主导催化来自AI算力爆发引发的PCB及上游覆铜板需求重构，政策端强力支持高端材料国产替代，行业进入量价齐升的预期通道。然而，全球地缘政治导致铜及化工原料成本急剧上升，构成主要风险变量。最关键的问题是缺乏公司层面的微观证据（如具体订单、高端产品验证进度、调价落地情况）来确认其能否将行业贝塔转化为自身阿尔法。后续需紧密跟踪原材料成本传导机制及公司高端产能释放节奏。"
+  },
+  "trace": {
+    "run_id": "3ad0152e-81c0-4694-b96d-caf1bdf37ae7",
+    "agent_name": "EventNewsAgent",
+    "agent_type": "agent",
+    "status": "success",
+    "started_at": 1774799268.9940522,
+    "finished_at": 1774799307.4016058,
+    "duration_ms": 38407,
+    "input_summary": {
+      "ticker": "600183.SH",
+      "analysis_date": "2026-03-29",
+      "has_company_context": false
+    },
+    "output_summary": {
+      "effective_trade_date": "2026-03-29",
+      "event_state": "mixed",
+      "company_events": 1,
+      "industry_events": 2
+    },
+    "error": null,
+    "steps": [
+      {
+        "step_id": "2804f7e8-f55c-427a-8880-03793737f08e",
+        "step_type": "context",
+        "name": "build_company_context",
+        "status": "success",
+        "started_at": 1774799268.9940748,
+        "input": {
+          "ticker": "600183.SH",
+          "analysis_date": "2026-03-29",
+          "date_mode": "natural_day"
+        },
+        "output": {
+          "market": "A_share",
+          "exchange": "SH"
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1774799269.0179431,
+        "duration_ms": 23
+      },
+      {
+        "step_id": "e6cf5f55-c23a-4d25-9c99-4f65f6807d80",
+        "step_type": "bundle",
+        "name": "build_event_news_bundle",
+        "status": "success",
+        "started_at": 1774799269.017972,
+        "input": {
+          "ticker": "600183.SH",
+          "analysis_date": "2026-03-29"
+        },
+        "output": {
+          "effective_trade_date": "2026-03-29",
+          "company_news_count": 0,
+          "macro_news_count": 8,
+          "has_debug_trace": true,
+          "has_debug_trace_payload": true
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1774799288.301922,
+        "duration_ms": 19283
+      },
+      {
+        "step_id": "c2b3da5f-d766-4e3b-be62-e9b2a9cf6080",
+        "step_type": "llm",
+        "name": "llm_invoke_round_1",
+        "status": "success",
+        "started_at": 1774799288.3093839,
+        "input": {
+          "round": 1,
+          "message_count": 2
+        },
+        "output": {
+          "has_tool_calls": false,
+          "content_preview": "{\n  \"ticker\": \"600183.SH\",\n  \"effective_trade_date\": \"2026-03-29\",\n  \"event_overview\": {\n    \"state\": \"mixed\",\n    \"summary\": \"行业处于强景气周期，AI算力与国产替代政策驱动需求高增，供给偏紧支撑价格；但全球地缘冲突导致铜等原材料成本上行，且缺乏公司层面具体经营兑现证据，形成'行业热、个股冷'的背离局面。\",\n    \"confidence\": 0.65\n  },\n  \"company_specific_events\": [\n    {\n      \"event_type\": \"other\",\n      \"title\": \"缺乏公司层面具体订单或业绩公告验证行业红利传导\",\n      \"direction\": \"neutral\",\n      \"importance\": 0.4,\n      \"time_horizon\": \"short_term\",\n      \"affected_variables\": [\n        \"earnings_visibi"
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1774799307.4008808,
+        "duration_ms": 19091
+      },
+      {
+        "step_id": "dc195ef8-d13f-4465-b04b-80adb0addd50",
+        "step_type": "parse",
+        "name": "parse_json_response",
+        "status": "success",
+        "started_at": 1774799307.4009962,
+        "input": {
+          "content_preview": "{\n  \"ticker\": \"600183.SH\",\n  \"effective_trade_date\": \"2026-03-29\",\n  \"event_overview\": {\n    \"state\": \"mixed\",\n    \"summary\": \"行业处于强景气周期，AI算力与国产替代政策驱动需求高增，供给偏紧支撑价格；但全球地缘冲突导致铜等原材料成本上行，且缺乏公司层面具体经营兑现证据，形成'行业热、个股冷'的背离局面。\",\n    \"confidence\": 0.65\n  },\n  \"company_specific_events\": [\n    {\n      \"event_type\": \"other\",\n      \"title\": \"缺乏公司层面具体订单或业绩公告验证行业红利传导\",\n      \"direction\": \"neutral\",\n      \"importance\": 0.4,\n      \"time_horizon\": \"short_term\",\n      \"affected_variables\": [\n        \"earnings_visibi"
+        },
+        "output": {
+          "event_state": "mixed",
+          "company_events": 1,
+          "industry_events": 2
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1774799307.40128,
+        "duration_ms": 0
+      },
+      {
+        "step_id": "04a9b9ef-aa4d-4614-910f-51b9faec7ae3",
+        "step_type": "quality_gate",
+        "name": "quality_gate",
+        "status": "success",
+        "started_at": 1774799307.4012952,
+        "input": {
+          "round": 1
+        },
+        "output": {
+          "is_sparse": false
+        },
+        "metrics": {
+          "company_events": 1,
+          "industry_events": 2
+        },
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1774799307.401314,
+        "duration_ms": 0
+      }
+    ],
+    "observability": {
+      "langsmith_enabled": false,
+      "langsmith_project_name": null,
+      "otel_enabled": false
+    }
+  }
+}

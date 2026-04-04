@@ -1,0 +1,774 @@
+{
+  "fundamental_data_bundle": {
+    "ticker": "601677.SH",
+    "requested_date": "2026-03-29",
+    "effective_trade_date": "2026-03-27",
+    "meta": {
+      "name": "明泰铝业",
+      "industry": "铝",
+      "market": "A_share",
+      "list_date": 20110919,
+      "sub_industry": "铝",
+      "business_model": "主要产品:铝板带箔及铝型材两大门类,广泛应用于新能源电池,轨道车体,汽车制造,印刷制版,电子家电,电力设施,建筑装饰,交通运输,食品和医药包装等领域.主营业务:1-8系铝板带箔的生产和销售."
+    },
+    "company_context": {
+      "identity": {
+        "ticker": "601677.SH",
+        "company_name": "明泰铝业",
+        "exchange": "SH",
+        "market": "A_share"
+      },
+      "analysis_time": {
+        "requested_date": "2026-03-29",
+        "effective_date": "2026-03-29",
+        "date_mode": "natural_day"
+      },
+      "classification": {
+        "industry": "铝",
+        "company_type": "cyclical_resources",
+        "style_tag": "cyclical_resources",
+        "size_bucket": "small_cap",
+        "liquidity_bucket": "medium"
+      },
+      "business_context": {
+        "sub_industry": "铝",
+        "business_model": "主要产品:铝板带箔及铝型材两大门类,广泛应用于新能源电池,轨道车体,汽车制造,印刷制版,电子家电,电力设施,建筑装饰,交通运输,食品和医药包装等领域.主营业务:1-8系铝板带箔的生产和销售.",
+        "company_intro": "公司始建于1997年，为国内首家民营铝加工业企业。通过持续的技术创新及前瞻性布局，不断实现高端突破，再生铝战略持续向纵深推进，已形成废铝回收-熔炼再生-精深加工的铝产业链闭环。公司正以绿色智造为笔，书写着可持续发展的新篇章，为制造业绿色转型升级提供可复制经验样本。公司整体实力位居我国铝加工业第一方阵，是铝加工业产品多元化和再生铝保级应用龙头企业。",
+        "core_products": [
+          "铝板带",
+          "铝箔",
+          "铝板带-合金板",
+          "其他业务",
+          "其他主营业务"
+        ],
+        "main_business_items": [
+          "铝板带",
+          "铝箔",
+          "铝板带-合金板",
+          "其他业务",
+          "其他主营业务",
+          "铝板带-普通铝板带材",
+          "铝合金轨道车体",
+          "铝板带-花纹板"
+        ],
+        "demand_drivers": [],
+        "cost_drivers": [],
+        "policy_drivers": [],
+        "global_risk_drivers": []
+      },
+      "market_context": {
+        "valuation_style": "cyclical",
+        "market_attention_points": [],
+        "trading_sensitivity": []
+      },
+      "technical_context": {
+        "trend": {},
+        "momentum": {},
+        "volatility": {},
+        "volume_confirmation": {},
+        "relative_strength": {},
+        "technical_compact_signals": {},
+        "key_levels": {},
+        "signals": [],
+        "confidence": null,
+        "technical_summary_zh": ""
+      },
+      "fundamental_context": {
+        "company_profile": {},
+        "growth": {},
+        "profitability": {},
+        "cashflow_quality": {},
+        "balance_sheet_health": {},
+        "valuation": {},
+        "fundamental_compact_signals": {},
+        "financial_snapshot": {},
+        "core_risks": [],
+        "fundamental_signals": [],
+        "confidence": null,
+        "fundamental_summary_zh": ""
+      },
+      "event_context": {
+        "event_overview": {},
+        "event_compact_signals": {},
+        "event_context_snapshot": {},
+        "event_chain": {},
+        "key_catalysts": [],
+        "key_risks": [],
+        "tracking_points": [],
+        "confidence": null,
+        "event_summary_zh": ""
+      },
+      "search_context": {
+        "search_aliases": [
+          "明泰铝业",
+          "铝板带",
+          "铝箔",
+          "铝板带-合金板",
+          "其他业务",
+          "有色金属",
+          "工业金属",
+          "铝"
+        ],
+        "seed_titles": [],
+        "ths_member_codes": [
+          "700001.TI",
+          "700002.TI",
+          "700003.TI",
+          "700004.TI",
+          "700008.TI",
+          "700009.TI",
+          "700010.TI",
+          "700021.TI",
+          "700023.TI",
+          "700031.TI",
+          "700032.TI",
+          "700035.TI"
+        ],
+        "ths_concepts": [
+          "原材料(A股)",
+          "原材料Ⅱ(A股)",
+          "金属与采矿(A股)",
+          "铝(A股)",
+          "工业金属",
+          "河南",
+          "减持新规(不可减持)",
+          "破净股",
+          "铝",
+          "融资融券",
+          "特高压",
+          "新能源汽车"
+        ],
+        "index_memberships": [
+          "有色金属",
+          "工业金属",
+          "铝"
+        ],
+        "preferred_query_style": "keyword_cluster",
+        "language_bias": "cn_finance_media"
+      },
+      "data_quality": {
+        "missing_sections": [],
+        "stale_sections": [],
+        "source_summary": {
+          "stock_basic": true,
+          "stock_company": true,
+          "fina_mainbz": true,
+          "ths_member": true,
+          "index_member_all": true
+        }
+      }
+    },
+    "company_profile": {
+      "company_type": "cyclical_resources",
+      "industry": "铝",
+      "analysis_focus": [
+        "growth_cyclicality",
+        "margin_sensitivity",
+        "cashflow_strength",
+        "capex_pressure",
+        "valuation_cycle_position"
+      ],
+      "deprioritized_metrics": [
+        "channel_efficiency"
+      ]
+    },
+    "valuation_snapshot": {
+      "pe_ttm": 10.7103,
+      "pb": 1.0049,
+      "ps_ttm": 0.5401,
+      "dv_ratio": 1.7934,
+      "total_mv": 1865285.4405,
+      "circ_mv": 1827009.9405,
+      "turnover_rate": 1.399
+    },
+    "financial_snapshot_raw": {
+      "revenue": 25873547118.74,
+      "net_profit": 1407906312.95,
+      "operating_cashflow": 849028012.55,
+      "roe": 7.8047,
+      "roa": 6.3811,
+      "gross_margin": 6.8118,
+      "net_margin": 5.4415,
+      "debt_to_assets": 30.4311
+    },
+    "financial_trends": {
+      "revenue_yoy": 9.377,
+      "net_profit_yoy": -0.4891,
+      "deducted_net_profit_yoy": 1.42,
+      "ocf_to_net_profit": 0.603043,
+      "gross_margin": 6.8118,
+      "net_margin": 5.4415,
+      "roe": 7.8047,
+      "roa": 6.3811,
+      "debt_to_assets": 30.4311,
+      "current_ratio": 2.1014,
+      "quick_ratio": 1.4794,
+      "receivables_ratio": 0.083742,
+      "inventory_ratio": 0.181196
+    },
+    "financial_snapshot": {
+      "common": {
+        "revenue_yoy": 9.377,
+        "net_profit_yoy": -0.4891,
+        "profit_minus_revenue_growth": -9.8661,
+        "roe": 7.8047,
+        "gross_margin": 6.8118,
+        "net_margin": 5.4415,
+        "debt_to_assets": 30.4311,
+        "ocf_to_net_profit": 0.603043,
+        "pe_ttm": 10.7103,
+        "pb": 1.0049,
+        "ps_ttm": 0.5401
+      },
+      "profile_specific": {
+        "current_ratio": 2.1014,
+        "quick_ratio": 1.4794,
+        "receivables_ratio": 0.083742,
+        "inventory_ratio": 0.181196,
+        "roa": 6.3811,
+        "grossprofit_margin": 6.8118,
+        "netprofit_margin": 5.4415,
+        "revenue_yoy": 9.377,
+        "net_profit_yoy": -0.4891
+      }
+    },
+    "statement_summary": {
+      "income": {
+        "revenue": 25873547118.74,
+        "operating_profit": 1691231190.08,
+        "net_profit": 1407906312.95,
+        "basic_eps": 1.12,
+        "fin_exp": -58028914.17,
+        "rd_exp": 284989933.18
+      },
+      "balance_sheet": {
+        "total_assets": 27283137871.6,
+        "total_liab": 8302567380.76,
+        "money_cap": 2567750699.27,
+        "accounts_receiv": 2284752540.3,
+        "inventories": 4943602515.57,
+        "fixed_assets": 5067533937.8,
+        "total_hldr_eqy_exc_min_int": 18686098218.68
+      },
+      "cashflow": {
+        "operate_cashflow": 849028012.55,
+        "invest_cashflow": -841517204.53,
+        "finance_cashflow": null,
+        "cash_end_period": 1062969191.25
+      }
+    },
+    "fundamental_compact_signals": {
+      "growth_quality": "cycle_mixed",
+      "profit_quality": "low_conversion",
+      "cashflow_support": "weak_ocf_support",
+      "leverage_risk": "manageable_balance_sheet",
+      "valuation_pressure": "cycle_valuation_balanced",
+      "cyclical_exposure": "high_sensitivity"
+    },
+    "data_quality": {
+      "latest_report_period": "2025-09-30",
+      "report_periods_used": 12,
+      "missing_fields": [],
+      "source": "tushare"
+    }
+  },
+  "analysis_result": {
+    "ticker": "601677.SH",
+    "effective_trade_date": "2026-03-27",
+    "company_profile": {
+      "company_type": "cyclical_resources",
+      "industry": "铝",
+      "analysis_focus": [
+        "growth_cyclicality",
+        "margin_sensitivity",
+        "cashflow_strength",
+        "capex_pressure",
+        "valuation_cycle_position"
+      ],
+      "deprioritized_metrics": [
+        "channel_efficiency"
+      ]
+    },
+    "growth": {
+      "state": "stable",
+      "strength": 0.4,
+      "summary": "营收保持增长但利润承压，呈现典型的周期加工特征。收入同比增长9.38%显示下游需求尚可，但净利润同比微降0.49%，表明在原材料价格波动或加工费压缩背景下，公司未能将销量增长完全转化为利润增长。",
+      "evidence": [
+        "revenue_yoy: 9.377%",
+        "net_profit_yoy: -0.4891%",
+        "profit_minus_revenue_growth: -9.87%"
+      ]
+    },
+    "profitability": {
+      "state": "average",
+      "summary": "ROE处于7.8%的中等水平，毛利率仅6.81%符合铝加工行业低毛利、高周转的属性。净利率5.44%相对稳定，但缺乏超额收益能力，盈利高度依赖产能利用率和加工价差。",
+      "evidence": [
+        "roe: 7.80%",
+        "gross_margin: 6.81%",
+        "net_margin: 5.44%"
+      ]
+    },
+    "cashflow_quality": {
+      "state": "weak",
+      "summary": "经营现金流对净利润的覆盖度不足六成，显示盈利质量存在瑕疵。考虑到公司正处于再生铝产业链闭环建设的资本开支期，存货和应收占用资金可能是导致OCF偏低的主要原因。",
+      "evidence": [
+        "ocf_to_net_profit: 0.60",
+        "operate_cashflow: 8.49亿",
+        "net_profit: 14.08亿",
+        "inventory_ratio: 18.12%"
+      ]
+    },
+    "balance_sheet_health": {
+      "state": "healthy",
+      "summary": "资产负债结构稳健，负债率约30%处于安全区间。流动比率2.1倍，速动比率1.48倍，短期偿债无忧。货币资金充裕，能够支撑当前的投资活动支出。",
+      "evidence": [
+        "debt_to_assets: 30.43%",
+        "current_ratio: 2.10",
+        "quick_ratio: 1.48",
+        "money_cap: 25.68亿"
+      ]
+    },
+    "valuation": {
+      "state": "fair",
+      "summary": "PB约1.0倍，处于破净边缘，反映了市场对周期股盈利的谨慎预期。PE TTM约10.7倍，对于一家增速放缓的加工企业而言估值合理，并未显著低估，需警惕若周期下行导致盈利下滑带来的被动高估风险。",
+      "evidence": [
+        "pb: 1.00",
+        "pe_ttm: 10.71",
+        "ps_ttm: 0.54"
+      ]
+    },
+    "core_risks": [
+      "原材料价格剧烈波动导致库存减值或加工利润被压缩。",
+      "经营现金流持续弱于净利润，若资本开支加大可能引发融资需求增加。",
+      "宏观经济下行导致铝板带箔下游需求（如汽车、建筑）萎缩。"
+    ],
+    "fundamental_compact_signals": {
+      "growth_quality": "cycle_mixed",
+      "profit_quality": "low_conversion",
+      "cashflow_support": "weak_ocf_support",
+      "leverage_risk": "manageable_balance_sheet",
+      "valuation_pressure": "cycle_valuation_balanced",
+      "cyclical_exposure": "high_sensitivity"
+    },
+    "fundamental_signals": [
+      {
+        "type": "quality",
+        "direction": "bearish",
+        "strength": 0.6,
+        "description": "盈利含金量不足，经营现金流大幅低于净利润。",
+        "evidence": [
+          "ocf_to_net_profit: 0.60"
+        ]
+      },
+      {
+        "type": "risk",
+        "direction": "neutral",
+        "strength": 0.5,
+        "description": "资产负债表健康，低杠杆提供安全垫，但需关注存货占比。",
+        "evidence": [
+          "debt_to_assets: 30.43%",
+          "inventory_ratio: 18.12%"
+        ]
+      }
+    ],
+    "financial_snapshot": {
+      "common": {
+        "revenue_yoy": 9.377,
+        "net_profit_yoy": -0.4891,
+        "roe": 7.8047,
+        "gross_margin": 6.8118,
+        "net_margin": 5.4415,
+        "debt_to_assets": 30.4311,
+        "ocf_to_net_profit": 0.603043,
+        "pe_ttm": 10.7103,
+        "pb": 1.0049,
+        "ps_ttm": 0.5401,
+        "profit_minus_revenue_growth": -9.8661
+      },
+      "profile_specific": {
+        "current_ratio": 2.1014,
+        "quick_ratio": 1.4794,
+        "receivables_ratio": 0.083742,
+        "inventory_ratio": 0.181196,
+        "roa": 6.3811,
+        "grossprofit_margin": 6.8118,
+        "netprofit_margin": 5.4415,
+        "revenue_yoy": 9.377,
+        "net_profit_yoy": -0.4891
+      }
+    },
+    "confidence": 0.85,
+    "fundamental_summary_zh": "明泰铝业当前基本面呈现“增收不增利”的周期震荡特征。营收近10%的增长验证了公司在铝板带箔领域的市场份额稳固，但净利润微降及经营现金流覆盖率仅0.6倍，揭示了加工环节利润受挤压及营运资本占用的压力。资产负债表健康（负债率30%）是主要安全垫，支撑其抵御周期波动。估值处于合理区间（PB~1.0x），未反映显著的成长溢价。核心风险在于原材料价格波动对微薄毛利的侵蚀以及现金流质量的持续性。后续需重点跟踪加工费走势及再生铝项目投产后的成本改善情况。"
+  },
+  "raw_response": "{\n  \"ticker\": \"601677.SH\",\n  \"effective_trade_date\": \"2026-03-27\",\n  \"company_profile\": {\n    \"company_type\": \"cyclical_resources\",\n    \"industry\": \"铝\",\n    \"analysis_focus\": [\n      \"growth_cyclicality\",\n      \"margin_sensitivity\",\n      \"cashflow_strength\",\n      \"capex_pressure\",\n      \"valuation_cycle_position\"\n    ],\n    \"deprioritized_metrics\": [\n      \"channel_efficiency\"\n    ]\n  },\n  \"growth\": {\n    \"state\": \"stable\",\n    \"strength\": 0.4,\n    \"summary\": \"营收保持增长但利润承压，呈现典型的周期加工特征。收入同比增长9.38%显示下游需求尚可，但净利润同比微降0.49%，表明在原材料价格波动或加工费压缩背景下，公司未能将销量增长完全转化为利润增长。\",\n    \"evidence\": [\n      \"revenue_yoy: 9.377%\",\n      \"net_profit_yoy: -0.4891%\",\n      \"profit_minus_revenue_growth: -9.87%\"\n    ]\n  },\n  \"profitability\": {\n    \"state\": \"average\",\n    \"summary\": \"ROE处于7.8%的中等水平，毛利率仅6.81%符合铝加工行业低毛利、高周转的属性。净利率5.44%相对稳定，但缺乏超额收益能力，盈利高度依赖产能利用率和加工价差。\",\n    \"evidence\": [\n      \"roe: 7.80%\",\n      \"gross_margin: 6.81%\",\n      \"net_margin: 5.44%\"\n    ]\n  },\n  \"cashflow_quality\": {\n    \"state\": \"weak\",\n    \"summary\": \"经营现金流对净利润的覆盖度不足六成，显示盈利质量存在瑕疵。考虑到公司正处于再生铝产业链闭环建设的资本开支期，存货和应收占用资金可能是导致OCF偏低的主要原因。\",\n    \"evidence\": [\n      \"ocf_to_net_profit: 0.60\",\n      \"operate_cashflow: 8.49亿\",\n      \"net_profit: 14.08亿\",\n      \"inventory_ratio: 18.12%\"\n    ]\n  },\n  \"balance_sheet_health\": {\n    \"state\": \"healthy\",\n    \"summary\": \"资产负债结构稳健，负债率约30%处于安全区间。流动比率2.1倍，速动比率1.48倍，短期偿债无忧。货币资金充裕，能够支撑当前的投资活动支出。\",\n    \"evidence\": [\n      \"debt_to_assets: 30.43%\",\n      \"current_ratio: 2.10\",\n      \"quick_ratio: 1.48\",\n      \"money_cap: 25.68亿\"\n    ]\n  },\n  \"valuation\": {\n    \"state\": \"fair\",\n    \"summary\": \"PB约1.0倍，处于破净边缘，反映了市场对周期股盈利的谨慎预期。PE TTM约10.7倍，对于一家增速放缓的加工企业而言估值合理，并未显著低估，需警惕若周期下行导致盈利下滑带来的被动高估风险。\",\n    \"evidence\": [\n      \"pb: 1.00\",\n      \"pe_ttm: 10.71\",\n      \"ps_ttm: 0.54\"\n    ]\n  },\n  \"core_risks\": [\n    \"原材料价格剧烈波动导致库存减值或加工利润被压缩。\",\n    \"经营现金流持续弱于净利润，若资本开支加大可能引发融资需求增加。\",\n    \"宏观经济下行导致铝板带箔下游需求（如汽车、建筑）萎缩。\"\n  ],\n  \"fundamental_compact_signals\": {\n    \"growth_quality\": \"cycle_mixed\",\n    \"profit_quality\": \"low_conversion\",\n    \"cashflow_support\": \"weak_ocf_support\",\n    \"leverage_risk\": \"manageable_balance_sheet\",\n    \"valuation_pressure\": \"cycle_valuation_balanced\",\n    \"cyclical_exposure\": \"high_sensitivity\"\n  },\n  \"fundamental_signals\": [\n    {\n      \"type\": \"quality\",\n      \"direction\": \"bearish\",\n      \"strength\": 0.6,\n      \"description\": \"盈利含金量不足，经营现金流大幅低于净利润。\",\n      \"evidence\": [\n        \"ocf_to_net_profit: 0.60\"\n      ]\n    },\n    {\n      \"type\": \"risk\",\n      \"direction\": \"neutral\",\n      \"strength\": 0.5,\n      \"description\": \"资产负债表健康，低杠杆提供安全垫，但需关注存货占比。\",\n      \"evidence\": [\n        \"debt_to_assets: 30.43%\",\n        \"inventory_ratio: 18.12%\"\n      ]\n    }\n  ],\n  \"financial_snapshot\": {\n    \"common\": {\n      \"revenue_yoy\": 9.377,\n      \"net_profit_yoy\": -0.4891,\n      \"roe\": 7.8047,\n      \"gross_margin\": 6.8118,\n      \"net_margin\": 5.4415,\n      \"debt_to_assets\": 30.4311,\n      \"ocf_to_net_profit\": 0.603043,\n      \"pe_ttm\": 10.7103,\n      \"pb\": 1.0049,\n      \"ps_ttm\": 0.5401\n    },\n    \"profile_specific\": {\n      \"current_ratio\": 2.1014,\n      \"quick_ratio\": 1.4794,\n      \"receivables_ratio\": 0.083742,\n      \"inventory_ratio\": 0.181196,\n      \"roa\": 6.3811,\n      \"grossprofit_margin\": 6.8118,\n      \"netprofit_margin\": 5.4415,\n      \"revenue_yoy\": 9.377,\n      \"net_profit_yoy\": -0.4891\n    }\n  },\n  \"confidence\": 0.85,\n  \"fundamental_summary_zh\": \"明泰铝业当前基本面呈现“增收不增利”的周期震荡特征。营收近10%的增长验证了公司在铝板带箔领域的市场份额稳固，但净利润微降及经营现金流覆盖率仅0.6倍，揭示了加工环节利润受挤压及营运资本占用的压力。资产负债表健康（负债率30%）是主要安全垫，支撑其抵御周期波动。估值处于合理区间（PB~1.0x），未反映显著的成长溢价。核心风险在于原材料价格波动对微薄毛利的侵蚀以及现金流质量的持续性。后续需重点跟踪加工费走势及再生铝项目投产后的成本改善情况。\"\n}",
+  "company_context": {
+    "identity": {
+      "ticker": "601677.SH",
+      "company_name": "明泰铝业",
+      "exchange": "SH",
+      "market": "A_share"
+    },
+    "analysis_time": {
+      "requested_date": "2026-03-29",
+      "effective_date": "2026-03-29",
+      "date_mode": "natural_day"
+    },
+    "classification": {
+      "industry": "铝",
+      "company_type": "cyclical_resources",
+      "style_tag": "cyclical_resources",
+      "size_bucket": "small_cap",
+      "liquidity_bucket": "medium"
+    },
+    "business_context": {
+      "sub_industry": "铝",
+      "business_model": "主要产品:铝板带箔及铝型材两大门类,广泛应用于新能源电池,轨道车体,汽车制造,印刷制版,电子家电,电力设施,建筑装饰,交通运输,食品和医药包装等领域.主营业务:1-8系铝板带箔的生产和销售.",
+      "company_intro": "公司始建于1997年，为国内首家民营铝加工业企业。通过持续的技术创新及前瞻性布局，不断实现高端突破，再生铝战略持续向纵深推进，已形成废铝回收-熔炼再生-精深加工的铝产业链闭环。公司正以绿色智造为笔，书写着可持续发展的新篇章，为制造业绿色转型升级提供可复制经验样本。公司整体实力位居我国铝加工业第一方阵，是铝加工业产品多元化和再生铝保级应用龙头企业。",
+      "core_products": [
+        "铝板带",
+        "铝箔",
+        "铝板带-合金板",
+        "其他业务",
+        "其他主营业务"
+      ],
+      "main_business_items": [
+        "铝板带",
+        "铝箔",
+        "铝板带-合金板",
+        "其他业务",
+        "其他主营业务",
+        "铝板带-普通铝板带材",
+        "铝合金轨道车体",
+        "铝板带-花纹板"
+      ],
+      "demand_drivers": [],
+      "cost_drivers": [],
+      "policy_drivers": [],
+      "global_risk_drivers": []
+    },
+    "market_context": {
+      "valuation_style": "cyclical",
+      "market_attention_points": [],
+      "trading_sensitivity": []
+    },
+    "technical_context": {
+      "trend": {},
+      "momentum": {},
+      "volatility": {},
+      "volume_confirmation": {},
+      "relative_strength": {},
+      "technical_compact_signals": {},
+      "key_levels": {},
+      "signals": [],
+      "confidence": null,
+      "technical_summary_zh": ""
+    },
+    "fundamental_context": {
+      "company_profile": {
+        "company_type": "cyclical_resources",
+        "industry": "铝",
+        "analysis_focus": [
+          "growth_cyclicality",
+          "margin_sensitivity",
+          "cashflow_strength",
+          "capex_pressure",
+          "valuation_cycle_position"
+        ],
+        "deprioritized_metrics": [
+          "channel_efficiency"
+        ]
+      },
+      "growth": {
+        "state": "stable",
+        "strength": 0.4,
+        "summary": "营收保持增长但利润承压，呈现典型的周期加工特征。收入同比增长9.38%显示下游需求尚可，但净利润同比微降0.49%，表明在原材料价格波动或加工费压缩背景下，公司未能将销量增长完全转化为利润增长。",
+        "evidence": [
+          "revenue_yoy: 9.377%",
+          "net_profit_yoy: -0.4891%",
+          "profit_minus_revenue_growth: -9.87%"
+        ]
+      },
+      "profitability": {
+        "state": "average",
+        "summary": "ROE处于7.8%的中等水平，毛利率仅6.81%符合铝加工行业低毛利、高周转的属性。净利率5.44%相对稳定，但缺乏超额收益能力，盈利高度依赖产能利用率和加工价差。",
+        "evidence": [
+          "roe: 7.80%",
+          "gross_margin: 6.81%",
+          "net_margin: 5.44%"
+        ]
+      },
+      "cashflow_quality": {
+        "state": "weak",
+        "summary": "经营现金流对净利润的覆盖度不足六成，显示盈利质量存在瑕疵。考虑到公司正处于再生铝产业链闭环建设的资本开支期，存货和应收占用资金可能是导致OCF偏低的主要原因。",
+        "evidence": [
+          "ocf_to_net_profit: 0.60",
+          "operate_cashflow: 8.49亿",
+          "net_profit: 14.08亿",
+          "inventory_ratio: 18.12%"
+        ]
+      },
+      "balance_sheet_health": {
+        "state": "healthy",
+        "summary": "资产负债结构稳健，负债率约30%处于安全区间。流动比率2.1倍，速动比率1.48倍，短期偿债无忧。货币资金充裕，能够支撑当前的投资活动支出。",
+        "evidence": [
+          "debt_to_assets: 30.43%",
+          "current_ratio: 2.10",
+          "quick_ratio: 1.48",
+          "money_cap: 25.68亿"
+        ]
+      },
+      "valuation": {
+        "state": "fair",
+        "summary": "PB约1.0倍，处于破净边缘，反映了市场对周期股盈利的谨慎预期。PE TTM约10.7倍，对于一家增速放缓的加工企业而言估值合理，并未显著低估，需警惕若周期下行导致盈利下滑带来的被动高估风险。",
+        "evidence": [
+          "pb: 1.00",
+          "pe_ttm: 10.71",
+          "ps_ttm: 0.54"
+        ]
+      },
+      "fundamental_compact_signals": {
+        "growth_quality": "cycle_mixed",
+        "profit_quality": "low_conversion",
+        "cashflow_support": "weak_ocf_support",
+        "leverage_risk": "manageable_balance_sheet",
+        "valuation_pressure": "cycle_valuation_balanced",
+        "cyclical_exposure": "high_sensitivity"
+      },
+      "financial_snapshot": {
+        "common": {
+          "revenue_yoy": 9.377,
+          "net_profit_yoy": -0.4891,
+          "roe": 7.8047,
+          "gross_margin": 6.8118,
+          "net_margin": 5.4415,
+          "debt_to_assets": 30.4311,
+          "ocf_to_net_profit": 0.603043,
+          "pe_ttm": 10.7103,
+          "pb": 1.0049,
+          "ps_ttm": 0.5401,
+          "profit_minus_revenue_growth": -9.8661
+        },
+        "profile_specific": {
+          "current_ratio": 2.1014,
+          "quick_ratio": 1.4794,
+          "receivables_ratio": 0.083742,
+          "inventory_ratio": 0.181196,
+          "roa": 6.3811,
+          "grossprofit_margin": 6.8118,
+          "netprofit_margin": 5.4415,
+          "revenue_yoy": 9.377,
+          "net_profit_yoy": -0.4891
+        }
+      },
+      "core_risks": [
+        "原材料价格剧烈波动导致库存减值或加工利润被压缩。",
+        "经营现金流持续弱于净利润，若资本开支加大可能引发融资需求增加。",
+        "宏观经济下行导致铝板带箔下游需求（如汽车、建筑）萎缩。"
+      ],
+      "fundamental_signals": [
+        {
+          "type": "quality",
+          "direction": "bearish",
+          "strength": 0.6,
+          "description": "盈利含金量不足，经营现金流大幅低于净利润。",
+          "evidence": [
+            "ocf_to_net_profit: 0.60"
+          ]
+        },
+        {
+          "type": "risk",
+          "direction": "neutral",
+          "strength": 0.5,
+          "description": "资产负债表健康，低杠杆提供安全垫，但需关注存货占比。",
+          "evidence": [
+            "debt_to_assets: 30.43%",
+            "inventory_ratio: 18.12%"
+          ]
+        }
+      ],
+      "confidence": 0.85,
+      "fundamental_summary_zh": "明泰铝业当前基本面呈现“增收不增利”的周期震荡特征。营收近10%的增长验证了公司在铝板带箔领域的市场份额稳固，但净利润微降及经营现金流覆盖率仅0.6倍，揭示了加工环节利润受挤压及营运资本占用的压力。资产负债表健康（负债率30%）是主要安全垫，支撑其抵御周期波动。估值处于合理区间（PB~1.0x），未反映显著的成长溢价。核心风险在于原材料价格波动对微薄毛利的侵蚀以及现金流质量的持续性。后续需重点跟踪加工费走势及再生铝项目投产后的成本改善情况。"
+    },
+    "event_context": {
+      "event_overview": {},
+      "event_compact_signals": {},
+      "event_context_snapshot": {},
+      "event_chain": {},
+      "key_catalysts": [],
+      "key_risks": [],
+      "tracking_points": [],
+      "confidence": null,
+      "event_summary_zh": ""
+    },
+    "search_context": {
+      "search_aliases": [
+        "明泰铝业",
+        "铝板带",
+        "铝箔",
+        "铝板带-合金板",
+        "其他业务",
+        "有色金属",
+        "工业金属",
+        "铝"
+      ],
+      "seed_titles": [],
+      "ths_member_codes": [
+        "700001.TI",
+        "700002.TI",
+        "700003.TI",
+        "700004.TI",
+        "700008.TI",
+        "700009.TI",
+        "700010.TI",
+        "700021.TI",
+        "700023.TI",
+        "700031.TI",
+        "700032.TI",
+        "700035.TI"
+      ],
+      "ths_concepts": [
+        "原材料(A股)",
+        "原材料Ⅱ(A股)",
+        "金属与采矿(A股)",
+        "铝(A股)",
+        "工业金属",
+        "河南",
+        "减持新规(不可减持)",
+        "破净股",
+        "铝",
+        "融资融券",
+        "特高压",
+        "新能源汽车"
+      ],
+      "index_memberships": [
+        "有色金属",
+        "工业金属",
+        "铝"
+      ],
+      "preferred_query_style": "keyword_cluster",
+      "language_bias": "cn_finance_media"
+    },
+    "data_quality": {
+      "missing_sections": [],
+      "stale_sections": [],
+      "source_summary": {
+        "stock_basic": true,
+        "stock_company": true,
+        "fina_mainbz": true,
+        "ths_member": true,
+        "index_member_all": true
+      }
+    }
+  },
+  "trace": {
+    "run_id": "ba846b6c-4ce7-4a81-b79a-b5a785247c62",
+    "agent_name": "FundamentalAgent",
+    "agent_type": "agent",
+    "status": "success",
+    "started_at": 1774885004.886528,
+    "finished_at": 1774885031.541591,
+    "duration_ms": 26655,
+    "input_summary": {
+      "ticker": "601677.SH",
+      "analysis_date": "2026-03-29",
+      "has_company_context": true
+    },
+    "output_summary": {
+      "effective_trade_date": "2026-03-27",
+      "growth": "stable",
+      "valuation": "fair",
+      "company_type": "cyclical_resources",
+      "confidence": 0.85
+    },
+    "error": null,
+    "steps": [
+      {
+        "step_id": "1c3f0883-a730-40e4-ac66-f0c89947530b",
+        "step_type": "bundle",
+        "name": "build_fundamental_bundle",
+        "status": "success",
+        "started_at": 1774885004.886544,
+        "input": {
+          "ticker": "601677.SH",
+          "analysis_date": "2026-03-29"
+        },
+        "output": {
+          "effective_trade_date": "2026-03-27",
+          "company_type": "cyclical_resources",
+          "report_periods_used": 12
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1774885005.169869,
+        "duration_ms": 283
+      },
+      {
+        "step_id": "0f379c33-f3ea-43f5-a30f-64092f6f80c9",
+        "step_type": "llm",
+        "name": "llm_invoke_round_1",
+        "status": "success",
+        "started_at": 1774885005.176418,
+        "input": {
+          "round": 1,
+          "message_count": 2
+        },
+        "output": {
+          "has_tool_calls": false,
+          "content_preview": "{\n  \"ticker\": \"601677.SH\",\n  \"effective_trade_date\": \"2026-03-27\",\n  \"company_profile\": {\n    \"company_type\": \"cyclical_resources\",\n    \"industry\": \"铝\",\n    \"analysis_focus\": [\n      \"growth_cyclicality\",\n      \"margin_sensitivity\",\n      \"cashflow_strength\",\n      \"capex_pressure\",\n      \"valuation_cycle_position\"\n    ],\n    \"deprioritized_metrics\": [\n      \"channel_efficiency\"\n    ]\n  },\n  \"growth\": {\n    \"state\": \"stable\",\n    \"strength\": 0.4,\n    \"summary\": \"营收保持增长但利润承压，呈现典型的周期加工特征。收入同比增长9.3"
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1774885031.540622,
+        "duration_ms": 26364
+      },
+      {
+        "step_id": "7e73c53f-7fd7-431f-b4c9-93eadfa43185",
+        "step_type": "parse",
+        "name": "parse_json_response",
+        "status": "success",
+        "started_at": 1774885031.540676,
+        "input": {
+          "content_preview": "{\n  \"ticker\": \"601677.SH\",\n  \"effective_trade_date\": \"2026-03-27\",\n  \"company_profile\": {\n    \"company_type\": \"cyclical_resources\",\n    \"industry\": \"铝\",\n    \"analysis_focus\": [\n      \"growth_cyclicality\",\n      \"margin_sensitivity\",\n      \"cashflow_strength\",\n      \"capex_pressure\",\n      \"valuation_cycle_position\"\n    ],\n    \"deprioritized_metrics\": [\n      \"channel_efficiency\"\n    ]\n  },\n  \"growth\": {\n    \"state\": \"stable\",\n    \"strength\": 0.4,\n    \"summary\": \"营收保持增长但利润承压，呈现典型的周期加工特征。收入同比增长9.3"
+        },
+        "output": {
+          "growth": "stable",
+          "valuation": "fair",
+          "confidence": 0.85
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1774885031.5411,
+        "duration_ms": 0
+      },
+      {
+        "step_id": "c9464ec3-5416-4ed3-b29b-f7cf3dfea0f4",
+        "step_type": "quality_gate",
+        "name": "quality_gate",
+        "status": "success",
+        "started_at": 1774885031.541143,
+        "input": {
+          "round": 1
+        },
+        "output": {
+          "is_sparse": false
+        },
+        "metrics": {
+          "core_risks_count": 3,
+          "signals_count": 2
+        },
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1774885031.541216,
+        "duration_ms": 0
+      }
+    ],
+    "observability": {
+      "langsmith_enabled": false,
+      "langsmith_project_name": null,
+      "otel_enabled": false
+    }
+  }
+}

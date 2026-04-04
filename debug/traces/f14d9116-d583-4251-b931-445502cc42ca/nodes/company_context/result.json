@@ -1,0 +1,148 @@
+{
+  "identity": {
+    "ticker": "600873.SH",
+    "company_name": "梅花生物",
+    "exchange": "SH",
+    "market": "A_share"
+  },
+  "analysis_time": {
+    "requested_date": "2026-04-02",
+    "effective_date": "2026-04-02",
+    "date_mode": "natural_day"
+  },
+  "classification": {
+    "industry": "食品",
+    "company_type": "consumer_healthcare_growth",
+    "style_tag": "consumer_healthcare_growth",
+    "size_bucket": "small_cap",
+    "liquidity_bucket": "low"
+  },
+  "business_context": {
+    "sub_industry": "食品及饲料添加剂",
+    "business_model": "味精,氨基酸,有机肥等生物发酵产品的生产及销售.",
+    "company_intro": "公司是全球领先的氨基酸营养健康解决方案提供商。公司通过为全球100多个国家和地区多家知名客户提供各类氨基酸产品及使用解决方案，让全世界用户享有技术的全方位沟通。梅花集团拥有生物发酵行业中最完整的、最长的产业链和配套设施，通过全系列的研、产、供、销服务，灵活满足全球不同客户的差异化需求以及快速创新的追求，专注于打造生物发酵和生物制药的高端产业平台。",
+    "core_products": [
+      "动物营养氨基酸",
+      "食品味觉性状优化产品",
+      "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+      "味精及谷氨酸",
+      "氨基酸产品"
+    ],
+    "main_business_items": [
+      "动物营养氨基酸",
+      "食品味觉性状优化产品",
+      "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+      "味精及谷氨酸",
+      "氨基酸产品",
+      "大原料副产品(肥料、蛋白粉、胚芽、玉米皮粉、饲料纤维等)",
+      "综合产品及其他",
+      "食品添加剂"
+    ],
+    "demand_drivers": [],
+    "cost_drivers": [],
+    "policy_drivers": [],
+    "global_risk_drivers": []
+  },
+  "market_context": {
+    "valuation_style": "growth",
+    "market_attention_points": [],
+    "trading_sensitivity": []
+  },
+  "technical_context": {
+    "trend": {},
+    "momentum": {},
+    "volatility": {},
+    "volume_confirmation": {},
+    "relative_strength": {},
+    "technical_compact_signals": {},
+    "key_levels": {},
+    "signals": [],
+    "confidence": null,
+    "technical_summary_zh": ""
+  },
+  "fundamental_context": {
+    "company_profile": {},
+    "growth": {},
+    "profitability": {},
+    "cashflow_quality": {},
+    "balance_sheet_health": {},
+    "valuation": {},
+    "fundamental_compact_signals": {},
+    "financial_snapshot": {},
+    "core_risks": [],
+    "fundamental_signals": [],
+    "confidence": null,
+    "fundamental_summary_zh": ""
+  },
+  "event_context": {
+    "event_overview": {},
+    "event_compact_signals": {},
+    "event_context_snapshot": {},
+    "event_chain": {},
+    "key_catalysts": [],
+    "key_risks": [],
+    "tracking_points": [],
+    "confidence": null,
+    "event_summary_zh": ""
+  },
+  "search_context": {
+    "search_aliases": [
+      "梅花生物",
+      "梅花生物科技集团股份有限公司",
+      "动物营养氨基酸",
+      "食品味觉性状优化产品",
+      "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+      "味精及谷氨酸",
+      "基础化工",
+      "化学制品",
+      "食品及饲料添加剂"
+    ],
+    "seed_titles": [],
+    "ths_member_codes": [
+      "700001.TI",
+      "700002.TI",
+      "700003.TI",
+      "700004.TI",
+      "700008.TI",
+      "700009.TI",
+      "700010.TI",
+      "700021.TI",
+      "700023.TI",
+      "700031.TI",
+      "700032.TI",
+      "700035.TI"
+    ],
+    "ths_concepts": [
+      "日常消费品(A股)",
+      "食品、饮料与烟草(A股)",
+      "食品(A股)",
+      "农产品与服务(A股)",
+      "化学制品",
+      "西藏",
+      "增持计划",
+      "高股息股",
+      "回购计划",
+      "食品及饲料添加剂",
+      "融资融券",
+      "参股银行"
+    ],
+    "index_memberships": [
+      "基础化工",
+      "化学制品",
+      "食品及饲料添加剂"
+    ],
+    "preferred_query_style": "keyword_cluster",
+    "language_bias": "cn_finance_media"
+  },
+  "data_quality": {
+    "missing_sections": [],
+    "stale_sections": [],
+    "source_summary": {
+      "stock_basic": true,
+      "stock_company": true,
+      "fina_mainbz": true,
+      "ths_member": true,
+      "index_member_all": true
+    }
+  }
+}

@@ -1,0 +1,1633 @@
+{
+  "technical_data_bundle": {
+    "ticker": "601677.SH",
+    "requested_date": "2026-03-29",
+    "effective_trade_date": "2026-03-27",
+    "meta": {
+      "name": "明泰铝业",
+      "industry": "铝",
+      "market": "A_share",
+      "sub_industry": "铝",
+      "business_model": "主要产品:铝板带箔及铝型材两大门类,广泛应用于新能源电池,轨道车体,汽车制造,印刷制版,电子家电,电力设施,建筑装饰,交通运输,食品和医药包装等领域.主营业务:1-8系铝板带箔的生产和销售.",
+      "benchmark": "000300.SH",
+      "sector_index": null
+    },
+    "company_context": {
+      "identity": {
+        "ticker": "601677.SH",
+        "company_name": "明泰铝业",
+        "exchange": "SH",
+        "market": "A_share"
+      },
+      "analysis_time": {
+        "requested_date": "2026-03-29",
+        "effective_date": "2026-03-29",
+        "date_mode": "natural_day"
+      },
+      "classification": {
+        "industry": "铝",
+        "company_type": "cyclical_resources",
+        "style_tag": "cyclical_resources",
+        "size_bucket": "small_cap",
+        "liquidity_bucket": "medium"
+      },
+      "business_context": {
+        "sub_industry": "铝",
+        "business_model": "主要产品:铝板带箔及铝型材两大门类,广泛应用于新能源电池,轨道车体,汽车制造,印刷制版,电子家电,电力设施,建筑装饰,交通运输,食品和医药包装等领域.主营业务:1-8系铝板带箔的生产和销售.",
+        "company_intro": "公司始建于1997年，为国内首家民营铝加工业企业。通过持续的技术创新及前瞻性布局，不断实现高端突破，再生铝战略持续向纵深推进，已形成废铝回收-熔炼再生-精深加工的铝产业链闭环。公司正以绿色智造为笔，书写着可持续发展的新篇章，为制造业绿色转型升级提供可复制经验样本。公司整体实力位居我国铝加工业第一方阵，是铝加工业产品多元化和再生铝保级应用龙头企业。",
+        "core_products": [
+          "铝板带",
+          "铝箔",
+          "铝板带-合金板",
+          "其他业务",
+          "其他主营业务"
+        ],
+        "main_business_items": [
+          "铝板带",
+          "铝箔",
+          "铝板带-合金板",
+          "其他业务",
+          "其他主营业务",
+          "铝板带-普通铝板带材",
+          "铝合金轨道车体",
+          "铝板带-花纹板"
+        ],
+        "demand_drivers": [],
+        "cost_drivers": [],
+        "policy_drivers": [],
+        "global_risk_drivers": []
+      },
+      "market_context": {
+        "valuation_style": "cyclical",
+        "market_attention_points": [],
+        "trading_sensitivity": []
+      },
+      "technical_context": {
+        "trend": {},
+        "momentum": {},
+        "volatility": {},
+        "volume_confirmation": {},
+        "relative_strength": {},
+        "technical_compact_signals": {},
+        "key_levels": {},
+        "signals": [],
+        "confidence": null,
+        "technical_summary_zh": ""
+      },
+      "fundamental_context": {
+        "company_profile": {},
+        "growth": {},
+        "profitability": {},
+        "cashflow_quality": {},
+        "balance_sheet_health": {},
+        "valuation": {},
+        "fundamental_compact_signals": {},
+        "financial_snapshot": {},
+        "core_risks": [],
+        "fundamental_signals": [],
+        "confidence": null,
+        "fundamental_summary_zh": ""
+      },
+      "event_context": {
+        "event_overview": {},
+        "event_compact_signals": {},
+        "event_context_snapshot": {},
+        "event_chain": {},
+        "key_catalysts": [],
+        "key_risks": [],
+        "tracking_points": [],
+        "confidence": null,
+        "event_summary_zh": ""
+      },
+      "search_context": {
+        "search_aliases": [
+          "明泰铝业",
+          "铝板带",
+          "铝箔",
+          "铝板带-合金板",
+          "其他业务",
+          "有色金属",
+          "工业金属",
+          "铝"
+        ],
+        "seed_titles": [],
+        "ths_member_codes": [
+          "700001.TI",
+          "700002.TI",
+          "700003.TI",
+          "700004.TI",
+          "700008.TI",
+          "700009.TI",
+          "700010.TI",
+          "700021.TI",
+          "700023.TI",
+          "700031.TI",
+          "700032.TI",
+          "700035.TI"
+        ],
+        "ths_concepts": [
+          "原材料(A股)",
+          "原材料Ⅱ(A股)",
+          "金属与采矿(A股)",
+          "铝(A股)",
+          "工业金属",
+          "河南",
+          "减持新规(不可减持)",
+          "破净股",
+          "铝",
+          "融资融券",
+          "特高压",
+          "新能源汽车"
+        ],
+        "index_memberships": [
+          "有色金属",
+          "工业金属",
+          "铝"
+        ],
+        "preferred_query_style": "keyword_cluster",
+        "language_bias": "cn_finance_media"
+      },
+      "data_quality": {
+        "missing_sections": [],
+        "stale_sections": [],
+        "source_summary": {
+          "stock_basic": true,
+          "stock_company": true,
+          "fina_mainbz": true,
+          "ths_member": true,
+          "index_member_all": true
+        }
+      }
+    },
+    "price_series": {
+      "frequency": "1d",
+      "adjustment": "qfq",
+      "window_days": 90,
+      "bars": [
+        {
+          "trade_date": "2025-11-12",
+          "open": 15.0364,
+          "high": 15.5826,
+          "low": 14.9172,
+          "close": 15.5131,
+          "pre_close": 15.0264,
+          "volume": 527790.31,
+          "amount": 816229.109
+        },
+        {
+          "trade_date": "2025-11-13",
+          "open": 15.5925,
+          "high": 15.811,
+          "low": 15.3939,
+          "close": 15.672,
+          "pre_close": 15.5131,
+          "volume": 504582.96,
+          "amount": 792499.143
+        },
+        {
+          "trade_date": "2025-11-14",
+          "open": 15.4436,
+          "high": 15.5925,
+          "low": 15.3045,
+          "close": 15.3145,
+          "pre_close": 15.672,
+          "volume": 343669.68,
+          "amount": 534554.455
+        },
+        {
+          "trade_date": "2025-11-17",
+          "open": 15.1953,
+          "high": 15.1953,
+          "low": 14.9172,
+          "close": 14.9768,
+          "pre_close": 15.3145,
+          "volume": 357091.96,
+          "amount": 539748.303
+        },
+        {
+          "trade_date": "2025-11-18",
+          "open": 14.9371,
+          "high": 15.0264,
+          "low": 14.3312,
+          "close": 14.4901,
+          "pre_close": 14.9768,
+          "volume": 415273.01,
+          "amount": 609150.22
+        },
+        {
+          "trade_date": "2025-11-19",
+          "open": 14.57,
+          "high": 14.71,
+          "low": 14.31,
+          "close": 14.46,
+          "pre_close": 14.49,
+          "volume": 228771.46,
+          "amount": 330274.104
+        },
+        {
+          "trade_date": "2025-11-20",
+          "open": 14.54,
+          "high": 14.96,
+          "low": 14.45,
+          "close": 14.48,
+          "pre_close": 14.46,
+          "volume": 309203.62,
+          "amount": 453955.638
+        },
+        {
+          "trade_date": "2025-11-21",
+          "open": 14.26,
+          "high": 14.35,
+          "low": 13.82,
+          "close": 13.84,
+          "pre_close": 14.48,
+          "volume": 422208.35,
+          "amount": 591259.497
+        },
+        {
+          "trade_date": "2025-11-24",
+          "open": 13.92,
+          "high": 14.19,
+          "low": 13.81,
+          "close": 14.03,
+          "pre_close": 13.84,
+          "volume": 202117.88,
+          "amount": 282781.04
+        },
+        {
+          "trade_date": "2025-11-25",
+          "open": 14.14,
+          "high": 14.28,
+          "low": 14.0,
+          "close": 14.02,
+          "pre_close": 14.03,
+          "volume": 218010.49,
+          "amount": 308368.354
+        },
+        {
+          "trade_date": "2025-11-26",
+          "open": 14.05,
+          "high": 14.08,
+          "low": 13.88,
+          "close": 13.92,
+          "pre_close": 14.02,
+          "volume": 150968.65,
+          "amount": 211056.264
+        },
+        {
+          "trade_date": "2025-11-27",
+          "open": 14.03,
+          "high": 14.18,
+          "low": 13.87,
+          "close": 13.89,
+          "pre_close": 13.92,
+          "volume": 167068.09,
+          "amount": 234169.617
+        },
+        {
+          "trade_date": "2025-11-28",
+          "open": 13.87,
+          "high": 13.99,
+          "low": 13.7,
+          "close": 13.95,
+          "pre_close": 13.89,
+          "volume": 157840.15,
+          "amount": 218950.38
+        },
+        {
+          "trade_date": "2025-12-01",
+          "open": 14.07,
+          "high": 14.27,
+          "low": 14.05,
+          "close": 14.14,
+          "pre_close": 13.95,
+          "volume": 258053.99,
+          "amount": 364786.226
+        },
+        {
+          "trade_date": "2025-12-02",
+          "open": 14.06,
+          "high": 14.07,
+          "low": 13.86,
+          "close": 13.96,
+          "pre_close": 14.14,
+          "volume": 155118.17,
+          "amount": 216571.532
+        },
+        {
+          "trade_date": "2025-12-03",
+          "open": 13.96,
+          "high": 14.28,
+          "low": 13.87,
+          "close": 14.13,
+          "pre_close": 13.96,
+          "volume": 266208.58,
+          "amount": 376362.215
+        },
+        {
+          "trade_date": "2025-12-04",
+          "open": 14.23,
+          "high": 14.27,
+          "low": 14.1,
+          "close": 14.14,
+          "pre_close": 14.13,
+          "volume": 165200.7,
+          "amount": 233986.444
+        },
+        {
+          "trade_date": "2025-12-05",
+          "open": 14.1,
+          "high": 14.66,
+          "low": 14.1,
+          "close": 14.54,
+          "pre_close": 14.14,
+          "volume": 364049.39,
+          "amount": 526309.902
+        },
+        {
+          "trade_date": "2025-12-08",
+          "open": 14.53,
+          "high": 14.57,
+          "low": 14.25,
+          "close": 14.35,
+          "pre_close": 14.54,
+          "volume": 273150.96,
+          "amount": 391618.313
+        },
+        {
+          "trade_date": "2025-12-09",
+          "open": 14.29,
+          "high": 14.35,
+          "low": 13.89,
+          "close": 13.98,
+          "pre_close": 14.35,
+          "volume": 263668.24,
+          "amount": 370754.605
+        },
+        {
+          "trade_date": "2025-12-10",
+          "open": 14.01,
+          "high": 14.05,
+          "low": 13.85,
+          "close": 14.0,
+          "pre_close": 13.98,
+          "volume": 164231.16,
+          "amount": 228812.963
+        },
+        {
+          "trade_date": "2025-12-11",
+          "open": 14.08,
+          "high": 14.13,
+          "low": 13.9,
+          "close": 13.98,
+          "pre_close": 14.0,
+          "volume": 180352.01,
+          "amount": 252686.282
+        },
+        {
+          "trade_date": "2025-12-12",
+          "open": 14.1,
+          "high": 14.13,
+          "low": 13.98,
+          "close": 14.02,
+          "pre_close": 13.98,
+          "volume": 138327.05,
+          "amount": 194334.703
+        },
+        {
+          "trade_date": "2025-12-15",
+          "open": 13.92,
+          "high": 14.22,
+          "low": 13.89,
+          "close": 14.03,
+          "pre_close": 14.02,
+          "volume": 149818.81,
+          "amount": 210914.185
+        },
+        {
+          "trade_date": "2025-12-16",
+          "open": 13.95,
+          "high": 13.97,
+          "low": 13.55,
+          "close": 13.68,
+          "pre_close": 14.03,
+          "volume": 191802.79,
+          "amount": 262699.831
+        },
+        {
+          "trade_date": "2025-12-17",
+          "open": 13.71,
+          "high": 14.3,
+          "low": 13.69,
+          "close": 14.24,
+          "pre_close": 13.68,
+          "volume": 335704.66,
+          "amount": 472414.828
+        },
+        {
+          "trade_date": "2025-12-18",
+          "open": 14.17,
+          "high": 14.34,
+          "low": 14.12,
+          "close": 14.14,
+          "pre_close": 14.24,
+          "volume": 134213.77,
+          "amount": 190677.973
+        },
+        {
+          "trade_date": "2025-12-19",
+          "open": 14.13,
+          "high": 14.34,
+          "low": 14.1,
+          "close": 14.28,
+          "pre_close": 14.14,
+          "volume": 197981.81,
+          "amount": 282395.947
+        },
+        {
+          "trade_date": "2025-12-22",
+          "open": 14.38,
+          "high": 14.4,
+          "low": 14.13,
+          "close": 14.25,
+          "pre_close": 14.28,
+          "volume": 184351.16,
+          "amount": 263110.378
+        },
+        {
+          "trade_date": "2025-12-23",
+          "open": 14.2,
+          "high": 14.51,
+          "low": 14.17,
+          "close": 14.32,
+          "pre_close": 14.25,
+          "volume": 189322.0,
+          "amount": 271866.804
+        },
+        {
+          "trade_date": "2025-12-24",
+          "open": 14.34,
+          "high": 14.42,
+          "low": 14.26,
+          "close": 14.34,
+          "pre_close": 14.32,
+          "volume": 149701.56,
+          "amount": 214572.446
+        },
+        {
+          "trade_date": "2025-12-25",
+          "open": 14.3,
+          "high": 14.3,
+          "low": 14.18,
+          "close": 14.26,
+          "pre_close": 14.34,
+          "volume": 155758.87,
+          "amount": 222053.209
+        },
+        {
+          "trade_date": "2025-12-26",
+          "open": 14.26,
+          "high": 14.73,
+          "low": 14.21,
+          "close": 14.69,
+          "pre_close": 14.26,
+          "volume": 366530.49,
+          "amount": 533046.127
+        },
+        {
+          "trade_date": "2025-12-29",
+          "open": 14.79,
+          "high": 14.86,
+          "low": 14.52,
+          "close": 14.55,
+          "pre_close": 14.69,
+          "volume": 318990.58,
+          "amount": 468865.538
+        },
+        {
+          "trade_date": "2025-12-30",
+          "open": 14.44,
+          "high": 14.93,
+          "low": 14.3,
+          "close": 14.86,
+          "pre_close": 14.55,
+          "volume": 350865.66,
+          "amount": 517317.757
+        },
+        {
+          "trade_date": "2025-12-31",
+          "open": 14.85,
+          "high": 15.04,
+          "low": 14.69,
+          "close": 14.79,
+          "pre_close": 14.86,
+          "volume": 254208.94,
+          "amount": 378101.938
+        },
+        {
+          "trade_date": "2026-01-05",
+          "open": 15.03,
+          "high": 15.16,
+          "low": 14.92,
+          "close": 15.0,
+          "pre_close": 14.79,
+          "volume": 399876.62,
+          "amount": 600932.925
+        },
+        {
+          "trade_date": "2026-01-06",
+          "open": 15.1,
+          "high": 15.44,
+          "low": 15.1,
+          "close": 15.22,
+          "pre_close": 15.0,
+          "volume": 410866.75,
+          "amount": 626591.09
+        },
+        {
+          "trade_date": "2026-01-07",
+          "open": 15.24,
+          "high": 15.27,
+          "low": 14.93,
+          "close": 15.05,
+          "pre_close": 15.22,
+          "volume": 390972.82,
+          "amount": 589561.178
+        },
+        {
+          "trade_date": "2026-01-08",
+          "open": 14.95,
+          "high": 15.04,
+          "low": 14.71,
+          "close": 14.82,
+          "pre_close": 15.05,
+          "volume": 289517.85,
+          "amount": 430979.148
+        },
+        {
+          "trade_date": "2026-01-09",
+          "open": 14.8,
+          "high": 15.06,
+          "low": 14.75,
+          "close": 14.95,
+          "pre_close": 14.82,
+          "volume": 295930.67,
+          "amount": 442133.597
+        },
+        {
+          "trade_date": "2026-01-12",
+          "open": 15.07,
+          "high": 15.12,
+          "low": 14.67,
+          "close": 14.85,
+          "pre_close": 14.95,
+          "volume": 421538.71,
+          "amount": 624110.748
+        },
+        {
+          "trade_date": "2026-01-13",
+          "open": 14.85,
+          "high": 15.0,
+          "low": 14.64,
+          "close": 14.73,
+          "pre_close": 14.85,
+          "volume": 388001.83,
+          "amount": 574423.553
+        },
+        {
+          "trade_date": "2026-01-14",
+          "open": 14.68,
+          "high": 14.97,
+          "low": 14.53,
+          "close": 14.64,
+          "pre_close": 14.73,
+          "volume": 421648.9,
+          "amount": 622545.67
+        },
+        {
+          "trade_date": "2026-01-15",
+          "open": 14.63,
+          "high": 15.12,
+          "low": 14.6,
+          "close": 15.04,
+          "pre_close": 14.64,
+          "volume": 519060.11,
+          "amount": 776314.092
+        },
+        {
+          "trade_date": "2026-01-16",
+          "open": 15.05,
+          "high": 15.3,
+          "low": 14.83,
+          "close": 14.88,
+          "pre_close": 15.04,
+          "volume": 356274.69,
+          "amount": 535854.848
+        },
+        {
+          "trade_date": "2026-01-19",
+          "open": 14.88,
+          "high": 15.19,
+          "low": 14.74,
+          "close": 15.12,
+          "pre_close": 14.88,
+          "volume": 308604.52,
+          "amount": 463569.933
+        },
+        {
+          "trade_date": "2026-01-20",
+          "open": 16.02,
+          "high": 16.63,
+          "low": 16.02,
+          "close": 16.63,
+          "pre_close": 15.12,
+          "volume": 507989.06,
+          "amount": 837041.822
+        },
+        {
+          "trade_date": "2026-01-21",
+          "open": 17.02,
+          "high": 17.02,
+          "low": 16.18,
+          "close": 16.29,
+          "pre_close": 16.63,
+          "volume": 1244935.67,
+          "amount": 2040283.096
+        },
+        {
+          "trade_date": "2026-01-22",
+          "open": 16.5,
+          "high": 16.57,
+          "low": 16.08,
+          "close": 16.21,
+          "pre_close": 16.29,
+          "volume": 588362.59,
+          "amount": 955374.409
+        },
+        {
+          "trade_date": "2026-01-23",
+          "open": 16.24,
+          "high": 16.8,
+          "low": 16.12,
+          "close": 16.62,
+          "pre_close": 16.21,
+          "volume": 802240.91,
+          "amount": 1325449.494
+        },
+        {
+          "trade_date": "2026-01-26",
+          "open": 16.98,
+          "high": 17.39,
+          "low": 16.8,
+          "close": 17.15,
+          "pre_close": 16.62,
+          "volume": 1118047.15,
+          "amount": 1914494.067
+        },
+        {
+          "trade_date": "2026-01-27",
+          "open": 17.0,
+          "high": 17.6,
+          "low": 16.74,
+          "close": 17.07,
+          "pre_close": 17.15,
+          "volume": 806830.55,
+          "amount": 1378884.859
+        },
+        {
+          "trade_date": "2026-01-28",
+          "open": 17.15,
+          "high": 18.34,
+          "low": 16.94,
+          "close": 18.16,
+          "pre_close": 17.07,
+          "volume": 1230123.73,
+          "amount": 2192953.832
+        },
+        {
+          "trade_date": "2026-01-29",
+          "open": 18.49,
+          "high": 18.5,
+          "low": 17.17,
+          "close": 17.76,
+          "pre_close": 18.16,
+          "volume": 1232254.41,
+          "amount": 2195903.248
+        },
+        {
+          "trade_date": "2026-01-30",
+          "open": 16.93,
+          "high": 17.15,
+          "low": 16.11,
+          "close": 16.78,
+          "pre_close": 17.76,
+          "volume": 888931.19,
+          "amount": 1476457.912
+        },
+        {
+          "trade_date": "2026-02-02",
+          "open": 16.11,
+          "high": 16.73,
+          "low": 16.1,
+          "close": 16.12,
+          "pre_close": 16.78,
+          "volume": 573195.22,
+          "amount": 937714.562
+        },
+        {
+          "trade_date": "2026-02-03",
+          "open": 16.44,
+          "high": 16.49,
+          "low": 16.08,
+          "close": 16.38,
+          "pre_close": 16.12,
+          "volume": 438961.4,
+          "amount": 714020.097
+        },
+        {
+          "trade_date": "2026-02-04",
+          "open": 16.46,
+          "high": 16.53,
+          "low": 16.23,
+          "close": 16.41,
+          "pre_close": 16.38,
+          "volume": 349906.64,
+          "amount": 572312.994
+        },
+        {
+          "trade_date": "2026-02-05",
+          "open": 16.29,
+          "high": 16.35,
+          "low": 15.8,
+          "close": 15.95,
+          "pre_close": 16.41,
+          "volume": 403537.37,
+          "amount": 646840.249
+        },
+        {
+          "trade_date": "2026-02-06",
+          "open": 15.75,
+          "high": 16.26,
+          "low": 15.66,
+          "close": 15.96,
+          "pre_close": 15.95,
+          "volume": 280591.66,
+          "amount": 449648.245
+        },
+        {
+          "trade_date": "2026-02-09",
+          "open": 16.22,
+          "high": 16.3,
+          "low": 16.12,
+          "close": 16.17,
+          "pre_close": 15.96,
+          "volume": 231565.24,
+          "amount": 375288.111
+        },
+        {
+          "trade_date": "2026-02-10",
+          "open": 16.18,
+          "high": 16.23,
+          "low": 16.01,
+          "close": 16.11,
+          "pre_close": 16.17,
+          "volume": 200995.23,
+          "amount": 323624.189
+        },
+        {
+          "trade_date": "2026-02-11",
+          "open": 16.1,
+          "high": 16.42,
+          "low": 16.08,
+          "close": 16.27,
+          "pre_close": 16.11,
+          "volume": 245454.81,
+          "amount": 399819.713
+        },
+        {
+          "trade_date": "2026-02-12",
+          "open": 16.26,
+          "high": 16.37,
+          "low": 16.16,
+          "close": 16.22,
+          "pre_close": 16.27,
+          "volume": 232137.24,
+          "amount": 377797.116
+        },
+        {
+          "trade_date": "2026-02-13",
+          "open": 16.13,
+          "high": 16.16,
+          "low": 15.88,
+          "close": 15.89,
+          "pre_close": 16.22,
+          "volume": 268368.98,
+          "amount": 429792.565
+        },
+        {
+          "trade_date": "2026-02-24",
+          "open": 16.24,
+          "high": 16.58,
+          "low": 16.16,
+          "close": 16.46,
+          "pre_close": 15.89,
+          "volume": 351110.98,
+          "amount": 576224.742
+        },
+        {
+          "trade_date": "2026-02-25",
+          "open": 16.5,
+          "high": 16.91,
+          "low": 16.47,
+          "close": 16.66,
+          "pre_close": 16.46,
+          "volume": 344574.6,
+          "amount": 576477.525
+        },
+        {
+          "trade_date": "2026-02-26",
+          "open": 16.71,
+          "high": 16.81,
+          "low": 16.57,
+          "close": 16.64,
+          "pre_close": 16.66,
+          "volume": 256835.89,
+          "amount": 428266.648
+        },
+        {
+          "trade_date": "2026-02-27",
+          "open": 16.57,
+          "high": 17.0,
+          "low": 16.52,
+          "close": 17.0,
+          "pre_close": 16.64,
+          "volume": 352443.73,
+          "amount": 593517.892
+        },
+        {
+          "trade_date": "2026-03-02",
+          "open": 17.0,
+          "high": 17.21,
+          "low": 16.72,
+          "close": 17.17,
+          "pre_close": 17.0,
+          "volume": 417299.31,
+          "amount": 709298.686
+        },
+        {
+          "trade_date": "2026-03-03",
+          "open": 17.13,
+          "high": 17.4,
+          "low": 16.6,
+          "close": 16.63,
+          "pre_close": 17.17,
+          "volume": 483436.23,
+          "amount": 815754.374
+        },
+        {
+          "trade_date": "2026-03-04",
+          "open": 16.55,
+          "high": 17.15,
+          "low": 16.53,
+          "close": 17.09,
+          "pre_close": 16.63,
+          "volume": 553853.54,
+          "amount": 941895.996
+        },
+        {
+          "trade_date": "2026-03-05",
+          "open": 17.38,
+          "high": 17.52,
+          "low": 17.17,
+          "close": 17.29,
+          "pre_close": 17.09,
+          "volume": 492860.34,
+          "amount": 853385.042
+        },
+        {
+          "trade_date": "2026-03-06",
+          "open": 17.01,
+          "high": 17.02,
+          "low": 16.65,
+          "close": 16.79,
+          "pre_close": 17.29,
+          "volume": 379345.31,
+          "amount": 638300.579
+        },
+        {
+          "trade_date": "2026-03-09",
+          "open": 16.88,
+          "high": 17.09,
+          "low": 16.45,
+          "close": 16.69,
+          "pre_close": 16.79,
+          "volume": 394118.32,
+          "amount": 658618.244
+        },
+        {
+          "trade_date": "2026-03-10",
+          "open": 16.56,
+          "high": 16.74,
+          "low": 16.47,
+          "close": 16.51,
+          "pre_close": 16.69,
+          "volume": 316220.85,
+          "amount": 523645.914
+        },
+        {
+          "trade_date": "2026-03-11",
+          "open": 16.55,
+          "high": 16.69,
+          "low": 16.47,
+          "close": 16.64,
+          "pre_close": 16.51,
+          "volume": 268861.69,
+          "amount": 445822.091
+        },
+        {
+          "trade_date": "2026-03-12",
+          "open": 16.65,
+          "high": 17.11,
+          "low": 16.65,
+          "close": 16.87,
+          "pre_close": 16.64,
+          "volume": 385965.9,
+          "amount": 652356.293
+        },
+        {
+          "trade_date": "2026-03-13",
+          "open": 16.78,
+          "high": 17.05,
+          "low": 16.52,
+          "close": 16.55,
+          "pre_close": 16.87,
+          "volume": 354260.66,
+          "amount": 593518.509
+        },
+        {
+          "trade_date": "2026-03-16",
+          "open": 16.59,
+          "high": 16.68,
+          "low": 15.95,
+          "close": 16.13,
+          "pre_close": 16.55,
+          "volume": 322024.24,
+          "amount": 520595.457
+        },
+        {
+          "trade_date": "2026-03-17",
+          "open": 16.2,
+          "high": 16.32,
+          "low": 15.9,
+          "close": 15.98,
+          "pre_close": 16.13,
+          "volume": 226792.52,
+          "amount": 365856.025
+        },
+        {
+          "trade_date": "2026-03-18",
+          "open": 15.94,
+          "high": 16.0,
+          "low": 15.56,
+          "close": 15.67,
+          "pre_close": 15.98,
+          "volume": 268210.86,
+          "amount": 421258.855
+        },
+        {
+          "trade_date": "2026-03-19",
+          "open": 15.44,
+          "high": 15.46,
+          "low": 14.94,
+          "close": 14.99,
+          "pre_close": 15.67,
+          "volume": 327867.01,
+          "amount": 496925.062
+        },
+        {
+          "trade_date": "2026-03-20",
+          "open": 14.98,
+          "high": 15.26,
+          "low": 14.86,
+          "close": 14.87,
+          "pre_close": 14.99,
+          "volume": 245674.29,
+          "amount": 369837.909
+        },
+        {
+          "trade_date": "2026-03-23",
+          "open": 14.5,
+          "high": 14.66,
+          "low": 13.97,
+          "close": 14.05,
+          "pre_close": 14.87,
+          "volume": 310941.35,
+          "amount": 444476.383
+        },
+        {
+          "trade_date": "2026-03-24",
+          "open": 14.25,
+          "high": 14.58,
+          "low": 14.0,
+          "close": 14.54,
+          "pre_close": 14.05,
+          "volume": 246647.51,
+          "amount": 352008.22
+        },
+        {
+          "trade_date": "2026-03-25",
+          "open": 14.73,
+          "high": 14.9,
+          "low": 14.68,
+          "close": 14.75,
+          "pre_close": 14.54,
+          "volume": 214542.79,
+          "amount": 317059.612
+        },
+        {
+          "trade_date": "2026-03-26",
+          "open": 14.75,
+          "high": 14.97,
+          "low": 14.67,
+          "close": 14.7,
+          "pre_close": 14.75,
+          "volume": 178496.69,
+          "amount": 264018.732
+        },
+        {
+          "trade_date": "2026-03-27",
+          "open": 14.52,
+          "high": 15.06,
+          "low": 14.46,
+          "close": 15.0,
+          "pre_close": 14.7,
+          "volume": 170400.93,
+          "amount": 253700.651
+        }
+      ]
+    },
+    "market_snapshot": {
+      "open": 14.52,
+      "high": 15.06,
+      "low": 14.46,
+      "close": 15.0,
+      "pre_close": 14.7,
+      "volume": 170400.93,
+      "amount": 253700.651,
+      "turnover_rate": 1.399,
+      "volume_ratio": 0.71,
+      "up_limit": 16.17,
+      "down_limit": 13.23,
+      "net_mf_amount": 3300.99
+    },
+    "indicators": {
+      "sma_20": 15.9455,
+      "sma_50": 16.0806,
+      "ema_10": 15.121897,
+      "macd": -0.453421,
+      "macd_signal": -0.281683,
+      "macd_hist": -0.171738,
+      "rsi_14": 41.428094,
+      "atr_14": 0.524689,
+      "boll_mid": 15.9455,
+      "boll_upper": 17.945385,
+      "boll_lower": 13.945615,
+      "vwma_20": 16.178549,
+      "volume_ma_20": 327891.017,
+      "mfi_14": 37.980051
+    },
+    "indicator_context": {
+      "returns": {
+        "1d": 0.020408,
+        "5d": 0.008742,
+        "20d": -0.117647,
+        "60d": 0.047486
+      },
+      "price_vs_moving_averages": {
+        "close_vs_sma_20": -0.059296,
+        "close_vs_sma_50": -0.067199,
+        "close_vs_ema_10": -0.008061,
+        "sma_20_vs_sma_50": -0.008401
+      },
+      "momentum_context": {
+        "macd": -0.453421,
+        "macd_signal": -0.281683,
+        "macd_hist": -0.171738,
+        "macd_hist_change": 0.055118,
+        "rsi_14": 41.428094,
+        "mfi_14": 37.980051
+      },
+      "volatility_context": {
+        "atr_14": 0.524689,
+        "atr_pct_of_close": 0.034979,
+        "boll_mid": 15.9455,
+        "boll_upper": 17.945385,
+        "boll_lower": 13.945615,
+        "boll_position": 0.263611
+      },
+      "volume_context": {
+        "volume": 170400.93,
+        "volume_ma_20": 327891.017,
+        "volume_vs_ma_20": -0.480312,
+        "volume_ratio": 0.71,
+        "turnover_rate": 1.399,
+        "vwma_20": 16.178549,
+        "close_vs_vwma_20": -0.072846,
+        "net_mf_amount": 3300.99
+      }
+    },
+    "price_structure": {
+      "high_20": 17.52,
+      "low_20": 13.97,
+      "high_60": 18.5,
+      "low_60": 13.97,
+      "high_90": 18.5,
+      "low_90": 13.55
+    },
+    "relative_strength": {
+      "vs_benchmark_20d": -0.073475,
+      "vs_benchmark_60d": 0.073059,
+      "vs_sector_20d": null,
+      "vs_sector_60d": null
+    },
+    "data_quality": {
+      "is_trade_date_aligned": false,
+      "missing_fields": [],
+      "source": "tushare",
+      "adjustment": "qfq"
+    }
+  },
+  "analysis_result": {
+    "ticker": "601677.SH",
+    "effective_trade_date": "2026-03-27",
+    "trend": {
+      "short_term": "sideways",
+      "medium_term": "bearish",
+      "strength": 0.3,
+      "summary": "短期在14.50附近企稳反弹，但受制于均线系统压制，中期趋势仍处空头排列。",
+      "evidence": [
+        "收盘价15.00元，位于SMA20(15.95)和SMA50(16.08)下方，偏离度分别为-5.9%和-6.7%",
+        "SMA20低于SMA50约0.8%，均线呈死叉向下发散形态",
+        "近5日涨幅0.87%，终结了连续4日的下跌，但未突破15.20附近的短期压力区"
+      ]
+    },
+    "momentum": {
+      "state": "weakening",
+      "strength": 0.2,
+      "summary": "MACD绿柱虽小幅缩短显示跌势趋缓，但RSI和MFI均处于弱势区间，反弹动能不足。",
+      "evidence": [
+        "MACD柱状图(-0.17)较前值略有收敛，但DIF(-0.45)仍远低于DEA(-0.28)",
+        "RSI(14)为41.4，MFI(14)为38.0，均位于50荣枯线下方，显示买盘力量薄弱",
+        "当日成交量仅为20日均量的52%，缩量反弹确认多头信心不足"
+      ]
+    },
+    "volatility": {
+      "state": "normal",
+      "summary": "波动率回归常态，布林带开口走平，价格运行于中轨与下轨之间。",
+      "evidence": [
+        "ATR(14)为0.52元，占收盘价比例3.5%，处于近期正常波动范围",
+        "布林带位置(Boll_Position)为0.26，股价位于下轨(13.95)与中轨(15.95)的下半区",
+        "近3日振幅收窄，从之前的单边下跌转为低位震荡"
+      ]
+    },
+    "volume_confirmation": {
+      "state": "diverging",
+      "summary": "价格上涨伴随显著缩量，量价背离，缺乏增量资金确认。",
+      "evidence": [
+        "当日成交量17.0万手，较20日均量(32.8万手)萎缩48%",
+        "量比0.71，换手率1.4%，活跃度降至近期低点",
+        "收盘价站上EMA10但成交量未放大，属于典型的存量博弈反弹"
+      ]
+    },
+    "relative_strength": {
+      "vs_benchmark": "weaker",
+      "vs_sector": "neutral",
+      "summary": "近20日表现显著弱于沪深300指数，中期相对强弱有所修复但短期再度转弱。",
+      "evidence": [
+        "近20日相对基准超额收益为-7.35%，显示短期大幅跑输大盘",
+        "近60日相对基准超额收益为+7.31%，说明中期趋势曾强于大盘，但近期被抹去",
+        "行业板块数据缺失，暂无法判断相对于铝行业的强弱"
+      ]
+    },
+    "indicator_snapshot": {
+      "price_vs_sma20": -0.0593,
+      "price_vs_sma50": -0.0672,
+      "price_vs_ema10": -0.0081,
+      "sma20_vs_sma50": -0.0084,
+      "macd": -0.4534,
+      "macd_signal": -0.2817,
+      "macd_hist": -0.1717,
+      "macd_hist_change": 0.0551,
+      "rsi_14": 41.43,
+      "mfi_14": 37.98,
+      "atr_14": 0.5247,
+      "atr_pct_of_close": 0.035,
+      "boll_position": 0.2636,
+      "volume_vs_ma20": -0.4803,
+      "close_vs_vwma20": -0.0728,
+      "rs_vs_benchmark_20d": -0.0735,
+      "rs_vs_benchmark_60d": 0.0731
+    },
+    "key_levels": {
+      "support": [
+        14.46,
+        13.97
+      ],
+      "resistance": [
+        15.95,
+        16.18
+      ],
+      "breakout_level": null,
+      "breakdown_level": 13.97
+    },
+    "signals": [
+      {
+        "type": "mean_reversion",
+        "direction": "bullish",
+        "strength": 0.3,
+        "description": "短线超跌后的技术性修复，触及布林下轨区域后出现止跌K线。",
+        "evidence": [
+          "股价回踩13.97-14.00区间（前期低点及布林下轨）获得支撑",
+          "RSI进入40以下超卖区后拐头向上",
+          "单日涨幅2.04%收复部分失地"
+        ]
+      },
+      {
+        "type": "trend_following",
+        "direction": "bearish",
+        "strength": 0.7,
+        "description": "中期均线系统空头排列，任何反弹至均线密集区的行为均构成压力。",
+        "evidence": [
+          "SMA20与SMA50形成死叉并持续下行",
+          "价格始终受制于VWMA20(16.18)压制",
+          "MACD零轴下方运行，未见金叉信号"
+        ]
+      }
+    ],
+    "risk_flags": [
+      "缩量反弹，若后续无法补量，极易再次探底",
+      "上方套牢盘沉重，15.90-16.20区间存在大量近期被套筹码",
+      "相对强度快速转弱，若大盘调整，个股可能跟随创新低"
+    ],
+    "invalidations": [
+      "若放量跌破13.97元，则短线止跌逻辑失效，开启新一轮下跌",
+      "若放量突破16.20元（20日均线及VWMA），则中期空头趋势暂时证伪"
+    ],
+    "confidence": 0.65,
+    "technical_summary_zh": "明泰铝业短期在14.50元附近获得支撑并出现缩量反弹，但整体仍处于中期空头趋势中。技术指标显示RSI和MFI处于弱势区，MACD虽绿柱缩短但未金叉，且成交量显著萎缩（-48%），表明当前上涨缺乏资金共识，大概率为超跌后的技术性修复。关键压力位在15.95元（20日线）至16.20元区间，若无法放量突破该区域，股价大概率将维持震荡或再次下探13.97元的前低支撑。策略上宜关注量能变化，警惕无量反弹后的回落风险。"
+  },
+  "raw_response": "{\n  \"ticker\": \"601677.SH\",\n  \"effective_trade_date\": \"2026-03-27\",\n  \"trend\": {\n    \"short_term\": \"sideways\",\n    \"medium_term\": \"bearish\",\n    \"strength\": 0.3,\n    \"summary\": \"短期在14.50附近企稳反弹，但受制于均线系统压制，中期趋势仍处空头排列。\",\n    \"evidence\": [\n      \"收盘价15.00元，位于SMA20(15.95)和SMA50(16.08)下方，偏离度分别为-5.9%和-6.7%\",\n      \"SMA20低于SMA50约0.8%，均线呈死叉向下发散形态\",\n      \"近5日涨幅0.87%，终结了连续4日的下跌，但未突破15.20附近的短期压力区\"\n    ]\n  },\n  \"momentum\": {\n    \"state\": \"weakening\",\n    \"strength\": 0.2,\n    \"summary\": \"MACD绿柱虽小幅缩短显示跌势趋缓，但RSI和MFI均处于弱势区间，反弹动能不足。\",\n    \"evidence\": [\n      \"MACD柱状图(-0.17)较前值略有收敛，但DIF(-0.45)仍远低于DEA(-0.28)\",\n      \"RSI(14)为41.4，MFI(14)为38.0，均位于50荣枯线下方，显示买盘力量薄弱\",\n      \"当日成交量仅为20日均量的52%，缩量反弹确认多头信心不足\"\n    ]\n  },\n  \"volatility\": {\n    \"state\": \"normal\",\n    \"summary\": \"波动率回归常态，布林带开口走平，价格运行于中轨与下轨之间。\",\n    \"evidence\": [\n      \"ATR(14)为0.52元，占收盘价比例3.5%，处于近期正常波动范围\",\n      \"布林带位置(Boll_Position)为0.26，股价位于下轨(13.95)与中轨(15.95)的下半区\",\n      \"近3日振幅收窄，从之前的单边下跌转为低位震荡\"\n    ]\n  },\n  \"volume_confirmation\": {\n    \"state\": \"diverging\",\n    \"summary\": \"价格上涨伴随显著缩量，量价背离，缺乏增量资金确认。\",\n    \"evidence\": [\n      \"当日成交量17.0万手，较20日均量(32.8万手)萎缩48%\",\n      \"量比0.71，换手率1.4%，活跃度降至近期低点\",\n      \"收盘价站上EMA10但成交量未放大，属于典型的存量博弈反弹\"\n    ]\n  },\n  \"relative_strength\": {\n    \"vs_benchmark\": \"weaker\",\n    \"vs_sector\": \"neutral\",\n    \"summary\": \"近20日表现显著弱于沪深300指数，中期相对强弱有所修复但短期再度转弱。\",\n    \"evidence\": [\n      \"近20日相对基准超额收益为-7.35%，显示短期大幅跑输大盘\",\n      \"近60日相对基准超额收益为+7.31%，说明中期趋势曾强于大盘，但近期被抹去\",\n      \"行业板块数据缺失，暂无法判断相对于铝行业的强弱\"\n    ]\n  },\n  \"indicator_snapshot\": {\n    \"price_vs_sma20\": -0.0593,\n    \"price_vs_sma50\": -0.0672,\n    \"price_vs_ema10\": -0.0081,\n    \"sma20_vs_sma50\": -0.0084,\n    \"macd\": -0.4534,\n    \"macd_signal\": -0.2817,\n    \"macd_hist\": -0.1717,\n    \"macd_hist_change\": 0.0551,\n    \"rsi_14\": 41.43,\n    \"mfi_14\": 37.98,\n    \"atr_14\": 0.5247,\n    \"atr_pct_of_close\": 0.0350,\n    \"boll_position\": 0.2636,\n    \"volume_vs_ma20\": -0.4803,\n    \"close_vs_vwma20\": -0.0728,\n    \"rs_vs_benchmark_20d\": -0.0735,\n    \"rs_vs_benchmark_60d\": 0.0731\n  },\n  \"key_levels\": {\n    \"support\": [\n      14.46,\n      13.97\n    ],\n    \"resistance\": [\n      15.95,\n      16.18\n    ],\n    \"breakout_level\": null,\n    \"breakdown_level\": 13.97\n  },\n  \"signals\": [\n    {\n      \"type\": \"mean_reversion\",\n      \"direction\": \"bullish\",\n      \"strength\": 0.3,\n      \"description\": \"短线超跌后的技术性修复，触及布林下轨区域后出现止跌K线。\",\n      \"evidence\": [\n        \"股价回踩13.97-14.00区间（前期低点及布林下轨）获得支撑\",\n        \"RSI进入40以下超卖区后拐头向上\",\n        \"单日涨幅2.04%收复部分失地\"\n      ]\n    },\n    {\n      \"type\": \"trend_following\",\n      \"direction\": \"bearish\",\n      \"strength\": 0.7,\n      \"description\": \"中期均线系统空头排列，任何反弹至均线密集区的行为均构成压力。\",\n      \"evidence\": [\n        \"SMA20与SMA50形成死叉并持续下行\",\n        \"价格始终受制于VWMA20(16.18)压制\",\n        \"MACD零轴下方运行，未见金叉信号\"\n      ]\n    }\n  ],\n  \"risk_flags\": [\n    \"缩量反弹，若后续无法补量，极易再次探底\",\n    \"上方套牢盘沉重，15.90-16.20区间存在大量近期被套筹码\",\n    \"相对强度快速转弱，若大盘调整，个股可能跟随创新低\"\n  ],\n  \"invalidations\": [\n    \"若放量跌破13.97元，则短线止跌逻辑失效，开启新一轮下跌\",\n    \"若放量突破16.20元（20日均线及VWMA），则中期空头趋势暂时证伪\"\n  ],\n  \"confidence\": 0.65,\n  \"technical_summary_zh\": \"明泰铝业短期在14.50元附近获得支撑并出现缩量反弹，但整体仍处于中期空头趋势中。技术指标显示RSI和MFI处于弱势区，MACD虽绿柱缩短但未金叉，且成交量显著萎缩（-48%），表明当前上涨缺乏资金共识，大概率为超跌后的技术性修复。关键压力位在15.95元（20日线）至16.20元区间，若无法放量突破该区域，股价大概率将维持震荡或再次下探13.97元的前低支撑。策略上宜关注量能变化，警惕无量反弹后的回落风险。\"\n}",
+  "company_context": {
+    "identity": {
+      "ticker": "601677.SH",
+      "company_name": "明泰铝业",
+      "exchange": "SH",
+      "market": "A_share"
+    },
+    "analysis_time": {
+      "requested_date": "2026-03-29",
+      "effective_date": "2026-03-29",
+      "date_mode": "natural_day"
+    },
+    "classification": {
+      "industry": "铝",
+      "company_type": "cyclical_resources",
+      "style_tag": "cyclical_resources",
+      "size_bucket": "small_cap",
+      "liquidity_bucket": "medium"
+    },
+    "business_context": {
+      "sub_industry": "铝",
+      "business_model": "主要产品:铝板带箔及铝型材两大门类,广泛应用于新能源电池,轨道车体,汽车制造,印刷制版,电子家电,电力设施,建筑装饰,交通运输,食品和医药包装等领域.主营业务:1-8系铝板带箔的生产和销售.",
+      "company_intro": "公司始建于1997年，为国内首家民营铝加工业企业。通过持续的技术创新及前瞻性布局，不断实现高端突破，再生铝战略持续向纵深推进，已形成废铝回收-熔炼再生-精深加工的铝产业链闭环。公司正以绿色智造为笔，书写着可持续发展的新篇章，为制造业绿色转型升级提供可复制经验样本。公司整体实力位居我国铝加工业第一方阵，是铝加工业产品多元化和再生铝保级应用龙头企业。",
+      "core_products": [
+        "铝板带",
+        "铝箔",
+        "铝板带-合金板",
+        "其他业务",
+        "其他主营业务"
+      ],
+      "main_business_items": [
+        "铝板带",
+        "铝箔",
+        "铝板带-合金板",
+        "其他业务",
+        "其他主营业务",
+        "铝板带-普通铝板带材",
+        "铝合金轨道车体",
+        "铝板带-花纹板"
+      ],
+      "demand_drivers": [],
+      "cost_drivers": [],
+      "policy_drivers": [],
+      "global_risk_drivers": []
+    },
+    "market_context": {
+      "valuation_style": "cyclical",
+      "market_attention_points": [],
+      "trading_sensitivity": []
+    },
+    "technical_context": {
+      "trend": {
+        "short_term": "sideways",
+        "medium_term": "bearish",
+        "strength": 0.3,
+        "summary": "短期在14.50附近企稳反弹，但受制于均线系统压制，中期趋势仍处空头排列。",
+        "evidence": [
+          "收盘价15.00元，位于SMA20(15.95)和SMA50(16.08)下方，偏离度分别为-5.9%和-6.7%",
+          "SMA20低于SMA50约0.8%，均线呈死叉向下发散形态",
+          "近5日涨幅0.87%，终结了连续4日的下跌，但未突破15.20附近的短期压力区"
+        ]
+      },
+      "momentum": {
+        "state": "weakening",
+        "strength": 0.2,
+        "summary": "MACD绿柱虽小幅缩短显示跌势趋缓，但RSI和MFI均处于弱势区间，反弹动能不足。",
+        "evidence": [
+          "MACD柱状图(-0.17)较前值略有收敛，但DIF(-0.45)仍远低于DEA(-0.28)",
+          "RSI(14)为41.4，MFI(14)为38.0，均位于50荣枯线下方，显示买盘力量薄弱",
+          "当日成交量仅为20日均量的52%，缩量反弹确认多头信心不足"
+        ]
+      },
+      "volatility": {
+        "state": "normal",
+        "summary": "波动率回归常态，布林带开口走平，价格运行于中轨与下轨之间。",
+        "evidence": [
+          "ATR(14)为0.52元，占收盘价比例3.5%，处于近期正常波动范围",
+          "布林带位置(Boll_Position)为0.26，股价位于下轨(13.95)与中轨(15.95)的下半区",
+          "近3日振幅收窄，从之前的单边下跌转为低位震荡"
+        ]
+      },
+      "volume_confirmation": {
+        "state": "diverging",
+        "summary": "价格上涨伴随显著缩量，量价背离，缺乏增量资金确认。",
+        "evidence": [
+          "当日成交量17.0万手，较20日均量(32.8万手)萎缩48%",
+          "量比0.71，换手率1.4%，活跃度降至近期低点",
+          "收盘价站上EMA10但成交量未放大，属于典型的存量博弈反弹"
+        ]
+      },
+      "relative_strength": {
+        "vs_benchmark": "weaker",
+        "vs_sector": "neutral",
+        "summary": "近20日表现显著弱于沪深300指数，中期相对强弱有所修复但短期再度转弱。",
+        "evidence": [
+          "近20日相对基准超额收益为-7.35%，显示短期大幅跑输大盘",
+          "近60日相对基准超额收益为+7.31%，说明中期趋势曾强于大盘，但近期被抹去",
+          "行业板块数据缺失，暂无法判断相对于铝行业的强弱"
+        ]
+      },
+      "technical_compact_signals": {
+        "price_vs_sma20": -0.0593,
+        "price_vs_sma50": -0.0672,
+        "price_vs_ema10": -0.0081,
+        "sma20_vs_sma50": -0.0084,
+        "macd": -0.4534,
+        "macd_signal": -0.2817,
+        "macd_hist": -0.1717,
+        "macd_hist_change": 0.0551,
+        "rsi_14": 41.43,
+        "mfi_14": 37.98,
+        "atr_14": 0.5247,
+        "atr_pct_of_close": 0.035,
+        "boll_position": 0.2636,
+        "volume_vs_ma20": -0.4803,
+        "close_vs_vwma20": -0.0728,
+        "rs_vs_benchmark_20d": -0.0735,
+        "rs_vs_benchmark_60d": 0.0731
+      },
+      "key_levels": {
+        "support": [
+          14.46,
+          13.97
+        ],
+        "resistance": [
+          15.95,
+          16.18
+        ],
+        "breakout_level": null,
+        "breakdown_level": 13.97
+      },
+      "signals": [
+        {
+          "type": "mean_reversion",
+          "direction": "bullish",
+          "strength": 0.3,
+          "description": "短线超跌后的技术性修复，触及布林下轨区域后出现止跌K线。",
+          "evidence": [
+            "股价回踩13.97-14.00区间（前期低点及布林下轨）获得支撑",
+            "RSI进入40以下超卖区后拐头向上",
+            "单日涨幅2.04%收复部分失地"
+          ]
+        },
+        {
+          "type": "trend_following",
+          "direction": "bearish",
+          "strength": 0.7,
+          "description": "中期均线系统空头排列，任何反弹至均线密集区的行为均构成压力。",
+          "evidence": [
+            "SMA20与SMA50形成死叉并持续下行",
+            "价格始终受制于VWMA20(16.18)压制",
+            "MACD零轴下方运行，未见金叉信号"
+          ]
+        }
+      ],
+      "confidence": 0.65,
+      "technical_summary_zh": "明泰铝业短期在14.50元附近获得支撑并出现缩量反弹，但整体仍处于中期空头趋势中。技术指标显示RSI和MFI处于弱势区，MACD虽绿柱缩短但未金叉，且成交量显著萎缩（-48%），表明当前上涨缺乏资金共识，大概率为超跌后的技术性修复。关键压力位在15.95元（20日线）至16.20元区间，若无法放量突破该区域，股价大概率将维持震荡或再次下探13.97元的前低支撑。策略上宜关注量能变化，警惕无量反弹后的回落风险。"
+    },
+    "fundamental_context": {
+      "company_profile": {},
+      "growth": {},
+      "profitability": {},
+      "cashflow_quality": {},
+      "balance_sheet_health": {},
+      "valuation": {},
+      "fundamental_compact_signals": {},
+      "financial_snapshot": {},
+      "core_risks": [],
+      "fundamental_signals": [],
+      "confidence": null,
+      "fundamental_summary_zh": ""
+    },
+    "event_context": {
+      "event_overview": {},
+      "event_compact_signals": {},
+      "event_context_snapshot": {},
+      "event_chain": {},
+      "key_catalysts": [],
+      "key_risks": [],
+      "tracking_points": [],
+      "confidence": null,
+      "event_summary_zh": ""
+    },
+    "search_context": {
+      "search_aliases": [
+        "明泰铝业",
+        "铝板带",
+        "铝箔",
+        "铝板带-合金板",
+        "其他业务",
+        "有色金属",
+        "工业金属",
+        "铝"
+      ],
+      "seed_titles": [],
+      "ths_member_codes": [
+        "700001.TI",
+        "700002.TI",
+        "700003.TI",
+        "700004.TI",
+        "700008.TI",
+        "700009.TI",
+        "700010.TI",
+        "700021.TI",
+        "700023.TI",
+        "700031.TI",
+        "700032.TI",
+        "700035.TI"
+      ],
+      "ths_concepts": [
+        "原材料(A股)",
+        "原材料Ⅱ(A股)",
+        "金属与采矿(A股)",
+        "铝(A股)",
+        "工业金属",
+        "河南",
+        "减持新规(不可减持)",
+        "破净股",
+        "铝",
+        "融资融券",
+        "特高压",
+        "新能源汽车"
+      ],
+      "index_memberships": [
+        "有色金属",
+        "工业金属",
+        "铝"
+      ],
+      "preferred_query_style": "keyword_cluster",
+      "language_bias": "cn_finance_media"
+    },
+    "data_quality": {
+      "missing_sections": [],
+      "stale_sections": [],
+      "source_summary": {
+        "stock_basic": true,
+        "stock_company": true,
+        "fina_mainbz": true,
+        "ths_member": true,
+        "index_member_all": true
+      }
+    }
+  },
+  "trace": {
+    "run_id": "baa14bee-3fa5-4fb2-bac3-c514e737bef2",
+    "agent_name": "TechnicalAgent",
+    "agent_type": "agent",
+    "status": "success",
+    "started_at": 1774810603.526112,
+    "finished_at": 1774810622.947737,
+    "duration_ms": 19421,
+    "input_summary": {
+      "ticker": "601677.SH",
+      "analysis_date": "2026-03-29",
+      "has_company_context": true
+    },
+    "output_summary": {
+      "effective_trade_date": "2026-03-27",
+      "trend": "sideways",
+      "momentum": "weakening",
+      "confidence": 0.65
+    },
+    "error": null,
+    "steps": [
+      {
+        "step_id": "c8f99066-e4b0-483e-b466-6ce847825656",
+        "step_type": "bundle",
+        "name": "build_technical_bundle",
+        "status": "success",
+        "started_at": 1774810603.526122,
+        "input": {
+          "ticker": "601677.SH",
+          "analysis_date": "2026-03-29",
+          "lookback_trading_days": 90
+        },
+        "output": {
+          "effective_trade_date": "2026-03-27",
+          "indicator_snapshot_keys": 0,
+          "signal_count": 0
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1774810603.7250292,
+        "duration_ms": 198
+      },
+      {
+        "step_id": "d103e560-659e-4375-919f-cfca6f4384f7",
+        "step_type": "llm",
+        "name": "llm_invoke_round_1",
+        "status": "success",
+        "started_at": 1774810603.73213,
+        "input": {
+          "round": 1,
+          "message_count": 2
+        },
+        "output": {
+          "has_tool_calls": false,
+          "content_preview": "{\n  \"ticker\": \"601677.SH\",\n  \"effective_trade_date\": \"2026-03-27\",\n  \"trend\": {\n    \"short_term\": \"sideways\",\n    \"medium_term\": \"bearish\",\n    \"strength\": 0.3,\n    \"summary\": \"短期在14.50附近企稳反弹，但受制于均线系统压制，中期趋势仍处空头排列。\",\n    \"evidence\": [\n      \"收盘价15.00元，位于SMA20(15.95)和SMA50(16.08)下方，偏离度分别为-5.9%和-6.7%\",\n      \"SMA20低于SMA50约0.8%，均线呈死叉向下发散形态\",\n      \"近5日涨幅0.87%，终结了连续4日的下跌，但未突破15.20附近的短期压力区\"\n    ]\n  },\n  \"momentum\": {\n    \"state\": \"weakening\",\n    \"strength\": 0.2,\n    \"summary\": \"MACD绿柱虽小幅缩短显示跌势趋缓，但RS"
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1774810622.9464781,
+        "duration_ms": 19214
+      },
+      {
+        "step_id": "4e96b561-4da1-47bb-b7fd-d1393f558832",
+        "step_type": "parse",
+        "name": "parse_json_response",
+        "status": "success",
+        "started_at": 1774810622.946635,
+        "input": {
+          "content_preview": "{\n  \"ticker\": \"601677.SH\",\n  \"effective_trade_date\": \"2026-03-27\",\n  \"trend\": {\n    \"short_term\": \"sideways\",\n    \"medium_term\": \"bearish\",\n    \"strength\": 0.3,\n    \"summary\": \"短期在14.50附近企稳反弹，但受制于均线系统压制，中期趋势仍处空头排列。\",\n    \"evidence\": [\n      \"收盘价15.00元，位于SMA20(15.95)和SMA50(16.08)下方，偏离度分别为-5.9%和-6.7%\",\n      \"SMA20低于SMA50约0.8%，均线呈死叉向下发散形态\",\n      \"近5日涨幅0.87%，终结了连续4日的下跌，但未突破15.20附近的短期压力区\"\n    ]\n  },\n  \"momentum\": {\n    \"state\": \"weakening\",\n    \"strength\": 0.2,\n    \"summary\": \"MACD绿柱虽小幅缩短显示跌势趋缓，但RS"
+        },
+        "output": {
+          "trend": "sideways",
+          "momentum": "weakening",
+          "confidence": 0.65
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1774810622.9470022,
+        "duration_ms": 0
+      },
+      {
+        "step_id": "c150b656-aaed-42ae-be51-d8ee18b8925a",
+        "step_type": "quality_gate",
+        "name": "quality_gate",
+        "status": "success",
+        "started_at": 1774810622.9470289,
+        "input": {
+          "round": 1
+        },
+        "output": {
+          "is_sparse": false
+        },
+        "metrics": {
+          "signal_count": 2
+        },
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1774810622.9470878,
+        "duration_ms": 0
+      }
+    ],
+    "observability": {
+      "langsmith_enabled": false,
+      "langsmith_project_name": null,
+      "otel_enabled": false
+    }
+  }
+}

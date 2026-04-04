@@ -1,0 +1,112 @@
+{
+  "run_id": "585c9bed-05a1-493e-b57d-e5aa2e43a4c7",
+  "agent_name": "CompanyAnalysisReportAgent",
+  "agent_type": "agent",
+  "status": "success",
+  "started_at": 1775143548.372976,
+  "finished_at": 1775143613.205911,
+  "duration_ms": 64832,
+  "input_summary": {
+    "ticker": "600873.SH",
+    "analysis_date": "2026-04-02"
+  },
+  "output_summary": {
+    "effective_date": "2026-04-02",
+    "report_title": "梅花生物（600873.SH）深度分析报告",
+    "markdown_length": 5506
+  },
+  "error": null,
+  "steps": [
+    {
+      "step_id": "c1178178-9b3d-4b3d-a720-bd8a8d958c5e",
+      "step_type": "merge",
+      "name": "prepare_context",
+      "status": "success",
+      "started_at": 1775143548.373089,
+      "input": {
+        "ticker": "600873.SH",
+        "analysis_date": "2026-04-02"
+      },
+      "output": {
+        "effective_date": "2026-04-02",
+        "context_keys": [
+          "analysis_date",
+          "company_context",
+          "effective_date",
+          "event_analysis_result",
+          "fundamental_analysis_result",
+          "sector_flow_analysis_result",
+          "strategy_style_result",
+          "technical_analysis_result",
+          "ticker"
+        ]
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1775143548.3731022,
+      "duration_ms": 0
+    },
+    {
+      "step_id": "c43a726f-dc89-4992-a0b0-5131d844c21a",
+      "step_type": "llm",
+      "name": "llm_invoke_round_1",
+      "status": "success",
+      "started_at": 1775143548.373822,
+      "input": {
+        "round": 1,
+        "message_count": 2
+      },
+      "output": {
+        "content_preview": "```json\n{\n  \"ticker\": \"600873.SH\",\n  \"effective_date\": \"2026-04-02\",\n  \"report_title\": \"梅花生物（600873.SH）深度分析报告\",\n  \"executive_summary\": [\n    \"梅花生物当前处于氨基酸价格周期上行与公司资本信号共振的关键窗口期，管理层3.04-3.50亿元大额增持叠加回购计划，构成强烈的底部确认信号\",\n    \"基本面呈现\\\"高质量盈利+极低估值\\\"特征：ROE 19.7%、经营现金流/净利润1.56倍、PE仅8.6倍，但营收下滑2.5%提示周期属性大于成长属性\",\n    \"技术面短期回调12.6%至11.57元，量能萎缩60%，处于中期上升趋势中的技术性休整阶段，关键支撑位11.18-11.02元\",\n    \"食品板块整体资金冷淡，个股处于板块边缘位置，缺乏资金合力，但低拥挤度反而为周期左侧布局提供条件\",\n    \"核心跟踪变量：赖氨酸/苏氨酸周度价格、月度出口增速、管理层增持执行进度，任一变量恶化均可能触发策略调整\"\n  ],\n  \"key_takeaways\": [\n    \"策略范式定位为宏观周期投资，赚产品价格周期上行的钱，而非PB-ROE价值投资或景气投资\",\n    \"氨基酸价格处于明确上行通道，1-2月出口同比增长，行业景气度由底部回升，"
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1775143613.2054348,
+      "duration_ms": 64831
+    },
+    {
+      "step_id": "27bb88b5-8773-4a30-a4d6-589b860520c6",
+      "step_type": "parse",
+      "name": "parse_json_response",
+      "status": "success",
+      "started_at": 1775143613.205575,
+      "input": {},
+      "output": {
+        "report_title": "梅花生物（600873.SH）深度分析报告",
+        "executive_summary_count": 5,
+        "key_takeaways_count": 8
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1775143613.2058182,
+      "duration_ms": 0
+    },
+    {
+      "step_id": "9f3a1fb1-4933-4494-8773-6e471aa8c24f",
+      "step_type": "quality_gate",
+      "name": "quality_gate",
+      "status": "success",
+      "started_at": 1775143613.205846,
+      "input": {},
+      "output": {
+        "passed": true,
+        "error_count": 0
+      },
+      "metrics": {
+        "markdown_length": 5506
+      },
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1775143613.205889,
+      "duration_ms": 0
+    }
+  ],
+  "observability": {
+    "langsmith_enabled": false,
+    "langsmith_project_name": null,
+    "otel_enabled": false
+  }
+}

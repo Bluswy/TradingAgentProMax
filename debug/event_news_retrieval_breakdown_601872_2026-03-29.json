@@ -1,0 +1,572 @@
+{
+  "ticker": "601872.SH",
+  "requested_date": "2026-03-29",
+  "effective_trade_date": "2026-03-29",
+  "meta": {
+    "name": "招商轮船",
+    "industry": "水运",
+    "market": "A_share",
+    "list_date": ""
+  },
+  "query_plan": {
+    "sensitivity_variables": [
+      "油轮运价 (BDTI)",
+      "干散货运价 (BDI)",
+      "VLCC 船队供需",
+      "地缘政治风险 (红海/霍尔木兹)",
+      "原油贸易流向",
+      "战争险与绕航成本"
+    ],
+    "company_query": "招商轮船 最近 30 天 公告 业绩 船队扩张 长租合同 新船交付 融资 风险",
+    "industry_query": "航运 油运 干散货 最近 30 天 运价 BDTI BDI VLCC 供需 交付 拆船 绕航 成本",
+    "global_event_query": "最近 30 天 红海 霍尔木兹 OPEC 原油 贸易流向 油轮 运价 战争险 绕航",
+    "query_rationale": {
+      "company": "覆盖业绩兑现、船队扩张、长租与现货合同比例、新船交付节点及融资风险。",
+      "industry": "覆盖油运与干散货核心中观变量：运价指数、船队供需、交付拆船、地缘绕航及成本。",
+      "global": "覆盖地缘触发点与原油贸易流，及其对运价、保险成本和航线的传导。"
+    }
+  },
+  "company_search": {
+    "queries": [
+      "招商轮船 最近 30 天 公告 业绩 船队扩张 长租合同 新船交付 融资 风险"
+    ],
+    "deduped_results_count": 11,
+    "reranked_results_count": 8,
+    "query_results": [
+      {
+        "query": "招商轮船 最近 30 天 公告 业绩 船队扩张 长租合同 新船交付 融资 风险",
+        "results_count": 11,
+        "titles": [
+          "招商轮船:招商轮船2025年年度报告",
+          "招商轮船:招商轮船关于卡姆萨型干散货船新船交付的公告",
+          "招商轮船:招商轮船2025年年度报告摘要",
+          "招商轮船再迎节能新船交付 干散货板块竞争力持续升级",
+          "招商轮船：新一代节能环保干散货船“明祺”轮交付",
+          "601872，油轮船队经营业绩创新高",
+          "运力规模稳居国际前列！招商轮船2025年净利超60亿元 | 航运界",
+          "4艘订单已接3艘：招商轮船“明祺”轮接收，卡姆萨型船队再扩容",
+          "招商轮船续刷历史新高，油运超级周期卷土重来？_财经头条_新浪财经",
+          "招商轮船年报解码：油轮业绩创新高与地缘避险",
+          "【船企】招商轮船2025年实现营业收入281.77亿元"
+        ]
+      }
+    ],
+    "final_results": [
+      {
+        "title": "招商轮船年报解码：油轮业绩创新高与地缘避险",
+        "trunk": ""
+      },
+      {
+        "title": "601872，油轮船队经营业绩创新高",
+        "trunk": ""
+      },
+      {
+        "title": "4艘订单已接3艘：招商轮船“明祺”轮接收，卡姆萨型船队再扩容",
+        "trunk": ""
+      },
+      {
+        "title": "招商轮船:招商轮船关于卡姆萨型干散货船新船交付的公告",
+        "trunk": ""
+      },
+      {
+        "title": "招商轮船:招商轮船2025年年度报告",
+        "trunk": ""
+      },
+      {
+        "title": "招商轮船:招商轮船2025年年度报告摘要",
+        "trunk": ""
+      },
+      {
+        "title": "招商轮船再迎节能新船交付 干散货板块竞争力持续升级",
+        "trunk": ""
+      },
+      {
+        "title": "招商轮船：新一代节能环保干散货船“明祺”轮交付",
+        "trunk": ""
+      }
+    ]
+  },
+  "industry_search": {
+    "queries": [
+      "航运 油运 干散货 最近 30 天 运价 BDTI BDI VLCC 供需 交付 拆船 绕航 成本"
+    ],
+    "deduped_results_count": 0,
+    "reranked_results_count": 0,
+    "query_results": [
+      {
+        "query": "航运 油运 干散货 最近 30 天 运价 BDTI BDI VLCC 供需 交付 拆船 绕航 成本",
+        "results_count": 0,
+        "titles": []
+      }
+    ],
+    "final_results": []
+  },
+  "global_search": {
+    "queries": [
+      "最近 30 天 红海 霍尔木兹 OPEC 原油 贸易流向 油轮 运价 战争险 绕航"
+    ],
+    "deduped_results_count": 14,
+    "reranked_results_count": 8,
+    "query_results": [
+      {
+        "query": "最近 30 天 红海 霍尔木兹 OPEC 原油 贸易流向 油轮 运价 战争险 绕航",
+        "results_count": 14,
+        "titles": [
+          "绕开霍尔木兹！船只扎堆涌向红海 沙特延布港至亚洲油轮运费暴跌",
+          "沙特每日700万桶石油绕过霍尔木兹",
+          "沙特航运巨头不惜代价抢船！支付天价运费，开启红海新线路转运原油_市值风云",
+          "沙特高价租用油轮绕道红海出口原油",
+          "原油周度报告",
+          "交通运输行业动态跟踪：地缘冲突影响持续，中期关注能源安全担忧下超额补库需求",
+          "交通运输行业周报：三箭齐发，快递涨价或将延续，重点推荐快递板块",
+          "地缘冲突持续，机构看好油运企业利润创新高（附概念股）-股票-金融界",
+          "港股概念追踪|地缘冲突持续    机构看好油运企业利润创新高（附概念股）",
+          "大量油轮涌向沙特红海港口装运原油，绕开霍尔木兹海峡",
+          "大量油轮涌向沙特红海港口装运原油 绕开霍尔木兹海峡_网易订阅",
+          "霍尔木兹停滞 油轮扎堆改道红海 已经30艘了！",
+          "中东战火引爆石油危机！三大板块迎来历史性机遇，深度逻辑全解析 - 今日头条Loading.",
+          "美伊冲突下的第一个赢家，出现了"
+        ]
+      }
+    ],
+    "final_results": [
+      {
+        "title": "交通运输行业动态跟踪：地缘冲突影响持续，中期关注能源安全担忧下超额补库需求",
+        "trunk": ""
+      },
+      {
+        "title": "沙特航运巨头不惜代价抢船！支付天价运费，开启红海新线路转运原油_市值风云",
+        "trunk": ""
+      },
+      {
+        "title": "大量油轮涌向沙特红海港口装运原油，绕开霍尔木兹海峡",
+        "trunk": ""
+      },
+      {
+        "title": "大量油轮涌向沙特红海港口装运原油 绕开霍尔木兹海峡_网易订阅",
+        "trunk": ""
+      },
+      {
+        "title": "绕开霍尔木兹！船只扎堆涌向红海 沙特延布港至亚洲油轮运费暴跌",
+        "trunk": ""
+      },
+      {
+        "title": "沙特高价租用油轮绕道红海出口原油",
+        "trunk": ""
+      },
+      {
+        "title": "地缘冲突持续，机构看好油运企业利润创新高（附概念股）-股票-金融界",
+        "trunk": ""
+      },
+      {
+        "title": "港股概念追踪|地缘冲突持续    机构看好油运企业利润创新高（附概念股）",
+        "trunk": ""
+      }
+    ]
+  },
+  "normalized_company_events": [
+    {
+      "event_key": "company:operations",
+      "layer": "company",
+      "event_type": "capacity",
+      "title": "招商轮船:招商轮船关于卡姆萨型干散货船新船交付的公告",
+      "direction": "neutral",
+      "importance": 0.88,
+      "time_horizon": "medium_term",
+      "affected_variables": [
+        "operations"
+      ],
+      "dimensions": {
+        "operations": [
+          "交付"
+        ]
+      },
+      "evidence_titles": [
+        "招商轮船:招商轮船关于卡姆萨型干散货船新船交付的公告",
+        "招商轮船再迎节能新船交付 干散货板块竞争力持续升级",
+        "招商轮船：新一代节能环保干散货船“明祺”轮交付"
+      ],
+      "evidence_items": [
+        {
+          "title": "招商轮船:招商轮船关于卡姆萨型干散货船新船交付的公告",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "招商轮船再迎节能新船交付 干散货板块竞争力持续升级",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "招商轮船：新一代节能环保干散货船“明祺”轮交付",
+          "trunk": "",
+          "secu_list": []
+        }
+      ],
+      "summary": "公司层事件聚焦于operations，共聚合 3 条证据。"
+    },
+    {
+      "event_key": "company:earnings",
+      "layer": "company",
+      "event_type": "earnings",
+      "title": "招商轮船年报解码：油轮业绩创新高与地缘避险",
+      "direction": "neutral",
+      "importance": 0.73,
+      "time_horizon": "medium_term",
+      "affected_variables": [
+        "earnings"
+      ],
+      "dimensions": {
+        "earnings": [
+          "业绩",
+          "年报"
+        ]
+      },
+      "evidence_titles": [
+        "招商轮船年报解码：油轮业绩创新高与地缘避险",
+        "601872，油轮船队经营业绩创新高"
+      ],
+      "evidence_items": [
+        {
+          "title": "招商轮船年报解码：油轮业绩创新高与地缘避险",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "601872，油轮船队经营业绩创新高",
+          "trunk": "",
+          "secu_list": []
+        }
+      ],
+      "summary": "公司层事件聚焦于earnings，共聚合 2 条证据。"
+    },
+    {
+      "event_key": "company:orders_projects",
+      "layer": "company",
+      "event_type": "order",
+      "title": "4艘订单已接3艘：招商轮船“明祺”轮接收，卡姆萨型船队再扩容",
+      "direction": "neutral",
+      "importance": 0.58,
+      "time_horizon": "medium_term",
+      "affected_variables": [
+        "orders_projects"
+      ],
+      "dimensions": {
+        "orders_projects": [
+          "订单"
+        ]
+      },
+      "evidence_titles": [
+        "4艘订单已接3艘：招商轮船“明祺”轮接收，卡姆萨型船队再扩容"
+      ],
+      "evidence_items": [
+        {
+          "title": "4艘订单已接3艘：招商轮船“明祺”轮接收，卡姆萨型船队再扩容",
+          "trunk": "",
+          "secu_list": []
+        }
+      ],
+      "summary": "公司层事件聚焦于orders_projects，共聚合 1 条证据。"
+    },
+    {
+      "event_key": "company:招商轮船 招商轮船2025年年度报告",
+      "layer": "company",
+      "event_type": "other",
+      "title": "招商轮船:招商轮船2025年年度报告",
+      "direction": "neutral",
+      "importance": 0.5,
+      "time_horizon": "medium_term",
+      "affected_variables": [],
+      "dimensions": {},
+      "evidence_titles": [
+        "招商轮船:招商轮船2025年年度报告"
+      ],
+      "evidence_items": [
+        {
+          "title": "招商轮船:招商轮船2025年年度报告",
+          "trunk": "",
+          "secu_list": []
+        }
+      ],
+      "summary": "公司层事件聚焦于经营变化，共聚合 1 条证据。"
+    },
+    {
+      "event_key": "company:招商轮船 招商轮船2025年年度报告摘要",
+      "layer": "company",
+      "event_type": "other",
+      "title": "招商轮船:招商轮船2025年年度报告摘要",
+      "direction": "neutral",
+      "importance": 0.5,
+      "time_horizon": "medium_term",
+      "affected_variables": [],
+      "dimensions": {},
+      "evidence_titles": [
+        "招商轮船:招商轮船2025年年度报告摘要"
+      ],
+      "evidence_items": [
+        {
+          "title": "招商轮船:招商轮船2025年年度报告摘要",
+          "trunk": "",
+          "secu_list": []
+        }
+      ],
+      "summary": "公司层事件聚焦于经营变化，共聚合 1 条证据。"
+    }
+  ],
+  "normalized_industry_events": [],
+  "normalized_global_events": [
+    {
+      "event_key": "global:commodity|geopolitics",
+      "layer": "global",
+      "event_type": "geopolitics",
+      "title": "沙特航运巨头不惜代价抢船！支付天价运费，开启红海新线路转运原油_市值风云",
+      "direction": "neutral",
+      "importance": 1.0,
+      "time_horizon": "medium_term",
+      "affected_variables": [
+        "commodity",
+        "geopolitics",
+        "logistics"
+      ],
+      "dimensions": {
+        "trigger": [
+          "commodity",
+          "geopolitics",
+          "logistics"
+        ],
+        "transmission": []
+      },
+      "evidence_titles": [
+        "沙特航运巨头不惜代价抢船！支付天价运费，开启红海新线路转运原油_市值风云",
+        "大量油轮涌向沙特红海港口装运原油，绕开霍尔木兹海峡",
+        "大量油轮涌向沙特红海港口装运原油 绕开霍尔木兹海峡_网易订阅"
+      ],
+      "evidence_items": [
+        {
+          "title": "沙特航运巨头不惜代价抢船！支付天价运费，开启红海新线路转运原油_市值风云",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "大量油轮涌向沙特红海港口装运原油，绕开霍尔木兹海峡",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "大量油轮涌向沙特红海港口装运原油 绕开霍尔木兹海峡_网易订阅",
+          "trunk": "",
+          "secu_list": []
+        }
+      ],
+      "summary": "全球层事件聚焦于commodity、geopolitics、logistics，共聚合 3 条证据。"
+    },
+    {
+      "event_key": "global:geopolitics|cost_margin",
+      "layer": "global",
+      "event_type": "geopolitics",
+      "title": "地缘冲突持续，机构看好油运企业利润创新高（附概念股）-股票-金融界",
+      "direction": "bearish",
+      "importance": 0.81,
+      "time_horizon": "medium_term",
+      "affected_variables": [
+        "cost_margin",
+        "geopolitics"
+      ],
+      "dimensions": {
+        "trigger": [
+          "geopolitics"
+        ],
+        "transmission": [
+          "cost_margin"
+        ]
+      },
+      "evidence_titles": [
+        "地缘冲突持续，机构看好油运企业利润创新高（附概念股）-股票-金融界",
+        "港股概念追踪|地缘冲突持续    机构看好油运企业利润创新高（附概念股）"
+      ],
+      "evidence_items": [
+        {
+          "title": "地缘冲突持续，机构看好油运企业利润创新高（附概念股）-股票-金融界",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "港股概念追踪|地缘冲突持续    机构看好油运企业利润创新高（附概念股）",
+          "trunk": "",
+          "secu_list": []
+        }
+      ],
+      "summary": "全球层事件聚焦于cost_margin、geopolitics，共聚合 2 条证据。"
+    },
+    {
+      "event_key": "global:commodity|geopolitics|supply_demand",
+      "layer": "global",
+      "event_type": "geopolitics",
+      "title": "沙特高价租用油轮绕道红海出口原油",
+      "direction": "neutral",
+      "importance": 0.74,
+      "time_horizon": "medium_term",
+      "affected_variables": [
+        "commodity",
+        "geopolitics",
+        "supply_demand"
+      ],
+      "dimensions": {
+        "trigger": [
+          "commodity",
+          "geopolitics"
+        ],
+        "transmission": [
+          "supply_demand"
+        ]
+      },
+      "evidence_titles": [
+        "沙特高价租用油轮绕道红海出口原油"
+      ],
+      "evidence_items": [
+        {
+          "title": "沙特高价租用油轮绕道红海出口原油",
+          "trunk": "",
+          "secu_list": []
+        }
+      ],
+      "summary": "全球层事件聚焦于commodity、geopolitics、supply_demand，共聚合 1 条证据。"
+    },
+    {
+      "event_key": "global:geopolitics|supply_demand",
+      "layer": "global",
+      "event_type": "geopolitics",
+      "title": "交通运输行业动态跟踪：地缘冲突影响持续，中期关注能源安全担忧下超额补库需求",
+      "direction": "bearish",
+      "importance": 0.66,
+      "time_horizon": "medium_term",
+      "affected_variables": [
+        "geopolitics",
+        "supply_demand"
+      ],
+      "dimensions": {
+        "trigger": [
+          "geopolitics"
+        ],
+        "transmission": [
+          "supply_demand"
+        ]
+      },
+      "evidence_titles": [
+        "交通运输行业动态跟踪：地缘冲突影响持续，中期关注能源安全担忧下超额补库需求"
+      ],
+      "evidence_items": [
+        {
+          "title": "交通运输行业动态跟踪：地缘冲突影响持续，中期关注能源安全担忧下超额补库需求",
+          "trunk": "",
+          "secu_list": []
+        }
+      ],
+      "summary": "全球层事件聚焦于geopolitics、supply_demand，共聚合 1 条证据。"
+    },
+    {
+      "event_key": "global:geopolitics",
+      "layer": "global",
+      "event_type": "geopolitics",
+      "title": "绕开霍尔木兹！船只扎堆涌向红海 沙特延布港至亚洲油轮运费暴跌",
+      "direction": "bearish",
+      "importance": 0.58,
+      "time_horizon": "medium_term",
+      "affected_variables": [
+        "geopolitics"
+      ],
+      "dimensions": {
+        "trigger": [
+          "geopolitics"
+        ],
+        "transmission": []
+      },
+      "evidence_titles": [
+        "绕开霍尔木兹！船只扎堆涌向红海 沙特延布港至亚洲油轮运费暴跌"
+      ],
+      "evidence_items": [
+        {
+          "title": "绕开霍尔木兹！船只扎堆涌向红海 沙特延布港至亚洲油轮运费暴跌",
+          "trunk": "",
+          "secu_list": []
+        }
+      ],
+      "summary": "全球层事件聚焦于geopolitics，共聚合 1 条证据。"
+    }
+  ],
+  "event_chain": {
+    "global_triggers": [
+      {
+        "title": "沙特航运巨头不惜代价抢船！支付天价运费，开启红海新线路转运原油_市值风云",
+        "event_type": "geopolitics",
+        "affected_variables": [
+          "commodity",
+          "geopolitics",
+          "logistics"
+        ],
+        "summary": "全球层事件聚焦于commodity、geopolitics、logistics，共聚合 3 条证据。"
+      },
+      {
+        "title": "地缘冲突持续，机构看好油运企业利润创新高（附概念股）-股票-金融界",
+        "event_type": "geopolitics",
+        "affected_variables": [
+          "cost_margin",
+          "geopolitics"
+        ],
+        "summary": "全球层事件聚焦于cost_margin、geopolitics，共聚合 2 条证据。"
+      },
+      {
+        "title": "沙特高价租用油轮绕道红海出口原油",
+        "event_type": "geopolitics",
+        "affected_variables": [
+          "commodity",
+          "geopolitics",
+          "supply_demand"
+        ],
+        "summary": "全球层事件聚焦于commodity、geopolitics、supply_demand，共聚合 1 条证据。"
+      }
+    ],
+    "industry_variables": [],
+    "company_impacts": [
+      {
+        "title": "招商轮船:招商轮船关于卡姆萨型干散货船新船交付的公告",
+        "event_type": "capacity",
+        "affected_variables": [
+          "operations"
+        ],
+        "summary": "公司层事件聚焦于operations，共聚合 3 条证据。"
+      },
+      {
+        "title": "招商轮船年报解码：油轮业绩创新高与地缘避险",
+        "event_type": "earnings",
+        "affected_variables": [
+          "earnings"
+        ],
+        "summary": "公司层事件聚焦于earnings，共聚合 2 条证据。"
+      },
+      {
+        "title": "4艘订单已接3艘：招商轮船“明祺”轮接收，卡姆萨型船队再扩容",
+        "event_type": "order",
+        "affected_variables": [
+          "orders_projects"
+        ],
+        "summary": "公司层事件聚焦于orders_projects，共聚合 1 条证据。"
+      }
+    ],
+    "missing_links": [
+      "缺行业中观变量证据"
+    ]
+  },
+  "event_context_snapshot": {
+    "company_event_strength": "strong",
+    "industry_context_strength": "weak",
+    "global_context_strength": "strong",
+    "chain_completeness": "partial",
+    "dominant_driver_layer": "company",
+    "dominant_driver_type": "capacity",
+    "primary_bullish_variable": "none",
+    "primary_bearish_variable": "cost_margin",
+    "most_actionable_catalyst": "招商轮船:招商轮船关于卡姆萨型干散货船新船交付的公告",
+    "most_critical_risk": "地缘冲突持续，机构看好油运企业利润创新高（附概念股）-股票-金融界"
+  }
+}

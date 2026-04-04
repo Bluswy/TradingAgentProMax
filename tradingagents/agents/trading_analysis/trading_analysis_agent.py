@@ -27,4 +27,7 @@ class TradingAnalysisAgent:
             "event_news_result": state.get("event_news_result"),
             "sector_flow_result": state.get("sector_flow_result"),
             "strategy_style_result": state.get("strategy_style_result"),
+            "strategy_decision_result": state.get("strategy_decision_result"),
+            "company_report_result": state.get("company_report_result"),
+            "final_report_result": state.get("final_report_result"),
         }

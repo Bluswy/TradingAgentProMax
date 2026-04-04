@@ -1,0 +1,110 @@
+{
+  "run_id": "baa14bee-3fa5-4fb2-bac3-c514e737bef2",
+  "agent_name": "TechnicalAgent",
+  "agent_type": "agent",
+  "status": "success",
+  "started_at": 1774810603.526112,
+  "finished_at": 1774810622.947737,
+  "duration_ms": 19421,
+  "input_summary": {
+    "ticker": "601677.SH",
+    "analysis_date": "2026-03-29",
+    "has_company_context": true
+  },
+  "output_summary": {
+    "effective_trade_date": "2026-03-27",
+    "trend": "sideways",
+    "momentum": "weakening",
+    "confidence": 0.65
+  },
+  "error": null,
+  "steps": [
+    {
+      "step_id": "c8f99066-e4b0-483e-b466-6ce847825656",
+      "step_type": "bundle",
+      "name": "build_technical_bundle",
+      "status": "success",
+      "started_at": 1774810603.526122,
+      "input": {
+        "ticker": "601677.SH",
+        "analysis_date": "2026-03-29",
+        "lookback_trading_days": 90
+      },
+      "output": {
+        "effective_trade_date": "2026-03-27",
+        "indicator_snapshot_keys": 0,
+        "signal_count": 0
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1774810603.7250292,
+      "duration_ms": 198
+    },
+    {
+      "step_id": "d103e560-659e-4375-919f-cfca6f4384f7",
+      "step_type": "llm",
+      "name": "llm_invoke_round_1",
+      "status": "success",
+      "started_at": 1774810603.73213,
+      "input": {
+        "round": 1,
+        "message_count": 2
+      },
+      "output": {
+        "has_tool_calls": false,
+        "content_preview": "{\n  \"ticker\": \"601677.SH\",\n  \"effective_trade_date\": \"2026-03-27\",\n  \"trend\": {\n    \"short_term\": \"sideways\",\n    \"medium_term\": \"bearish\",\n    \"strength\": 0.3,\n    \"summary\": \"短期在14.50附近企稳反弹，但受制于均线系统压制，中期趋势仍处空头排列。\",\n    \"evidence\": [\n      \"收盘价15.00元，位于SMA20(15.95)和SMA50(16.08)下方，偏离度分别为-5.9%和-6.7%\",\n      \"SMA20低于SMA50约0.8%，均线呈死叉向下发散形态\",\n      \"近5日涨幅0.87%，终结了连续4日的下跌，但未突破15.20附近的短期压力区\"\n    ]\n  },\n  \"momentum\": {\n    \"state\": \"weakening\",\n    \"strength\": 0.2,\n    \"summary\": \"MACD绿柱虽小幅缩短显示跌势趋缓，但RS"
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1774810622.9464781,
+      "duration_ms": 19214
+    },
+    {
+      "step_id": "4e96b561-4da1-47bb-b7fd-d1393f558832",
+      "step_type": "parse",
+      "name": "parse_json_response",
+      "status": "success",
+      "started_at": 1774810622.946635,
+      "input": {
+        "content_preview": "{\n  \"ticker\": \"601677.SH\",\n  \"effective_trade_date\": \"2026-03-27\",\n  \"trend\": {\n    \"short_term\": \"sideways\",\n    \"medium_term\": \"bearish\",\n    \"strength\": 0.3,\n    \"summary\": \"短期在14.50附近企稳反弹，但受制于均线系统压制，中期趋势仍处空头排列。\",\n    \"evidence\": [\n      \"收盘价15.00元，位于SMA20(15.95)和SMA50(16.08)下方，偏离度分别为-5.9%和-6.7%\",\n      \"SMA20低于SMA50约0.8%，均线呈死叉向下发散形态\",\n      \"近5日涨幅0.87%，终结了连续4日的下跌，但未突破15.20附近的短期压力区\"\n    ]\n  },\n  \"momentum\": {\n    \"state\": \"weakening\",\n    \"strength\": 0.2,\n    \"summary\": \"MACD绿柱虽小幅缩短显示跌势趋缓，但RS"
+      },
+      "output": {
+        "trend": "sideways",
+        "momentum": "weakening",
+        "confidence": 0.65
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1774810622.9470022,
+      "duration_ms": 0
+    },
+    {
+      "step_id": "c150b656-aaed-42ae-be51-d8ee18b8925a",
+      "step_type": "quality_gate",
+      "name": "quality_gate",
+      "status": "success",
+      "started_at": 1774810622.9470289,
+      "input": {
+        "round": 1
+      },
+      "output": {
+        "is_sparse": false
+      },
+      "metrics": {
+        "signal_count": 2
+      },
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1774810622.9470878,
+      "duration_ms": 0
+    }
+  ],
+  "observability": {
+    "langsmith_enabled": false,
+    "langsmith_project_name": null,
+    "otel_enabled": false
+  }
+}

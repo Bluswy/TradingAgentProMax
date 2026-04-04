@@ -1,0 +1,3916 @@
+{
+  "event_news_data_bundle": {
+    "ticker": "601677.SH",
+    "requested_date": "2026-03-29",
+    "effective_trade_date": "2026-03-29",
+    "meta": {
+      "name": "明泰铝业",
+      "industry": "铝",
+      "market": "A_share",
+      "list_date": ""
+    },
+    "company_context": {
+      "identity": {
+        "ticker": "601677.SH",
+        "company_name": "明泰铝业",
+        "exchange": "SH",
+        "market": "A_share"
+      },
+      "analysis_time": {
+        "requested_date": "2026-03-29",
+        "effective_date": "2026-03-29",
+        "date_mode": "natural_day"
+      },
+      "classification": {
+        "industry": "铝",
+        "company_type": "cyclical_resources",
+        "style_tag": "cyclical_resources",
+        "size_bucket": "small_cap",
+        "liquidity_bucket": "medium"
+      },
+      "business_context": {
+        "sub_industry": "铝",
+        "business_model": "主要产品:铝板带箔及铝型材两大门类,广泛应用于新能源电池,轨道车体,汽车制造,印刷制版,电子家电,电力设施,建筑装饰,交通运输,食品和医药包装等领域.主营业务:1-8系铝板带箔的生产和销售.",
+        "company_intro": "公司始建于1997年，为国内首家民营铝加工业企业。通过持续的技术创新及前瞻性布局，不断实现高端突破，再生铝战略持续向纵深推进，已形成废铝回收-熔炼再生-精深加工的铝产业链闭环。公司正以绿色智造为笔，书写着可持续发展的新篇章，为制造业绿色转型升级提供可复制经验样本。公司整体实力位居我国铝加工业第一方阵，是铝加工业产品多元化和再生铝保级应用龙头企业。",
+        "core_products": [
+          "铝板带",
+          "铝箔",
+          "铝板带-合金板",
+          "其他业务",
+          "其他主营业务"
+        ],
+        "main_business_items": [
+          "铝板带",
+          "铝箔",
+          "铝板带-合金板",
+          "其他业务",
+          "其他主营业务",
+          "铝板带-普通铝板带材",
+          "铝合金轨道车体",
+          "铝板带-花纹板"
+        ],
+        "demand_drivers": [],
+        "cost_drivers": [],
+        "policy_drivers": [],
+        "global_risk_drivers": []
+      },
+      "market_context": {
+        "valuation_style": "cyclical",
+        "market_attention_points": [],
+        "trading_sensitivity": []
+      },
+      "technical_context": {
+        "trend": {},
+        "momentum": {},
+        "volatility": {},
+        "volume_confirmation": {},
+        "relative_strength": {},
+        "technical_compact_signals": {},
+        "key_levels": {},
+        "signals": [],
+        "confidence": null,
+        "technical_summary_zh": ""
+      },
+      "fundamental_context": {
+        "company_profile": {},
+        "growth": {},
+        "profitability": {},
+        "cashflow_quality": {},
+        "balance_sheet_health": {},
+        "valuation": {},
+        "fundamental_compact_signals": {},
+        "financial_snapshot": {},
+        "core_risks": [],
+        "fundamental_signals": [],
+        "confidence": null,
+        "fundamental_summary_zh": ""
+      },
+      "event_context": {
+        "event_overview": {},
+        "event_compact_signals": {},
+        "event_context_snapshot": {},
+        "event_chain": {},
+        "key_catalysts": [],
+        "key_risks": [],
+        "tracking_points": [],
+        "confidence": null,
+        "event_summary_zh": ""
+      },
+      "search_context": {
+        "search_aliases": [
+          "明泰铝业",
+          "铝板带",
+          "铝箔",
+          "铝板带-合金板",
+          "其他业务",
+          "有色金属",
+          "工业金属",
+          "铝"
+        ],
+        "seed_titles": [],
+        "ths_member_codes": [
+          "700001.TI",
+          "700002.TI",
+          "700003.TI",
+          "700004.TI",
+          "700008.TI",
+          "700009.TI",
+          "700010.TI",
+          "700021.TI",
+          "700023.TI",
+          "700031.TI",
+          "700032.TI",
+          "700035.TI"
+        ],
+        "ths_concepts": [
+          "原材料(A股)",
+          "原材料Ⅱ(A股)",
+          "金属与采矿(A股)",
+          "铝(A股)",
+          "工业金属",
+          "河南",
+          "减持新规(不可减持)",
+          "破净股",
+          "铝",
+          "融资融券",
+          "特高压",
+          "新能源汽车"
+        ],
+        "index_memberships": [
+          "有色金属",
+          "工业金属",
+          "铝"
+        ],
+        "preferred_query_style": "keyword_cluster",
+        "language_bias": "cn_finance_media"
+      },
+      "data_quality": {
+        "missing_sections": [],
+        "stale_sections": [],
+        "source_summary": {
+          "stock_basic": true,
+          "stock_company": true,
+          "fina_mainbz": true,
+          "ths_member": true,
+          "index_member_all": true
+        }
+      }
+    },
+    "company_news": [
+      {
+        "title": "明泰铝业深度跟踪：业绩兑现超预期，高端产能释放打开成长空间 - 今日头条Loading.",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "明泰铝业：公司拥有再生铝保级应用产能超100万吨",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "明泰铝业：鸿晟新材“汽车、绿色能源用铝产业园”一期项目2025年已开工投产",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "明泰铝业：目前订单充足",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "明泰铝业2025年净利同比预增12%—14% 单吨盈利空间持续扩大",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "明泰铝业：目前再生铝产能超100万吨",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "明泰铝业：目前再生铝产能超100万吨|明泰铝业_新浪财经_新浪网",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "明泰铝业：拥有再生铝保级应用产能超100万吨，目前暂无铝矿资源|链条_网易订阅",
+        "trunk": "",
+        "secu_list": []
+      }
+    ],
+    "macro_news": [
+      {
+        "title": "中东产能“断供”！铝价能否持续飙升",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "天山铝业:2025年度董事会工作报告",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "南山铝业:山东南山铝业股份有限公司2025年度报告",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "华峰铝业:上海华峰铝业股份有限公司2025年年度报告",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "南山铝业:山东南山铝业股份有限公司2025年度报告_摘要",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "铝价强势上涨箭在弦上，中国铝企或成此次供应缺口最大受益者-CBC金属网",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "周末突发！中东两大铝业巨头遇袭，海外溢价创19年来最高！",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "2026-2030年中国铝箔行业：绿电铝溢价与再生铝降本的价值重估-手机中研网",
+        "trunk": "",
+        "secu_list": []
+      }
+    ],
+    "normalized_company_events": [
+      {
+        "event_key": "company:orders_projects",
+        "layer": "company",
+        "event_type": "order",
+        "title": "明泰铝业：公司拥有再生铝保级应用产能超100万吨",
+        "direction": "neutral",
+        "importance": 1.0,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "orders_projects"
+        ],
+        "dimensions": {
+          "orders_projects": [
+            "产能"
+          ]
+        },
+        "evidence_titles": [
+          "明泰铝业：公司拥有再生铝保级应用产能超100万吨",
+          "明泰铝业：鸿晟新材“汽车、绿色能源用铝产业园”一期项目2025年已开工投产",
+          "明泰铝业：目前订单充足",
+          "明泰铝业：目前再生铝产能超100万吨",
+          "明泰铝业：目前再生铝产能超100万吨|明泰铝业_新浪财经_新浪网",
+          "明泰铝业：拥有再生铝保级应用产能超100万吨，目前暂无铝矿资源|链条_网易订阅"
+        ],
+        "evidence_items": [
+          {
+            "title": "明泰铝业：公司拥有再生铝保级应用产能超100万吨",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "明泰铝业：鸿晟新材“汽车、绿色能源用铝产业园”一期项目2025年已开工投产",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "明泰铝业：目前订单充足",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "明泰铝业：目前再生铝产能超100万吨",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "明泰铝业：目前再生铝产能超100万吨|明泰铝业_新浪财经_新浪网",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "明泰铝业：拥有再生铝保级应用产能超100万吨，目前暂无铝矿资源|链条_网易订阅",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于orders_projects，共聚合 6 条证据。"
+      },
+      {
+        "event_key": "company:earnings|orders_projects",
+        "layer": "company",
+        "event_type": "earnings",
+        "title": "明泰铝业深度跟踪：业绩兑现超预期，高端产能释放打开成长空间 - 今日头条Loading.",
+        "direction": "neutral",
+        "importance": 0.66,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "earnings",
+          "orders_projects"
+        ],
+        "dimensions": {
+          "earnings": [
+            "业绩"
+          ],
+          "orders_projects": [
+            "产能"
+          ]
+        },
+        "evidence_titles": [
+          "明泰铝业深度跟踪：业绩兑现超预期，高端产能释放打开成长空间 - 今日头条Loading."
+        ],
+        "evidence_items": [
+          {
+            "title": "明泰铝业深度跟踪：业绩兑现超预期，高端产能释放打开成长空间 - 今日头条Loading.",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于earnings、orders_projects，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "company:earnings",
+        "layer": "company",
+        "event_type": "earnings",
+        "title": "明泰铝业2025年净利同比预增12%—14% 单吨盈利空间持续扩大",
+        "direction": "bullish",
+        "importance": 0.58,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "earnings"
+        ],
+        "dimensions": {
+          "earnings": [
+            "净利"
+          ]
+        },
+        "evidence_titles": [
+          "明泰铝业2025年净利同比预增12%—14% 单吨盈利空间持续扩大"
+        ],
+        "evidence_items": [
+          {
+            "title": "明泰铝业2025年净利同比预增12%—14% 单吨盈利空间持续扩大",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于earnings，共聚合 1 条证据。"
+      }
+    ],
+    "normalized_industry_events": [
+      {
+        "event_key": "industry:supply",
+        "layer": "industry",
+        "event_type": "industry_cycle",
+        "title": "中东产能“断供”！铝价能否持续飙升",
+        "direction": "neutral",
+        "importance": 0.58,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "supply"
+        ],
+        "dimensions": {
+          "supply": [
+            "产能"
+          ]
+        },
+        "evidence_titles": [
+          "中东产能“断供”！铝价能否持续飙升"
+        ],
+        "evidence_items": [
+          {
+            "title": "中东产能“断供”！铝价能否持续飙升",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于supply，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "industry:天山铝业 2025年度董事会工作报告",
+        "layer": "industry",
+        "event_type": "other",
+        "title": "天山铝业:2025年度董事会工作报告",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "天山铝业:2025年度董事会工作报告"
+        ],
+        "evidence_items": [
+          {
+            "title": "天山铝业:2025年度董事会工作报告",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "industry:南山铝业 山东南山铝业股份有限公司2025年度报告",
+        "layer": "industry",
+        "event_type": "other",
+        "title": "南山铝业:山东南山铝业股份有限公司2025年度报告",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "南山铝业:山东南山铝业股份有限公司2025年度报告"
+        ],
+        "evidence_items": [
+          {
+            "title": "南山铝业:山东南山铝业股份有限公司2025年度报告",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "industry:华峰铝业 上海华峰铝业股份有限公司2025年年度报告",
+        "layer": "industry",
+        "event_type": "other",
+        "title": "华峰铝业:上海华峰铝业股份有限公司2025年年度报告",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "华峰铝业:上海华峰铝业股份有限公司2025年年度报告"
+        ],
+        "evidence_items": [
+          {
+            "title": "华峰铝业:上海华峰铝业股份有限公司2025年年度报告",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "industry:南山铝业 山东南山铝业股份有限公司2025年度报告 摘要",
+        "layer": "industry",
+        "event_type": "other",
+        "title": "南山铝业:山东南山铝业股份有限公司2025年度报告_摘要",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "南山铝业:山东南山铝业股份有限公司2025年度报告_摘要"
+        ],
+        "evidence_items": [
+          {
+            "title": "南山铝业:山东南山铝业股份有限公司2025年度报告_摘要",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "industry:铝价强势上涨箭在弦上 中国铝企或成此次供应缺口最大受益者 cbc金属网",
+        "layer": "industry",
+        "event_type": "other",
+        "title": "铝价强势上涨箭在弦上，中国铝企或成此次供应缺口最大受益者-CBC金属网",
+        "direction": "bullish",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "铝价强势上涨箭在弦上，中国铝企或成此次供应缺口最大受益者-CBC金属网"
+        ],
+        "evidence_items": [
+          {
+            "title": "铝价强势上涨箭在弦上，中国铝企或成此次供应缺口最大受益者-CBC金属网",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "industry:周末突发 中东两大铝业巨头遇袭 海外溢价创19年来最高",
+        "layer": "industry",
+        "event_type": "other",
+        "title": "周末突发！中东两大铝业巨头遇袭，海外溢价创19年来最高！",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "周末突发！中东两大铝业巨头遇袭，海外溢价创19年来最高！"
+        ],
+        "evidence_items": [
+          {
+            "title": "周末突发！中东两大铝业巨头遇袭，海外溢价创19年来最高！",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "industry:2026 2030年中国铝箔行业 绿电铝溢价与再生铝降本的价值重估 手机中研网",
+        "layer": "industry",
+        "event_type": "other",
+        "title": "2026-2030年中国铝箔行业：绿电铝溢价与再生铝降本的价值重估-手机中研网",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "2026-2030年中国铝箔行业：绿电铝溢价与再生铝降本的价值重估-手机中研网"
+        ],
+        "evidence_items": [
+          {
+            "title": "2026-2030年中国铝箔行业：绿电铝溢价与再生铝降本的价值重估-手机中研网",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+      }
+    ],
+    "normalized_global_events": [
+      {
+        "event_key": "global:geopolitics",
+        "layer": "global",
+        "event_type": "geopolitics",
+        "title": "有色金属行业周报：地缘冲突持续扰动金属市场，短期承压不改长期看好",
+        "direction": "bearish",
+        "importance": 1.0,
+        "time_horizon": "short_term",
+        "affected_variables": [
+          "geopolitics"
+        ],
+        "dimensions": {
+          "trigger": [
+            "geopolitics"
+          ],
+          "transmission": []
+        },
+        "evidence_titles": [
+          "有色金属行业周报：地缘冲突持续扰动金属市场，短期承压不改长期看好",
+          "地缘冲突引爆供应危机，铝价内外联动强势冲高，沪铝单日飙涨820元/吨！",
+          "30日铝市早评：中东两大铝厂遭遇袭击，铝价或直逼25000位置——AL2605-佛山市南海区铝型材行业协会",
+          "有色（铝产业链）季报：中东局势为锚，把握震荡格局下铝价多头配置机会",
+          "【建信聚焦】 铝:伊朗袭击中东两大铝厂,供应扰动推升铝价",
+          "中东两大铝厂遇袭，全球供应格局重构，铝价独立走强"
+        ],
+        "evidence_items": [
+          {
+            "title": "有色金属行业周报：地缘冲突持续扰动金属市场，短期承压不改长期看好",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "地缘冲突引爆供应危机，铝价内外联动强势冲高，沪铝单日飙涨820元/吨！",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "30日铝市早评：中东两大铝厂遭遇袭击，铝价或直逼25000位置——AL2605-佛山市南海区铝型材行业协会",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "有色（铝产业链）季报：中东局势为锚，把握震荡格局下铝价多头配置机会",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "【建信聚焦】 铝:伊朗袭击中东两大铝厂,供应扰动推升铝价",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "中东两大铝厂遇袭，全球供应格局重构，铝价独立走强",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "全球层事件聚焦于geopolitics，共聚合 6 条证据。"
+      },
+      {
+        "event_key": "global:commodity|supply_demand",
+        "layer": "global",
+        "event_type": "commodity",
+        "title": "大宗商品：铝：供给收缩或引发铝价新一轮上行",
+        "direction": "neutral",
+        "importance": 0.66,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "commodity",
+          "supply_demand"
+        ],
+        "dimensions": {
+          "trigger": [
+            "commodity"
+          ],
+          "transmission": [
+            "supply_demand"
+          ]
+        },
+        "evidence_titles": [
+          "大宗商品：铝：供给收缩或引发铝价新一轮上行"
+        ],
+        "evidence_items": [
+          {
+            "title": "大宗商品：铝：供给收缩或引发铝价新一轮上行",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "全球层事件聚焦于commodity、supply_demand，共聚合 1 条证据。"
+      }
+    ],
+    "event_chain": {
+      "global_triggers": [
+        "中东两大铝厂遇袭导致产能断供",
+        "海外铝溢价创19年新高引发全球供应恐慌"
+      ],
+      "industry_variables": [
+        "铝价大幅跳涨（沪铝单日飙涨820元/吨）",
+        "国内铝企被视作供应缺口受益者",
+        "再生铝相对原铝成本优势扩大"
+      ],
+      "company_impacts": [
+        "库存铝锭及在产品价值重估带来短期收益",
+        "单吨盈利空间因加工费潜在上调而扩大",
+        "再生铝闭环低成本优势在高价环境下更显著",
+        "2025年业绩预增验证成长逻辑"
+      ],
+      "missing_links": [
+        "需跟踪铝价高位持续时间及下游对高价的接受程度（需求破坏风险）",
+        "需验证公司实际库存规模以量化库存重估的具体收益"
+      ]
+    },
+    "announcements": [],
+    "market_events": [],
+    "event_compact_signals": {
+      "company_event_bias": "positive",
+      "macro_event_bias": "mixed",
+      "event_density": "high",
+      "policy_sensitivity": "medium",
+      "earnings_catalyst_state": "confirmed_positive",
+      "risk_event_level": "high"
+    },
+    "event_context_snapshot": {
+      "company_event_strength": "strong",
+      "industry_context_strength": "very_strong",
+      "global_context_strength": "extreme",
+      "chain_completeness": "complete",
+      "dominant_driver_layer": "global_macro",
+      "dominant_driver_type": "geopolitics_supply_shock",
+      "primary_bullish_variable": "aluminum_price_inventory_gain",
+      "primary_bearish_variable": "geopolitical_escalation_risk",
+      "most_actionable_catalyst": "中东铝厂遇袭致铝价暴涨与公司业绩预增共振",
+      "most_critical_risk": "地缘冲突失控导致全球需求衰退或物流中断"
+    },
+    "query_plan": {
+      "sensitivity_variables": [
+        "铝价",
+        "加工费",
+        "再生铝供给",
+        "新能源/汽车需求",
+        "出口政策",
+        "能源成本"
+      ],
+      "company_query": "明泰铝业 近期 公告 业绩 订单 产能 再生铝 项目 融资 风险",
+      "industry_query": "铝加工 近期 铝板带 铝箔 加工费 库存 需求 新能源 汽车 再生铝 供给",
+      "global_event_query": "近期 铝价 LME 库存 美元指数 关税 出口 能源 成本 需求",
+      "query_rationale": {
+        "company": "覆盖业绩、订单、产能扩张及再生铝战略项目，兼顾融资与经营风险。",
+        "industry": "聚焦铝加工核心变量：加工费、库存、下游新能源/汽车需求及再生铝供给格局。",
+        "global": "覆盖铝价、LME 库存、汇率、关税及能源成本对出口和利润的传导。"
+      }
+    },
+    "debug_trace": {
+      "planner_context": {
+        "ticker": "601677.SH",
+        "company_name": "明泰铝业",
+        "analysis_date": "2026-03-29",
+        "industry": "铝",
+        "company_type": "cyclical_resources",
+        "business_hint": null,
+        "company_context": {
+          "identity": {
+            "ticker": "601677.SH",
+            "company_name": "明泰铝业",
+            "exchange": "SH",
+            "market": "A_share"
+          },
+          "analysis_time": {
+            "requested_date": "2026-03-29",
+            "effective_date": "2026-03-29",
+            "date_mode": "natural_day"
+          },
+          "classification": {
+            "industry": "铝",
+            "company_type": "cyclical_resources",
+            "style_tag": "cyclical_resources",
+            "size_bucket": "small_cap",
+            "liquidity_bucket": "medium"
+          },
+          "business_context": {
+            "sub_industry": "铝",
+            "business_model": "主要产品:铝板带箔及铝型材两大门类,广泛应用于新能源电池,轨道车体,汽车制造,印刷制版,电子家电,电力设施,建筑装饰,交通运输,食品和医药包装等领域.主营业务:1-8系铝板带箔的生产和销售.",
+            "company_intro": "公司始建于1997年，为国内首家民营铝加工业企业。通过持续的技术创新及前瞻性布局，不断实现高端突破，再生铝战略持续向纵深推进，已形成废铝回收-熔炼再生-精深加工的铝产业链闭环。公司正以绿色智造为笔，书写着可持续发展的新篇章，为制造业绿色转型升级提供可复制经验样本。公司整体实力位居我国铝加工业第一方阵，是铝加工业产品多元化和再生铝保级应用龙头企业。",
+            "core_products": [
+              "铝板带",
+              "铝箔",
+              "铝板带-合金板",
+              "其他业务",
+              "其他主营业务"
+            ],
+            "main_business_items": [
+              "铝板带",
+              "铝箔",
+              "铝板带-合金板",
+              "其他业务",
+              "其他主营业务",
+              "铝板带-普通铝板带材",
+              "铝合金轨道车体",
+              "铝板带-花纹板"
+            ],
+            "demand_drivers": [],
+            "cost_drivers": [],
+            "policy_drivers": [],
+            "global_risk_drivers": []
+          },
+          "market_context": {
+            "valuation_style": "cyclical",
+            "market_attention_points": [],
+            "trading_sensitivity": []
+          },
+          "technical_context": {
+            "trend": {},
+            "momentum": {},
+            "volatility": {},
+            "volume_confirmation": {},
+            "relative_strength": {},
+            "technical_compact_signals": {},
+            "key_levels": {},
+            "signals": [],
+            "confidence": null,
+            "technical_summary_zh": ""
+          },
+          "fundamental_context": {
+            "company_profile": {},
+            "growth": {},
+            "profitability": {},
+            "cashflow_quality": {},
+            "balance_sheet_health": {},
+            "valuation": {},
+            "fundamental_compact_signals": {},
+            "financial_snapshot": {},
+            "core_risks": [],
+            "fundamental_signals": [],
+            "confidence": null,
+            "fundamental_summary_zh": ""
+          },
+          "event_context": {
+            "event_overview": {},
+            "event_compact_signals": {},
+            "event_context_snapshot": {},
+            "event_chain": {},
+            "key_catalysts": [],
+            "key_risks": [],
+            "tracking_points": [],
+            "confidence": null,
+            "event_summary_zh": ""
+          },
+          "search_context": {
+            "search_aliases": [
+              "明泰铝业",
+              "铝板带",
+              "铝箔",
+              "铝板带-合金板",
+              "其他业务",
+              "有色金属",
+              "工业金属",
+              "铝"
+            ],
+            "seed_titles": [],
+            "ths_member_codes": [
+              "700001.TI",
+              "700002.TI",
+              "700003.TI",
+              "700004.TI",
+              "700008.TI",
+              "700009.TI",
+              "700010.TI",
+              "700021.TI",
+              "700023.TI",
+              "700031.TI",
+              "700032.TI",
+              "700035.TI"
+            ],
+            "ths_concepts": [
+              "原材料(A股)",
+              "原材料Ⅱ(A股)",
+              "金属与采矿(A股)",
+              "铝(A股)",
+              "工业金属",
+              "河南",
+              "减持新规(不可减持)",
+              "破净股",
+              "铝",
+              "融资融券",
+              "特高压",
+              "新能源汽车"
+            ],
+            "index_memberships": [
+              "有色金属",
+              "工业金属",
+              "铝"
+            ],
+            "preferred_query_style": "keyword_cluster",
+            "language_bias": "cn_finance_media"
+          },
+          "data_quality": {
+            "missing_sections": [],
+            "stale_sections": [],
+            "source_summary": {
+              "stock_basic": true,
+              "stock_company": true,
+              "fina_mainbz": true,
+              "ths_member": true,
+              "index_member_all": true
+            }
+          }
+        }
+      },
+      "company_context": {
+        "identity": {
+          "ticker": "601677.SH",
+          "company_name": "明泰铝业",
+          "exchange": "SH",
+          "market": "A_share"
+        },
+        "analysis_time": {
+          "requested_date": "2026-03-29",
+          "effective_date": "2026-03-29",
+          "date_mode": "natural_day"
+        },
+        "classification": {
+          "industry": "铝",
+          "company_type": "cyclical_resources",
+          "style_tag": "cyclical_resources",
+          "size_bucket": "small_cap",
+          "liquidity_bucket": "medium"
+        },
+        "business_context": {
+          "sub_industry": "铝",
+          "business_model": "主要产品:铝板带箔及铝型材两大门类,广泛应用于新能源电池,轨道车体,汽车制造,印刷制版,电子家电,电力设施,建筑装饰,交通运输,食品和医药包装等领域.主营业务:1-8系铝板带箔的生产和销售.",
+          "company_intro": "公司始建于1997年，为国内首家民营铝加工业企业。通过持续的技术创新及前瞻性布局，不断实现高端突破，再生铝战略持续向纵深推进，已形成废铝回收-熔炼再生-精深加工的铝产业链闭环。公司正以绿色智造为笔，书写着可持续发展的新篇章，为制造业绿色转型升级提供可复制经验样本。公司整体实力位居我国铝加工业第一方阵，是铝加工业产品多元化和再生铝保级应用龙头企业。",
+          "core_products": [
+            "铝板带",
+            "铝箔",
+            "铝板带-合金板",
+            "其他业务",
+            "其他主营业务"
+          ],
+          "main_business_items": [
+            "铝板带",
+            "铝箔",
+            "铝板带-合金板",
+            "其他业务",
+            "其他主营业务",
+            "铝板带-普通铝板带材",
+            "铝合金轨道车体",
+            "铝板带-花纹板"
+          ],
+          "demand_drivers": [],
+          "cost_drivers": [],
+          "policy_drivers": [],
+          "global_risk_drivers": []
+        },
+        "market_context": {
+          "valuation_style": "cyclical",
+          "market_attention_points": [],
+          "trading_sensitivity": []
+        },
+        "technical_context": {
+          "trend": {},
+          "momentum": {},
+          "volatility": {},
+          "volume_confirmation": {},
+          "relative_strength": {},
+          "technical_compact_signals": {},
+          "key_levels": {},
+          "signals": [],
+          "confidence": null,
+          "technical_summary_zh": ""
+        },
+        "fundamental_context": {
+          "company_profile": {},
+          "growth": {},
+          "profitability": {},
+          "cashflow_quality": {},
+          "balance_sheet_health": {},
+          "valuation": {},
+          "fundamental_compact_signals": {},
+          "financial_snapshot": {},
+          "core_risks": [],
+          "fundamental_signals": [],
+          "confidence": null,
+          "fundamental_summary_zh": ""
+        },
+        "event_context": {
+          "event_overview": {},
+          "event_compact_signals": {},
+          "event_context_snapshot": {},
+          "event_chain": {},
+          "key_catalysts": [],
+          "key_risks": [],
+          "tracking_points": [],
+          "confidence": null,
+          "event_summary_zh": ""
+        },
+        "search_context": {
+          "search_aliases": [
+            "明泰铝业",
+            "铝板带",
+            "铝箔",
+            "铝板带-合金板",
+            "其他业务",
+            "有色金属",
+            "工业金属",
+            "铝"
+          ],
+          "seed_titles": [],
+          "ths_member_codes": [
+            "700001.TI",
+            "700002.TI",
+            "700003.TI",
+            "700004.TI",
+            "700008.TI",
+            "700009.TI",
+            "700010.TI",
+            "700021.TI",
+            "700023.TI",
+            "700031.TI",
+            "700032.TI",
+            "700035.TI"
+          ],
+          "ths_concepts": [
+            "原材料(A股)",
+            "原材料Ⅱ(A股)",
+            "金属与采矿(A股)",
+            "铝(A股)",
+            "工业金属",
+            "河南",
+            "减持新规(不可减持)",
+            "破净股",
+            "铝",
+            "融资融券",
+            "特高压",
+            "新能源汽车"
+          ],
+          "index_memberships": [
+            "有色金属",
+            "工业金属",
+            "铝"
+          ],
+          "preferred_query_style": "keyword_cluster",
+          "language_bias": "cn_finance_media"
+        },
+        "data_quality": {
+          "missing_sections": [],
+          "stale_sections": [],
+          "source_summary": {
+            "stock_basic": true,
+            "stock_company": true,
+            "fina_mainbz": true,
+            "ths_member": true,
+            "index_member_all": true
+          }
+        }
+      },
+      "query_plan": {
+        "sensitivity_variables": [
+          "铝价",
+          "加工费",
+          "再生铝供给",
+          "新能源/汽车需求",
+          "出口政策",
+          "能源成本"
+        ],
+        "company_query": "明泰铝业 近期 公告 业绩 订单 产能 再生铝 项目 融资 风险",
+        "industry_query": "铝加工 近期 铝板带 铝箔 加工费 库存 需求 新能源 汽车 再生铝 供给",
+        "global_event_query": "近期 铝价 LME 库存 美元指数 关税 出口 能源 成本 需求",
+        "query_rationale": {
+          "company": "覆盖业绩、订单、产能扩张及再生铝战略项目，兼顾融资与经营风险。",
+          "industry": "聚焦铝加工核心变量：加工费、库存、下游新能源/汽车需求及再生铝供给格局。",
+          "global": "覆盖铝价、LME 库存、汇率、关税及能源成本对出口和利润的传导。"
+        }
+      },
+      "company_search": {
+        "queries": [
+          "明泰铝业 近期 公告 业绩 订单 产能 再生铝 项目 融资 风险"
+        ],
+        "query_results": [
+          {
+            "query": "明泰铝业 近期 公告 业绩 订单 产能 再生铝 项目 融资 风险",
+            "results_count": 13,
+            "results": [
+              {
+                "title": "明泰铝业：公司拥有再生铝保级应用产能超100万吨",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "明泰铝业：鸿晟新材“汽车、绿色能源用铝产业园”一期项目2025年已开工投产",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "明泰铝业：目前订单充足",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "明泰铝业：公司与南山铝业产业链结构不同-证券日报网-证券日报网",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "明泰铝业：2026年公司将继续秉承“高端化+绿色化+智能化”的发展主战略-证券日报网-证券日报网",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "明泰铝业2025年净利同比预增12%—14% 单吨盈利空间持续扩大",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "明泰铝业：公司已构建起“原料回收-熔炼再生-精深加工”的全产业链闭环",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "明泰铝业：公司积极拓展在低空经济、新能源等高增长领域的核心产品种类",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "明泰铝业：目前再生铝产能超100万吨",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "明泰铝业面临欧盟碳税挑战，再生铝技术或成优势|明泰铝业_新浪财经_新浪网",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "明泰铝业深度跟踪：业绩兑现超预期，高端产能释放打开成长空间 - 今日头条Loading.",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "明泰铝业：目前再生铝产能超100万吨|明泰铝业_新浪财经_新浪网",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "明泰铝业：拥有再生铝保级应用产能超100万吨，目前暂无铝矿资源|链条_网易订阅",
+                "trunk": "",
+                "secu_list": []
+              }
+            ]
+          }
+        ],
+        "results": [
+          {
+            "title": "明泰铝业深度跟踪：业绩兑现超预期，高端产能释放打开成长空间 - 今日头条Loading.",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "明泰铝业：公司拥有再生铝保级应用产能超100万吨",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "明泰铝业：鸿晟新材“汽车、绿色能源用铝产业园”一期项目2025年已开工投产",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "明泰铝业：目前订单充足",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "明泰铝业2025年净利同比预增12%—14% 单吨盈利空间持续扩大",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "明泰铝业：目前再生铝产能超100万吨",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "明泰铝业：目前再生铝产能超100万吨|明泰铝业_新浪财经_新浪网",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "明泰铝业：拥有再生铝保级应用产能超100万吨，目前暂无铝矿资源|链条_网易订阅",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "deduped_results_count": 13,
+        "reranked_results_count": 8,
+        "retry_attempts": [
+          {
+            "attempt": 1,
+            "layer": "company",
+            "queries": [
+              "明泰铝业 近期 公告 业绩 订单 产能 再生铝 项目 融资 风险"
+            ],
+            "raw_results_count": 13,
+            "deduped_results_count": 13,
+            "reranked_results_count": 8,
+            "query_results": [
+              {
+                "query": "明泰铝业 近期 公告 业绩 订单 产能 再生铝 项目 融资 风险",
+                "results_count": 13,
+                "results": [
+                  {
+                    "title": "明泰铝业：公司拥有再生铝保级应用产能超100万吨",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "明泰铝业：鸿晟新材“汽车、绿色能源用铝产业园”一期项目2025年已开工投产",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "明泰铝业：目前订单充足",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "明泰铝业：公司与南山铝业产业链结构不同-证券日报网-证券日报网",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "明泰铝业：2026年公司将继续秉承“高端化+绿色化+智能化”的发展主战略-证券日报网-证券日报网",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "明泰铝业2025年净利同比预增12%—14% 单吨盈利空间持续扩大",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "明泰铝业：公司已构建起“原料回收-熔炼再生-精深加工”的全产业链闭环",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "明泰铝业：公司积极拓展在低空经济、新能源等高增长领域的核心产品种类",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "明泰铝业：目前再生铝产能超100万吨",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "明泰铝业面临欧盟碳税挑战，再生铝技术或成优势|明泰铝业_新浪财经_新浪网",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "明泰铝业深度跟踪：业绩兑现超预期，高端产能释放打开成长空间 - 今日头条Loading.",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "明泰铝业：目前再生铝产能超100万吨|明泰铝业_新浪财经_新浪网",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "明泰铝业：拥有再生铝保级应用产能超100万吨，目前暂无铝矿资源|链条_网易订阅",
+                    "trunk": "",
+                    "secu_list": []
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "retry_used": false,
+        "final_attempt": 1
+      },
+      "industry_search": {
+        "queries": [
+          "铝加工 近期 铝板带 铝箔 加工费 库存 需求 新能源 汽车 再生铝 供给"
+        ],
+        "query_results": [
+          {
+            "query": "铝加工 近期 铝板带 铝箔 加工费 库存 需求 新能源 汽车 再生铝 供给",
+            "results_count": 12,
+            "results": [
+              {
+                "title": "永杰新材:永杰新材2025年年度报告摘要",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "永杰新材:永杰新材2025年年度报告",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "天山铝业:2025年度董事会工作报告",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "南山铝业:山东南山铝业股份有限公司2025年度报告",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "华峰铝业:上海华峰铝业股份有限公司2025年年度报告",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "南山铝业:山东南山铝业股份有限公司2025年度报告_摘要",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "铝行业周报：中东铝供应扰动再起",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "中东产能“断供”！铝价能否持续飙升",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "铝价强势上涨箭在弦上，中国铝企或成此次供应缺口最大受益者-CBC金属网",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "周末突发！中东两大铝业巨头遇袭，海外溢价创19年来最高！",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "2026-2030年中国铝箔行业：绿电铝溢价与再生铝降本的价值重估-手机中研网",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "阿联酋和巴林铝厂遇袭事件全面发酵，国内合规铝企在全球格局中优势持续凸显|海外额度榜|中国铝业|云铝股份|电解铝|新能源_新浪新闻",
+                "trunk": "",
+                "secu_list": []
+              }
+            ]
+          }
+        ],
+        "results": [
+          {
+            "title": "中东产能“断供”！铝价能否持续飙升",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "天山铝业:2025年度董事会工作报告",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "南山铝业:山东南山铝业股份有限公司2025年度报告",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "华峰铝业:上海华峰铝业股份有限公司2025年年度报告",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "南山铝业:山东南山铝业股份有限公司2025年度报告_摘要",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "铝价强势上涨箭在弦上，中国铝企或成此次供应缺口最大受益者-CBC金属网",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "周末突发！中东两大铝业巨头遇袭，海外溢价创19年来最高！",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "2026-2030年中国铝箔行业：绿电铝溢价与再生铝降本的价值重估-手机中研网",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "deduped_results_count": 12,
+        "reranked_results_count": 8,
+        "retry_attempts": [
+          {
+            "attempt": 1,
+            "layer": "industry",
+            "queries": [
+              "铝加工 近期 铝板带 铝箔 加工费 库存 需求 新能源 汽车 再生铝 供给"
+            ],
+            "raw_results_count": 12,
+            "deduped_results_count": 12,
+            "reranked_results_count": 8,
+            "query_results": [
+              {
+                "query": "铝加工 近期 铝板带 铝箔 加工费 库存 需求 新能源 汽车 再生铝 供给",
+                "results_count": 12,
+                "results": [
+                  {
+                    "title": "永杰新材:永杰新材2025年年度报告摘要",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "永杰新材:永杰新材2025年年度报告",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "天山铝业:2025年度董事会工作报告",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "南山铝业:山东南山铝业股份有限公司2025年度报告",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "华峰铝业:上海华峰铝业股份有限公司2025年年度报告",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "南山铝业:山东南山铝业股份有限公司2025年度报告_摘要",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "铝行业周报：中东铝供应扰动再起",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "中东产能“断供”！铝价能否持续飙升",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "铝价强势上涨箭在弦上，中国铝企或成此次供应缺口最大受益者-CBC金属网",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "周末突发！中东两大铝业巨头遇袭，海外溢价创19年来最高！",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "2026-2030年中国铝箔行业：绿电铝溢价与再生铝降本的价值重估-手机中研网",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "阿联酋和巴林铝厂遇袭事件全面发酵，国内合规铝企在全球格局中优势持续凸显|海外额度榜|中国铝业|云铝股份|电解铝|新能源_新浪新闻",
+                    "trunk": "",
+                    "secu_list": []
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "retry_used": false,
+        "final_attempt": 1
+      },
+      "global_search": {
+        "queries": [
+          "近期 铝价 LME 库存 美元指数 关税 出口 能源 成本 需求"
+        ],
+        "query_results": [
+          {
+            "query": "近期 铝价 LME 库存 美元指数 关税 出口 能源 成本 需求",
+            "results_count": 11,
+            "results": [
+              {
+                "title": "30日铝市早评：中东两大铝厂遭遇袭击，铝价或直逼25000位置——AL2605-佛山市南海区铝型材行业协会",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "文字早评",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "有色（铝产业链）季报：中东局势为锚，把握震荡格局下铝价多头配置机会",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "大宗商品：铝：供给收缩或引发铝价新一轮上行",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "有色金属行业周报：地缘冲突持续扰动金属市场，短期承压不改长期看好",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "【建信聚焦】 铝:伊朗袭击中东两大铝厂,供应扰动推升铝价",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "有色ETF鹏华(159880)涨近1%，铝业巨头遭受袭击中东减产加剧",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "地缘冲突引爆供应危机，铝价内外联动强势冲高，沪铝单日飙涨820元/吨！",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "铝价强势上涨箭在弦上，中国铝企或成此次供应缺口最大受益者-CBC金属网",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "中东两大铝厂遇袭，全球供应格局重构，铝价独立走强",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "铝市迎来强催化！巴林、阿联酋铝厂遇袭，铝价或再迎上行窗口",
+                "trunk": "",
+                "secu_list": []
+              }
+            ]
+          }
+        ],
+        "results": [
+          {
+            "title": "有色金属行业周报：地缘冲突持续扰动金属市场，短期承压不改长期看好",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "地缘冲突引爆供应危机，铝价内外联动强势冲高，沪铝单日飙涨820元/吨！",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "30日铝市早评：中东两大铝厂遭遇袭击，铝价或直逼25000位置——AL2605-佛山市南海区铝型材行业协会",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "有色（铝产业链）季报：中东局势为锚，把握震荡格局下铝价多头配置机会",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "大宗商品：铝：供给收缩或引发铝价新一轮上行",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "【建信聚焦】 铝:伊朗袭击中东两大铝厂,供应扰动推升铝价",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "中东两大铝厂遇袭，全球供应格局重构，铝价独立走强",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "deduped_results_count": 11,
+        "reranked_results_count": 7,
+        "retry_attempts": [
+          {
+            "attempt": 1,
+            "layer": "global",
+            "queries": [
+              "近期 铝价 LME 库存 美元指数 关税 出口 能源 成本 需求"
+            ],
+            "raw_results_count": 0,
+            "deduped_results_count": 0,
+            "reranked_results_count": 0,
+            "query_results": [
+              {
+                "query": "近期 铝价 LME 库存 美元指数 关税 出口 能源 成本 需求",
+                "results_count": 0,
+                "results": []
+              }
+            ]
+          },
+          {
+            "attempt": 2,
+            "layer": "global",
+            "queries": [
+              "近期 铝价 LME 库存 美元指数 关税 出口 能源 成本 需求"
+            ],
+            "raw_results_count": 0,
+            "deduped_results_count": 0,
+            "reranked_results_count": 0,
+            "query_results": [
+              {
+                "query": "近期 铝价 LME 库存 美元指数 关税 出口 能源 成本 需求",
+                "results_count": 0,
+                "results": []
+              }
+            ]
+          },
+          {
+            "attempt": 3,
+            "layer": "global",
+            "queries": [
+              "近期 铝价 LME 库存 美元指数 关税 出口 能源 成本 需求"
+            ],
+            "raw_results_count": 11,
+            "deduped_results_count": 11,
+            "reranked_results_count": 7,
+            "query_results": [
+              {
+                "query": "近期 铝价 LME 库存 美元指数 关税 出口 能源 成本 需求",
+                "results_count": 11,
+                "results": [
+                  {
+                    "title": "30日铝市早评：中东两大铝厂遭遇袭击，铝价或直逼25000位置——AL2605-佛山市南海区铝型材行业协会",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "文字早评",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "有色（铝产业链）季报：中东局势为锚，把握震荡格局下铝价多头配置机会",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "大宗商品：铝：供给收缩或引发铝价新一轮上行",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "有色金属行业周报：地缘冲突持续扰动金属市场，短期承压不改长期看好",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "【建信聚焦】 铝:伊朗袭击中东两大铝厂,供应扰动推升铝价",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "有色ETF鹏华(159880)涨近1%，铝业巨头遭受袭击中东减产加剧",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "地缘冲突引爆供应危机，铝价内外联动强势冲高，沪铝单日飙涨820元/吨！",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "铝价强势上涨箭在弦上，中国铝企或成此次供应缺口最大受益者-CBC金属网",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "中东两大铝厂遇袭，全球供应格局重构，铝价独立走强",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "铝市迎来强催化！巴林、阿联酋铝厂遇袭，铝价或再迎上行窗口",
+                    "trunk": "",
+                    "secu_list": []
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "retry_used": true,
+        "final_attempt": 3
+      },
+      "normalized_company_events": [
+        {
+          "event_key": "company:orders_projects",
+          "layer": "company",
+          "event_type": "order",
+          "title": "明泰铝业：公司拥有再生铝保级应用产能超100万吨",
+          "direction": "neutral",
+          "importance": 1.0,
+          "time_horizon": "medium_term",
+          "affected_variables": [
+            "orders_projects"
+          ],
+          "dimensions": {
+            "orders_projects": [
+              "产能"
+            ]
+          },
+          "evidence_titles": [
+            "明泰铝业：公司拥有再生铝保级应用产能超100万吨",
+            "明泰铝业：鸿晟新材“汽车、绿色能源用铝产业园”一期项目2025年已开工投产",
+            "明泰铝业：目前订单充足",
+            "明泰铝业：目前再生铝产能超100万吨",
+            "明泰铝业：目前再生铝产能超100万吨|明泰铝业_新浪财经_新浪网",
+            "明泰铝业：拥有再生铝保级应用产能超100万吨，目前暂无铝矿资源|链条_网易订阅"
+          ],
+          "evidence_items": [
+            {
+              "title": "明泰铝业：公司拥有再生铝保级应用产能超100万吨",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "明泰铝业：鸿晟新材“汽车、绿色能源用铝产业园”一期项目2025年已开工投产",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "明泰铝业：目前订单充足",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "明泰铝业：目前再生铝产能超100万吨",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "明泰铝业：目前再生铝产能超100万吨|明泰铝业_新浪财经_新浪网",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "明泰铝业：拥有再生铝保级应用产能超100万吨，目前暂无铝矿资源|链条_网易订阅",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "公司层事件聚焦于orders_projects，共聚合 6 条证据。"
+        },
+        {
+          "event_key": "company:earnings|orders_projects",
+          "layer": "company",
+          "event_type": "earnings",
+          "title": "明泰铝业深度跟踪：业绩兑现超预期，高端产能释放打开成长空间 - 今日头条Loading.",
+          "direction": "neutral",
+          "importance": 0.66,
+          "time_horizon": "medium_term",
+          "affected_variables": [
+            "earnings",
+            "orders_projects"
+          ],
+          "dimensions": {
+            "earnings": [
+              "业绩"
+            ],
+            "orders_projects": [
+              "产能"
+            ]
+          },
+          "evidence_titles": [
+            "明泰铝业深度跟踪：业绩兑现超预期，高端产能释放打开成长空间 - 今日头条Loading."
+          ],
+          "evidence_items": [
+            {
+              "title": "明泰铝业深度跟踪：业绩兑现超预期，高端产能释放打开成长空间 - 今日头条Loading.",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "公司层事件聚焦于earnings、orders_projects，共聚合 1 条证据。"
+        },
+        {
+          "event_key": "company:earnings",
+          "layer": "company",
+          "event_type": "earnings",
+          "title": "明泰铝业2025年净利同比预增12%—14% 单吨盈利空间持续扩大",
+          "direction": "bullish",
+          "importance": 0.58,
+          "time_horizon": "medium_term",
+          "affected_variables": [
+            "earnings"
+          ],
+          "dimensions": {
+            "earnings": [
+              "净利"
+            ]
+          },
+          "evidence_titles": [
+            "明泰铝业2025年净利同比预增12%—14% 单吨盈利空间持续扩大"
+          ],
+          "evidence_items": [
+            {
+              "title": "明泰铝业2025年净利同比预增12%—14% 单吨盈利空间持续扩大",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "公司层事件聚焦于earnings，共聚合 1 条证据。"
+        }
+      ],
+      "normalized_industry_events": [
+        {
+          "event_key": "industry:supply",
+          "layer": "industry",
+          "event_type": "industry_cycle",
+          "title": "中东产能“断供”！铝价能否持续飙升",
+          "direction": "neutral",
+          "importance": 0.58,
+          "time_horizon": "medium_term",
+          "affected_variables": [
+            "supply"
+          ],
+          "dimensions": {
+            "supply": [
+              "产能"
+            ]
+          },
+          "evidence_titles": [
+            "中东产能“断供”！铝价能否持续飙升"
+          ],
+          "evidence_items": [
+            {
+              "title": "中东产能“断供”！铝价能否持续飙升",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "行业层事件聚焦于supply，共聚合 1 条证据。"
+        },
+        {
+          "event_key": "industry:天山铝业 2025年度董事会工作报告",
+          "layer": "industry",
+          "event_type": "other",
+          "title": "天山铝业:2025年度董事会工作报告",
+          "direction": "neutral",
+          "importance": 0.5,
+          "time_horizon": "medium_term",
+          "affected_variables": [],
+          "dimensions": {},
+          "evidence_titles": [
+            "天山铝业:2025年度董事会工作报告"
+          ],
+          "evidence_items": [
+            {
+              "title": "天山铝业:2025年度董事会工作报告",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+        },
+        {
+          "event_key": "industry:南山铝业 山东南山铝业股份有限公司2025年度报告",
+          "layer": "industry",
+          "event_type": "other",
+          "title": "南山铝业:山东南山铝业股份有限公司2025年度报告",
+          "direction": "neutral",
+          "importance": 0.5,
+          "time_horizon": "medium_term",
+          "affected_variables": [],
+          "dimensions": {},
+          "evidence_titles": [
+            "南山铝业:山东南山铝业股份有限公司2025年度报告"
+          ],
+          "evidence_items": [
+            {
+              "title": "南山铝业:山东南山铝业股份有限公司2025年度报告",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+        },
+        {
+          "event_key": "industry:华峰铝业 上海华峰铝业股份有限公司2025年年度报告",
+          "layer": "industry",
+          "event_type": "other",
+          "title": "华峰铝业:上海华峰铝业股份有限公司2025年年度报告",
+          "direction": "neutral",
+          "importance": 0.5,
+          "time_horizon": "medium_term",
+          "affected_variables": [],
+          "dimensions": {},
+          "evidence_titles": [
+            "华峰铝业:上海华峰铝业股份有限公司2025年年度报告"
+          ],
+          "evidence_items": [
+            {
+              "title": "华峰铝业:上海华峰铝业股份有限公司2025年年度报告",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+        },
+        {
+          "event_key": "industry:南山铝业 山东南山铝业股份有限公司2025年度报告 摘要",
+          "layer": "industry",
+          "event_type": "other",
+          "title": "南山铝业:山东南山铝业股份有限公司2025年度报告_摘要",
+          "direction": "neutral",
+          "importance": 0.5,
+          "time_horizon": "medium_term",
+          "affected_variables": [],
+          "dimensions": {},
+          "evidence_titles": [
+            "南山铝业:山东南山铝业股份有限公司2025年度报告_摘要"
+          ],
+          "evidence_items": [
+            {
+              "title": "南山铝业:山东南山铝业股份有限公司2025年度报告_摘要",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+        },
+        {
+          "event_key": "industry:铝价强势上涨箭在弦上 中国铝企或成此次供应缺口最大受益者 cbc金属网",
+          "layer": "industry",
+          "event_type": "other",
+          "title": "铝价强势上涨箭在弦上，中国铝企或成此次供应缺口最大受益者-CBC金属网",
+          "direction": "bullish",
+          "importance": 0.5,
+          "time_horizon": "medium_term",
+          "affected_variables": [],
+          "dimensions": {},
+          "evidence_titles": [
+            "铝价强势上涨箭在弦上，中国铝企或成此次供应缺口最大受益者-CBC金属网"
+          ],
+          "evidence_items": [
+            {
+              "title": "铝价强势上涨箭在弦上，中国铝企或成此次供应缺口最大受益者-CBC金属网",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+        },
+        {
+          "event_key": "industry:周末突发 中东两大铝业巨头遇袭 海外溢价创19年来最高",
+          "layer": "industry",
+          "event_type": "other",
+          "title": "周末突发！中东两大铝业巨头遇袭，海外溢价创19年来最高！",
+          "direction": "neutral",
+          "importance": 0.5,
+          "time_horizon": "medium_term",
+          "affected_variables": [],
+          "dimensions": {},
+          "evidence_titles": [
+            "周末突发！中东两大铝业巨头遇袭，海外溢价创19年来最高！"
+          ],
+          "evidence_items": [
+            {
+              "title": "周末突发！中东两大铝业巨头遇袭，海外溢价创19年来最高！",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+        },
+        {
+          "event_key": "industry:2026 2030年中国铝箔行业 绿电铝溢价与再生铝降本的价值重估 手机中研网",
+          "layer": "industry",
+          "event_type": "other",
+          "title": "2026-2030年中国铝箔行业：绿电铝溢价与再生铝降本的价值重估-手机中研网",
+          "direction": "neutral",
+          "importance": 0.5,
+          "time_horizon": "medium_term",
+          "affected_variables": [],
+          "dimensions": {},
+          "evidence_titles": [
+            "2026-2030年中国铝箔行业：绿电铝溢价与再生铝降本的价值重估-手机中研网"
+          ],
+          "evidence_items": [
+            {
+              "title": "2026-2030年中国铝箔行业：绿电铝溢价与再生铝降本的价值重估-手机中研网",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+        }
+      ],
+      "normalized_global_events": [
+        {
+          "event_key": "global:geopolitics",
+          "layer": "global",
+          "event_type": "geopolitics",
+          "title": "有色金属行业周报：地缘冲突持续扰动金属市场，短期承压不改长期看好",
+          "direction": "bearish",
+          "importance": 1.0,
+          "time_horizon": "short_term",
+          "affected_variables": [
+            "geopolitics"
+          ],
+          "dimensions": {
+            "trigger": [
+              "geopolitics"
+            ],
+            "transmission": []
+          },
+          "evidence_titles": [
+            "有色金属行业周报：地缘冲突持续扰动金属市场，短期承压不改长期看好",
+            "地缘冲突引爆供应危机，铝价内外联动强势冲高，沪铝单日飙涨820元/吨！",
+            "30日铝市早评：中东两大铝厂遭遇袭击，铝价或直逼25000位置——AL2605-佛山市南海区铝型材行业协会",
+            "有色（铝产业链）季报：中东局势为锚，把握震荡格局下铝价多头配置机会",
+            "【建信聚焦】 铝:伊朗袭击中东两大铝厂,供应扰动推升铝价",
+            "中东两大铝厂遇袭，全球供应格局重构，铝价独立走强"
+          ],
+          "evidence_items": [
+            {
+              "title": "有色金属行业周报：地缘冲突持续扰动金属市场，短期承压不改长期看好",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "地缘冲突引爆供应危机，铝价内外联动强势冲高，沪铝单日飙涨820元/吨！",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "30日铝市早评：中东两大铝厂遭遇袭击，铝价或直逼25000位置——AL2605-佛山市南海区铝型材行业协会",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "有色（铝产业链）季报：中东局势为锚，把握震荡格局下铝价多头配置机会",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "【建信聚焦】 铝:伊朗袭击中东两大铝厂,供应扰动推升铝价",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "中东两大铝厂遇袭，全球供应格局重构，铝价独立走强",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "全球层事件聚焦于geopolitics，共聚合 6 条证据。"
+        },
+        {
+          "event_key": "global:commodity|supply_demand",
+          "layer": "global",
+          "event_type": "commodity",
+          "title": "大宗商品：铝：供给收缩或引发铝价新一轮上行",
+          "direction": "neutral",
+          "importance": 0.66,
+          "time_horizon": "medium_term",
+          "affected_variables": [
+            "commodity",
+            "supply_demand"
+          ],
+          "dimensions": {
+            "trigger": [
+              "commodity"
+            ],
+            "transmission": [
+              "supply_demand"
+            ]
+          },
+          "evidence_titles": [
+            "大宗商品：铝：供给收缩或引发铝价新一轮上行"
+          ],
+          "evidence_items": [
+            {
+              "title": "大宗商品：铝：供给收缩或引发铝价新一轮上行",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "全球层事件聚焦于commodity、supply_demand，共聚合 1 条证据。"
+        }
+      ],
+      "event_chain": {
+        "global_triggers": [
+          "中东两大铝厂遇袭导致产能断供",
+          "海外铝溢价创19年新高引发全球供应恐慌"
+        ],
+        "industry_variables": [
+          "铝价大幅跳涨（沪铝单日飙涨820元/吨）",
+          "国内铝企被视作供应缺口受益者",
+          "再生铝相对原铝成本优势扩大"
+        ],
+        "company_impacts": [
+          "库存铝锭及在产品价值重估带来短期收益",
+          "单吨盈利空间因加工费潜在上调而扩大",
+          "再生铝闭环低成本优势在高价环境下更显著",
+          "2025年业绩预增验证成长逻辑"
+        ],
+        "missing_links": [
+          "需跟踪铝价高位持续时间及下游对高价的接受程度（需求破坏风险）",
+          "需验证公司实际库存规模以量化库存重估的具体收益"
+        ]
+      },
+      "event_context_snapshot": {
+        "company_event_strength": "strong",
+        "industry_context_strength": "very_strong",
+        "global_context_strength": "extreme",
+        "chain_completeness": "complete",
+        "dominant_driver_layer": "global_macro",
+        "dominant_driver_type": "geopolitics_supply_shock",
+        "primary_bullish_variable": "aluminum_price_inventory_gain",
+        "primary_bearish_variable": "geopolitical_escalation_risk",
+        "most_actionable_catalyst": "中东铝厂遇袭致铝价暴涨与公司业绩预增共振",
+        "most_critical_risk": "地缘冲突失控导致全球需求衰退或物流中断"
+      }
+    },
+    "data_quality": {
+      "company_news_count": 8,
+      "macro_news_count": 8,
+      "announcements_count": 0,
+      "market_events_count": 0,
+      "source": "mx_search+tushare"
+    }
+  },
+  "analysis_result": {
+    "ticker": "601677.SH",
+    "effective_trade_date": "2026-03-29",
+    "event_overview": {
+      "state": "catalyst_positive",
+      "summary": "公司层面业绩预增与产能释放形成明确利好，叠加中东地缘冲突导致的全球铝供应短缺预期，行业景气度显著回升。虽然宏观风险（地缘政治）存在短期扰动，但对公司而言，铝价上涨带来的库存重估及加工费潜在提升是主导逻辑，且公司再生铝闭环成本优势在原料涨价背景下进一步凸显。",
+      "confidence": 0.85
+    },
+    "company_specific_events": [
+      {
+        "event_type": "earnings",
+        "title": "明泰铝业2025年净利同比预增12%—14% 单吨盈利空间持续扩大",
+        "direction": "bullish",
+        "importance": 0.9,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "earnings",
+          "profit_margin"
+        ],
+        "evidence": [
+          "明泰铝业2025年净利同比预增12%—14% 单吨盈利空间持续扩大",
+          "明泰铝业深度跟踪：业绩兑现超预期，高端产能释放打开成长空间"
+        ],
+        "summary": "2025年净利润预增12%-14%，验证了高端产能释放与单吨盈利扩大的逻辑，业绩兑现度高，直接提振估值预期。"
+      },
+      {
+        "event_type": "capacity",
+        "title": "公司拥有再生铝保级应用产能超100万吨，鸿晟新材项目投产",
+        "direction": "bullish",
+        "importance": 0.8,
+        "time_horizon": "long_term",
+        "affected_variables": [
+          "supply_capacity",
+          "cost_structure"
+        ],
+        "evidence": [
+          "明泰铝业：公司拥有再生铝保级应用产能超100万吨",
+          "明泰铝业：鸿晟新材“汽车、绿色能源用铝产业园”一期项目2025年已开工投产",
+          "明泰铝业：目前订单充足"
+        ],
+        "summary": "再生铝产能超100万吨且新项目投产，强化了'废铝回收 - 熔炼再生 - 精深加工'的闭环优势。在铝价上涨周期中，再生铝的低成本属性将显著扩大利润弹性。"
+      }
+    ],
+    "industry_macro_events": [
+      {
+        "event_type": "geopolitics",
+        "title": "中东两大铝业巨头遇袭，海外溢价创19年来最高，全球供应格局重构",
+        "direction": "bullish",
+        "importance": 0.95,
+        "time_horizon": "short_term",
+        "affected_variables": [
+          "commodity_price",
+          "global_supply"
+        ],
+        "evidence": [
+          "周末突发！中东两大铝业巨头遇袭，海外溢价创19年来最高！",
+          "中东产能“断供”！铝价能否持续飙升",
+          "铝价强势上涨箭在弦上，中国铝企或成此次供应缺口最大受益者"
+        ],
+        "summary": "中东地缘冲突导致核心铝产能受损，引发全球供应恐慌，LME及国内铝价大幅跳涨。作为铝加工企业，短期内受益于库存重估及潜在的加工费上调，行业景气度急剧升温。"
+      },
+      {
+        "event_type": "industry_cycle",
+        "title": "2026-2030年中国铝箔行业：绿电铝溢价与再生铝降本的价值重估",
+        "direction": "bullish",
+        "importance": 0.7,
+        "time_horizon": "long_term",
+        "affected_variables": [
+          "valuation_premium",
+          "cost_competitiveness"
+        ],
+        "evidence": [
+          "2026-2030年中国铝箔行业：绿电铝溢价与再生铝降本的价值重估-手机中研网"
+        ],
+        "summary": "行业长期逻辑指向绿电铝溢价与再生铝的成本优势，符合公司战略方向，有助于提升长期估值中枢。"
+      }
+    ],
+    "event_compact_signals": {
+      "company_event_bias": "positive",
+      "macro_event_bias": "mixed",
+      "event_density": "high",
+      "policy_sensitivity": "medium",
+      "earnings_catalyst_state": "confirmed_positive",
+      "risk_event_level": "high"
+    },
+    "event_context_snapshot": {
+      "company_event_strength": "strong",
+      "industry_context_strength": "very_strong",
+      "global_context_strength": "extreme",
+      "chain_completeness": "complete",
+      "dominant_driver_layer": "global_macro",
+      "dominant_driver_type": "geopolitics_supply_shock",
+      "primary_bullish_variable": "aluminum_price_inventory_gain",
+      "primary_bearish_variable": "geopolitical_escalation_risk",
+      "most_actionable_catalyst": "中东铝厂遇袭致铝价暴涨与公司业绩预增共振",
+      "most_critical_risk": "地缘冲突失控导致全球需求衰退或物流中断"
+    },
+    "event_chain": {
+      "global_triggers": [
+        "中东两大铝厂遇袭导致产能断供",
+        "海外铝溢价创19年新高引发全球供应恐慌"
+      ],
+      "industry_variables": [
+        "铝价大幅跳涨（沪铝单日飙涨820元/吨）",
+        "国内铝企被视作供应缺口受益者",
+        "再生铝相对原铝成本优势扩大"
+      ],
+      "company_impacts": [
+        "库存铝锭及在产品价值重估带来短期收益",
+        "单吨盈利空间因加工费潜在上调而扩大",
+        "再生铝闭环低成本优势在高价环境下更显著",
+        "2025年业绩预增验证成长逻辑"
+      ],
+      "missing_links": [
+        "需跟踪铝价高位持续时间及下游对高价的接受程度（需求破坏风险）",
+        "需验证公司实际库存规模以量化库存重估的具体收益"
+      ]
+    },
+    "key_catalysts": [
+      "铝价持续上涨带来的库存重估收益及加工费提价落地",
+      "2025年年报正式披露及2026年一季报延续高增长",
+      "鸿晟新材等新产能项目爬坡带来的销量增量"
+    ],
+    "key_risks": [
+      "地缘政治局势进一步恶化导致全球宏观经济衰退，抑制铝需求",
+      "铝价过快上涨引发下游需求负反馈，导致订单流失",
+      "能源价格随油价上涨，削弱再生铝的能耗成本优势"
+    ],
+    "tracking_points": [
+      "LME铝价及沪铝主力合约价格走势",
+      "公司月度经营数据中单吨盈利及订单排产情况",
+      "中东局势进展及全球铝供应链恢复情况",
+      "国内铝加工费（TC/RC）变动趋势"
+    ],
+    "event_summary_zh": "主导催化为中东地缘冲突引发的全球铝供应休克，推动铝价暴力拉升，公司作为拥有百万吨再生铝产能的龙头，显著受益于库存重估及成本优势扩大；同时公司2025年净利预增12%-14%确认了内生增长逻辑。主要风险在于地缘局势失控引发的宏观衰退及高价对下游需求的抑制。影响路径清晰：地缘冲突->供给收缩->铝价暴涨->公司库存增值+毛利扩张。后续重点观察铝价高位持续性、加工费传导情况及公司季度业绩兑现度。"
+  },
+  "raw_response": "{\n  \"ticker\": \"601677.SH\",\n  \"effective_trade_date\": \"2026-03-29\",\n  \"event_overview\": {\n    \"state\": \"catalyst_positive\",\n    \"summary\": \"公司层面业绩预增与产能释放形成明确利好，叠加中东地缘冲突导致的全球铝供应短缺预期，行业景气度显著回升。虽然宏观风险（地缘政治）存在短期扰动，但对公司而言，铝价上涨带来的库存重估及加工费潜在提升是主导逻辑，且公司再生铝闭环成本优势在原料涨价背景下进一步凸显。\",\n    \"confidence\": 0.85\n  },\n  \"company_specific_events\": [\n    {\n      \"event_type\": \"earnings\",\n      \"title\": \"明泰铝业2025年净利同比预增12%—14% 单吨盈利空间持续扩大\",\n      \"direction\": \"bullish\",\n      \"importance\": 0.9,\n      \"time_horizon\": \"medium_term\",\n      \"affected_variables\": [\n        \"earnings\",\n        \"profit_margin\"\n      ],\n      \"evidence\": [\n        \"明泰铝业2025年净利同比预增12%—14% 单吨盈利空间持续扩大\",\n        \"明泰铝业深度跟踪：业绩兑现超预期，高端产能释放打开成长空间\"\n      ],\n      \"summary\": \"2025年净利润预增12%-14%，验证了高端产能释放与单吨盈利扩大的逻辑，业绩兑现度高，直接提振估值预期。\"\n    },\n    {\n      \"event_type\": \"capacity\",\n      \"title\": \"公司拥有再生铝保级应用产能超100万吨，鸿晟新材项目投产\",\n      \"direction\": \"bullish\",\n      \"importance\": 0.8,\n      \"time_horizon\": \"long_term\",\n      \"affected_variables\": [\n        \"supply_capacity\",\n        \"cost_structure\"\n      ],\n      \"evidence\": [\n        \"明泰铝业：公司拥有再生铝保级应用产能超100万吨\",\n        \"明泰铝业：鸿晟新材“汽车、绿色能源用铝产业园”一期项目2025年已开工投产\",\n        \"明泰铝业：目前订单充足\"\n      ],\n      \"summary\": \"再生铝产能超100万吨且新项目投产，强化了'废铝回收 - 熔炼再生 - 精深加工'的闭环优势。在铝价上涨周期中，再生铝的低成本属性将显著扩大利润弹性。\"\n    }\n  ],\n  \"industry_macro_events\": [\n    {\n      \"event_type\": \"geopolitics\",\n      \"title\": \"中东两大铝业巨头遇袭，海外溢价创19年来最高，全球供应格局重构\",\n      \"direction\": \"bullish\",\n      \"importance\": 0.95,\n      \"time_horizon\": \"short_term\",\n      \"affected_variables\": [\n        \"commodity_price\",\n        \"global_supply\"\n      ],\n      \"evidence\": [\n        \"周末突发！中东两大铝业巨头遇袭，海外溢价创19年来最高！\",\n        \"中东产能“断供”！铝价能否持续飙升\",\n        \"铝价强势上涨箭在弦上，中国铝企或成此次供应缺口最大受益者\"\n      ],\n      \"summary\": \"中东地缘冲突导致核心铝产能受损，引发全球供应恐慌，LME及国内铝价大幅跳涨。作为铝加工企业，短期内受益于库存重估及潜在的加工费上调，行业景气度急剧升温。\"\n    },\n    {\n      \"event_type\": \"industry_cycle\",\n      \"title\": \"2026-2030年中国铝箔行业：绿电铝溢价与再生铝降本的价值重估\",\n      \"direction\": \"bullish\",\n      \"importance\": 0.7,\n      \"time_horizon\": \"long_term\",\n      \"affected_variables\": [\n        \"valuation_premium\",\n        \"cost_competitiveness\"\n      ],\n      \"evidence\": [\n        \"2026-2030年中国铝箔行业：绿电铝溢价与再生铝降本的价值重估-手机中研网\"\n      ],\n      \"summary\": \"行业长期逻辑指向绿电铝溢价与再生铝的成本优势，符合公司战略方向，有助于提升长期估值中枢。\"\n    }\n  ],\n  \"event_compact_signals\": {\n    \"company_event_bias\": \"positive\",\n    \"macro_event_bias\": \"bullish_on_price\",\n    \"event_density\": \"high\",\n    \"policy_sensitivity\": \"medium\",\n    \"earnings_catalyst_state\": \"confirmed_positive\",\n    \"risk_event_level\": \"high\"\n  },\n  \"event_context_snapshot\": {\n    \"company_event_strength\": \"strong\",\n    \"industry_context_strength\": \"very_strong\",\n    \"global_context_strength\": \"extreme\",\n    \"chain_completeness\": \"complete\",\n    \"dominant_driver_layer\": \"global_macro\",\n    \"dominant_driver_type\": \"geopolitics_supply_shock\",\n    \"primary_bullish_variable\": \"aluminum_price_inventory_gain\",\n    \"primary_bearish_variable\": \"geopolitical_escalation_risk\",\n    \"most_actionable_catalyst\": \"中东铝厂遇袭致铝价暴涨与公司业绩预增共振\",\n    \"most_critical_risk\": \"地缘冲突失控导致全球需求衰退或物流中断\"\n  },\n  \"event_chain\": {\n    \"global_triggers\": [\n      \"中东两大铝厂遇袭导致产能断供\",\n      \"海外铝溢价创19年新高引发全球供应恐慌\"\n    ],\n    \"industry_variables\": [\n      \"铝价大幅跳涨（沪铝单日飙涨820元/吨）\",\n      \"国内铝企被视作供应缺口受益者\",\n      \"再生铝相对原铝成本优势扩大\"\n    ],\n    \"company_impacts\": [\n      \"库存铝锭及在产品价值重估带来短期收益\",\n      \"单吨盈利空间因加工费潜在上调而扩大\",\n      \"再生铝闭环低成本优势在高价环境下更显著\",\n      \"2025年业绩预增验证成长逻辑\"\n    ],\n    \"missing_links\": [\n      \"需跟踪铝价高位持续时间及下游对高价的接受程度（需求破坏风险）\",\n      \"需验证公司实际库存规模以量化库存重估的具体收益\"\n    ]\n  },\n  \"key_catalysts\": [\n    \"铝价持续上涨带来的库存重估收益及加工费提价落地\",\n    \"2025年年报正式披露及2026年一季报延续高增长\",\n    \"鸿晟新材等新产能项目爬坡带来的销量增量\"\n  ],\n  \"key_risks\": [\n    \"地缘政治局势进一步恶化导致全球宏观经济衰退，抑制铝需求\",\n    \"铝价过快上涨引发下游需求负反馈，导致订单流失\",\n    \"能源价格随油价上涨，削弱再生铝的能耗成本优势\"\n  ],\n  \"tracking_points\": [\n    \"LME铝价及沪铝主力合约价格走势\",\n    \"公司月度经营数据中单吨盈利及订单排产情况\",\n    \"中东局势进展及全球铝供应链恢复情况\",\n    \"国内铝加工费（TC/RC）变动趋势\"\n  ],\n  \"event_summary_zh\": \"主导催化为中东地缘冲突引发的全球铝供应休克，推动铝价暴力拉升，公司作为拥有百万吨再生铝产能的龙头，显著受益于库存重估及成本优势扩大；同时公司2025年净...<truncated>",
+  "company_context": {
+    "identity": {
+      "ticker": "601677.SH",
+      "company_name": "明泰铝业",
+      "exchange": "SH",
+      "market": "A_share"
+    },
+    "analysis_time": {
+      "requested_date": "2026-03-29",
+      "effective_date": "2026-03-29",
+      "date_mode": "natural_day"
+    },
+    "classification": {
+      "industry": "铝",
+      "company_type": "cyclical_resources",
+      "style_tag": "cyclical_resources",
+      "size_bucket": "small_cap",
+      "liquidity_bucket": "medium"
+    },
+    "business_context": {
+      "sub_industry": "铝",
+      "business_model": "主要产品:铝板带箔及铝型材两大门类,广泛应用于新能源电池,轨道车体,汽车制造,印刷制版,电子家电,电力设施,建筑装饰,交通运输,食品和医药包装等领域.主营业务:1-8系铝板带箔的生产和销售.",
+      "company_intro": "公司始建于1997年，为国内首家民营铝加工业企业。通过持续的技术创新及前瞻性布局，不断实现高端突破，再生铝战略持续向纵深推进，已形成废铝回收-熔炼再生-精深加工的铝产业链闭环。公司正以绿色智造为笔，书写着可持续发展的新篇章，为制造业绿色转型升级提供可复制经验样本。公司整体实力位居我国铝加工业第一方阵，是铝加工业产品多元化和再生铝保级应用龙头企业。",
+      "core_products": [
+        "铝板带",
+        "铝箔",
+        "铝板带-合金板",
+        "其他业务",
+        "其他主营业务"
+      ],
+      "main_business_items": [
+        "铝板带",
+        "铝箔",
+        "铝板带-合金板",
+        "其他业务",
+        "其他主营业务",
+        "铝板带-普通铝板带材",
+        "铝合金轨道车体",
+        "铝板带-花纹板"
+      ],
+      "demand_drivers": [],
+      "cost_drivers": [],
+      "policy_drivers": [],
+      "global_risk_drivers": []
+    },
+    "market_context": {
+      "valuation_style": "cyclical",
+      "market_attention_points": [],
+      "trading_sensitivity": []
+    },
+    "technical_context": {
+      "trend": {},
+      "momentum": {},
+      "volatility": {},
+      "volume_confirmation": {},
+      "relative_strength": {},
+      "technical_compact_signals": {},
+      "key_levels": {},
+      "signals": [],
+      "confidence": null,
+      "technical_summary_zh": ""
+    },
+    "fundamental_context": {
+      "company_profile": {},
+      "growth": {},
+      "profitability": {},
+      "cashflow_quality": {},
+      "balance_sheet_health": {},
+      "valuation": {},
+      "fundamental_compact_signals": {},
+      "financial_snapshot": {},
+      "core_risks": [],
+      "fundamental_signals": [],
+      "confidence": null,
+      "fundamental_summary_zh": ""
+    },
+    "event_context": {
+      "event_overview": {
+        "state": "catalyst_positive",
+        "summary": "公司层面业绩预增与产能释放形成明确利好，叠加中东地缘冲突导致的全球铝供应短缺预期，行业景气度显著回升。虽然宏观风险（地缘政治）存在短期扰动，但对公司而言，铝价上涨带来的库存重估及加工费潜在提升是主导逻辑，且公司再生铝闭环成本优势在原料涨价背景下进一步凸显。",
+        "confidence": 0.85
+      },
+      "event_compact_signals": {
+        "company_event_bias": "positive",
+        "macro_event_bias": "mixed",
+        "event_density": "high",
+        "policy_sensitivity": "medium",
+        "earnings_catalyst_state": "confirmed_positive",
+        "risk_event_level": "high"
+      },
+      "event_context_snapshot": {
+        "company_event_strength": "strong",
+        "industry_context_strength": "very_strong",
+        "global_context_strength": "extreme",
+        "chain_completeness": "complete",
+        "dominant_driver_layer": "global_macro",
+        "dominant_driver_type": "geopolitics_supply_shock",
+        "primary_bullish_variable": "aluminum_price_inventory_gain",
+        "primary_bearish_variable": "geopolitical_escalation_risk",
+        "most_actionable_catalyst": "中东铝厂遇袭致铝价暴涨与公司业绩预增共振",
+        "most_critical_risk": "地缘冲突失控导致全球需求衰退或物流中断"
+      },
+      "event_chain": {
+        "global_triggers": [
+          "中东两大铝厂遇袭导致产能断供",
+          "海外铝溢价创19年新高引发全球供应恐慌"
+        ],
+        "industry_variables": [
+          "铝价大幅跳涨（沪铝单日飙涨820元/吨）",
+          "国内铝企被视作供应缺口受益者",
+          "再生铝相对原铝成本优势扩大"
+        ],
+        "company_impacts": [
+          "库存铝锭及在产品价值重估带来短期收益",
+          "单吨盈利空间因加工费潜在上调而扩大",
+          "再生铝闭环低成本优势在高价环境下更显著",
+          "2025年业绩预增验证成长逻辑"
+        ],
+        "missing_links": [
+          "需跟踪铝价高位持续时间及下游对高价的接受程度（需求破坏风险）",
+          "需验证公司实际库存规模以量化库存重估的具体收益"
+        ]
+      },
+      "key_catalysts": [
+        "铝价持续上涨带来的库存重估收益及加工费提价落地",
+        "2025年年报正式披露及2026年一季报延续高增长",
+        "鸿晟新材等新产能项目爬坡带来的销量增量"
+      ],
+      "key_risks": [
+        "地缘政治局势进一步恶化导致全球宏观经济衰退，抑制铝需求",
+        "铝价过快上涨引发下游需求负反馈，导致订单流失",
+        "能源价格随油价上涨，削弱再生铝的能耗成本优势"
+      ],
+      "tracking_points": [
+        "LME铝价及沪铝主力合约价格走势",
+        "公司月度经营数据中单吨盈利及订单排产情况",
+        "中东局势进展及全球铝供应链恢复情况",
+        "国内铝加工费（TC/RC）变动趋势"
+      ],
+      "confidence": 0.85,
+      "event_summary_zh": "主导催化为中东地缘冲突引发的全球铝供应休克，推动铝价暴力拉升，公司作为拥有百万吨再生铝产能的龙头，显著受益于库存重估及成本优势扩大；同时公司2025年净利预增12%-14%确认了内生增长逻辑。主要风险在于地缘局势失控引发的宏观衰退及高价对下游需求的抑制。影响路径清晰：地缘冲突->供给收缩->铝价暴涨->公司库存增值+毛利扩张。后续重点观察铝价高位持续性、加工费传导情况及公司季度业绩兑现度。"
+    },
+    "search_context": {
+      "search_aliases": [
+        "明泰铝业",
+        "铝板带",
+        "铝箔",
+        "铝板带-合金板",
+        "其他业务",
+        "有色金属",
+        "工业金属",
+        "铝"
+      ],
+      "seed_titles": [],
+      "ths_member_codes": [
+        "700001.TI",
+        "700002.TI",
+        "700003.TI",
+        "700004.TI",
+        "700008.TI",
+        "700009.TI",
+        "700010.TI",
+        "700021.TI",
+        "700023.TI",
+        "700031.TI",
+        "700032.TI",
+        "700035.TI"
+      ],
+      "ths_concepts": [
+        "原材料(A股)",
+        "原材料Ⅱ(A股)",
+        "金属与采矿(A股)",
+        "铝(A股)",
+        "工业金属",
+        "河南",
+        "减持新规(不可减持)",
+        "破净股",
+        "铝",
+        "融资融券",
+        "特高压",
+        "新能源汽车"
+      ],
+      "index_memberships": [
+        "有色金属",
+        "工业金属",
+        "铝"
+      ],
+      "preferred_query_style": "keyword_cluster",
+      "language_bias": "cn_finance_media"
+    },
+    "data_quality": {
+      "missing_sections": [],
+      "stale_sections": [],
+      "source_summary": {
+        "stock_basic": true,
+        "stock_company": true,
+        "fina_mainbz": true,
+        "ths_member": true,
+        "index_member_all": true
+      }
+    }
+  },
+  "debug_trace": {
+    "planner_context": {
+      "ticker": "601677.SH",
+      "company_name": "明泰铝业",
+      "analysis_date": "2026-03-29",
+      "industry": "铝",
+      "company_type": "cyclical_resources",
+      "business_hint": null,
+      "company_context": {
+        "identity": {
+          "ticker": "601677.SH",
+          "company_name": "明泰铝业",
+          "exchange": "SH",
+          "market": "A_share"
+        },
+        "analysis_time": {
+          "requested_date": "2026-03-29",
+          "effective_date": "2026-03-29",
+          "date_mode": "natural_day"
+        },
+        "classification": {
+          "industry": "铝",
+          "company_type": "cyclical_resources",
+          "style_tag": "cyclical_resources",
+          "size_bucket": "small_cap",
+          "liquidity_bucket": "medium"
+        },
+        "business_context": {
+          "sub_industry": "铝",
+          "business_model": "主要产品:铝板带箔及铝型材两大门类,广泛应用于新能源电池,轨道车体,汽车制造,印刷制版,电子家电,电力设施,建筑装饰,交通运输,食品和医药包装等领域.主营业务:1-8系铝板带箔的生产和销售.",
+          "company_intro": "公司始建于1997年，为国内首家民营铝加工业企业。通过持续的技术创新及前瞻性布局，不断实现高端突破，再生铝战略持续向纵深推进，已形成废铝回收-熔炼再生-精深加工的铝产业链闭环。公司正以绿色智造为笔，书写着可持续发展的新篇章，为制造业绿色转型升级提供可复制经验样本。公司整体实力位居我国铝加工业第一方阵，是铝加工业产品多元化和再生铝保级应用龙头企业。",
+          "core_products": [
+            "铝板带",
+            "铝箔",
+            "铝板带-合金板",
+            "其他业务",
+            "其他主营业务"
+          ],
+          "main_business_items": [
+            "铝板带",
+            "铝箔",
+            "铝板带-合金板",
+            "其他业务",
+            "其他主营业务",
+            "铝板带-普通铝板带材",
+            "铝合金轨道车体",
+            "铝板带-花纹板"
+          ],
+          "demand_drivers": [],
+          "cost_drivers": [],
+          "policy_drivers": [],
+          "global_risk_drivers": []
+        },
+        "market_context": {
+          "valuation_style": "cyclical",
+          "market_attention_points": [],
+          "trading_sensitivity": []
+        },
+        "technical_context": {
+          "trend": {},
+          "momentum": {},
+          "volatility": {},
+          "volume_confirmation": {},
+          "relative_strength": {},
+          "technical_compact_signals": {},
+          "key_levels": {},
+          "signals": [],
+          "confidence": null,
+          "technical_summary_zh": ""
+        },
+        "fundamental_context": {
+          "company_profile": {},
+          "growth": {},
+          "profitability": {},
+          "cashflow_quality": {},
+          "balance_sheet_health": {},
+          "valuation": {},
+          "fundamental_compact_signals": {},
+          "financial_snapshot": {},
+          "core_risks": [],
+          "fundamental_signals": [],
+          "confidence": null,
+          "fundamental_summary_zh": ""
+        },
+        "event_context": {
+          "event_overview": {},
+          "event_compact_signals": {},
+          "event_context_snapshot": {},
+          "event_chain": {},
+          "key_catalysts": [],
+          "key_risks": [],
+          "tracking_points": [],
+          "confidence": null,
+          "event_summary_zh": ""
+        },
+        "search_context": {
+          "search_aliases": [
+            "明泰铝业",
+            "铝板带",
+            "铝箔",
+            "铝板带-合金板",
+            "其他业务",
+            "有色金属",
+            "工业金属",
+            "铝"
+          ],
+          "seed_titles": [],
+          "ths_member_codes": [
+            "700001.TI",
+            "700002.TI",
+            "700003.TI",
+            "700004.TI",
+            "700008.TI",
+            "700009.TI",
+            "700010.TI",
+            "700021.TI",
+            "700023.TI",
+            "700031.TI",
+            "700032.TI",
+            "700035.TI"
+          ],
+          "ths_concepts": [
+            "原材料(A股)",
+            "原材料Ⅱ(A股)",
+            "金属与采矿(A股)",
+            "铝(A股)",
+            "工业金属",
+            "河南",
+            "减持新规(不可减持)",
+            "破净股",
+            "铝",
+            "融资融券",
+            "特高压",
+            "新能源汽车"
+          ],
+          "index_memberships": [
+            "有色金属",
+            "工业金属",
+            "铝"
+          ],
+          "preferred_query_style": "keyword_cluster",
+          "language_bias": "cn_finance_media"
+        },
+        "data_quality": {
+          "missing_sections": [],
+          "stale_sections": [],
+          "source_summary": {
+            "stock_basic": true,
+            "stock_company": true,
+            "fina_mainbz": true,
+            "ths_member": true,
+            "index_member_all": true
+          }
+        }
+      }
+    },
+    "company_context": {
+      "identity": {
+        "ticker": "601677.SH",
+        "company_name": "明泰铝业",
+        "exchange": "SH",
+        "market": "A_share"
+      },
+      "analysis_time": {
+        "requested_date": "2026-03-29",
+        "effective_date": "2026-03-29",
+        "date_mode": "natural_day"
+      },
+      "classification": {
+        "industry": "铝",
+        "company_type": "cyclical_resources",
+        "style_tag": "cyclical_resources",
+        "size_bucket": "small_cap",
+        "liquidity_bucket": "medium"
+      },
+      "business_context": {
+        "sub_industry": "铝",
+        "business_model": "主要产品:铝板带箔及铝型材两大门类,广泛应用于新能源电池,轨道车体,汽车制造,印刷制版,电子家电,电力设施,建筑装饰,交通运输,食品和医药包装等领域.主营业务:1-8系铝板带箔的生产和销售.",
+        "company_intro": "公司始建于1997年，为国内首家民营铝加工业企业。通过持续的技术创新及前瞻性布局，不断实现高端突破，再生铝战略持续向纵深推进，已形成废铝回收-熔炼再生-精深加工的铝产业链闭环。公司正以绿色智造为笔，书写着可持续发展的新篇章，为制造业绿色转型升级提供可复制经验样本。公司整体实力位居我国铝加工业第一方阵，是铝加工业产品多元化和再生铝保级应用龙头企业。",
+        "core_products": [
+          "铝板带",
+          "铝箔",
+          "铝板带-合金板",
+          "其他业务",
+          "其他主营业务"
+        ],
+        "main_business_items": [
+          "铝板带",
+          "铝箔",
+          "铝板带-合金板",
+          "其他业务",
+          "其他主营业务",
+          "铝板带-普通铝板带材",
+          "铝合金轨道车体",
+          "铝板带-花纹板"
+        ],
+        "demand_drivers": [],
+        "cost_drivers": [],
+        "policy_drivers": [],
+        "global_risk_drivers": []
+      },
+      "market_context": {
+        "valuation_style": "cyclical",
+        "market_attention_points": [],
+        "trading_sensitivity": []
+      },
+      "technical_context": {
+        "trend": {},
+        "momentum": {},
+        "volatility": {},
+        "volume_confirmation": {},
+        "relative_strength": {},
+        "technical_compact_signals": {},
+        "key_levels": {},
+        "signals": [],
+        "confidence": null,
+        "technical_summary_zh": ""
+      },
+      "fundamental_context": {
+        "company_profile": {},
+        "growth": {},
+        "profitability": {},
+        "cashflow_quality": {},
+        "balance_sheet_health": {},
+        "valuation": {},
+        "fundamental_compact_signals": {},
+        "financial_snapshot": {},
+        "core_risks": [],
+        "fundamental_signals": [],
+        "confidence": null,
+        "fundamental_summary_zh": ""
+      },
+      "event_context": {
+        "event_overview": {},
+        "event_compact_signals": {},
+        "event_context_snapshot": {},
+        "event_chain": {},
+        "key_catalysts": [],
+        "key_risks": [],
+        "tracking_points": [],
+        "confidence": null,
+        "event_summary_zh": ""
+      },
+      "search_context": {
+        "search_aliases": [
+          "明泰铝业",
+          "铝板带",
+          "铝箔",
+          "铝板带-合金板",
+          "其他业务",
+          "有色金属",
+          "工业金属",
+          "铝"
+        ],
+        "seed_titles": [],
+        "ths_member_codes": [
+          "700001.TI",
+          "700002.TI",
+          "700003.TI",
+          "700004.TI",
+          "700008.TI",
+          "700009.TI",
+          "700010.TI",
+          "700021.TI",
+          "700023.TI",
+          "700031.TI",
+          "700032.TI",
+          "700035.TI"
+        ],
+        "ths_concepts": [
+          "原材料(A股)",
+          "原材料Ⅱ(A股)",
+          "金属与采矿(A股)",
+          "铝(A股)",
+          "工业金属",
+          "河南",
+          "减持新规(不可减持)",
+          "破净股",
+          "铝",
+          "融资融券",
+          "特高压",
+          "新能源汽车"
+        ],
+        "index_memberships": [
+          "有色金属",
+          "工业金属",
+          "铝"
+        ],
+        "preferred_query_style": "keyword_cluster",
+        "language_bias": "cn_finance_media"
+      },
+      "data_quality": {
+        "missing_sections": [],
+        "stale_sections": [],
+        "source_summary": {
+          "stock_basic": true,
+          "stock_company": true,
+          "fina_mainbz": true,
+          "ths_member": true,
+          "index_member_all": true
+        }
+      }
+    },
+    "query_plan": {
+      "sensitivity_variables": [
+        "铝价",
+        "加工费",
+        "再生铝供给",
+        "新能源/汽车需求",
+        "出口政策",
+        "能源成本"
+      ],
+      "company_query": "明泰铝业 近期 公告 业绩 订单 产能 再生铝 项目 融资 风险",
+      "industry_query": "铝加工 近期 铝板带 铝箔 加工费 库存 需求 新能源 汽车 再生铝 供给",
+      "global_event_query": "近期 铝价 LME 库存 美元指数 关税 出口 能源 成本 需求",
+      "query_rationale": {
+        "company": "覆盖业绩、订单、产能扩张及再生铝战略项目，兼顾融资与经营风险。",
+        "industry": "聚焦铝加工核心变量：加工费、库存、下游新能源/汽车需求及再生铝供给格局。",
+        "global": "覆盖铝价、LME 库存、汇率、关税及能源成本对出口和利润的传导。"
+      }
+    },
+    "company_search": {
+      "queries": [
+        "明泰铝业 近期 公告 业绩 订单 产能 再生铝 项目 融资 风险"
+      ],
+      "query_results": [
+        {
+          "query": "明泰铝业 近期 公告 业绩 订单 产能 再生铝 项目 融资 风险",
+          "results_count": 13,
+          "results": [
+            {
+              "title": "明泰铝业：公司拥有再生铝保级应用产能超100万吨",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "明泰铝业：鸿晟新材“汽车、绿色能源用铝产业园”一期项目2025年已开工投产",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "明泰铝业：目前订单充足",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "明泰铝业：公司与南山铝业产业链结构不同-证券日报网-证券日报网",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "明泰铝业：2026年公司将继续秉承“高端化+绿色化+智能化”的发展主战略-证券日报网-证券日报网",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "明泰铝业2025年净利同比预增12%—14% 单吨盈利空间持续扩大",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "明泰铝业：公司已构建起“原料回收-熔炼再生-精深加工”的全产业链闭环",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "明泰铝业：公司积极拓展在低空经济、新能源等高增长领域的核心产品种类",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "明泰铝业：目前再生铝产能超100万吨",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "明泰铝业面临欧盟碳税挑战，再生铝技术或成优势|明泰铝业_新浪财经_新浪网",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "明泰铝业深度跟踪：业绩兑现超预期，高端产能释放打开成长空间 - 今日头条Loading.",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "明泰铝业：目前再生铝产能超100万吨|明泰铝业_新浪财经_新浪网",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "明泰铝业：拥有再生铝保级应用产能超100万吨，目前暂无铝矿资源|链条_网易订阅",
+              "trunk": "",
+              "secu_list": []
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "title": "明泰铝业深度跟踪：业绩兑现超预期，高端产能释放打开成长空间 - 今日头条Loading.",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "明泰铝业：公司拥有再生铝保级应用产能超100万吨",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "明泰铝业：鸿晟新材“汽车、绿色能源用铝产业园”一期项目2025年已开工投产",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "明泰铝业：目前订单充足",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "明泰铝业2025年净利同比预增12%—14% 单吨盈利空间持续扩大",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "明泰铝业：目前再生铝产能超100万吨",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "明泰铝业：目前再生铝产能超100万吨|明泰铝业_新浪财经_新浪网",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "明泰铝业：拥有再生铝保级应用产能超100万吨，目前暂无铝矿资源|链条_网易订阅",
+          "trunk": "",
+          "secu_list": []
+        }
+      ],
+      "deduped_results_count": 13,
+      "reranked_results_count": 8,
+      "retry_attempts": [
+        {
+          "attempt": 1,
+          "layer": "company",
+          "queries": [
+            "明泰铝业 近期 公告 业绩 订单 产能 再生铝 项目 融资 风险"
+          ],
+          "raw_results_count": 13,
+          "deduped_results_count": 13,
+          "reranked_results_count": 8,
+          "query_results": [
+            {
+              "query": "明泰铝业 近期 公告 业绩 订单 产能 再生铝 项目 融资 风险",
+              "results_count": 13,
+              "results": [
+                {
+                  "title": "明泰铝业：公司拥有再生铝保级应用产能超100万吨",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "明泰铝业：鸿晟新材“汽车、绿色能源用铝产业园”一期项目2025年已开工投产",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "明泰铝业：目前订单充足",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "明泰铝业：公司与南山铝业产业链结构不同-证券日报网-证券日报网",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "明泰铝业：2026年公司将继续秉承“高端化+绿色化+智能化”的发展主战略-证券日报网-证券日报网",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "明泰铝业2025年净利同比预增12%—14% 单吨盈利空间持续扩大",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "明泰铝业：公司已构建起“原料回收-熔炼再生-精深加工”的全产业链闭环",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "明泰铝业：公司积极拓展在低空经济、新能源等高增长领域的核心产品种类",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "明泰铝业：目前再生铝产能超100万吨",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "明泰铝业面临欧盟碳税挑战，再生铝技术或成优势|明泰铝业_新浪财经_新浪网",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "明泰铝业深度跟踪：业绩兑现超预期，高端产能释放打开成长空间 - 今日头条Loading.",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "明泰铝业：目前再生铝产能超100万吨|明泰铝业_新浪财经_新浪网",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "明泰铝业：拥有再生铝保级应用产能超100万吨，目前暂无铝矿资源|链条_网易订阅",
+                  "trunk": "",
+                  "secu_list": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "retry_used": false,
+      "final_attempt": 1
+    },
+    "industry_search": {
+      "queries": [
+        "铝加工 近期 铝板带 铝箔 加工费 库存 需求 新能源 汽车 再生铝 供给"
+      ],
+      "query_results": [
+        {
+          "query": "铝加工 近期 铝板带 铝箔 加工费 库存 需求 新能源 汽车 再生铝 供给",
+          "results_count": 12,
+          "results": [
+            {
+              "title": "永杰新材:永杰新材2025年年度报告摘要",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "永杰新材:永杰新材2025年年度报告",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "天山铝业:2025年度董事会工作报告",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "南山铝业:山东南山铝业股份有限公司2025年度报告",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "华峰铝业:上海华峰铝业股份有限公司2025年年度报告",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "南山铝业:山东南山铝业股份有限公司2025年度报告_摘要",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "铝行业周报：中东铝供应扰动再起",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "中东产能“断供”！铝价能否持续飙升",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "铝价强势上涨箭在弦上，中国铝企或成此次供应缺口最大受益者-CBC金属网",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "周末突发！中东两大铝业巨头遇袭，海外溢价创19年来最高！",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "2026-2030年中国铝箔行业：绿电铝溢价与再生铝降本的价值重估-手机中研网",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "阿联酋和巴林铝厂遇袭事件全面发酵，国内合规铝企在全球格局中优势持续凸显|海外额度榜|中国铝业|云铝股份|电解铝|新能源_新浪新闻",
+              "trunk": "",
+              "secu_list": []
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "title": "中东产能“断供”！铝价能否持续飙升",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "天山铝业:2025年度董事会工作报告",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "南山铝业:山东南山铝业股份有限公司2025年度报告",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "华峰铝业:上海华峰铝业股份有限公司2025年年度报告",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "南山铝业:山东南山铝业股份有限公司2025年度报告_摘要",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "铝价强势上涨箭在弦上，中国铝企或成此次供应缺口最大受益者-CBC金属网",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "周末突发！中东两大铝业巨头遇袭，海外溢价创19年来最高！",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "2026-2030年中国铝箔行业：绿电铝溢价与再生铝降本的价值重估-手机中研网",
+          "trunk": "",
+          "secu_list": []
+        }
+      ],
+      "deduped_results_count": 12,
+      "reranked_results_count": 8,
+      "retry_attempts": [
+        {
+          "attempt": 1,
+          "layer": "industry",
+          "queries": [
+            "铝加工 近期 铝板带 铝箔 加工费 库存 需求 新能源 汽车 再生铝 供给"
+          ],
+          "raw_results_count": 12,
+          "deduped_results_count": 12,
+          "reranked_results_count": 8,
+          "query_results": [
+            {
+              "query": "铝加工 近期 铝板带 铝箔 加工费 库存 需求 新能源 汽车 再生铝 供给",
+              "results_count": 12,
+              "results": [
+                {
+                  "title": "永杰新材:永杰新材2025年年度报告摘要",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "永杰新材:永杰新材2025年年度报告",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "天山铝业:2025年度董事会工作报告",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "南山铝业:山东南山铝业股份有限公司2025年度报告",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "华峰铝业:上海华峰铝业股份有限公司2025年年度报告",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "南山铝业:山东南山铝业股份有限公司2025年度报告_摘要",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "铝行业周报：中东铝供应扰动再起",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "中东产能“断供”！铝价能否持续飙升",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "铝价强势上涨箭在弦上，中国铝企或成此次供应缺口最大受益者-CBC金属网",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "周末突发！中东两大铝业巨头遇袭，海外溢价创19年来最高！",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "2026-2030年中国铝箔行业：绿电铝溢价与再生铝降本的价值重估-手机中研网",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "阿联酋和巴林铝厂遇袭事件全面发酵，国内合规铝企在全球格局中优势持续凸显|海外额度榜|中国铝业|云铝股份|电解铝|新能源_新浪新闻",
+                  "trunk": "",
+                  "secu_list": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "retry_used": false,
+      "final_attempt": 1
+    },
+    "global_search": {
+      "queries": [
+        "近期 铝价 LME 库存 美元指数 关税 出口 能源 成本 需求"
+      ],
+      "query_results": [
+        {
+          "query": "近期 铝价 LME 库存 美元指数 关税 出口 能源 成本 需求",
+          "results_count": 11,
+          "results": [
+            {
+              "title": "30日铝市早评：中东两大铝厂遭遇袭击，铝价或直逼25000位置——AL2605-佛山市南海区铝型材行业协会",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "文字早评",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "有色（铝产业链）季报：中东局势为锚，把握震荡格局下铝价多头配置机会",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "大宗商品：铝：供给收缩或引发铝价新一轮上行",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "有色金属行业周报：地缘冲突持续扰动金属市场，短期承压不改长期看好",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "【建信聚焦】 铝:伊朗袭击中东两大铝厂,供应扰动推升铝价",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "有色ETF鹏华(159880)涨近1%，铝业巨头遭受袭击中东减产加剧",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "地缘冲突引爆供应危机，铝价内外联动强势冲高，沪铝单日飙涨820元/吨！",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "铝价强势上涨箭在弦上，中国铝企或成此次供应缺口最大受益者-CBC金属网",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "中东两大铝厂遇袭，全球供应格局重构，铝价独立走强",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "铝市迎来强催化！巴林、阿联酋铝厂遇袭，铝价或再迎上行窗口",
+              "trunk": "",
+              "secu_list": []
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "title": "有色金属行业周报：地缘冲突持续扰动金属市场，短期承压不改长期看好",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "地缘冲突引爆供应危机，铝价内外联动强势冲高，沪铝单日飙涨820元/吨！",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "30日铝市早评：中东两大铝厂遭遇袭击，铝价或直逼25000位置——AL2605-佛山市南海区铝型材行业协会",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "有色（铝产业链）季报：中东局势为锚，把握震荡格局下铝价多头配置机会",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "大宗商品：铝：供给收缩或引发铝价新一轮上行",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "【建信聚焦】 铝:伊朗袭击中东两大铝厂,供应扰动推升铝价",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "中东两大铝厂遇袭，全球供应格局重构，铝价独立走强",
+          "trunk": "",
+          "secu_list": []
+        }
+      ],
+      "deduped_results_count": 11,
+      "reranked_results_count": 7,
+      "retry_attempts": [
+        {
+          "attempt": 1,
+          "layer": "global",
+          "queries": [
+            "近期 铝价 LME 库存 美元指数 关税 出口 能源 成本 需求"
+          ],
+          "raw_results_count": 0,
+          "deduped_results_count": 0,
+          "reranked_results_count": 0,
+          "query_results": [
+            {
+              "query": "近期 铝价 LME 库存 美元指数 关税 出口 能源 成本 需求",
+              "results_count": 0,
+              "results": []
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "layer": "global",
+          "queries": [
+            "近期 铝价 LME 库存 美元指数 关税 出口 能源 成本 需求"
+          ],
+          "raw_results_count": 0,
+          "deduped_results_count": 0,
+          "reranked_results_count": 0,
+          "query_results": [
+            {
+              "query": "近期 铝价 LME 库存 美元指数 关税 出口 能源 成本 需求",
+              "results_count": 0,
+              "results": []
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "layer": "global",
+          "queries": [
+            "近期 铝价 LME 库存 美元指数 关税 出口 能源 成本 需求"
+          ],
+          "raw_results_count": 11,
+          "deduped_results_count": 11,
+          "reranked_results_count": 7,
+          "query_results": [
+            {
+              "query": "近期 铝价 LME 库存 美元指数 关税 出口 能源 成本 需求",
+              "results_count": 11,
+              "results": [
+                {
+                  "title": "30日铝市早评：中东两大铝厂遭遇袭击，铝价或直逼25000位置——AL2605-佛山市南海区铝型材行业协会",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "文字早评",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "有色（铝产业链）季报：中东局势为锚，把握震荡格局下铝价多头配置机会",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "大宗商品：铝：供给收缩或引发铝价新一轮上行",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "有色金属行业周报：地缘冲突持续扰动金属市场，短期承压不改长期看好",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "【建信聚焦】 铝:伊朗袭击中东两大铝厂,供应扰动推升铝价",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "有色ETF鹏华(159880)涨近1%，铝业巨头遭受袭击中东减产加剧",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "地缘冲突引爆供应危机，铝价内外联动强势冲高，沪铝单日飙涨820元/吨！",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "铝价强势上涨箭在弦上，中国铝企或成此次供应缺口最大受益者-CBC金属网",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "中东两大铝厂遇袭，全球供应格局重构，铝价独立走强",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "铝市迎来强催化！巴林、阿联酋铝厂遇袭，铝价或再迎上行窗口",
+                  "trunk": "",
+                  "secu_list": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "retry_used": true,
+      "final_attempt": 3
+    },
+    "normalized_company_events": [
+      {
+        "event_key": "company:orders_projects",
+        "layer": "company",
+        "event_type": "order",
+        "title": "明泰铝业：公司拥有再生铝保级应用产能超100万吨",
+        "direction": "neutral",
+        "importance": 1.0,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "orders_projects"
+        ],
+        "dimensions": {
+          "orders_projects": [
+            "产能"
+          ]
+        },
+        "evidence_titles": [
+          "明泰铝业：公司拥有再生铝保级应用产能超100万吨",
+          "明泰铝业：鸿晟新材“汽车、绿色能源用铝产业园”一期项目2025年已开工投产",
+          "明泰铝业：目前订单充足",
+          "明泰铝业：目前再生铝产能超100万吨",
+          "明泰铝业：目前再生铝产能超100万吨|明泰铝业_新浪财经_新浪网",
+          "明泰铝业：拥有再生铝保级应用产能超100万吨，目前暂无铝矿资源|链条_网易订阅"
+        ],
+        "evidence_items": [
+          {
+            "title": "明泰铝业：公司拥有再生铝保级应用产能超100万吨",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "明泰铝业：鸿晟新材“汽车、绿色能源用铝产业园”一期项目2025年已开工投产",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "明泰铝业：目前订单充足",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "明泰铝业：目前再生铝产能超100万吨",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "明泰铝业：目前再生铝产能超100万吨|明泰铝业_新浪财经_新浪网",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "明泰铝业：拥有再生铝保级应用产能超100万吨，目前暂无铝矿资源|链条_网易订阅",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于orders_projects，共聚合 6 条证据。"
+      },
+      {
+        "event_key": "company:earnings|orders_projects",
+        "layer": "company",
+        "event_type": "earnings",
+        "title": "明泰铝业深度跟踪：业绩兑现超预期，高端产能释放打开成长空间 - 今日头条Loading.",
+        "direction": "neutral",
+        "importance": 0.66,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "earnings",
+          "orders_projects"
+        ],
+        "dimensions": {
+          "earnings": [
+            "业绩"
+          ],
+          "orders_projects": [
+            "产能"
+          ]
+        },
+        "evidence_titles": [
+          "明泰铝业深度跟踪：业绩兑现超预期，高端产能释放打开成长空间 - 今日头条Loading."
+        ],
+        "evidence_items": [
+          {
+            "title": "明泰铝业深度跟踪：业绩兑现超预期，高端产能释放打开成长空间 - 今日头条Loading.",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于earnings、orders_projects，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "company:earnings",
+        "layer": "company",
+        "event_type": "earnings",
+        "title": "明泰铝业2025年净利同比预增12%—14% 单吨盈利空间持续扩大",
+        "direction": "bullish",
+        "importance": 0.58,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "earnings"
+        ],
+        "dimensions": {
+          "earnings": [
+            "净利"
+          ]
+        },
+        "evidence_titles": [
+          "明泰铝业2025年净利同比预增12%—14% 单吨盈利空间持续扩大"
+        ],
+        "evidence_items": [
+          {
+            "title": "明泰铝业2025年净利同比预增12%—14% 单吨盈利空间持续扩大",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于earnings，共聚合 1 条证据。"
+      }
+    ],
+    "normalized_industry_events": [
+      {
+        "event_key": "industry:supply",
+        "layer": "industry",
+        "event_type": "industry_cycle",
+        "title": "中东产能“断供”！铝价能否持续飙升",
+        "direction": "neutral",
+        "importance": 0.58,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "supply"
+        ],
+        "dimensions": {
+          "supply": [
+            "产能"
+          ]
+        },
+        "evidence_titles": [
+          "中东产能“断供”！铝价能否持续飙升"
+        ],
+        "evidence_items": [
+          {
+            "title": "中东产能“断供”！铝价能否持续飙升",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于supply，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "industry:天山铝业 2025年度董事会工作报告",
+        "layer": "industry",
+        "event_type": "other",
+        "title": "天山铝业:2025年度董事会工作报告",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "天山铝业:2025年度董事会工作报告"
+        ],
+        "evidence_items": [
+          {
+            "title": "天山铝业:2025年度董事会工作报告",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "industry:南山铝业 山东南山铝业股份有限公司2025年度报告",
+        "layer": "industry",
+        "event_type": "other",
+        "title": "南山铝业:山东南山铝业股份有限公司2025年度报告",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "南山铝业:山东南山铝业股份有限公司2025年度报告"
+        ],
+        "evidence_items": [
+          {
+            "title": "南山铝业:山东南山铝业股份有限公司2025年度报告",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "industry:华峰铝业 上海华峰铝业股份有限公司2025年年度报告",
+        "layer": "industry",
+        "event_type": "other",
+        "title": "华峰铝业:上海华峰铝业股份有限公司2025年年度报告",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "华峰铝业:上海华峰铝业股份有限公司2025年年度报告"
+        ],
+        "evidence_items": [
+          {
+            "title": "华峰铝业:上海华峰铝业股份有限公司2025年年度报告",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "industry:南山铝业 山东南山铝业股份有限公司2025年度报告 摘要",
+        "layer": "industry",
+        "event_type": "other",
+        "title": "南山铝业:山东南山铝业股份有限公司2025年度报告_摘要",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "南山铝业:山东南山铝业股份有限公司2025年度报告_摘要"
+        ],
+        "evidence_items": [
+          {
+            "title": "南山铝业:山东南山铝业股份有限公司2025年度报告_摘要",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "industry:铝价强势上涨箭在弦上 中国铝企或成此次供应缺口最大受益者 cbc金属网",
+        "layer": "industry",
+        "event_type": "other",
+        "title": "铝价强势上涨箭在弦上，中国铝企或成此次供应缺口最大受益者-CBC金属网",
+        "direction": "bullish",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "铝价强势上涨箭在弦上，中国铝企或成此次供应缺口最大受益者-CBC金属网"
+        ],
+        "evidence_items": [
+          {
+            "title": "铝价强势上涨箭在弦上，中国铝企或成此次供应缺口最大受益者-CBC金属网",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "industry:周末突发 中东两大铝业巨头遇袭 海外溢价创19年来最高",
+        "layer": "industry",
+        "event_type": "other",
+        "title": "周末突发！中东两大铝业巨头遇袭，海外溢价创19年来最高！",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "周末突发！中东两大铝业巨头遇袭，海外溢价创19年来最高！"
+        ],
+        "evidence_items": [
+          {
+            "title": "周末突发！中东两大铝业巨头遇袭，海外溢价创19年来最高！",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "industry:2026 2030年中国铝箔行业 绿电铝溢价与再生铝降本的价值重估 手机中研网",
+        "layer": "industry",
+        "event_type": "other",
+        "title": "2026-2030年中国铝箔行业：绿电铝溢价与再生铝降本的价值重估-手机中研网",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "2026-2030年中国铝箔行业：绿电铝溢价与再生铝降本的价值重估-手机中研网"
+        ],
+        "evidence_items": [
+          {
+            "title": "2026-2030年中国铝箔行业：绿电铝溢价与再生铝降本的价值重估-手机中研网",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+      }
+    ],
+    "normalized_global_events": [
+      {
+        "event_key": "global:geopolitics",
+        "layer": "global",
+        "event_type": "geopolitics",
+        "title": "有色金属行业周报：地缘冲突持续扰动金属市场，短期承压不改长期看好",
+        "direction": "bearish",
+        "importance": 1.0,
+        "time_horizon": "short_term",
+        "affected_variables": [
+          "geopolitics"
+        ],
+        "dimensions": {
+          "trigger": [
+            "geopolitics"
+          ],
+          "transmission": []
+        },
+        "evidence_titles": [
+          "有色金属行业周报：地缘冲突持续扰动金属市场，短期承压不改长期看好",
+          "地缘冲突引爆供应危机，铝价内外联动强势冲高，沪铝单日飙涨820元/吨！",
+          "30日铝市早评：中东两大铝厂遭遇袭击，铝价或直逼25000位置——AL2605-佛山市南海区铝型材行业协会",
+          "有色（铝产业链）季报：中东局势为锚，把握震荡格局下铝价多头配置机会",
+          "【建信聚焦】 铝:伊朗袭击中东两大铝厂,供应扰动推升铝价",
+          "中东两大铝厂遇袭，全球供应格局重构，铝价独立走强"
+        ],
+        "evidence_items": [
+          {
+            "title": "有色金属行业周报：地缘冲突持续扰动金属市场，短期承压不改长期看好",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "地缘冲突引爆供应危机，铝价内外联动强势冲高，沪铝单日飙涨820元/吨！",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "30日铝市早评：中东两大铝厂遭遇袭击，铝价或直逼25000位置——AL2605-佛山市南海区铝型材行业协会",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "有色（铝产业链）季报：中东局势为锚，把握震荡格局下铝价多头配置机会",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "【建信聚焦】 铝:伊朗袭击中东两大铝厂,供应扰动推升铝价",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "中东两大铝厂遇袭，全球供应格局重构，铝价独立走强",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "全球层事件聚焦于geopolitics，共聚合 6 条证据。"
+      },
+      {
+        "event_key": "global:commodity|supply_demand",
+        "layer": "global",
+        "event_type": "commodity",
+        "title": "大宗商品：铝：供给收缩或引发铝价新一轮上行",
+        "direction": "neutral",
+        "importance": 0.66,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "commodity",
+          "supply_demand"
+        ],
+        "dimensions": {
+          "trigger": [
+            "commodity"
+          ],
+          "transmission": [
+            "supply_demand"
+          ]
+        },
+        "evidence_titles": [
+          "大宗商品：铝：供给收缩或引发铝价新一轮上行"
+        ],
+        "evidence_items": [
+          {
+            "title": "大宗商品：铝：供给收缩或引发铝价新一轮上行",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "全球层事件聚焦于commodity、supply_demand，共聚合 1 条证据。"
+      }
+    ],
+    "event_chain": {
+      "global_triggers": [
+        "中东两大铝厂遇袭导致产能断供",
+        "海外铝溢价创19年新高引发全球供应恐慌"
+      ],
+      "industry_variables": [
+        "铝价大幅跳涨（沪铝单日飙涨820元/吨）",
+        "国内铝企被视作供应缺口受益者",
+        "再生铝相对原铝成本优势扩大"
+      ],
+      "company_impacts": [
+        "库存铝锭及在产品价值重估带来短期收益",
+        "单吨盈利空间因加工费潜在上调而扩大",
+        "再生铝闭环低成本优势在高价环境下更显著",
+        "2025年业绩预增验证成长逻辑"
+      ],
+      "missing_links": [
+        "需跟踪铝价高位持续时间及下游对高价的接受程度（需求破坏风险）",
+        "需验证公司实际库存规模以量化库存重估的具体收益"
+      ]
+    },
+    "event_context_snapshot": {
+      "company_event_strength": "strong",
+      "industry_context_strength": "very_strong",
+      "global_context_strength": "extreme",
+      "chain_completeness": "complete",
+      "dominant_driver_layer": "global_macro",
+      "dominant_driver_type": "geopolitics_supply_shock",
+      "primary_bullish_variable": "aluminum_price_inventory_gain",
+      "primary_bearish_variable": "geopolitical_escalation_risk",
+      "most_actionable_catalyst": "中东铝厂遇袭致铝价暴涨与公司业绩预增共振",
+      "most_critical_risk": "地缘冲突失控导致全球需求衰退或物流中断"
+    }
+  },
+  "trace": {
+    "run_id": "fce53942-2834-41ac-857c-66ed122ad29e",
+    "agent_name": "EventNewsAgent",
+    "agent_type": "agent",
+    "status": "success",
+    "started_at": 1774885004.886265,
+    "finished_at": 1774885064.863393,
+    "duration_ms": 59977,
+    "input_summary": {
+      "ticker": "601677.SH",
+      "analysis_date": "2026-03-29",
+      "has_company_context": true
+    },
+    "output_summary": {
+      "effective_trade_date": "2026-03-29",
+      "event_state": "catalyst_positive",
+      "company_events": 2,
+      "industry_events": 2
+    },
+    "error": null,
+    "steps": [
+      {
+        "step_id": "e7b1c90b-df6a-4e67-9015-c7de89ca9954",
+        "step_type": "bundle",
+        "name": "build_event_news_bundle",
+        "status": "success",
+        "started_at": 1774885004.886283,
+        "input": {
+          "ticker": "601677.SH",
+          "analysis_date": "2026-03-29"
+        },
+        "output": {
+          "effective_trade_date": "2026-03-29",
+          "company_news_count": 8,
+          "macro_news_count": 8,
+          "has_debug_trace": true,
+          "has_debug_trace_payload": true
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1774885044.165676,
+        "duration_ms": 39279
+      },
+      {
+        "step_id": "fb43eea3-cc4a-4356-a643-92ecb33d3810",
+        "step_type": "llm",
+        "name": "llm_invoke_round_1",
+        "status": "success",
+        "started_at": 1774885044.1727638,
+        "input": {
+          "round": 1,
+          "message_count": 2
+        },
+        "output": {
+          "has_tool_calls": false,
+          "content_preview": "{\n  \"ticker\": \"601677.SH\",\n  \"effective_trade_date\": \"2026-03-29\",\n  \"event_overview\": {\n    \"state\": \"catalyst_positive\",\n    \"summary\": \"公司层面业绩预增与产能释放形成明确利好，叠加中东地缘冲突导致的全球铝供应短缺预期，行业景气度显著回升。虽然宏观风险（地缘政治）存在短期扰动，但对公司而言，铝价上涨带来的库存重估及加工费潜在提升是主导逻辑，且公司再生铝闭环成本优势在原料涨价背景下进一步凸显。\",\n    \"confidence\": 0.85\n  },\n  \"company_specific_events\": [\n    {\n      \"event_type\": \"earnings\",\n      \"title\": \"明泰铝业2025年净利同比预增12%—14% 单吨盈利空间持续扩大\",\n      \"direction\": \"bullish\",\n      \"importance\": 0.9,\n      \"time_horizon\": \"med"
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1774885064.860521,
+        "duration_ms": 20687
+      },
+      {
+        "step_id": "07988898-7e0f-4c4d-9bb1-3ba7ff1b66cb",
+        "step_type": "parse",
+        "name": "parse_json_response",
+        "status": "success",
+        "started_at": 1774885064.860654,
+        "input": {
+          "content_preview": "{\n  \"ticker\": \"601677.SH\",\n  \"effective_trade_date\": \"2026-03-29\",\n  \"event_overview\": {\n    \"state\": \"catalyst_positive\",\n    \"summary\": \"公司层面业绩预增与产能释放形成明确利好，叠加中东地缘冲突导致的全球铝供应短缺预期，行业景气度显著回升。虽然宏观风险（地缘政治）存在短期扰动，但对公司而言，铝价上涨带来的库存重估及加工费潜在提升是主导逻辑，且公司再生铝闭环成本优势在原料涨价背景下进一步凸显。\",\n    \"confidence\": 0.85\n  },\n  \"company_specific_events\": [\n    {\n      \"event_type\": \"earnings\",\n      \"title\": \"明泰铝业2025年净利同比预增12%—14% 单吨盈利空间持续扩大\",\n      \"direction\": \"bullish\",\n      \"importance\": 0.9,\n      \"time_horizon\": \"med"
+        },
+        "output": {
+          "event_state": "catalyst_positive",
+          "company_events": 2,
+          "industry_events": 2
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1774885064.8619468,
+        "duration_ms": 1
+      },
+      {
+        "step_id": "9bd605a5-3a25-484f-90c8-8e392c0e9716",
+        "step_type": "quality_gate",
+        "name": "quality_gate",
+        "status": "success",
+        "started_at": 1774885064.8619719,
+        "input": {
+          "round": 1
+        },
+        "output": {
+          "is_sparse": false
+        },
+        "metrics": {
+          "company_events": 2,
+          "industry_events": 2
+        },
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1774885064.862047,
+        "duration_ms": 0
+      }
+    ],
+    "observability": {
+      "langsmith_enabled": false,
+      "langsmith_project_name": null,
+      "otel_enabled": false
+    }
+  }
+}

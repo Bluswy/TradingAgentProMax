@@ -1,0 +1,4044 @@
+{
+  "event_news_data_bundle": {
+    "ticker": "600873.SH",
+    "requested_date": "2026-04-02",
+    "effective_trade_date": "2026-04-02",
+    "meta": {
+      "name": "梅花生物",
+      "industry": "食品",
+      "market": "A_share",
+      "list_date": ""
+    },
+    "company_context": {
+      "identity": {
+        "ticker": "600873.SH",
+        "company_name": "梅花生物",
+        "exchange": "SH",
+        "market": "A_share"
+      },
+      "analysis_time": {
+        "requested_date": "2026-04-02",
+        "effective_date": "2026-04-02",
+        "date_mode": "natural_day"
+      },
+      "classification": {
+        "industry": "食品",
+        "company_type": "consumer_healthcare_growth",
+        "style_tag": "consumer_healthcare_growth",
+        "size_bucket": "small_cap",
+        "liquidity_bucket": "low"
+      },
+      "business_context": {
+        "sub_industry": "食品及饲料添加剂",
+        "business_model": "味精,氨基酸,有机肥等生物发酵产品的生产及销售.",
+        "company_intro": "公司是全球领先的氨基酸营养健康解决方案提供商。公司通过为全球100多个国家和地区多家知名客户提供各类氨基酸产品及使用解决方案，让全世界用户享有技术的全方位沟通。梅花集团拥有生物发酵行业中最完整的、最长的产业链和配套设施，通过全系列的研、产、供、销服务，灵活满足全球不同客户的差异化需求以及快速创新的追求，专注于打造生物发酵和生物制药的高端产业平台。",
+        "core_products": [
+          "动物营养氨基酸",
+          "食品味觉性状优化产品",
+          "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+          "味精及谷氨酸",
+          "氨基酸产品"
+        ],
+        "main_business_items": [
+          "动物营养氨基酸",
+          "食品味觉性状优化产品",
+          "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+          "味精及谷氨酸",
+          "氨基酸产品",
+          "大原料副产品(肥料、蛋白粉、胚芽、玉米皮粉、饲料纤维等)",
+          "综合产品及其他",
+          "食品添加剂"
+        ],
+        "demand_drivers": [],
+        "cost_drivers": [],
+        "policy_drivers": [],
+        "global_risk_drivers": []
+      },
+      "market_context": {
+        "valuation_style": "growth",
+        "market_attention_points": [],
+        "trading_sensitivity": []
+      },
+      "technical_context": {
+        "trend": {},
+        "momentum": {},
+        "volatility": {},
+        "volume_confirmation": {},
+        "relative_strength": {},
+        "technical_compact_signals": {},
+        "key_levels": {},
+        "signals": [],
+        "confidence": null,
+        "technical_summary_zh": ""
+      },
+      "fundamental_context": {
+        "company_profile": {},
+        "growth": {},
+        "profitability": {},
+        "cashflow_quality": {},
+        "balance_sheet_health": {},
+        "valuation": {},
+        "fundamental_compact_signals": {},
+        "financial_snapshot": {},
+        "core_risks": [],
+        "fundamental_signals": [],
+        "confidence": null,
+        "fundamental_summary_zh": ""
+      },
+      "event_context": {
+        "event_overview": {},
+        "event_compact_signals": {},
+        "event_context_snapshot": {},
+        "event_chain": {},
+        "key_catalysts": [],
+        "key_risks": [],
+        "tracking_points": [],
+        "confidence": null,
+        "event_summary_zh": ""
+      },
+      "search_context": {
+        "search_aliases": [
+          "梅花生物",
+          "梅花生物科技集团股份有限公司",
+          "动物营养氨基酸",
+          "食品味觉性状优化产品",
+          "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+          "味精及谷氨酸",
+          "基础化工",
+          "化学制品",
+          "食品及饲料添加剂"
+        ],
+        "seed_titles": [],
+        "ths_member_codes": [
+          "700001.TI",
+          "700002.TI",
+          "700003.TI",
+          "700004.TI",
+          "700008.TI",
+          "700009.TI",
+          "700010.TI",
+          "700021.TI",
+          "700023.TI",
+          "700031.TI",
+          "700032.TI",
+          "700035.TI"
+        ],
+        "ths_concepts": [
+          "日常消费品(A股)",
+          "食品、饮料与烟草(A股)",
+          "食品(A股)",
+          "农产品与服务(A股)",
+          "化学制品",
+          "西藏",
+          "增持计划",
+          "高股息股",
+          "回购计划",
+          "食品及饲料添加剂",
+          "融资融券",
+          "参股银行"
+        ],
+        "index_memberships": [
+          "基础化工",
+          "化学制品",
+          "食品及饲料添加剂"
+        ],
+        "preferred_query_style": "keyword_cluster",
+        "language_bias": "cn_finance_media"
+      },
+      "data_quality": {
+        "missing_sections": [],
+        "stale_sections": [],
+        "source_summary": {
+          "stock_basic": true,
+          "stock_company": true,
+          "fina_mainbz": true,
+          "ths_member": true,
+          "index_member_all": true
+        }
+      }
+    },
+    "company_news": [
+      {
+        "title": "梅花生物：公司正在按照既定的计划对收购的海外业务进行整合-证券日报网-证券日报网",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "梅花生物：公司年报中有关于税收政策的详细介绍",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "梅花生物：76名管理层拟增持3.04亿元至3.50亿元股份",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "梅花生物：关于完成工商变更登记并换发营业执照的公告-证券日报网-证券日报网",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "梅花生物:梅花生物关于完成工商变更登记并换发营业执照的公告",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "梅花生物近一周股价下跌9.81% 振幅达13.10% - 经济观察网 － 专业财经新闻网站",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "梅花生物股票行情分析：主力资金流出与财报亮点交织的未来展望！_市场_该公司_方面",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "生物基材料（替代石油基）概念龙头-研发实力大比拼：凯赛生物、华恒生物、嘉必优、梅花生物、星湖科技",
+        "trunk": "",
+        "secu_list": []
+      }
+    ],
+    "macro_news": [
+      {
+        "title": "基础化工行业周报：原油价格高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI需求大周期",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期需求大周期+AI",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "国海化工|基础化工行业周报：原油成本高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI 需求大周期_新浪财经_新浪网",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "国海化工|基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期+AI需求大周期|红利ETF港股广发|现金流|股息率|甲醇|尿素_新浪新闻",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "化工：原料涨价及海外产能占比高，蛋氨酸、MDI/TDI及维生素等持续涨价",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "Mysteel早报：味精出货价格继续偏强（20260331）-我的钢铁网",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "Mysteel早报：近期味精企业暂时稳价出货（20260326）_我的钢铁网",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "Mysteel早报：味精暂时高位暂稳（20260325）",
+        "trunk": "",
+        "secu_list": []
+      }
+    ],
+    "normalized_company_events": [
+      {
+        "event_key": "company:earnings",
+        "layer": "company",
+        "event_type": "earnings",
+        "title": "梅花生物：公司年报中有关于税收政策的详细介绍",
+        "direction": "neutral",
+        "importance": 0.58,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "earnings"
+        ],
+        "dimensions": {
+          "earnings": [
+            "年报"
+          ]
+        },
+        "evidence_titles": [
+          "梅花生物：公司年报中有关于税收政策的详细介绍"
+        ],
+        "evidence_items": [
+          {
+            "title": "梅花生物：公司年报中有关于税收政策的详细介绍",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于earnings，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "company:capital_markets",
+        "layer": "company",
+        "event_type": "mna",
+        "title": "梅花生物：76名管理层拟增持3.04亿元至3.50亿元股份",
+        "direction": "bullish",
+        "importance": 0.58,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "capital_markets"
+        ],
+        "dimensions": {
+          "capital_markets": [
+            "增持"
+          ]
+        },
+        "evidence_titles": [
+          "梅花生物：76名管理层拟增持3.04亿元至3.50亿元股份"
+        ],
+        "evidence_items": [
+          {
+            "title": "梅花生物：76名管理层拟增持3.04亿元至3.50亿元股份",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于capital_markets，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "company:梅花生物 公司正在按照既定的计划对收购的海外业务进行整合 证券日报网 证券日报网",
+        "layer": "company",
+        "event_type": "other",
+        "title": "梅花生物：公司正在按照既定的计划对收购的海外业务进行整合-证券日报网-证券日报网",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "梅花生物：公司正在按照既定的计划对收购的海外业务进行整合-证券日报网-证券日报网"
+        ],
+        "evidence_items": [
+          {
+            "title": "梅花生物：公司正在按照既定的计划对收购的海外业务进行整合-证券日报网-证券日报网",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于经营变化，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "company:梅花生物 关于完成工商变更登记并换发营业执照的公告 证券日报网 证券日报网",
+        "layer": "company",
+        "event_type": "other",
+        "title": "梅花生物：关于完成工商变更登记并换发营业执照的公告-证券日报网-证券日报网",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "梅花生物：关于完成工商变更登记并换发营业执照的公告-证券日报网-证券日报网"
+        ],
+        "evidence_items": [
+          {
+            "title": "梅花生物：关于完成工商变更登记并换发营业执照的公告-证券日报网-证券日报网",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于经营变化，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "company:梅花生物 梅花生物关于完成工商变更登记并换发营业执照的公告",
+        "layer": "company",
+        "event_type": "other",
+        "title": "梅花生物:梅花生物关于完成工商变更登记并换发营业执照的公告",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "梅花生物:梅花生物关于完成工商变更登记并换发营业执照的公告"
+        ],
+        "evidence_items": [
+          {
+            "title": "梅花生物:梅花生物关于完成工商变更登记并换发营业执照的公告",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于经营变化，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "company:梅花生物近一周股价下跌9 81 振幅达13 10 经济观察网 专业财经新闻网站",
+        "layer": "company",
+        "event_type": "other",
+        "title": "梅花生物近一周股价下跌9.81% 振幅达13.10% - 经济观察网 － 专业财经新闻网站",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "梅花生物近一周股价下跌9.81% 振幅达13.10% - 经济观察网 － 专业财经新闻网站"
+        ],
+        "evidence_items": [
+          {
+            "title": "梅花生物近一周股价下跌9.81% 振幅达13.10% - 经济观察网 － 专业财经新闻网站",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于经营变化，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "company:梅花生物股票行情分析 主力资金流出与财报亮点交织的未来展望 市场 该公司 方面",
+        "layer": "company",
+        "event_type": "other",
+        "title": "梅花生物股票行情分析：主力资金流出与财报亮点交织的未来展望！_市场_该公司_方面",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "梅花生物股票行情分析：主力资金流出与财报亮点交织的未来展望！_市场_该公司_方面"
+        ],
+        "evidence_items": [
+          {
+            "title": "梅花生物股票行情分析：主力资金流出与财报亮点交织的未来展望！_市场_该公司_方面",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于经营变化，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "company:生物基材料 替代石油基 概念龙头 研发实力大比拼 凯赛生物 华恒生物 嘉必优 梅花生物 星湖科技",
+        "layer": "company",
+        "event_type": "other",
+        "title": "生物基材料（替代石油基）概念龙头-研发实力大比拼：凯赛生物、华恒生物、嘉必优、梅花生物、星湖科技",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "生物基材料（替代石油基）概念龙头-研发实力大比拼：凯赛生物、华恒生物、嘉必优、梅花生物、星湖科技"
+        ],
+        "evidence_items": [
+          {
+            "title": "生物基材料（替代石油基）概念龙头-研发实力大比拼：凯赛生物、华恒生物、嘉必优、梅花生物、星湖科技",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于经营变化，共聚合 1 条证据。"
+      }
+    ],
+    "normalized_industry_events": [
+      {
+        "event_key": "industry:demand|price_cycle",
+        "layer": "industry",
+        "event_type": "industry_cycle",
+        "title": "基础化工行业周报：原油价格高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI需求大周期",
+        "direction": "neutral",
+        "importance": 1.0,
+        "time_horizon": "short_term",
+        "affected_variables": [
+          "demand",
+          "price_cycle",
+          "supply"
+        ],
+        "dimensions": {
+          "supply": [
+            "产能"
+          ],
+          "demand": [
+            "需求"
+          ],
+          "price_cycle": [
+            "价格",
+            "油价",
+            "周期"
+          ]
+        },
+        "evidence_titles": [
+          "基础化工行业周报：原油价格高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI需求大周期",
+          "基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期需求大周期+AI",
+          "国海化工|基础化工行业周报：原油成本高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI 需求大周期_新浪财经_新浪网",
+          "国海化工|基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期+AI需求大周期|红利ETF港股广发|现金流|股息率|甲醇|尿素_新浪新闻",
+          "Mysteel早报：味精出货价格继续偏强（20260331）-我的钢铁网"
+        ],
+        "evidence_items": [
+          {
+            "title": "基础化工行业周报：原油价格高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI需求大周期",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期需求大周期+AI",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "国海化工|基础化工行业周报：原油成本高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI 需求大周期_新浪财经_新浪网",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "国海化工|基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期+AI需求大周期|红利ETF港股广发|现金流|股息率|甲醇|尿素_新浪新闻",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "Mysteel早报：味精出货价格继续偏强（20260331）-我的钢铁网",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于demand、price_cycle、supply，共聚合 5 条证据。"
+      },
+      {
+        "event_key": "industry:supply",
+        "layer": "industry",
+        "event_type": "industry_cycle",
+        "title": "化工：原料涨价及海外产能占比高，蛋氨酸、MDI/TDI及维生素等持续涨价",
+        "direction": "neutral",
+        "importance": 0.58,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "supply"
+        ],
+        "dimensions": {
+          "supply": [
+            "产能"
+          ]
+        },
+        "evidence_titles": [
+          "化工：原料涨价及海外产能占比高，蛋氨酸、MDI/TDI及维生素等持续涨价"
+        ],
+        "evidence_items": [
+          {
+            "title": "化工：原料涨价及海外产能占比高，蛋氨酸、MDI/TDI及维生素等持续涨价",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于supply，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "industry:demand",
+        "layer": "industry",
+        "event_type": "industry_cycle",
+        "title": "Mysteel早报：近期味精企业暂时稳价出货（20260326）_我的钢铁网",
+        "direction": "neutral",
+        "importance": 0.58,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "demand"
+        ],
+        "dimensions": {
+          "demand": [
+            "出货"
+          ]
+        },
+        "evidence_titles": [
+          "Mysteel早报：近期味精企业暂时稳价出货（20260326）_我的钢铁网"
+        ],
+        "evidence_items": [
+          {
+            "title": "Mysteel早报：近期味精企业暂时稳价出货（20260326）_我的钢铁网",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于demand，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "industry:mysteel早报 味精暂时高位暂稳 20260325",
+        "layer": "industry",
+        "event_type": "other",
+        "title": "Mysteel早报：味精暂时高位暂稳（20260325）",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "Mysteel早报：味精暂时高位暂稳（20260325）"
+        ],
+        "evidence_items": [
+          {
+            "title": "Mysteel早报：味精暂时高位暂稳（20260325）",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+      }
+    ],
+    "normalized_global_events": [
+      {
+        "event_key": "global:geopolitics",
+        "layer": "global",
+        "event_type": "geopolitics",
+        "title": "真是没想到，中东打仗的蝴蝶效应，竟扇到了中国猪圈 - 今日头条Loading.",
+        "direction": "neutral",
+        "importance": 0.73,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "geopolitics"
+        ],
+        "dimensions": {
+          "trigger": [
+            "geopolitics"
+          ],
+          "transmission": []
+        },
+        "evidence_titles": [
+          "真是没想到，中东打仗的蝴蝶效应，竟扇到了中国猪圈 - 今日头条Loading.",
+          "真是没想到，中东打仗扇动蝴蝶效应，中国猪圈成了最大受害者 - 今日头条Loading."
+        ],
+        "evidence_items": [
+          {
+            "title": "真是没想到，中东打仗的蝴蝶效应，竟扇到了中国猪圈 - 今日头条Loading.",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "真是没想到，中东打仗扇动蝴蝶效应，中国猪圈成了最大受害者 - 今日头条Loading.",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "全球层事件聚焦于geopolitics，共聚合 2 条证据。"
+      },
+      {
+        "event_key": "global:commodity|pricing",
+        "layer": "global",
+        "event_type": "commodity",
+        "title": "双粕2026商品季度报告：集中供应价格承压 关注原油连锁反应新冲击",
+        "direction": "neutral",
+        "importance": 0.66,
+        "time_horizon": "short_term",
+        "affected_variables": [
+          "commodity",
+          "pricing"
+        ],
+        "dimensions": {
+          "trigger": [
+            "commodity"
+          ],
+          "transmission": [
+            "pricing"
+          ]
+        },
+        "evidence_titles": [
+          "双粕2026商品季度报告：集中供应价格承压 关注原油连锁反应新冲击"
+        ],
+        "evidence_items": [
+          {
+            "title": "双粕2026商品季度报告：集中供应价格承压 关注原油连锁反应新冲击",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "全球层事件聚焦于commodity、pricing，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "global:supply_demand",
+        "layer": "global",
+        "event_type": "other",
+        "title": "农产品日报：需求略显疲软，豆粕维持震荡",
+        "direction": "neutral",
+        "importance": 0.58,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "supply_demand"
+        ],
+        "dimensions": {
+          "trigger": [],
+          "transmission": [
+            "supply_demand"
+          ]
+        },
+        "evidence_titles": [
+          "农产品日报：需求略显疲软，豆粕维持震荡"
+        ],
+        "evidence_items": [
+          {
+            "title": "农产品日报：需求略显疲软，豆粕维持震荡",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "全球层事件聚焦于supply_demand，共聚合 1 条证据。"
+      }
+    ],
+    "event_chain": {
+      "global_triggers": [
+        "中东地缘政治风险",
+        "原油价格高位运行",
+        "农产品/饲料需求疲软"
+      ],
+      "industry_variables": [
+        "味精价格高位偏强",
+        "海外化工产能退出预期",
+        "化工旺季需求回暖",
+        "蛋氨酸/维生素涨价传导"
+      ],
+      "company_impacts": [
+        "管理层增持支撑股价预期",
+        "味精业务毛利率受益价格高位",
+        "海外业务整合推进",
+        "饲料氨基酸业务待验证"
+      ],
+      "missing_links": [
+        "缺赖氨酸/苏氨酸/色氨酸等核心饲料氨基酸的实时价格数据",
+        "缺公司饲料氨基酸业务占比及盈利结构的具体数据",
+        "缺海外产能退出对氨基酸细分品种的实际影响验证",
+        "缺下游饲料/养殖需求回暖的明确信号"
+      ]
+    },
+    "announcements": [],
+    "market_events": [],
+    "event_compact_signals": {
+      "company_event_bias": "positive",
+      "macro_event_bias": "none",
+      "event_density": "high",
+      "policy_sensitivity": "medium",
+      "earnings_catalyst_state": "none",
+      "risk_event_level": "high"
+    },
+    "event_context_snapshot": {
+      "company_event_strength": "medium",
+      "industry_context_strength": "medium",
+      "global_context_strength": "medium",
+      "chain_completeness": "partial",
+      "dominant_driver_layer": "company",
+      "dominant_driver_type": "buyback",
+      "primary_bullish_variable": "capital_markets",
+      "primary_bearish_variable": "price_volatility",
+      "most_actionable_catalyst": "管理层大额增持计划",
+      "most_critical_risk": "核心饲料氨基酸价格信号缺失"
+    },
+    "query_plan": {
+      "sensitivity_variables": [
+        "赖氨酸价格",
+        "苏氨酸价格",
+        "味精价格",
+        "玉米价格",
+        "饲料需求",
+        "产能利用率",
+        "出口价格"
+      ],
+      "company_query": "梅花生物 近期公告 业绩 赖氨酸 苏氨酸 味精 产能 出口 风险",
+      "industry_query": "赖氨酸 苏氨酸 味精 近期价格 玉米 饲料需求 产能 出口",
+      "global_event_query": "近期 玉米 豆粕 价格 美元 汇率 能源 关税 运费",
+      "query_rationale": {
+        "company": "覆盖业绩公告、主营产品价格动态、产能扩张、出口业务及潜在风险事件。",
+        "industry": "覆盖氨基酸行业核心变量：产品价格、原料玉米成本、下游饲料需求、行业产能与出口情况。",
+        "global": "覆盖原料农产品价格、汇率波动、能源成本及国际贸易政策对成本的传导。"
+      }
+    },
+    "debug_trace": {
+      "planner_context": {
+        "ticker": "600873.SH",
+        "company_name": "梅花生物",
+        "analysis_date": "2026-04-02",
+        "industry": "食品",
+        "company_type": "consumer_healthcare_growth",
+        "business_hint": null,
+        "company_context": {
+          "identity": {
+            "ticker": "600873.SH",
+            "company_name": "梅花生物",
+            "exchange": "SH",
+            "market": "A_share"
+          },
+          "analysis_time": {
+            "requested_date": "2026-04-02",
+            "effective_date": "2026-04-02",
+            "date_mode": "natural_day"
+          },
+          "classification": {
+            "industry": "食品",
+            "company_type": "consumer_healthcare_growth",
+            "style_tag": "consumer_healthcare_growth",
+            "size_bucket": "small_cap",
+            "liquidity_bucket": "low"
+          },
+          "business_context": {
+            "sub_industry": "食品及饲料添加剂",
+            "business_model": "味精,氨基酸,有机肥等生物发酵产品的生产及销售.",
+            "company_intro": "公司是全球领先的氨基酸营养健康解决方案提供商。公司通过为全球100多个国家和地区多家知名客户提供各类氨基酸产品及使用解决方案，让全世界用户享有技术的全方位沟通。梅花集团拥有生物发酵行业中最完整的、最长的产业链和配套设施，通过全系列的研、产、供、销服务，灵活满足全球不同客户的差异化需求以及快速创新的追求，专注于打造生物发酵和生物制药的高端产业平台。",
+            "core_products": [
+              "动物营养氨基酸",
+              "食品味觉性状优化产品",
+              "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+              "味精及谷氨酸",
+              "氨基酸产品"
+            ],
+            "main_business_items": [
+              "动物营养氨基酸",
+              "食品味觉性状优化产品",
+              "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+              "味精及谷氨酸",
+              "氨基酸产品",
+              "大原料副产品(肥料、蛋白粉、胚芽、玉米皮粉、饲料纤维等)",
+              "综合产品及其他",
+              "食品添加剂"
+            ],
+            "demand_drivers": [],
+            "cost_drivers": [],
+            "policy_drivers": [],
+            "global_risk_drivers": []
+          },
+          "market_context": {
+            "valuation_style": "growth",
+            "market_attention_points": [],
+            "trading_sensitivity": []
+          },
+          "technical_context": {
+            "trend": {},
+            "momentum": {},
+            "volatility": {},
+            "volume_confirmation": {},
+            "relative_strength": {},
+            "technical_compact_signals": {},
+            "key_levels": {},
+            "signals": [],
+            "confidence": null,
+            "technical_summary_zh": ""
+          },
+          "fundamental_context": {
+            "company_profile": {},
+            "growth": {},
+            "profitability": {},
+            "cashflow_quality": {},
+            "balance_sheet_health": {},
+            "valuation": {},
+            "fundamental_compact_signals": {},
+            "financial_snapshot": {},
+            "core_risks": [],
+            "fundamental_signals": [],
+            "confidence": null,
+            "fundamental_summary_zh": ""
+          },
+          "event_context": {
+            "event_overview": {},
+            "event_compact_signals": {},
+            "event_context_snapshot": {},
+            "event_chain": {},
+            "key_catalysts": [],
+            "key_risks": [],
+            "tracking_points": [],
+            "confidence": null,
+            "event_summary_zh": ""
+          },
+          "search_context": {
+            "search_aliases": [
+              "梅花生物",
+              "梅花生物科技集团股份有限公司",
+              "动物营养氨基酸",
+              "食品味觉性状优化产品",
+              "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+              "味精及谷氨酸",
+              "基础化工",
+              "化学制品",
+              "食品及饲料添加剂"
+            ],
+            "seed_titles": [],
+            "ths_member_codes": [
+              "700001.TI",
+              "700002.TI",
+              "700003.TI",
+              "700004.TI",
+              "700008.TI",
+              "700009.TI",
+              "700010.TI",
+              "700021.TI",
+              "700023.TI",
+              "700031.TI",
+              "700032.TI",
+              "700035.TI"
+            ],
+            "ths_concepts": [
+              "日常消费品(A股)",
+              "食品、饮料与烟草(A股)",
+              "食品(A股)",
+              "农产品与服务(A股)",
+              "化学制品",
+              "西藏",
+              "增持计划",
+              "高股息股",
+              "回购计划",
+              "食品及饲料添加剂",
+              "融资融券",
+              "参股银行"
+            ],
+            "index_memberships": [
+              "基础化工",
+              "化学制品",
+              "食品及饲料添加剂"
+            ],
+            "preferred_query_style": "keyword_cluster",
+            "language_bias": "cn_finance_media"
+          },
+          "data_quality": {
+            "missing_sections": [],
+            "stale_sections": [],
+            "source_summary": {
+              "stock_basic": true,
+              "stock_company": true,
+              "fina_mainbz": true,
+              "ths_member": true,
+              "index_member_all": true
+            }
+          }
+        }
+      },
+      "company_context": {
+        "identity": {
+          "ticker": "600873.SH",
+          "company_name": "梅花生物",
+          "exchange": "SH",
+          "market": "A_share"
+        },
+        "analysis_time": {
+          "requested_date": "2026-04-02",
+          "effective_date": "2026-04-02",
+          "date_mode": "natural_day"
+        },
+        "classification": {
+          "industry": "食品",
+          "company_type": "consumer_healthcare_growth",
+          "style_tag": "consumer_healthcare_growth",
+          "size_bucket": "small_cap",
+          "liquidity_bucket": "low"
+        },
+        "business_context": {
+          "sub_industry": "食品及饲料添加剂",
+          "business_model": "味精,氨基酸,有机肥等生物发酵产品的生产及销售.",
+          "company_intro": "公司是全球领先的氨基酸营养健康解决方案提供商。公司通过为全球100多个国家和地区多家知名客户提供各类氨基酸产品及使用解决方案，让全世界用户享有技术的全方位沟通。梅花集团拥有生物发酵行业中最完整的、最长的产业链和配套设施，通过全系列的研、产、供、销服务，灵活满足全球不同客户的差异化需求以及快速创新的追求，专注于打造生物发酵和生物制药的高端产业平台。",
+          "core_products": [
+            "动物营养氨基酸",
+            "食品味觉性状优化产品",
+            "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+            "味精及谷氨酸",
+            "氨基酸产品"
+          ],
+          "main_business_items": [
+            "动物营养氨基酸",
+            "食品味觉性状优化产品",
+            "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+            "味精及谷氨酸",
+            "氨基酸产品",
+            "大原料副产品(肥料、蛋白粉、胚芽、玉米皮粉、饲料纤维等)",
+            "综合产品及其他",
+            "食品添加剂"
+          ],
+          "demand_drivers": [],
+          "cost_drivers": [],
+          "policy_drivers": [],
+          "global_risk_drivers": []
+        },
+        "market_context": {
+          "valuation_style": "growth",
+          "market_attention_points": [],
+          "trading_sensitivity": []
+        },
+        "technical_context": {
+          "trend": {},
+          "momentum": {},
+          "volatility": {},
+          "volume_confirmation": {},
+          "relative_strength": {},
+          "technical_compact_signals": {},
+          "key_levels": {},
+          "signals": [],
+          "confidence": null,
+          "technical_summary_zh": ""
+        },
+        "fundamental_context": {
+          "company_profile": {},
+          "growth": {},
+          "profitability": {},
+          "cashflow_quality": {},
+          "balance_sheet_health": {},
+          "valuation": {},
+          "fundamental_compact_signals": {},
+          "financial_snapshot": {},
+          "core_risks": [],
+          "fundamental_signals": [],
+          "confidence": null,
+          "fundamental_summary_zh": ""
+        },
+        "event_context": {
+          "event_overview": {},
+          "event_compact_signals": {},
+          "event_context_snapshot": {},
+          "event_chain": {},
+          "key_catalysts": [],
+          "key_risks": [],
+          "tracking_points": [],
+          "confidence": null,
+          "event_summary_zh": ""
+        },
+        "search_context": {
+          "search_aliases": [
+            "梅花生物",
+            "梅花生物科技集团股份有限公司",
+            "动物营养氨基酸",
+            "食品味觉性状优化产品",
+            "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+            "味精及谷氨酸",
+            "基础化工",
+            "化学制品",
+            "食品及饲料添加剂"
+          ],
+          "seed_titles": [],
+          "ths_member_codes": [
+            "700001.TI",
+            "700002.TI",
+            "700003.TI",
+            "700004.TI",
+            "700008.TI",
+            "700009.TI",
+            "700010.TI",
+            "700021.TI",
+            "700023.TI",
+            "700031.TI",
+            "700032.TI",
+            "700035.TI"
+          ],
+          "ths_concepts": [
+            "日常消费品(A股)",
+            "食品、饮料与烟草(A股)",
+            "食品(A股)",
+            "农产品与服务(A股)",
+            "化学制品",
+            "西藏",
+            "增持计划",
+            "高股息股",
+            "回购计划",
+            "食品及饲料添加剂",
+            "融资融券",
+            "参股银行"
+          ],
+          "index_memberships": [
+            "基础化工",
+            "化学制品",
+            "食品及饲料添加剂"
+          ],
+          "preferred_query_style": "keyword_cluster",
+          "language_bias": "cn_finance_media"
+        },
+        "data_quality": {
+          "missing_sections": [],
+          "stale_sections": [],
+          "source_summary": {
+            "stock_basic": true,
+            "stock_company": true,
+            "fina_mainbz": true,
+            "ths_member": true,
+            "index_member_all": true
+          }
+        }
+      },
+      "query_plan": {
+        "sensitivity_variables": [
+          "赖氨酸价格",
+          "苏氨酸价格",
+          "味精价格",
+          "玉米价格",
+          "饲料需求",
+          "产能利用率",
+          "出口价格"
+        ],
+        "company_query": "梅花生物 近期公告 业绩 赖氨酸 苏氨酸 味精 产能 出口 风险",
+        "industry_query": "赖氨酸 苏氨酸 味精 近期价格 玉米 饲料需求 产能 出口",
+        "global_event_query": "近期 玉米 豆粕 价格 美元 汇率 能源 关税 运费",
+        "query_rationale": {
+          "company": "覆盖业绩公告、主营产品价格动态、产能扩张、出口业务及潜在风险事件。",
+          "industry": "覆盖氨基酸行业核心变量：产品价格、原料玉米成本、下游饲料需求、行业产能与出口情况。",
+          "global": "覆盖原料农产品价格、汇率波动、能源成本及国际贸易政策对成本的传导。"
+        }
+      },
+      "company_search": {
+        "queries": [
+          "梅花生物 近期公告 业绩 赖氨酸 苏氨酸 味精 产能 出口 风险"
+        ],
+        "query_results": [
+          {
+            "query": "梅花生物 近期公告 业绩 赖氨酸 苏氨酸 味精 产能 出口 风险",
+            "results_count": 13,
+            "results": [
+              {
+                "title": "梅花生物：关于完成工商变更登记并换发营业执照的公告-证券日报网-证券日报网",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "梅花生物:梅花生物关于完成工商变更登记并换发营业执照的公告",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "梅花生物：公司正在按照既定的计划对收购的海外业务进行整合-证券日报网-证券日报网",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "梅花生物：公司年报中有关于税收政策的详细介绍",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "梅花生物近一周股价下跌9.81% 振幅达13.10% - 经济观察网 － 专业财经新闻网站",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "梅花生物：76名管理层拟增持3.04亿元至3.50亿元股份",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "梅花生物股票行情分析：主力资金流出与财报亮点交织的未来展望！_市场_该公司_方面",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "生物基材料（替代石油基）概念龙头-研发实力大比拼：凯赛生物、华恒生物、嘉必优、梅花生物、星湖科技",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "梅花生物3月26日获融资买入3011.32万元，融资余额6.80亿元|持股|融券|派现_网易订阅",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "前景研判！2026年赖氨酸行业市场发展概况分析及投资前景预测（智研咨询）",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "600873营收情况如何？（2026/3/24） - 南方财富网",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "梅花生物股价连续4天下跌累计跌幅10.76%，华夏基金旗下4只基金合计持212.59万股，浮亏损失293.38万元_新浪财经_新浪网",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "梅花生物：30+专利家族，补上全球氨基酸短板",
+                "trunk": "",
+                "secu_list": []
+              }
+            ]
+          }
+        ],
+        "results": [
+          {
+            "title": "梅花生物：公司正在按照既定的计划对收购的海外业务进行整合-证券日报网-证券日报网",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "梅花生物：公司年报中有关于税收政策的详细介绍",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "梅花生物：76名管理层拟增持3.04亿元至3.50亿元股份",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "梅花生物：关于完成工商变更登记并换发营业执照的公告-证券日报网-证券日报网",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "梅花生物:梅花生物关于完成工商变更登记并换发营业执照的公告",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "梅花生物近一周股价下跌9.81% 振幅达13.10% - 经济观察网 － 专业财经新闻网站",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "梅花生物股票行情分析：主力资金流出与财报亮点交织的未来展望！_市场_该公司_方面",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "生物基材料（替代石油基）概念龙头-研发实力大比拼：凯赛生物、华恒生物、嘉必优、梅花生物、星湖科技",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "deduped_results_count": 13,
+        "reranked_results_count": 8,
+        "retry_attempts": [
+          {
+            "attempt": 1,
+            "layer": "company",
+            "queries": [
+              "梅花生物 近期公告 业绩 赖氨酸 苏氨酸 味精 产能 出口 风险"
+            ],
+            "raw_results_count": 13,
+            "deduped_results_count": 13,
+            "reranked_results_count": 8,
+            "query_results": [
+              {
+                "query": "梅花生物 近期公告 业绩 赖氨酸 苏氨酸 味精 产能 出口 风险",
+                "results_count": 13,
+                "results": [
+                  {
+                    "title": "梅花生物：关于完成工商变更登记并换发营业执照的公告-证券日报网-证券日报网",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "梅花生物:梅花生物关于完成工商变更登记并换发营业执照的公告",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "梅花生物：公司正在按照既定的计划对收购的海外业务进行整合-证券日报网-证券日报网",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "梅花生物：公司年报中有关于税收政策的详细介绍",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "梅花生物近一周股价下跌9.81% 振幅达13.10% - 经济观察网 － 专业财经新闻网站",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "梅花生物：76名管理层拟增持3.04亿元至3.50亿元股份",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "梅花生物股票行情分析：主力资金流出与财报亮点交织的未来展望！_市场_该公司_方面",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "生物基材料（替代石油基）概念龙头-研发实力大比拼：凯赛生物、华恒生物、嘉必优、梅花生物、星湖科技",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "梅花生物3月26日获融资买入3011.32万元，融资余额6.80亿元|持股|融券|派现_网易订阅",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "前景研判！2026年赖氨酸行业市场发展概况分析及投资前景预测（智研咨询）",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "600873营收情况如何？（2026/3/24） - 南方财富网",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "梅花生物股价连续4天下跌累计跌幅10.76%，华夏基金旗下4只基金合计持212.59万股，浮亏损失293.38万元_新浪财经_新浪网",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "梅花生物：30+专利家族，补上全球氨基酸短板",
+                    "trunk": "",
+                    "secu_list": []
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "retry_used": false,
+        "final_attempt": 1
+      },
+      "industry_search": {
+        "queries": [
+          "赖氨酸 苏氨酸 味精 近期价格 玉米 饲料需求 产能 出口"
+        ],
+        "query_results": [
+          {
+            "query": "赖氨酸 苏氨酸 味精 近期价格 玉米 饲料需求 产能 出口",
+            "results_count": 11,
+            "results": [
+              {
+                "title": "化工新材料周报：本周氧气、SAF、磷酸铁锂等涨价",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "2025年业绩大幅增长，强化股东回报",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "基础化工行业周报：原油价格高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI需求大周期",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "化工新材料周报：本周EVA等涨价，特斯拉第三代Optimus宣布年底投产",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期需求大周期+AI",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "化工：原料涨价及海外产能占比高，蛋氨酸、MDI/TDI及维生素等持续涨价",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "Mysteel早报：味精出货价格继续偏强（20260331）-我的钢铁网",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "Mysteel早报：近期味精企业暂时稳价出货（20260326）_我的钢铁网",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "Mysteel早报：味精暂时高位暂稳（20260325）",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "国海化工|基础化工行业周报：原油成本高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI 需求大周期_新浪财经_新浪网",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "国海化工|基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期+AI需求大周期|红利ETF港股广发|现金流|股息率|甲醇|尿素_新浪新闻",
+                "trunk": "",
+                "secu_list": []
+              }
+            ]
+          }
+        ],
+        "results": [
+          {
+            "title": "基础化工行业周报：原油价格高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI需求大周期",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期需求大周期+AI",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "国海化工|基础化工行业周报：原油成本高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI 需求大周期_新浪财经_新浪网",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "国海化工|基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期+AI需求大周期|红利ETF港股广发|现金流|股息率|甲醇|尿素_新浪新闻",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "化工：原料涨价及海外产能占比高，蛋氨酸、MDI/TDI及维生素等持续涨价",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "Mysteel早报：味精出货价格继续偏强（20260331）-我的钢铁网",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "Mysteel早报：近期味精企业暂时稳价出货（20260326）_我的钢铁网",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "Mysteel早报：味精暂时高位暂稳（20260325）",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "deduped_results_count": 11,
+        "reranked_results_count": 8,
+        "retry_attempts": [
+          {
+            "attempt": 1,
+            "layer": "industry",
+            "queries": [
+              "赖氨酸 苏氨酸 味精 近期价格 玉米 饲料需求 产能 出口"
+            ],
+            "raw_results_count": 11,
+            "deduped_results_count": 11,
+            "reranked_results_count": 8,
+            "query_results": [
+              {
+                "query": "赖氨酸 苏氨酸 味精 近期价格 玉米 饲料需求 产能 出口",
+                "results_count": 11,
+                "results": [
+                  {
+                    "title": "化工新材料周报：本周氧气、SAF、磷酸铁锂等涨价",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "2025年业绩大幅增长，强化股东回报",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "基础化工行业周报：原油价格高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI需求大周期",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "化工新材料周报：本周EVA等涨价，特斯拉第三代Optimus宣布年底投产",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期需求大周期+AI",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "化工：原料涨价及海外产能占比高，蛋氨酸、MDI/TDI及维生素等持续涨价",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "Mysteel早报：味精出货价格继续偏强（20260331）-我的钢铁网",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "Mysteel早报：近期味精企业暂时稳价出货（20260326）_我的钢铁网",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "Mysteel早报：味精暂时高位暂稳（20260325）",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "国海化工|基础化工行业周报：原油成本高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI 需求大周期_新浪财经_新浪网",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "国海化工|基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期+AI需求大周期|红利ETF港股广发|现金流|股息率|甲醇|尿素_新浪新闻",
+                    "trunk": "",
+                    "secu_list": []
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "retry_used": false,
+        "final_attempt": 1
+      },
+      "global_search": {
+        "queries": [
+          "近期 玉米 豆粕 价格 美元 汇率 能源 关税 运费"
+        ],
+        "query_results": [
+          {
+            "query": "近期 玉米 豆粕 价格 美元 汇率 能源 关税 运费",
+            "results_count": 15,
+            "results": [
+              {
+                "title": "农产品 | 中国放宽巴西大豆中杂草含量的相关规定 进口大豆到港清关问题将解决",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "华夏饲料豆粕期货交易型开放式证券投资基金发起式联接基金2025年年度报告",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "农产品日报：需求略显疲软，豆粕维持震荡",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "豆粕二季度展望：国内季节性累库，关注美国新作情况",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "双粕2026商品季度报告：集中供应价格承压 关注原油连锁反应新冲击",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "光期农产品：玉米、淀粉季报",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "玉米类市场周报：小麦替代优势显现 玉米期价高位震荡",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "粕类油脂周报",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "玉米期货日报",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "豆粕每日报告",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "不接受预付款！新希望、海大、安佑、大台农.再次集体涨价，最高上涨125元",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "【晨会纪要】2026年4月1日晨会纪要",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "真是没想到，中东打仗的蝴蝶效应，竟扇到了中国猪圈 - 今日头条Loading.",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "真是没想到，中东打仗扇动蝴蝶效应，中国猪圈成了最大受害者 - 今日头条Loading.",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "玉米阶段供需宽松  期现偏弱震荡-饲料行业信息网玉米阶段供需宽松  期现偏弱震荡-饲料行业信息网-",
+                "trunk": "",
+                "secu_list": []
+              }
+            ]
+          }
+        ],
+        "results": [
+          {
+            "title": "双粕2026商品季度报告：集中供应价格承压 关注原油连锁反应新冲击",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "农产品日报：需求略显疲软，豆粕维持震荡",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "真是没想到，中东打仗的蝴蝶效应，竟扇到了中国猪圈 - 今日头条Loading.",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "真是没想到，中东打仗扇动蝴蝶效应，中国猪圈成了最大受害者 - 今日头条Loading.",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "deduped_results_count": 15,
+        "reranked_results_count": 4,
+        "retry_attempts": [
+          {
+            "attempt": 1,
+            "layer": "global",
+            "queries": [
+              "近期 玉米 豆粕 价格 美元 汇率 能源 关税 运费"
+            ],
+            "raw_results_count": 15,
+            "deduped_results_count": 15,
+            "reranked_results_count": 4,
+            "query_results": [
+              {
+                "query": "近期 玉米 豆粕 价格 美元 汇率 能源 关税 运费",
+                "results_count": 15,
+                "results": [
+                  {
+                    "title": "农产品 | 中国放宽巴西大豆中杂草含量的相关规定 进口大豆到港清关问题将解决",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "华夏饲料豆粕期货交易型开放式证券投资基金发起式联接基金2025年年度报告",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "农产品日报：需求略显疲软，豆粕维持震荡",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "豆粕二季度展望：国内季节性累库，关注美国新作情况",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "双粕2026商品季度报告：集中供应价格承压 关注原油连锁反应新冲击",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "光期农产品：玉米、淀粉季报",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "玉米类市场周报：小麦替代优势显现 玉米期价高位震荡",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "粕类油脂周报",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "玉米期货日报",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "豆粕每日报告",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "不接受预付款！新希望、海大、安佑、大台农.再次集体涨价，最高上涨125元",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "【晨会纪要】2026年4月1日晨会纪要",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "真是没想到，中东打仗的蝴蝶效应，竟扇到了中国猪圈 - 今日头条Loading.",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "真是没想到，中东打仗扇动蝴蝶效应，中国猪圈成了最大受害者 - 今日头条Loading.",
+                    "trunk": "",
+                    "secu_list": []
+                  },
+                  {
+                    "title": "玉米阶段供需宽松  期现偏弱震荡-饲料行业信息网玉米阶段供需宽松  期现偏弱震荡-饲料行业信息网-",
+                    "trunk": "",
+                    "secu_list": []
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "retry_used": false,
+        "final_attempt": 1
+      },
+      "normalized_company_events": [
+        {
+          "event_key": "company:earnings",
+          "layer": "company",
+          "event_type": "earnings",
+          "title": "梅花生物：公司年报中有关于税收政策的详细介绍",
+          "direction": "neutral",
+          "importance": 0.58,
+          "time_horizon": "medium_term",
+          "affected_variables": [
+            "earnings"
+          ],
+          "dimensions": {
+            "earnings": [
+              "年报"
+            ]
+          },
+          "evidence_titles": [
+            "梅花生物：公司年报中有关于税收政策的详细介绍"
+          ],
+          "evidence_items": [
+            {
+              "title": "梅花生物：公司年报中有关于税收政策的详细介绍",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "公司层事件聚焦于earnings，共聚合 1 条证据。"
+        },
+        {
+          "event_key": "company:capital_markets",
+          "layer": "company",
+          "event_type": "mna",
+          "title": "梅花生物：76名管理层拟增持3.04亿元至3.50亿元股份",
+          "direction": "bullish",
+          "importance": 0.58,
+          "time_horizon": "medium_term",
+          "affected_variables": [
+            "capital_markets"
+          ],
+          "dimensions": {
+            "capital_markets": [
+              "增持"
+            ]
+          },
+          "evidence_titles": [
+            "梅花生物：76名管理层拟增持3.04亿元至3.50亿元股份"
+          ],
+          "evidence_items": [
+            {
+              "title": "梅花生物：76名管理层拟增持3.04亿元至3.50亿元股份",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "公司层事件聚焦于capital_markets，共聚合 1 条证据。"
+        },
+        {
+          "event_key": "company:梅花生物 公司正在按照既定的计划对收购的海外业务进行整合 证券日报网 证券日报网",
+          "layer": "company",
+          "event_type": "other",
+          "title": "梅花生物：公司正在按照既定的计划对收购的海外业务进行整合-证券日报网-证券日报网",
+          "direction": "neutral",
+          "importance": 0.5,
+          "time_horizon": "medium_term",
+          "affected_variables": [],
+          "dimensions": {},
+          "evidence_titles": [
+            "梅花生物：公司正在按照既定的计划对收购的海外业务进行整合-证券日报网-证券日报网"
+          ],
+          "evidence_items": [
+            {
+              "title": "梅花生物：公司正在按照既定的计划对收购的海外业务进行整合-证券日报网-证券日报网",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "公司层事件聚焦于经营变化，共聚合 1 条证据。"
+        },
+        {
+          "event_key": "company:梅花生物 关于完成工商变更登记并换发营业执照的公告 证券日报网 证券日报网",
+          "layer": "company",
+          "event_type": "other",
+          "title": "梅花生物：关于完成工商变更登记并换发营业执照的公告-证券日报网-证券日报网",
+          "direction": "neutral",
+          "importance": 0.5,
+          "time_horizon": "medium_term",
+          "affected_variables": [],
+          "dimensions": {},
+          "evidence_titles": [
+            "梅花生物：关于完成工商变更登记并换发营业执照的公告-证券日报网-证券日报网"
+          ],
+          "evidence_items": [
+            {
+              "title": "梅花生物：关于完成工商变更登记并换发营业执照的公告-证券日报网-证券日报网",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "公司层事件聚焦于经营变化，共聚合 1 条证据。"
+        },
+        {
+          "event_key": "company:梅花生物 梅花生物关于完成工商变更登记并换发营业执照的公告",
+          "layer": "company",
+          "event_type": "other",
+          "title": "梅花生物:梅花生物关于完成工商变更登记并换发营业执照的公告",
+          "direction": "neutral",
+          "importance": 0.5,
+          "time_horizon": "medium_term",
+          "affected_variables": [],
+          "dimensions": {},
+          "evidence_titles": [
+            "梅花生物:梅花生物关于完成工商变更登记并换发营业执照的公告"
+          ],
+          "evidence_items": [
+            {
+              "title": "梅花生物:梅花生物关于完成工商变更登记并换发营业执照的公告",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "公司层事件聚焦于经营变化，共聚合 1 条证据。"
+        },
+        {
+          "event_key": "company:梅花生物近一周股价下跌9 81 振幅达13 10 经济观察网 专业财经新闻网站",
+          "layer": "company",
+          "event_type": "other",
+          "title": "梅花生物近一周股价下跌9.81% 振幅达13.10% - 经济观察网 － 专业财经新闻网站",
+          "direction": "neutral",
+          "importance": 0.5,
+          "time_horizon": "medium_term",
+          "affected_variables": [],
+          "dimensions": {},
+          "evidence_titles": [
+            "梅花生物近一周股价下跌9.81% 振幅达13.10% - 经济观察网 － 专业财经新闻网站"
+          ],
+          "evidence_items": [
+            {
+              "title": "梅花生物近一周股价下跌9.81% 振幅达13.10% - 经济观察网 － 专业财经新闻网站",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "公司层事件聚焦于经营变化，共聚合 1 条证据。"
+        },
+        {
+          "event_key": "company:梅花生物股票行情分析 主力资金流出与财报亮点交织的未来展望 市场 该公司 方面",
+          "layer": "company",
+          "event_type": "other",
+          "title": "梅花生物股票行情分析：主力资金流出与财报亮点交织的未来展望！_市场_该公司_方面",
+          "direction": "neutral",
+          "importance": 0.5,
+          "time_horizon": "medium_term",
+          "affected_variables": [],
+          "dimensions": {},
+          "evidence_titles": [
+            "梅花生物股票行情分析：主力资金流出与财报亮点交织的未来展望！_市场_该公司_方面"
+          ],
+          "evidence_items": [
+            {
+              "title": "梅花生物股票行情分析：主力资金流出与财报亮点交织的未来展望！_市场_该公司_方面",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "公司层事件聚焦于经营变化，共聚合 1 条证据。"
+        },
+        {
+          "event_key": "company:生物基材料 替代石油基 概念龙头 研发实力大比拼 凯赛生物 华恒生物 嘉必优 梅花生物 星湖科技",
+          "layer": "company",
+          "event_type": "other",
+          "title": "生物基材料（替代石油基）概念龙头-研发实力大比拼：凯赛生物、华恒生物、嘉必优、梅花生物、星湖科技",
+          "direction": "neutral",
+          "importance": 0.5,
+          "time_horizon": "medium_term",
+          "affected_variables": [],
+          "dimensions": {},
+          "evidence_titles": [
+            "生物基材料（替代石油基）概念龙头-研发实力大比拼：凯赛生物、华恒生物、嘉必优、梅花生物、星湖科技"
+          ],
+          "evidence_items": [
+            {
+              "title": "生物基材料（替代石油基）概念龙头-研发实力大比拼：凯赛生物、华恒生物、嘉必优、梅花生物、星湖科技",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "公司层事件聚焦于经营变化，共聚合 1 条证据。"
+        }
+      ],
+      "normalized_industry_events": [
+        {
+          "event_key": "industry:demand|price_cycle",
+          "layer": "industry",
+          "event_type": "industry_cycle",
+          "title": "基础化工行业周报：原油价格高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI需求大周期",
+          "direction": "neutral",
+          "importance": 1.0,
+          "time_horizon": "short_term",
+          "affected_variables": [
+            "demand",
+            "price_cycle",
+            "supply"
+          ],
+          "dimensions": {
+            "supply": [
+              "产能"
+            ],
+            "demand": [
+              "需求"
+            ],
+            "price_cycle": [
+              "价格",
+              "油价",
+              "周期"
+            ]
+          },
+          "evidence_titles": [
+            "基础化工行业周报：原油价格高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI需求大周期",
+            "基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期需求大周期+AI",
+            "国海化工|基础化工行业周报：原油成本高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI 需求大周期_新浪财经_新浪网",
+            "国海化工|基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期+AI需求大周期|红利ETF港股广发|现金流|股息率|甲醇|尿素_新浪新闻",
+            "Mysteel早报：味精出货价格继续偏强（20260331）-我的钢铁网"
+          ],
+          "evidence_items": [
+            {
+              "title": "基础化工行业周报：原油价格高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI需求大周期",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期需求大周期+AI",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "国海化工|基础化工行业周报：原油成本高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI 需求大周期_新浪财经_新浪网",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "国海化工|基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期+AI需求大周期|红利ETF港股广发|现金流|股息率|甲醇|尿素_新浪新闻",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "Mysteel早报：味精出货价格继续偏强（20260331）-我的钢铁网",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "行业层事件聚焦于demand、price_cycle、supply，共聚合 5 条证据。"
+        },
+        {
+          "event_key": "industry:supply",
+          "layer": "industry",
+          "event_type": "industry_cycle",
+          "title": "化工：原料涨价及海外产能占比高，蛋氨酸、MDI/TDI及维生素等持续涨价",
+          "direction": "neutral",
+          "importance": 0.58,
+          "time_horizon": "medium_term",
+          "affected_variables": [
+            "supply"
+          ],
+          "dimensions": {
+            "supply": [
+              "产能"
+            ]
+          },
+          "evidence_titles": [
+            "化工：原料涨价及海外产能占比高，蛋氨酸、MDI/TDI及维生素等持续涨价"
+          ],
+          "evidence_items": [
+            {
+              "title": "化工：原料涨价及海外产能占比高，蛋氨酸、MDI/TDI及维生素等持续涨价",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "行业层事件聚焦于supply，共聚合 1 条证据。"
+        },
+        {
+          "event_key": "industry:demand",
+          "layer": "industry",
+          "event_type": "industry_cycle",
+          "title": "Mysteel早报：近期味精企业暂时稳价出货（20260326）_我的钢铁网",
+          "direction": "neutral",
+          "importance": 0.58,
+          "time_horizon": "medium_term",
+          "affected_variables": [
+            "demand"
+          ],
+          "dimensions": {
+            "demand": [
+              "出货"
+            ]
+          },
+          "evidence_titles": [
+            "Mysteel早报：近期味精企业暂时稳价出货（20260326）_我的钢铁网"
+          ],
+          "evidence_items": [
+            {
+              "title": "Mysteel早报：近期味精企业暂时稳价出货（20260326）_我的钢铁网",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "行业层事件聚焦于demand，共聚合 1 条证据。"
+        },
+        {
+          "event_key": "industry:mysteel早报 味精暂时高位暂稳 20260325",
+          "layer": "industry",
+          "event_type": "other",
+          "title": "Mysteel早报：味精暂时高位暂稳（20260325）",
+          "direction": "neutral",
+          "importance": 0.5,
+          "time_horizon": "medium_term",
+          "affected_variables": [],
+          "dimensions": {},
+          "evidence_titles": [
+            "Mysteel早报：味精暂时高位暂稳（20260325）"
+          ],
+          "evidence_items": [
+            {
+              "title": "Mysteel早报：味精暂时高位暂稳（20260325）",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+        }
+      ],
+      "normalized_global_events": [
+        {
+          "event_key": "global:geopolitics",
+          "layer": "global",
+          "event_type": "geopolitics",
+          "title": "真是没想到，中东打仗的蝴蝶效应，竟扇到了中国猪圈 - 今日头条Loading.",
+          "direction": "neutral",
+          "importance": 0.73,
+          "time_horizon": "medium_term",
+          "affected_variables": [
+            "geopolitics"
+          ],
+          "dimensions": {
+            "trigger": [
+              "geopolitics"
+            ],
+            "transmission": []
+          },
+          "evidence_titles": [
+            "真是没想到，中东打仗的蝴蝶效应，竟扇到了中国猪圈 - 今日头条Loading.",
+            "真是没想到，中东打仗扇动蝴蝶效应，中国猪圈成了最大受害者 - 今日头条Loading."
+          ],
+          "evidence_items": [
+            {
+              "title": "真是没想到，中东打仗的蝴蝶效应，竟扇到了中国猪圈 - 今日头条Loading.",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "真是没想到，中东打仗扇动蝴蝶效应，中国猪圈成了最大受害者 - 今日头条Loading.",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "全球层事件聚焦于geopolitics，共聚合 2 条证据。"
+        },
+        {
+          "event_key": "global:commodity|pricing",
+          "layer": "global",
+          "event_type": "commodity",
+          "title": "双粕2026商品季度报告：集中供应价格承压 关注原油连锁反应新冲击",
+          "direction": "neutral",
+          "importance": 0.66,
+          "time_horizon": "short_term",
+          "affected_variables": [
+            "commodity",
+            "pricing"
+          ],
+          "dimensions": {
+            "trigger": [
+              "commodity"
+            ],
+            "transmission": [
+              "pricing"
+            ]
+          },
+          "evidence_titles": [
+            "双粕2026商品季度报告：集中供应价格承压 关注原油连锁反应新冲击"
+          ],
+          "evidence_items": [
+            {
+              "title": "双粕2026商品季度报告：集中供应价格承压 关注原油连锁反应新冲击",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "全球层事件聚焦于commodity、pricing，共聚合 1 条证据。"
+        },
+        {
+          "event_key": "global:supply_demand",
+          "layer": "global",
+          "event_type": "other",
+          "title": "农产品日报：需求略显疲软，豆粕维持震荡",
+          "direction": "neutral",
+          "importance": 0.58,
+          "time_horizon": "medium_term",
+          "affected_variables": [
+            "supply_demand"
+          ],
+          "dimensions": {
+            "trigger": [],
+            "transmission": [
+              "supply_demand"
+            ]
+          },
+          "evidence_titles": [
+            "农产品日报：需求略显疲软，豆粕维持震荡"
+          ],
+          "evidence_items": [
+            {
+              "title": "农产品日报：需求略显疲软，豆粕维持震荡",
+              "trunk": "",
+              "secu_list": []
+            }
+          ],
+          "summary": "全球层事件聚焦于supply_demand，共聚合 1 条证据。"
+        }
+      ],
+      "event_chain": {
+        "global_triggers": [
+          "中东地缘政治风险",
+          "原油价格高位运行",
+          "农产品/饲料需求疲软"
+        ],
+        "industry_variables": [
+          "味精价格高位偏强",
+          "海外化工产能退出预期",
+          "化工旺季需求回暖",
+          "蛋氨酸/维生素涨价传导"
+        ],
+        "company_impacts": [
+          "管理层增持支撑股价预期",
+          "味精业务毛利率受益价格高位",
+          "海外业务整合推进",
+          "饲料氨基酸业务待验证"
+        ],
+        "missing_links": [
+          "缺赖氨酸/苏氨酸/色氨酸等核心饲料氨基酸的实时价格数据",
+          "缺公司饲料氨基酸业务占比及盈利结构的具体数据",
+          "缺海外产能退出对氨基酸细分品种的实际影响验证",
+          "缺下游饲料/养殖需求回暖的明确信号"
+        ]
+      },
+      "event_context_snapshot": {
+        "company_event_strength": "medium",
+        "industry_context_strength": "medium",
+        "global_context_strength": "medium",
+        "chain_completeness": "partial",
+        "dominant_driver_layer": "company",
+        "dominant_driver_type": "buyback",
+        "primary_bullish_variable": "capital_markets",
+        "primary_bearish_variable": "price_volatility",
+        "most_actionable_catalyst": "管理层大额增持计划",
+        "most_critical_risk": "核心饲料氨基酸价格信号缺失"
+      }
+    },
+    "data_quality": {
+      "company_news_count": 8,
+      "macro_news_count": 8,
+      "announcements_count": 0,
+      "market_events_count": 0,
+      "source": "mx_search+tushare"
+    }
+  },
+  "analysis_result": {
+    "ticker": "600873.SH",
+    "effective_trade_date": "2026-04-02",
+    "event_overview": {
+      "state": "mixed",
+      "summary": "管理层大额增持构成短期正面催化，但股价近期大幅波动（周跌9.81%）反映市场情绪分歧；行业层面味精价格高位偏强，但赖氨酸/苏氨酸等核心饲料氨基酸价格信号缺失，海外产能退出逻辑对氨基酸板块传导尚不明确。",
+      "confidence": 0.65
+    },
+    "company_specific_events": [
+      {
+        "event_type": "buyback",
+        "title": "76名管理层拟增持3.04亿元至3.50亿元股份",
+        "direction": "bullish",
+        "importance": 0.75,
+        "time_horizon": "short_term",
+        "affected_variables": [
+          "capital_markets",
+          "valuation_expectation",
+          "management_confidence"
+        ],
+        "evidence": [
+          "梅花生物：76名管理层拟增持3.04亿元至3.50亿元股份"
+        ],
+        "summary": "管理层大额增持释放信心信号，短期支撑股价，但需关注增持执行节奏及市场跟风效应。"
+      },
+      {
+        "event_type": "earnings",
+        "title": "年报税收政策披露",
+        "direction": "neutral",
+        "importance": 0.55,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "earnings",
+          "tax_policy"
+        ],
+        "evidence": [
+          "梅花生物：公司年报中有关于税收政策的详细介绍"
+        ],
+        "summary": "年报已发布，税收政策细节披露，但无超预期信息，属于常规信息披露。"
+      },
+      {
+        "event_type": "mna",
+        "title": "海外业务整合推进",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "business_integration",
+          "overseas_expansion"
+        ],
+        "evidence": [
+          "梅花生物：公司正在按照既定的计划对收购的海外业务进行整合-证券日报网-证券日报网"
+        ],
+        "summary": "海外并购后整合按计划进行，属中长期战略执行，短期无明确业绩影响信号。"
+      }
+    ],
+    "industry_macro_events": [
+      {
+        "event_type": "industry_cycle",
+        "title": "味精价格高位偏强，化工品旺季来临",
+        "direction": "bullish",
+        "importance": 0.7,
+        "time_horizon": "short_term",
+        "affected_variables": [
+          "product_price",
+          "demand",
+          "margin"
+        ],
+        "evidence": [
+          "Mysteel早报：味精出货价格继续偏强（20260331）-我的钢铁网",
+          "Mysteel早报：近期味精企业暂时稳价出货（20260326）_我的钢铁网",
+          "基础化工行业周报：周内化工品价格走高，关注化工旺季到来"
+        ],
+        "summary": "味精价格维持高位偏强态势，行业进入传统旺季，对公司食品味觉性状优化产品业务形成支撑。"
+      },
+      {
+        "event_type": "commodity",
+        "title": "原油价格高位运行，海外化工产能加速退出",
+        "direction": "neutral",
+        "importance": 0.65,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "cost_structure",
+          "supply",
+          "competitive_landscape"
+        ],
+        "evidence": [
+          "基础化工行业周报：原油价格高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI需求大周期",
+          "化工：原料涨价及海外产能占比高，蛋氨酸、MDI/TDI及维生素等持续涨价"
+        ],
+        "summary": "油价高位推升成本，海外产能退出利好蛋氨酸、维生素等品种，但对味精、赖氨酸等发酵类氨基酸的直接传导需进一步验证。"
+      },
+      {
+        "event_type": "geopolitics",
+        "title": "中东局势对农产品/饲料链的潜在影响",
+        "direction": "bearish",
+        "importance": 0.55,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "feed_demand",
+          "agricultural_commodity_price"
+        ],
+        "evidence": [
+          "真是没想到，中东打仗的蝴蝶效应，竟扇到了中国猪圈 - 今日头条Loading.",
+          "农产品日报：需求略显疲软，豆粕维持震荡"
+        ],
+        "summary": "地缘政治扰动可能通过能源-农产品-饲料链条传导，当前豆粕需求疲软，需关注对下游养殖及饲料氨基酸需求的间接影响。"
+      }
+    ],
+    "event_compact_signals": {
+      "company_event_bias": "positive",
+      "macro_event_bias": "none",
+      "event_density": "high",
+      "policy_sensitivity": "medium",
+      "earnings_catalyst_state": "none",
+      "risk_event_level": "high"
+    },
+    "event_context_snapshot": {
+      "company_event_strength": "medium",
+      "industry_context_strength": "medium",
+      "global_context_strength": "medium",
+      "chain_completeness": "partial",
+      "dominant_driver_layer": "company",
+      "dominant_driver_type": "buyback",
+      "primary_bullish_variable": "capital_markets",
+      "primary_bearish_variable": "price_volatility",
+      "most_actionable_catalyst": "管理层大额增持计划",
+      "most_critical_risk": "核心饲料氨基酸价格信号缺失"
+    },
+    "event_chain": {
+      "global_triggers": [
+        "中东地缘政治风险",
+        "原油价格高位运行",
+        "农产品/饲料需求疲软"
+      ],
+      "industry_variables": [
+        "味精价格高位偏强",
+        "海外化工产能退出预期",
+        "化工旺季需求回暖",
+        "蛋氨酸/维生素涨价传导"
+      ],
+      "company_impacts": [
+        "管理层增持支撑股价预期",
+        "味精业务毛利率受益价格高位",
+        "海外业务整合推进",
+        "饲料氨基酸业务待验证"
+      ],
+      "missing_links": [
+        "缺赖氨酸/苏氨酸/色氨酸等核心饲料氨基酸的实时价格数据",
+        "缺公司饲料氨基酸业务占比及盈利结构的具体数据",
+        "缺海外产能退出对氨基酸细分品种的实际影响验证",
+        "缺下游饲料/养殖需求回暖的明确信号"
+      ]
+    },
+    "key_catalysts": [
+      "管理层3-3.5亿元大额增持计划的执行进度",
+      "味精价格高位持续性及旺季需求验证",
+      "海外化工产能退出对氨基酸行业的实际供给收缩效应",
+      "公司饲料氨基酸业务订单/价格回暖信号"
+    ],
+    "key_risks": [
+      "股价近期大幅波动（周跌9.81%）反映的市场情绪分歧",
+      "核心饲料氨基酸（赖氨酸、苏氨酸）价格走势不明",
+      "下游饲料需求疲软对氨基酸需求的拖累",
+      "地缘政治对能源-农产品成本链的扰动"
+    ],
+    "tracking_points": [
+      "管理层增持公告后的实际成交披露",
+      "Mysteel/Myspic味精、赖氨酸、苏氨酸周度价格数据",
+      "公司饲料氨基酸板块订单及开工率变化",
+      "海外化工产能退出事件的后续进展",
+      "下游养殖/饲料行业补库存节奏"
+    ],
+    "event_summary_zh": "【事件核心】梅花生物当前处于管理层增持催化与行业价格信号分化交织的状态。公司层面，76名管理层拟增持3.04-3.50亿元构成短期最强正面催化，但股价近一周下跌9.81%、振幅13.10%显示市场情绪存在明显分歧。行业层面，味精价格维持高位偏强（Mysteel 3月31日数据）对公司食品业务形成支撑，但赖氨酸、苏氨酸等核心饲料氨基酸的价格走势缺乏明确信号，海外产能退出逻辑对氨基酸细分品种的传导尚待验证。全球层面，中东地缘政治与原油价格高位运行通过成本链条产生间接影响，豆粕需求疲软暗示下游饲料需求尚未明显回暖。主导催化：管理层大额增持释放信心+味精价格高位；主要风险：核心饲料氨基酸价格不明+股价波动放大；影响路径：增持支撑估值底线→味精业务贡献毛利→饲料氨基酸待需求验证；后续观察：增持执行进度、赖氨酸苏氨酸价格、饲料需求回暖信号。"
+  },
+  "raw_response": "```json\n{\n  \"ticker\": \"600873.SH\",\n  \"effective_trade_date\": \"2026-04-02\",\n  \"event_overview\": {\n    \"state\": \"mixed\",\n    \"summary\": \"管理层大额增持构成短期正面催化，但股价近期大幅波动（周跌9.81%）反映市场情绪分歧；行业层面味精价格高位偏强，但赖氨酸/苏氨酸等核心饲料氨基酸价格信号缺失，海外产能退出逻辑对氨基酸板块传导尚不明确。\",\n    \"confidence\": 0.65\n  },\n  \"company_specific_events\": [\n    {\n      \"event_type\": \"buyback\",\n      \"title\": \"76名管理层拟增持3.04亿元至3.50亿元股份\",\n      \"direction\": \"bullish\",\n      \"importance\": 0.75,\n      \"time_horizon\": \"short_term\",\n      \"affected_variables\": [\"capital_markets\", \"valuation_expectation\", \"management_confidence\"],\n      \"evidence\": [\"梅花生物：76名管理层拟增持3.04亿元至3.50亿元股份\"],\n      \"summary\": \"管理层大额增持释放信心信号，短期支撑股价，但需关注增持执行节奏及市场跟风效应。\"\n    },\n    {\n      \"event_type\": \"earnings\",\n      \"title\": \"年报税收政策披露\",\n      \"direction\": \"neutral\",\n      \"importance\": 0.55,\n      \"time_horizon\": \"medium_term\",\n      \"affected_variables\": [\"earnings\", \"tax_policy\"],\n      \"evidence\": [\"梅花生物：公司年报中有关于税收政策的详细介绍\"],\n      \"summary\": \"年报已发布，税收政策细节披露，但无超预期信息，属于常规信息披露。\"\n    },\n    {\n      \"event_type\": \"mna\",\n      \"title\": \"海外业务整合推进\",\n      \"direction\": \"neutral\",\n      \"importance\": 0.5,\n      \"time_horizon\": \"medium_term\",\n      \"affected_variables\": [\"business_integration\", \"overseas_expansion\"],\n      \"evidence\": [\"梅花生物：公司正在按照既定的计划对收购的海外业务进行整合-证券日报网-证券日报网\"],\n      \"summary\": \"海外并购后整合按计划进行，属中长期战略执行，短期无明确业绩影响信号。\"\n    }\n  ],\n  \"industry_macro_events\": [\n    {\n      \"event_type\": \"industry_cycle\",\n      \"title\": \"味精价格高位偏强，化工品旺季来临\",\n      \"direction\": \"bullish\",\n      \"importance\": 0.7,\n      \"time_horizon\": \"short_term\",\n      \"affected_variables\": [\"product_price\", \"demand\", \"margin\"],\n      \"evidence\": [\n        \"Mysteel早报：味精出货价格继续偏强（20260331）-我的钢铁网\",\n        \"Mysteel早报：近期味精企业暂时稳价出货（20260326）_我的钢铁网\",\n        \"基础化工行业周报：周内化工品价格走高，关注化工旺季到来\"\n      ],\n      \"summary\": \"味精价格维持高位偏强态势，行业进入传统旺季，对公司食品味觉性状优化产品业务形成支撑。\"\n    },\n    {\n      \"event_type\": \"commodity\",\n      \"title\": \"原油价格高位运行，海外化工产能加速退出\",\n      \"direction\": \"neutral\",\n      \"importance\": 0.65,\n      \"time_horizon\": \"medium_term\",\n      \"affected_variables\": [\"cost_structure\", \"supply\", \"competitive_landscape\"],\n      \"evidence\": [\n        \"基础化工行业周报：原油价格高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI需求大周期\",\n        \"化工：原料涨价及海外产能占比高，蛋氨酸、MDI/TDI及维生素等持续涨价\"\n      ],\n      \"summary\": \"油价高位推升成本，海外产能退出利好蛋氨酸、维生素等品种，但对味精、赖氨酸等发酵类氨基酸的直接传导需进一步验证。\"\n    },\n    {\n      \"event_type\": \"geopolitics\",\n      \"title\": \"中东局势对农产品/饲料链的潜在影响\",\n      \"direction\": \"bearish\",\n      \"importance\": 0.55,\n      \"time_horizon\": \"medium_term\",\n      \"affected_variables\": [\"feed_demand\", \"agricultural_commodity_price\"],\n      \"evidence\": [\n        \"真是没想到，中东打仗的蝴蝶效应，竟扇到了中国猪圈 - 今日头条Loading.\",\n        \"农产品日报：需求略显疲软，豆粕维持震荡\"\n      ],\n      \"summary\": \"地缘政治扰动可能通过能源-农产品-饲料链条传导，当前豆粕需求疲软，需关注对下游养殖及饲料氨基酸需求的间接影响。\"\n    }\n  ],\n  \"event_compact_signals\": {\n    \"company_event_bias\": \"positive\",\n    \"macro_event_bias\": \"neutral\",\n    \"event_density\": \"high\",\n    \"policy_sensitivity\": \"medium\",\n    \"earnings_catalyst_state\": \"post_earnings\",\n    \"risk_event_level\": \"medium\"\n  },\n  \"event_context_snapshot\": {\n    \"company_event_strength\": \"medium\",\n    \"industry_context_strength\": \"medium\",\n    \"global_context_strength\": \"medium\",\n    \"chain_completeness\": \"partial\",\n    \"dominant_driver_layer\": \"company\",\n    \"dominant_driver_type\": \"buyback\",\n    \"primary_bullish_variable\": \"capital_markets\",\n    \"primary_bearish_variable\": \"price_volatility\",\n    \"most_actionable_catalyst\": \"管理层大额增持计划\",\n    \"most_critical_risk\": \"核心饲料氨基酸价格信号缺失\"\n  },\n  \"event_chain\": {\n    \"global_triggers\": [\n      \"中东地缘政治风险\",\n      \"原油价格高位运行\",\n      \"农产品/饲料需求疲软\"\n    ],\n    \"industry_variables\": [\n      \"味精价格高位偏强\",\n      \"海外化工产能退出预期\",\n      \"化工旺季需求回暖\",\n      \"蛋氨酸/维生素涨价传导\"\n    ],\n    \"company_impacts\": [\n      \"管理层增持支撑股价预期\",\n      \"味精业务毛利率受益价格高位\",\n      \"海外业务整合推进\",\n      \"饲料氨基酸业务待验证\"\n    ],\n    \"missing_links\": [\n      \"缺赖氨酸/苏氨酸/色氨酸等核心饲料氨基酸的实时价格数据\",\n      \"缺公司饲料氨基酸业务占比及盈利结构的具体数据\",\n      \"缺海外产能退出对氨基酸细分品种的实际影响验证\",\n      \"缺下游饲料/养殖需求回暖的明确信号\"\n    ]\n  },\n  \"key_cata...<truncated>",
+  "company_context": {
+    "identity": {
+      "ticker": "600873.SH",
+      "company_name": "梅花生物",
+      "exchange": "SH",
+      "market": "A_share"
+    },
+    "analysis_time": {
+      "requested_date": "2026-04-02",
+      "effective_date": "2026-04-02",
+      "date_mode": "natural_day"
+    },
+    "classification": {
+      "industry": "食品",
+      "company_type": "consumer_healthcare_growth",
+      "style_tag": "consumer_healthcare_growth",
+      "size_bucket": "small_cap",
+      "liquidity_bucket": "low"
+    },
+    "business_context": {
+      "sub_industry": "食品及饲料添加剂",
+      "business_model": "味精,氨基酸,有机肥等生物发酵产品的生产及销售.",
+      "company_intro": "公司是全球领先的氨基酸营养健康解决方案提供商。公司通过为全球100多个国家和地区多家知名客户提供各类氨基酸产品及使用解决方案，让全世界用户享有技术的全方位沟通。梅花集团拥有生物发酵行业中最完整的、最长的产业链和配套设施，通过全系列的研、产、供、销服务，灵活满足全球不同客户的差异化需求以及快速创新的追求，专注于打造生物发酵和生物制药的高端产业平台。",
+      "core_products": [
+        "动物营养氨基酸",
+        "食品味觉性状优化产品",
+        "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+        "味精及谷氨酸",
+        "氨基酸产品"
+      ],
+      "main_business_items": [
+        "动物营养氨基酸",
+        "食品味觉性状优化产品",
+        "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+        "味精及谷氨酸",
+        "氨基酸产品",
+        "大原料副产品(肥料、蛋白粉、胚芽、玉米皮粉、饲料纤维等)",
+        "综合产品及其他",
+        "食品添加剂"
+      ],
+      "demand_drivers": [],
+      "cost_drivers": [],
+      "policy_drivers": [],
+      "global_risk_drivers": []
+    },
+    "market_context": {
+      "valuation_style": "growth",
+      "market_attention_points": [],
+      "trading_sensitivity": []
+    },
+    "technical_context": {
+      "trend": {},
+      "momentum": {},
+      "volatility": {},
+      "volume_confirmation": {},
+      "relative_strength": {},
+      "technical_compact_signals": {},
+      "key_levels": {},
+      "signals": [],
+      "confidence": null,
+      "technical_summary_zh": ""
+    },
+    "fundamental_context": {
+      "company_profile": {},
+      "growth": {},
+      "profitability": {},
+      "cashflow_quality": {},
+      "balance_sheet_health": {},
+      "valuation": {},
+      "fundamental_compact_signals": {},
+      "financial_snapshot": {},
+      "core_risks": [],
+      "fundamental_signals": [],
+      "confidence": null,
+      "fundamental_summary_zh": ""
+    },
+    "event_context": {
+      "event_overview": {
+        "state": "mixed",
+        "summary": "管理层大额增持构成短期正面催化，但股价近期大幅波动（周跌9.81%）反映市场情绪分歧；行业层面味精价格高位偏强，但赖氨酸/苏氨酸等核心饲料氨基酸价格信号缺失，海外产能退出逻辑对氨基酸板块传导尚不明确。",
+        "confidence": 0.65
+      },
+      "event_compact_signals": {
+        "company_event_bias": "positive",
+        "macro_event_bias": "none",
+        "event_density": "high",
+        "policy_sensitivity": "medium",
+        "earnings_catalyst_state": "none",
+        "risk_event_level": "high"
+      },
+      "event_context_snapshot": {
+        "company_event_strength": "medium",
+        "industry_context_strength": "medium",
+        "global_context_strength": "medium",
+        "chain_completeness": "partial",
+        "dominant_driver_layer": "company",
+        "dominant_driver_type": "buyback",
+        "primary_bullish_variable": "capital_markets",
+        "primary_bearish_variable": "price_volatility",
+        "most_actionable_catalyst": "管理层大额增持计划",
+        "most_critical_risk": "核心饲料氨基酸价格信号缺失"
+      },
+      "event_chain": {
+        "global_triggers": [
+          "中东地缘政治风险",
+          "原油价格高位运行",
+          "农产品/饲料需求疲软"
+        ],
+        "industry_variables": [
+          "味精价格高位偏强",
+          "海外化工产能退出预期",
+          "化工旺季需求回暖",
+          "蛋氨酸/维生素涨价传导"
+        ],
+        "company_impacts": [
+          "管理层增持支撑股价预期",
+          "味精业务毛利率受益价格高位",
+          "海外业务整合推进",
+          "饲料氨基酸业务待验证"
+        ],
+        "missing_links": [
+          "缺赖氨酸/苏氨酸/色氨酸等核心饲料氨基酸的实时价格数据",
+          "缺公司饲料氨基酸业务占比及盈利结构的具体数据",
+          "缺海外产能退出对氨基酸细分品种的实际影响验证",
+          "缺下游饲料/养殖需求回暖的明确信号"
+        ]
+      },
+      "key_catalysts": [
+        "管理层3-3.5亿元大额增持计划的执行进度",
+        "味精价格高位持续性及旺季需求验证",
+        "海外化工产能退出对氨基酸行业的实际供给收缩效应",
+        "公司饲料氨基酸业务订单/价格回暖信号"
+      ],
+      "key_risks": [
+        "股价近期大幅波动（周跌9.81%）反映的市场情绪分歧",
+        "核心饲料氨基酸（赖氨酸、苏氨酸）价格走势不明",
+        "下游饲料需求疲软对氨基酸需求的拖累",
+        "地缘政治对能源-农产品成本链的扰动"
+      ],
+      "tracking_points": [
+        "管理层增持公告后的实际成交披露",
+        "Mysteel/Myspic味精、赖氨酸、苏氨酸周度价格数据",
+        "公司饲料氨基酸板块订单及开工率变化",
+        "海外化工产能退出事件的后续进展",
+        "下游养殖/饲料行业补库存节奏"
+      ],
+      "confidence": 0.65,
+      "event_summary_zh": "【事件核心】梅花生物当前处于管理层增持催化与行业价格信号分化交织的状态。公司层面，76名管理层拟增持3.04-3.50亿元构成短期最强正面催化，但股价近一周下跌9.81%、振幅13.10%显示市场情绪存在明显分歧。行业层面，味精价格维持高位偏强（Mysteel 3月31日数据）对公司食品业务形成支撑，但赖氨酸、苏氨酸等核心饲料氨基酸的价格走势缺乏明确信号，海外产能退出逻辑对氨基酸细分品种的传导尚待验证。全球层面，中东地缘政治与原油价格高位运行通过成本链条产生间接影响，豆粕需求疲软暗示下游饲料需求尚未明显回暖。主导催化：管理层大额增持释放信心+味精价格高位；主要风险：核心饲料氨基酸价格不明+股价波动放大；影响路径：增持支撑估值底线→味精业务贡献毛利→饲料氨基酸待需求验证；后续观察：增持执行进度、赖氨酸苏氨酸价格、饲料需求回暖信号。"
+    },
+    "search_context": {
+      "search_aliases": [
+        "梅花生物",
+        "梅花生物科技集团股份有限公司",
+        "动物营养氨基酸",
+        "食品味觉性状优化产品",
+        "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+        "味精及谷氨酸",
+        "基础化工",
+        "化学制品",
+        "食品及饲料添加剂"
+      ],
+      "seed_titles": [],
+      "ths_member_codes": [
+        "700001.TI",
+        "700002.TI",
+        "700003.TI",
+        "700004.TI",
+        "700008.TI",
+        "700009.TI",
+        "700010.TI",
+        "700021.TI",
+        "700023.TI",
+        "700031.TI",
+        "700032.TI",
+        "700035.TI"
+      ],
+      "ths_concepts": [
+        "日常消费品(A股)",
+        "食品、饮料与烟草(A股)",
+        "食品(A股)",
+        "农产品与服务(A股)",
+        "化学制品",
+        "西藏",
+        "增持计划",
+        "高股息股",
+        "回购计划",
+        "食品及饲料添加剂",
+        "融资融券",
+        "参股银行"
+      ],
+      "index_memberships": [
+        "基础化工",
+        "化学制品",
+        "食品及饲料添加剂"
+      ],
+      "preferred_query_style": "keyword_cluster",
+      "language_bias": "cn_finance_media"
+    },
+    "data_quality": {
+      "missing_sections": [],
+      "stale_sections": [],
+      "source_summary": {
+        "stock_basic": true,
+        "stock_company": true,
+        "fina_mainbz": true,
+        "ths_member": true,
+        "index_member_all": true
+      }
+    }
+  },
+  "debug_trace": {
+    "planner_context": {
+      "ticker": "600873.SH",
+      "company_name": "梅花生物",
+      "analysis_date": "2026-04-02",
+      "industry": "食品",
+      "company_type": "consumer_healthcare_growth",
+      "business_hint": null,
+      "company_context": {
+        "identity": {
+          "ticker": "600873.SH",
+          "company_name": "梅花生物",
+          "exchange": "SH",
+          "market": "A_share"
+        },
+        "analysis_time": {
+          "requested_date": "2026-04-02",
+          "effective_date": "2026-04-02",
+          "date_mode": "natural_day"
+        },
+        "classification": {
+          "industry": "食品",
+          "company_type": "consumer_healthcare_growth",
+          "style_tag": "consumer_healthcare_growth",
+          "size_bucket": "small_cap",
+          "liquidity_bucket": "low"
+        },
+        "business_context": {
+          "sub_industry": "食品及饲料添加剂",
+          "business_model": "味精,氨基酸,有机肥等生物发酵产品的生产及销售.",
+          "company_intro": "公司是全球领先的氨基酸营养健康解决方案提供商。公司通过为全球100多个国家和地区多家知名客户提供各类氨基酸产品及使用解决方案，让全世界用户享有技术的全方位沟通。梅花集团拥有生物发酵行业中最完整的、最长的产业链和配套设施，通过全系列的研、产、供、销服务，灵活满足全球不同客户的差异化需求以及快速创新的追求，专注于打造生物发酵和生物制药的高端产业平台。",
+          "core_products": [
+            "动物营养氨基酸",
+            "食品味觉性状优化产品",
+            "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+            "味精及谷氨酸",
+            "氨基酸产品"
+          ],
+          "main_business_items": [
+            "动物营养氨基酸",
+            "食品味觉性状优化产品",
+            "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+            "味精及谷氨酸",
+            "氨基酸产品",
+            "大原料副产品(肥料、蛋白粉、胚芽、玉米皮粉、饲料纤维等)",
+            "综合产品及其他",
+            "食品添加剂"
+          ],
+          "demand_drivers": [],
+          "cost_drivers": [],
+          "policy_drivers": [],
+          "global_risk_drivers": []
+        },
+        "market_context": {
+          "valuation_style": "growth",
+          "market_attention_points": [],
+          "trading_sensitivity": []
+        },
+        "technical_context": {
+          "trend": {},
+          "momentum": {},
+          "volatility": {},
+          "volume_confirmation": {},
+          "relative_strength": {},
+          "technical_compact_signals": {},
+          "key_levels": {},
+          "signals": [],
+          "confidence": null,
+          "technical_summary_zh": ""
+        },
+        "fundamental_context": {
+          "company_profile": {},
+          "growth": {},
+          "profitability": {},
+          "cashflow_quality": {},
+          "balance_sheet_health": {},
+          "valuation": {},
+          "fundamental_compact_signals": {},
+          "financial_snapshot": {},
+          "core_risks": [],
+          "fundamental_signals": [],
+          "confidence": null,
+          "fundamental_summary_zh": ""
+        },
+        "event_context": {
+          "event_overview": {},
+          "event_compact_signals": {},
+          "event_context_snapshot": {},
+          "event_chain": {},
+          "key_catalysts": [],
+          "key_risks": [],
+          "tracking_points": [],
+          "confidence": null,
+          "event_summary_zh": ""
+        },
+        "search_context": {
+          "search_aliases": [
+            "梅花生物",
+            "梅花生物科技集团股份有限公司",
+            "动物营养氨基酸",
+            "食品味觉性状优化产品",
+            "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+            "味精及谷氨酸",
+            "基础化工",
+            "化学制品",
+            "食品及饲料添加剂"
+          ],
+          "seed_titles": [],
+          "ths_member_codes": [
+            "700001.TI",
+            "700002.TI",
+            "700003.TI",
+            "700004.TI",
+            "700008.TI",
+            "700009.TI",
+            "700010.TI",
+            "700021.TI",
+            "700023.TI",
+            "700031.TI",
+            "700032.TI",
+            "700035.TI"
+          ],
+          "ths_concepts": [
+            "日常消费品(A股)",
+            "食品、饮料与烟草(A股)",
+            "食品(A股)",
+            "农产品与服务(A股)",
+            "化学制品",
+            "西藏",
+            "增持计划",
+            "高股息股",
+            "回购计划",
+            "食品及饲料添加剂",
+            "融资融券",
+            "参股银行"
+          ],
+          "index_memberships": [
+            "基础化工",
+            "化学制品",
+            "食品及饲料添加剂"
+          ],
+          "preferred_query_style": "keyword_cluster",
+          "language_bias": "cn_finance_media"
+        },
+        "data_quality": {
+          "missing_sections": [],
+          "stale_sections": [],
+          "source_summary": {
+            "stock_basic": true,
+            "stock_company": true,
+            "fina_mainbz": true,
+            "ths_member": true,
+            "index_member_all": true
+          }
+        }
+      }
+    },
+    "company_context": {
+      "identity": {
+        "ticker": "600873.SH",
+        "company_name": "梅花生物",
+        "exchange": "SH",
+        "market": "A_share"
+      },
+      "analysis_time": {
+        "requested_date": "2026-04-02",
+        "effective_date": "2026-04-02",
+        "date_mode": "natural_day"
+      },
+      "classification": {
+        "industry": "食品",
+        "company_type": "consumer_healthcare_growth",
+        "style_tag": "consumer_healthcare_growth",
+        "size_bucket": "small_cap",
+        "liquidity_bucket": "low"
+      },
+      "business_context": {
+        "sub_industry": "食品及饲料添加剂",
+        "business_model": "味精,氨基酸,有机肥等生物发酵产品的生产及销售.",
+        "company_intro": "公司是全球领先的氨基酸营养健康解决方案提供商。公司通过为全球100多个国家和地区多家知名客户提供各类氨基酸产品及使用解决方案，让全世界用户享有技术的全方位沟通。梅花集团拥有生物发酵行业中最完整的、最长的产业链和配套设施，通过全系列的研、产、供、销服务，灵活满足全球不同客户的差异化需求以及快速创新的追求，专注于打造生物发酵和生物制药的高端产业平台。",
+        "core_products": [
+          "动物营养氨基酸",
+          "食品味觉性状优化产品",
+          "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+          "味精及谷氨酸",
+          "氨基酸产品"
+        ],
+        "main_business_items": [
+          "动物营养氨基酸",
+          "食品味觉性状优化产品",
+          "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+          "味精及谷氨酸",
+          "氨基酸产品",
+          "大原料副产品(肥料、蛋白粉、胚芽、玉米皮粉、饲料纤维等)",
+          "综合产品及其他",
+          "食品添加剂"
+        ],
+        "demand_drivers": [],
+        "cost_drivers": [],
+        "policy_drivers": [],
+        "global_risk_drivers": []
+      },
+      "market_context": {
+        "valuation_style": "growth",
+        "market_attention_points": [],
+        "trading_sensitivity": []
+      },
+      "technical_context": {
+        "trend": {},
+        "momentum": {},
+        "volatility": {},
+        "volume_confirmation": {},
+        "relative_strength": {},
+        "technical_compact_signals": {},
+        "key_levels": {},
+        "signals": [],
+        "confidence": null,
+        "technical_summary_zh": ""
+      },
+      "fundamental_context": {
+        "company_profile": {},
+        "growth": {},
+        "profitability": {},
+        "cashflow_quality": {},
+        "balance_sheet_health": {},
+        "valuation": {},
+        "fundamental_compact_signals": {},
+        "financial_snapshot": {},
+        "core_risks": [],
+        "fundamental_signals": [],
+        "confidence": null,
+        "fundamental_summary_zh": ""
+      },
+      "event_context": {
+        "event_overview": {},
+        "event_compact_signals": {},
+        "event_context_snapshot": {},
+        "event_chain": {},
+        "key_catalysts": [],
+        "key_risks": [],
+        "tracking_points": [],
+        "confidence": null,
+        "event_summary_zh": ""
+      },
+      "search_context": {
+        "search_aliases": [
+          "梅花生物",
+          "梅花生物科技集团股份有限公司",
+          "动物营养氨基酸",
+          "食品味觉性状优化产品",
+          "饲料氨基酸(赖氨酸、苏氨酸、色氨酸等)",
+          "味精及谷氨酸",
+          "基础化工",
+          "化学制品",
+          "食品及饲料添加剂"
+        ],
+        "seed_titles": [],
+        "ths_member_codes": [
+          "700001.TI",
+          "700002.TI",
+          "700003.TI",
+          "700004.TI",
+          "700008.TI",
+          "700009.TI",
+          "700010.TI",
+          "700021.TI",
+          "700023.TI",
+          "700031.TI",
+          "700032.TI",
+          "700035.TI"
+        ],
+        "ths_concepts": [
+          "日常消费品(A股)",
+          "食品、饮料与烟草(A股)",
+          "食品(A股)",
+          "农产品与服务(A股)",
+          "化学制品",
+          "西藏",
+          "增持计划",
+          "高股息股",
+          "回购计划",
+          "食品及饲料添加剂",
+          "融资融券",
+          "参股银行"
+        ],
+        "index_memberships": [
+          "基础化工",
+          "化学制品",
+          "食品及饲料添加剂"
+        ],
+        "preferred_query_style": "keyword_cluster",
+        "language_bias": "cn_finance_media"
+      },
+      "data_quality": {
+        "missing_sections": [],
+        "stale_sections": [],
+        "source_summary": {
+          "stock_basic": true,
+          "stock_company": true,
+          "fina_mainbz": true,
+          "ths_member": true,
+          "index_member_all": true
+        }
+      }
+    },
+    "query_plan": {
+      "sensitivity_variables": [
+        "赖氨酸价格",
+        "苏氨酸价格",
+        "味精价格",
+        "玉米价格",
+        "饲料需求",
+        "产能利用率",
+        "出口价格"
+      ],
+      "company_query": "梅花生物 近期公告 业绩 赖氨酸 苏氨酸 味精 产能 出口 风险",
+      "industry_query": "赖氨酸 苏氨酸 味精 近期价格 玉米 饲料需求 产能 出口",
+      "global_event_query": "近期 玉米 豆粕 价格 美元 汇率 能源 关税 运费",
+      "query_rationale": {
+        "company": "覆盖业绩公告、主营产品价格动态、产能扩张、出口业务及潜在风险事件。",
+        "industry": "覆盖氨基酸行业核心变量：产品价格、原料玉米成本、下游饲料需求、行业产能与出口情况。",
+        "global": "覆盖原料农产品价格、汇率波动、能源成本及国际贸易政策对成本的传导。"
+      }
+    },
+    "company_search": {
+      "queries": [
+        "梅花生物 近期公告 业绩 赖氨酸 苏氨酸 味精 产能 出口 风险"
+      ],
+      "query_results": [
+        {
+          "query": "梅花生物 近期公告 业绩 赖氨酸 苏氨酸 味精 产能 出口 风险",
+          "results_count": 13,
+          "results": [
+            {
+              "title": "梅花生物：关于完成工商变更登记并换发营业执照的公告-证券日报网-证券日报网",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "梅花生物:梅花生物关于完成工商变更登记并换发营业执照的公告",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "梅花生物：公司正在按照既定的计划对收购的海外业务进行整合-证券日报网-证券日报网",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "梅花生物：公司年报中有关于税收政策的详细介绍",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "梅花生物近一周股价下跌9.81% 振幅达13.10% - 经济观察网 － 专业财经新闻网站",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "梅花生物：76名管理层拟增持3.04亿元至3.50亿元股份",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "梅花生物股票行情分析：主力资金流出与财报亮点交织的未来展望！_市场_该公司_方面",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "生物基材料（替代石油基）概念龙头-研发实力大比拼：凯赛生物、华恒生物、嘉必优、梅花生物、星湖科技",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "梅花生物3月26日获融资买入3011.32万元，融资余额6.80亿元|持股|融券|派现_网易订阅",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "前景研判！2026年赖氨酸行业市场发展概况分析及投资前景预测（智研咨询）",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "600873营收情况如何？（2026/3/24） - 南方财富网",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "梅花生物股价连续4天下跌累计跌幅10.76%，华夏基金旗下4只基金合计持212.59万股，浮亏损失293.38万元_新浪财经_新浪网",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "梅花生物：30+专利家族，补上全球氨基酸短板",
+              "trunk": "",
+              "secu_list": []
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "title": "梅花生物：公司正在按照既定的计划对收购的海外业务进行整合-证券日报网-证券日报网",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "梅花生物：公司年报中有关于税收政策的详细介绍",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "梅花生物：76名管理层拟增持3.04亿元至3.50亿元股份",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "梅花生物：关于完成工商变更登记并换发营业执照的公告-证券日报网-证券日报网",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "梅花生物:梅花生物关于完成工商变更登记并换发营业执照的公告",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "梅花生物近一周股价下跌9.81% 振幅达13.10% - 经济观察网 － 专业财经新闻网站",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "梅花生物股票行情分析：主力资金流出与财报亮点交织的未来展望！_市场_该公司_方面",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "生物基材料（替代石油基）概念龙头-研发实力大比拼：凯赛生物、华恒生物、嘉必优、梅花生物、星湖科技",
+          "trunk": "",
+          "secu_list": []
+        }
+      ],
+      "deduped_results_count": 13,
+      "reranked_results_count": 8,
+      "retry_attempts": [
+        {
+          "attempt": 1,
+          "layer": "company",
+          "queries": [
+            "梅花生物 近期公告 业绩 赖氨酸 苏氨酸 味精 产能 出口 风险"
+          ],
+          "raw_results_count": 13,
+          "deduped_results_count": 13,
+          "reranked_results_count": 8,
+          "query_results": [
+            {
+              "query": "梅花生物 近期公告 业绩 赖氨酸 苏氨酸 味精 产能 出口 风险",
+              "results_count": 13,
+              "results": [
+                {
+                  "title": "梅花生物：关于完成工商变更登记并换发营业执照的公告-证券日报网-证券日报网",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "梅花生物:梅花生物关于完成工商变更登记并换发营业执照的公告",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "梅花生物：公司正在按照既定的计划对收购的海外业务进行整合-证券日报网-证券日报网",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "梅花生物：公司年报中有关于税收政策的详细介绍",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "梅花生物近一周股价下跌9.81% 振幅达13.10% - 经济观察网 － 专业财经新闻网站",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "梅花生物：76名管理层拟增持3.04亿元至3.50亿元股份",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "梅花生物股票行情分析：主力资金流出与财报亮点交织的未来展望！_市场_该公司_方面",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "生物基材料（替代石油基）概念龙头-研发实力大比拼：凯赛生物、华恒生物、嘉必优、梅花生物、星湖科技",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "梅花生物3月26日获融资买入3011.32万元，融资余额6.80亿元|持股|融券|派现_网易订阅",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "前景研判！2026年赖氨酸行业市场发展概况分析及投资前景预测（智研咨询）",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "600873营收情况如何？（2026/3/24） - 南方财富网",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "梅花生物股价连续4天下跌累计跌幅10.76%，华夏基金旗下4只基金合计持212.59万股，浮亏损失293.38万元_新浪财经_新浪网",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "梅花生物：30+专利家族，补上全球氨基酸短板",
+                  "trunk": "",
+                  "secu_list": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "retry_used": false,
+      "final_attempt": 1
+    },
+    "industry_search": {
+      "queries": [
+        "赖氨酸 苏氨酸 味精 近期价格 玉米 饲料需求 产能 出口"
+      ],
+      "query_results": [
+        {
+          "query": "赖氨酸 苏氨酸 味精 近期价格 玉米 饲料需求 产能 出口",
+          "results_count": 11,
+          "results": [
+            {
+              "title": "化工新材料周报：本周氧气、SAF、磷酸铁锂等涨价",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "2025年业绩大幅增长，强化股东回报",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "基础化工行业周报：原油价格高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI需求大周期",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "化工新材料周报：本周EVA等涨价，特斯拉第三代Optimus宣布年底投产",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期需求大周期+AI",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "化工：原料涨价及海外产能占比高，蛋氨酸、MDI/TDI及维生素等持续涨价",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "Mysteel早报：味精出货价格继续偏强（20260331）-我的钢铁网",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "Mysteel早报：近期味精企业暂时稳价出货（20260326）_我的钢铁网",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "Mysteel早报：味精暂时高位暂稳（20260325）",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "国海化工|基础化工行业周报：原油成本高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI 需求大周期_新浪财经_新浪网",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "国海化工|基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期+AI需求大周期|红利ETF港股广发|现金流|股息率|甲醇|尿素_新浪新闻",
+              "trunk": "",
+              "secu_list": []
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "title": "基础化工行业周报：原油价格高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI需求大周期",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期需求大周期+AI",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "国海化工|基础化工行业周报：原油成本高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI 需求大周期_新浪财经_新浪网",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "国海化工|基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期+AI需求大周期|红利ETF港股广发|现金流|股息率|甲醇|尿素_新浪新闻",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "化工：原料涨价及海外产能占比高，蛋氨酸、MDI/TDI及维生素等持续涨价",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "Mysteel早报：味精出货价格继续偏强（20260331）-我的钢铁网",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "Mysteel早报：近期味精企业暂时稳价出货（20260326）_我的钢铁网",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "Mysteel早报：味精暂时高位暂稳（20260325）",
+          "trunk": "",
+          "secu_list": []
+        }
+      ],
+      "deduped_results_count": 11,
+      "reranked_results_count": 8,
+      "retry_attempts": [
+        {
+          "attempt": 1,
+          "layer": "industry",
+          "queries": [
+            "赖氨酸 苏氨酸 味精 近期价格 玉米 饲料需求 产能 出口"
+          ],
+          "raw_results_count": 11,
+          "deduped_results_count": 11,
+          "reranked_results_count": 8,
+          "query_results": [
+            {
+              "query": "赖氨酸 苏氨酸 味精 近期价格 玉米 饲料需求 产能 出口",
+              "results_count": 11,
+              "results": [
+                {
+                  "title": "化工新材料周报：本周氧气、SAF、磷酸铁锂等涨价",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "2025年业绩大幅增长，强化股东回报",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "基础化工行业周报：原油价格高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI需求大周期",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "化工新材料周报：本周EVA等涨价，特斯拉第三代Optimus宣布年底投产",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期需求大周期+AI",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "化工：原料涨价及海外产能占比高，蛋氨酸、MDI/TDI及维生素等持续涨价",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "Mysteel早报：味精出货价格继续偏强（20260331）-我的钢铁网",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "Mysteel早报：近期味精企业暂时稳价出货（20260326）_我的钢铁网",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "Mysteel早报：味精暂时高位暂稳（20260325）",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "国海化工|基础化工行业周报：原油成本高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI 需求大周期_新浪财经_新浪网",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "国海化工|基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期+AI需求大周期|红利ETF港股广发|现金流|股息率|甲醇|尿素_新浪新闻",
+                  "trunk": "",
+                  "secu_list": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "retry_used": false,
+      "final_attempt": 1
+    },
+    "global_search": {
+      "queries": [
+        "近期 玉米 豆粕 价格 美元 汇率 能源 关税 运费"
+      ],
+      "query_results": [
+        {
+          "query": "近期 玉米 豆粕 价格 美元 汇率 能源 关税 运费",
+          "results_count": 15,
+          "results": [
+            {
+              "title": "农产品 | 中国放宽巴西大豆中杂草含量的相关规定 进口大豆到港清关问题将解决",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "华夏饲料豆粕期货交易型开放式证券投资基金发起式联接基金2025年年度报告",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "农产品日报：需求略显疲软，豆粕维持震荡",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "豆粕二季度展望：国内季节性累库，关注美国新作情况",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "双粕2026商品季度报告：集中供应价格承压 关注原油连锁反应新冲击",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "光期农产品：玉米、淀粉季报",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "玉米类市场周报：小麦替代优势显现 玉米期价高位震荡",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "粕类油脂周报",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "玉米期货日报",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "豆粕每日报告",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "不接受预付款！新希望、海大、安佑、大台农.再次集体涨价，最高上涨125元",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "【晨会纪要】2026年4月1日晨会纪要",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "真是没想到，中东打仗的蝴蝶效应，竟扇到了中国猪圈 - 今日头条Loading.",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "真是没想到，中东打仗扇动蝴蝶效应，中国猪圈成了最大受害者 - 今日头条Loading.",
+              "trunk": "",
+              "secu_list": []
+            },
+            {
+              "title": "玉米阶段供需宽松  期现偏弱震荡-饲料行业信息网玉米阶段供需宽松  期现偏弱震荡-饲料行业信息网-",
+              "trunk": "",
+              "secu_list": []
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "title": "双粕2026商品季度报告：集中供应价格承压 关注原油连锁反应新冲击",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "农产品日报：需求略显疲软，豆粕维持震荡",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "真是没想到，中东打仗的蝴蝶效应，竟扇到了中国猪圈 - 今日头条Loading.",
+          "trunk": "",
+          "secu_list": []
+        },
+        {
+          "title": "真是没想到，中东打仗扇动蝴蝶效应，中国猪圈成了最大受害者 - 今日头条Loading.",
+          "trunk": "",
+          "secu_list": []
+        }
+      ],
+      "deduped_results_count": 15,
+      "reranked_results_count": 4,
+      "retry_attempts": [
+        {
+          "attempt": 1,
+          "layer": "global",
+          "queries": [
+            "近期 玉米 豆粕 价格 美元 汇率 能源 关税 运费"
+          ],
+          "raw_results_count": 15,
+          "deduped_results_count": 15,
+          "reranked_results_count": 4,
+          "query_results": [
+            {
+              "query": "近期 玉米 豆粕 价格 美元 汇率 能源 关税 运费",
+              "results_count": 15,
+              "results": [
+                {
+                  "title": "农产品 | 中国放宽巴西大豆中杂草含量的相关规定 进口大豆到港清关问题将解决",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "华夏饲料豆粕期货交易型开放式证券投资基金发起式联接基金2025年年度报告",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "农产品日报：需求略显疲软，豆粕维持震荡",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "豆粕二季度展望：国内季节性累库，关注美国新作情况",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "双粕2026商品季度报告：集中供应价格承压 关注原油连锁反应新冲击",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "光期农产品：玉米、淀粉季报",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "玉米类市场周报：小麦替代优势显现 玉米期价高位震荡",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "粕类油脂周报",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "玉米期货日报",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "豆粕每日报告",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "不接受预付款！新希望、海大、安佑、大台农.再次集体涨价，最高上涨125元",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "【晨会纪要】2026年4月1日晨会纪要",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "真是没想到，中东打仗的蝴蝶效应，竟扇到了中国猪圈 - 今日头条Loading.",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "真是没想到，中东打仗扇动蝴蝶效应，中国猪圈成了最大受害者 - 今日头条Loading.",
+                  "trunk": "",
+                  "secu_list": []
+                },
+                {
+                  "title": "玉米阶段供需宽松  期现偏弱震荡-饲料行业信息网玉米阶段供需宽松  期现偏弱震荡-饲料行业信息网-",
+                  "trunk": "",
+                  "secu_list": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "retry_used": false,
+      "final_attempt": 1
+    },
+    "normalized_company_events": [
+      {
+        "event_key": "company:earnings",
+        "layer": "company",
+        "event_type": "earnings",
+        "title": "梅花生物：公司年报中有关于税收政策的详细介绍",
+        "direction": "neutral",
+        "importance": 0.58,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "earnings"
+        ],
+        "dimensions": {
+          "earnings": [
+            "年报"
+          ]
+        },
+        "evidence_titles": [
+          "梅花生物：公司年报中有关于税收政策的详细介绍"
+        ],
+        "evidence_items": [
+          {
+            "title": "梅花生物：公司年报中有关于税收政策的详细介绍",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于earnings，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "company:capital_markets",
+        "layer": "company",
+        "event_type": "mna",
+        "title": "梅花生物：76名管理层拟增持3.04亿元至3.50亿元股份",
+        "direction": "bullish",
+        "importance": 0.58,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "capital_markets"
+        ],
+        "dimensions": {
+          "capital_markets": [
+            "增持"
+          ]
+        },
+        "evidence_titles": [
+          "梅花生物：76名管理层拟增持3.04亿元至3.50亿元股份"
+        ],
+        "evidence_items": [
+          {
+            "title": "梅花生物：76名管理层拟增持3.04亿元至3.50亿元股份",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于capital_markets，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "company:梅花生物 公司正在按照既定的计划对收购的海外业务进行整合 证券日报网 证券日报网",
+        "layer": "company",
+        "event_type": "other",
+        "title": "梅花生物：公司正在按照既定的计划对收购的海外业务进行整合-证券日报网-证券日报网",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "梅花生物：公司正在按照既定的计划对收购的海外业务进行整合-证券日报网-证券日报网"
+        ],
+        "evidence_items": [
+          {
+            "title": "梅花生物：公司正在按照既定的计划对收购的海外业务进行整合-证券日报网-证券日报网",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于经营变化，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "company:梅花生物 关于完成工商变更登记并换发营业执照的公告 证券日报网 证券日报网",
+        "layer": "company",
+        "event_type": "other",
+        "title": "梅花生物：关于完成工商变更登记并换发营业执照的公告-证券日报网-证券日报网",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "梅花生物：关于完成工商变更登记并换发营业执照的公告-证券日报网-证券日报网"
+        ],
+        "evidence_items": [
+          {
+            "title": "梅花生物：关于完成工商变更登记并换发营业执照的公告-证券日报网-证券日报网",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于经营变化，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "company:梅花生物 梅花生物关于完成工商变更登记并换发营业执照的公告",
+        "layer": "company",
+        "event_type": "other",
+        "title": "梅花生物:梅花生物关于完成工商变更登记并换发营业执照的公告",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "梅花生物:梅花生物关于完成工商变更登记并换发营业执照的公告"
+        ],
+        "evidence_items": [
+          {
+            "title": "梅花生物:梅花生物关于完成工商变更登记并换发营业执照的公告",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于经营变化，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "company:梅花生物近一周股价下跌9 81 振幅达13 10 经济观察网 专业财经新闻网站",
+        "layer": "company",
+        "event_type": "other",
+        "title": "梅花生物近一周股价下跌9.81% 振幅达13.10% - 经济观察网 － 专业财经新闻网站",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "梅花生物近一周股价下跌9.81% 振幅达13.10% - 经济观察网 － 专业财经新闻网站"
+        ],
+        "evidence_items": [
+          {
+            "title": "梅花生物近一周股价下跌9.81% 振幅达13.10% - 经济观察网 － 专业财经新闻网站",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于经营变化，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "company:梅花生物股票行情分析 主力资金流出与财报亮点交织的未来展望 市场 该公司 方面",
+        "layer": "company",
+        "event_type": "other",
+        "title": "梅花生物股票行情分析：主力资金流出与财报亮点交织的未来展望！_市场_该公司_方面",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "梅花生物股票行情分析：主力资金流出与财报亮点交织的未来展望！_市场_该公司_方面"
+        ],
+        "evidence_items": [
+          {
+            "title": "梅花生物股票行情分析：主力资金流出与财报亮点交织的未来展望！_市场_该公司_方面",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于经营变化，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "company:生物基材料 替代石油基 概念龙头 研发实力大比拼 凯赛生物 华恒生物 嘉必优 梅花生物 星湖科技",
+        "layer": "company",
+        "event_type": "other",
+        "title": "生物基材料（替代石油基）概念龙头-研发实力大比拼：凯赛生物、华恒生物、嘉必优、梅花生物、星湖科技",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "生物基材料（替代石油基）概念龙头-研发实力大比拼：凯赛生物、华恒生物、嘉必优、梅花生物、星湖科技"
+        ],
+        "evidence_items": [
+          {
+            "title": "生物基材料（替代石油基）概念龙头-研发实力大比拼：凯赛生物、华恒生物、嘉必优、梅花生物、星湖科技",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "公司层事件聚焦于经营变化，共聚合 1 条证据。"
+      }
+    ],
+    "normalized_industry_events": [
+      {
+        "event_key": "industry:demand|price_cycle",
+        "layer": "industry",
+        "event_type": "industry_cycle",
+        "title": "基础化工行业周报：原油价格高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI需求大周期",
+        "direction": "neutral",
+        "importance": 1.0,
+        "time_horizon": "short_term",
+        "affected_variables": [
+          "demand",
+          "price_cycle",
+          "supply"
+        ],
+        "dimensions": {
+          "supply": [
+            "产能"
+          ],
+          "demand": [
+            "需求"
+          ],
+          "price_cycle": [
+            "价格",
+            "油价",
+            "周期"
+          ]
+        },
+        "evidence_titles": [
+          "基础化工行业周报：原油价格高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI需求大周期",
+          "基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期需求大周期+AI",
+          "国海化工|基础化工行业周报：原油成本高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI 需求大周期_新浪财经_新浪网",
+          "国海化工|基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期+AI需求大周期|红利ETF港股广发|现金流|股息率|甲醇|尿素_新浪新闻",
+          "Mysteel早报：味精出货价格继续偏强（20260331）-我的钢铁网"
+        ],
+        "evidence_items": [
+          {
+            "title": "基础化工行业周报：原油价格高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI需求大周期",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期需求大周期+AI",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "国海化工|基础化工行业周报：原油成本高位运行，关注海外化工产能加速退出—看好全球化工反内卷大周期+AI 需求大周期_新浪财经_新浪网",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "国海化工|基础化工行业周报：周内化工品价格走高，关注化工旺季到来—看好全球化工反内卷大周期+AI需求大周期|红利ETF港股广发|现金流|股息率|甲醇|尿素_新浪新闻",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "Mysteel早报：味精出货价格继续偏强（20260331）-我的钢铁网",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于demand、price_cycle、supply，共聚合 5 条证据。"
+      },
+      {
+        "event_key": "industry:supply",
+        "layer": "industry",
+        "event_type": "industry_cycle",
+        "title": "化工：原料涨价及海外产能占比高，蛋氨酸、MDI/TDI及维生素等持续涨价",
+        "direction": "neutral",
+        "importance": 0.58,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "supply"
+        ],
+        "dimensions": {
+          "supply": [
+            "产能"
+          ]
+        },
+        "evidence_titles": [
+          "化工：原料涨价及海外产能占比高，蛋氨酸、MDI/TDI及维生素等持续涨价"
+        ],
+        "evidence_items": [
+          {
+            "title": "化工：原料涨价及海外产能占比高，蛋氨酸、MDI/TDI及维生素等持续涨价",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于supply，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "industry:demand",
+        "layer": "industry",
+        "event_type": "industry_cycle",
+        "title": "Mysteel早报：近期味精企业暂时稳价出货（20260326）_我的钢铁网",
+        "direction": "neutral",
+        "importance": 0.58,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "demand"
+        ],
+        "dimensions": {
+          "demand": [
+            "出货"
+          ]
+        },
+        "evidence_titles": [
+          "Mysteel早报：近期味精企业暂时稳价出货（20260326）_我的钢铁网"
+        ],
+        "evidence_items": [
+          {
+            "title": "Mysteel早报：近期味精企业暂时稳价出货（20260326）_我的钢铁网",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于demand，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "industry:mysteel早报 味精暂时高位暂稳 20260325",
+        "layer": "industry",
+        "event_type": "other",
+        "title": "Mysteel早报：味精暂时高位暂稳（20260325）",
+        "direction": "neutral",
+        "importance": 0.5,
+        "time_horizon": "medium_term",
+        "affected_variables": [],
+        "dimensions": {},
+        "evidence_titles": [
+          "Mysteel早报：味精暂时高位暂稳（20260325）"
+        ],
+        "evidence_items": [
+          {
+            "title": "Mysteel早报：味精暂时高位暂稳（20260325）",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "行业层事件聚焦于景气变化，共聚合 1 条证据。"
+      }
+    ],
+    "normalized_global_events": [
+      {
+        "event_key": "global:geopolitics",
+        "layer": "global",
+        "event_type": "geopolitics",
+        "title": "真是没想到，中东打仗的蝴蝶效应，竟扇到了中国猪圈 - 今日头条Loading.",
+        "direction": "neutral",
+        "importance": 0.73,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "geopolitics"
+        ],
+        "dimensions": {
+          "trigger": [
+            "geopolitics"
+          ],
+          "transmission": []
+        },
+        "evidence_titles": [
+          "真是没想到，中东打仗的蝴蝶效应，竟扇到了中国猪圈 - 今日头条Loading.",
+          "真是没想到，中东打仗扇动蝴蝶效应，中国猪圈成了最大受害者 - 今日头条Loading."
+        ],
+        "evidence_items": [
+          {
+            "title": "真是没想到，中东打仗的蝴蝶效应，竟扇到了中国猪圈 - 今日头条Loading.",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "真是没想到，中东打仗扇动蝴蝶效应，中国猪圈成了最大受害者 - 今日头条Loading.",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "全球层事件聚焦于geopolitics，共聚合 2 条证据。"
+      },
+      {
+        "event_key": "global:commodity|pricing",
+        "layer": "global",
+        "event_type": "commodity",
+        "title": "双粕2026商品季度报告：集中供应价格承压 关注原油连锁反应新冲击",
+        "direction": "neutral",
+        "importance": 0.66,
+        "time_horizon": "short_term",
+        "affected_variables": [
+          "commodity",
+          "pricing"
+        ],
+        "dimensions": {
+          "trigger": [
+            "commodity"
+          ],
+          "transmission": [
+            "pricing"
+          ]
+        },
+        "evidence_titles": [
+          "双粕2026商品季度报告：集中供应价格承压 关注原油连锁反应新冲击"
+        ],
+        "evidence_items": [
+          {
+            "title": "双粕2026商品季度报告：集中供应价格承压 关注原油连锁反应新冲击",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "全球层事件聚焦于commodity、pricing，共聚合 1 条证据。"
+      },
+      {
+        "event_key": "global:supply_demand",
+        "layer": "global",
+        "event_type": "other",
+        "title": "农产品日报：需求略显疲软，豆粕维持震荡",
+        "direction": "neutral",
+        "importance": 0.58,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "supply_demand"
+        ],
+        "dimensions": {
+          "trigger": [],
+          "transmission": [
+            "supply_demand"
+          ]
+        },
+        "evidence_titles": [
+          "农产品日报：需求略显疲软，豆粕维持震荡"
+        ],
+        "evidence_items": [
+          {
+            "title": "农产品日报：需求略显疲软，豆粕维持震荡",
+            "trunk": "",
+            "secu_list": []
+          }
+        ],
+        "summary": "全球层事件聚焦于supply_demand，共聚合 1 条证据。"
+      }
+    ],
+    "event_chain": {
+      "global_triggers": [
+        "中东地缘政治风险",
+        "原油价格高位运行",
+        "农产品/饲料需求疲软"
+      ],
+      "industry_variables": [
+        "味精价格高位偏强",
+        "海外化工产能退出预期",
+        "化工旺季需求回暖",
+        "蛋氨酸/维生素涨价传导"
+      ],
+      "company_impacts": [
+        "管理层增持支撑股价预期",
+        "味精业务毛利率受益价格高位",
+        "海外业务整合推进",
+        "饲料氨基酸业务待验证"
+      ],
+      "missing_links": [
+        "缺赖氨酸/苏氨酸/色氨酸等核心饲料氨基酸的实时价格数据",
+        "缺公司饲料氨基酸业务占比及盈利结构的具体数据",
+        "缺海外产能退出对氨基酸细分品种的实际影响验证",
+        "缺下游饲料/养殖需求回暖的明确信号"
+      ]
+    },
+    "event_context_snapshot": {
+      "company_event_strength": "medium",
+      "industry_context_strength": "medium",
+      "global_context_strength": "medium",
+      "chain_completeness": "partial",
+      "dominant_driver_layer": "company",
+      "dominant_driver_type": "buyback",
+      "primary_bullish_variable": "capital_markets",
+      "primary_bearish_variable": "price_volatility",
+      "most_actionable_catalyst": "管理层大额增持计划",
+      "most_critical_risk": "核心饲料氨基酸价格信号缺失"
+    }
+  },
+  "trace": {
+    "run_id": "46d8b3d2-3f87-4010-b46c-e868521618ef",
+    "agent_name": "EventNewsAgent",
+    "agent_type": "agent",
+    "status": "success",
+    "started_at": 1775063982.472078,
+    "finished_at": 1775064078.389717,
+    "duration_ms": 95917,
+    "input_summary": {
+      "ticker": "600873.SH",
+      "analysis_date": "2026-04-02",
+      "has_company_context": true
+    },
+    "output_summary": {
+      "effective_trade_date": "2026-04-02",
+      "event_state": "mixed",
+      "company_events": 3,
+      "industry_events": 3
+    },
+    "error": null,
+    "steps": [
+      {
+        "step_id": "67b03161-0b79-44c2-83eb-d0762ac2cd29",
+        "step_type": "bundle",
+        "name": "build_event_news_bundle",
+        "status": "success",
+        "started_at": 1775063982.472092,
+        "input": {
+          "ticker": "600873.SH",
+          "analysis_date": "2026-04-02"
+        },
+        "output": {
+          "effective_trade_date": "2026-04-02",
+          "company_news_count": 8,
+          "macro_news_count": 8,
+          "has_debug_trace": true,
+          "has_debug_trace_payload": true
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775064038.955146,
+        "duration_ms": 56483
+      },
+      {
+        "step_id": "186d7ff3-7c3a-45c2-9148-6f28f52effaf",
+        "step_type": "llm",
+        "name": "llm_invoke_round_1",
+        "status": "success",
+        "started_at": 1775064038.9678268,
+        "input": {
+          "round": 1,
+          "message_count": 2
+        },
+        "output": {
+          "has_tool_calls": false,
+          "content_preview": "```json\n{\n  \"ticker\": \"600873.SH\",\n  \"effective_trade_date\": \"2026-04-02\",\n  \"event_overview\": {\n    \"state\": \"mixed\",\n    \"summary\": \"管理层大额增持构成短期正面催化，但股价近期大幅波动（周跌9.81%）反映市场情绪分歧；行业层面味精价格高位偏强，但赖氨酸/苏氨酸等核心饲料氨基酸价格信号缺失，海外产能退出逻辑对氨基酸板块传导尚不明确。\",\n    \"confidence\": 0.65\n  },\n  \"company_specific_events\": [\n    {\n      \"event_type\": \"buyback\",\n      \"title\": \"76名管理层拟增持3.04亿元至3.50亿元股份\",\n      \"direction\": \"bullish\",\n      \"importance\": 0.75,\n      \"time_horizon\": \"short_term\",\n      \"affected_variables\": [\"c"
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775064078.3850508,
+        "duration_ms": 39417
+      },
+      {
+        "step_id": "9d6282eb-2abb-48da-90df-7ef0d8e7b48d",
+        "step_type": "parse",
+        "name": "parse_json_response",
+        "status": "success",
+        "started_at": 1775064078.385241,
+        "input": {
+          "content_preview": "```json\n{\n  \"ticker\": \"600873.SH\",\n  \"effective_trade_date\": \"2026-04-02\",\n  \"event_overview\": {\n    \"state\": \"mixed\",\n    \"summary\": \"管理层大额增持构成短期正面催化，但股价近期大幅波动（周跌9.81%）反映市场情绪分歧；行业层面味精价格高位偏强，但赖氨酸/苏氨酸等核心饲料氨基酸价格信号缺失，海外产能退出逻辑对氨基酸板块传导尚不明确。\",\n    \"confidence\": 0.65\n  },\n  \"company_specific_events\": [\n    {\n      \"event_type\": \"buyback\",\n      \"title\": \"76名管理层拟增持3.04亿元至3.50亿元股份\",\n      \"direction\": \"bullish\",\n      \"importance\": 0.75,\n      \"time_horizon\": \"short_term\",\n      \"affected_variables\": [\"c"
+        },
+        "output": {
+          "event_state": "mixed",
+          "company_events": 3,
+          "industry_events": 3
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775064078.386817,
+        "duration_ms": 1
+      },
+      {
+        "step_id": "a6cec3e5-35e1-47dd-9a94-3883e1b90028",
+        "step_type": "quality_gate",
+        "name": "quality_gate",
+        "status": "success",
+        "started_at": 1775064078.3868532,
+        "input": {
+          "round": 1
+        },
+        "output": {
+          "is_sparse": false
+        },
+        "metrics": {
+          "company_events": 3,
+          "industry_events": 3
+        },
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775064078.387135,
+        "duration_ms": 0
+      }
+    ],
+    "observability": {
+      "langsmith_enabled": false,
+      "langsmith_project_name": null,
+      "otel_enabled": false
+    }
+  }
+}

@@ -13,6 +13,7 @@ DEFAULT_CONFIG = {
     "trace_enabled": True,
     "trace_project_name": "TradingAgents",
     "trace_artifact_dir": os.getenv("TRADINGAGENTS_TRACE_ARTIFACT_DIR"),
+    "trace_db_path": os.getenv("TRADINGAGENTS_TRACE_DB_PATH"),
     "langsmith_enabled": False,
     "langsmith_project_name": "TradingAgents",
     "langsmith_api_key": None,
@@ -28,7 +29,7 @@ DEFAULT_CONFIG = {
     },
     # LLM settings
     "llm_provider": "bailian",
-    "deep_think_llm": "qwen3.5-plus-2026-02-15",
+    "deep_think_llm": "kimi-k2.5",
     "quick_think_llm": "qwen3.5-flash",
     "backend_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
     # Provider-specific thinking configuration

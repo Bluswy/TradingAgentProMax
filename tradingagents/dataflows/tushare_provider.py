@@ -47,8 +47,8 @@ def _require_tushare():
             "Missing Tushare token. Set config/tushare.toml or config['tushare_token']."
         )
 
-    ts.set_token(token)
-    return ts.pro_api()
+    # Avoid global token file writes so multiple graph branches can call Tushare in parallel safely.
+    return ts.pro_api(token=token)
 
 
 def _get_tushare_token() -> str | None:

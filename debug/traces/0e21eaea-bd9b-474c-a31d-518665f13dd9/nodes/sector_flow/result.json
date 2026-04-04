@@ -1,0 +1,395 @@
+{
+  "sector_flow_data_bundle": {
+    "ticker": "600873.SH",
+    "requested_date": "2026-04-02",
+    "effective_trade_date": "2026-04-02",
+    "meta": {
+      "name": "梅花生物",
+      "industry": "食品",
+      "market": "主板",
+      "company_type": "consumer_healthcare_growth",
+      "sector_index": null,
+      "sector_name": "食品",
+      "sector_level": "stock_basic_industry",
+      "sector_member_count": 93
+    },
+    "stock_snapshot": {
+      "close": null,
+      "pct_chg": null,
+      "volume": null,
+      "amount": null,
+      "turnover_rate": null,
+      "volume_ratio": null,
+      "circ_mv": null,
+      "net_mf_amount": null,
+      "top_inst_row_count": 0,
+      "limit_state": null
+    },
+    "sector_snapshot": {
+      "sector_pct_chg": null,
+      "sector_volume_change": null,
+      "sector_amount_change": null,
+      "sector_breadth_up_ratio": null,
+      "sector_limit_up_count": 0,
+      "sector_limit_down_count": 0,
+      "sector_top_inst_count": 0
+    },
+    "relative_position": {
+      "pct_chg_percentile": null,
+      "turnover_percentile": null,
+      "moneyflow_percentile": null,
+      "volume_ratio_percentile": null
+    },
+    "theme_activity": {
+      "leader_stock_names": [
+        "京粮控股",
+        "红棉股份",
+        "广弘控股",
+        "西王食品",
+        "黑芝麻"
+      ],
+      "leader_confirmation": "unconfirmed",
+      "theme_expansion": "narrow",
+      "theme_dispersion": "unknown"
+    },
+    "flow_features": {
+      "volume_vs_ma20": -0.609298,
+      "amount_vs_ma20": -0.623943,
+      "turnover_percentile_20d": 0.05,
+      "turnover_percentile_60d": 0.216667,
+      "moneyflow_persistence_3d": 0,
+      "moneyflow_persistence_5d": 1,
+      "sector_amount_change_5d": null,
+      "crowding_proxy": 0.108333,
+      "net_mf_amount": -1830.23,
+      "turnover_rate": 0.9408
+    },
+    "sector_flow_compact_signals": {
+      "theme_strength": "weak",
+      "theme_heat": "cold",
+      "crowding_level": "low",
+      "stock_role": "peripheral",
+      "flow_persistence": "fading",
+      "rotation_state": "rotating_out"
+    },
+    "sector_series": [],
+    "peer_rankings": [
+      {
+        "ts_code": "000505.SZ",
+        "name": "京粮控股",
+        "pct_chg": null,
+        "turnover_rate": null,
+        "net_mf_amount": null
+      },
+      {
+        "ts_code": "000523.SZ",
+        "name": "红棉股份",
+        "pct_chg": null,
+        "turnover_rate": null,
+        "net_mf_amount": null
+      },
+      {
+        "ts_code": "000529.SZ",
+        "name": "广弘控股",
+        "pct_chg": null,
+        "turnover_rate": null,
+        "net_mf_amount": null
+      },
+      {
+        "ts_code": "000639.SZ",
+        "name": "西王食品",
+        "pct_chg": null,
+        "turnover_rate": null,
+        "net_mf_amount": null
+      },
+      {
+        "ts_code": "000716.SZ",
+        "name": "黑芝麻",
+        "pct_chg": null,
+        "turnover_rate": null,
+        "net_mf_amount": null
+      },
+      {
+        "ts_code": "000895.SZ",
+        "name": "双汇发展",
+        "pct_chg": null,
+        "turnover_rate": null,
+        "net_mf_amount": null
+      },
+      {
+        "ts_code": "000911.SZ",
+        "name": "广农糖业",
+        "pct_chg": null,
+        "turnover_rate": null,
+        "net_mf_amount": null
+      },
+      {
+        "ts_code": "000972.SZ",
+        "name": "*ST中基",
+        "pct_chg": null,
+        "turnover_rate": null,
+        "net_mf_amount": null
+      },
+      {
+        "ts_code": "600073.SH",
+        "name": "光明肉业",
+        "pct_chg": null,
+        "turnover_rate": null,
+        "net_mf_amount": null
+      },
+      {
+        "ts_code": "600186.SH",
+        "name": "莲花控股",
+        "pct_chg": null,
+        "turnover_rate": null,
+        "net_mf_amount": null
+      }
+    ],
+    "data_quality": {
+      "is_trade_date_aligned": true,
+      "missing_fields": [],
+      "source": "tushare"
+    }
+  },
+  "analysis_result": {
+    "ticker": "600873.SH",
+    "effective_trade_date": "2026-04-02",
+    "theme_strength": {
+      "state": "weak",
+      "summary": "食品板块当前缺乏明确的板块逻辑驱动，板块内无涨停个股，龙头确认状态为'unconfirmed'，板块整体处于弱势状态",
+      "evidence": [
+        "板块涨停家数为0，无资金集中攻击信号",
+        "主题扩散状态为'narrow'，板块内部联动性弱，缺乏主线逻辑支撑",
+        "龙头确认状态为'unconfirmed'，板块缺乏明确的核心领涨标的"
+      ]
+    },
+    "theme_heat": {
+      "state": "cold",
+      "summary": "食品板块当前交易热度极低，资金参与度处于低位，市场未在交易该板块逻辑",
+      "evidence": [
+        "crowding_proxy指标为0.108333，显示板块交易拥挤度处于极低水平",
+        "volume_vs_ma20为-0.609298，成交额较20日均值下降约61%",
+        "amount_vs_ma20为-0.623943，成交量较20日均值下降约62%"
+      ]
+    },
+    "crowding": {
+      "state": "low",
+      "summary": "板块交易拥挤度处于低位，资金撤离明显，换手率和成交额均处于历史低位",
+      "evidence": [
+        "turnover_percentile_20d为0.05，换手率处于近20日5%分位，处于极低水平",
+        "turnover_percentile_60d为0.216667，换手率处于近60日约22%分位，同样偏低",
+        "crowding_proxy为0.108333，板块整体拥挤度指标显示资金参与度低"
+      ]
+    },
+    "stock_role_in_theme": {
+      "state": "peripheral",
+      "summary": "梅花生物在食品板块中处于边缘位置，既非板块龙头也非核心跟随标的，资金关注度低",
+      "evidence": [
+        "板块潜在龙头列表包括京粮控股、红棉股份、广弘控股、西王食品、黑芝麻，梅花生物未在其中",
+        "net_mf_amount为-1830.23万元，主力资金呈净流出状态",
+        "turnover_rate为0.9408%，换手率处于板块内较低水平"
+      ]
+    },
+    "flow_persistence": {
+      "state": "fading",
+      "summary": "板块资金持续性差，资金正在流出，短期难以形成有效反弹",
+      "evidence": [
+        "moneyflow_persistence_3d为0，近3日资金流无持续性",
+        "rotation_state为'rotating_out'，显示资金正在从该板块轮动撤出",
+        "net_mf_amount为-1830.23万元，当日主力资金净流出"
+      ]
+    },
+    "sector_flow_compact_signals": {
+      "theme_strength": "weak",
+      "theme_heat": "cold",
+      "crowding_level": "low",
+      "stock_role": "peripheral",
+      "flow_persistence": "fading",
+      "rotation_state": "rotating_out"
+    },
+    "key_risks": [
+      "板块资金持续流出，rotation_state显示资金正在轮动撤离食品板块，短期缺乏资金回流信号",
+      "个股主力资金净流出1830万元，且处于板块边缘位置，若板块反弹可能无法获得资金青睐",
+      "成交量和成交额均较20日均值下降超60%，流动性萎缩风险"
+    ],
+    "tracking_points": [
+      "关注食品板块涨停家数变化，若出现2家以上涨停可能预示板块热度回升",
+      "监控moneyflow_persistence_5d指标，当前为1但3d为0，需观察资金持续性是否改善",
+      "跟踪板块潜在龙头（京粮控股、红棉股份等）的资金流向，判断板块逻辑是否重新激活"
+    ],
+    "flow_summary_zh": "食品板块当前处于弱势冷清状态，市场并未交易该板块逻辑。板块无涨停个股，成交量较20日均值下降超60%，资金拥挤度处于极低水平。梅花生物在板块中处于边缘位置，既非龙头也非核心标的，当日主力资金净流出1830万元。rotation_state显示资金正在从该板块轮动撤出，短期难以形成有效反弹。建议关注板块涨停家数变化和龙头个股资金流向，以判断板块逻辑是否重新激活。"
+  },
+  "raw_response": "基于提供的板块资金面数据包和补充数据，完成分析如下：\n\n```json\n{\n  \"ticker\": \"600873.SH\",\n  \"effective_trade_date\": \"2026-04-02\",\n  \"theme_strength\": {\n    \"state\": \"weak\",\n    \"summary\": \"食品板块当前缺乏明确的板块逻辑驱动，板块内无涨停个股，龙头确认状态为'unconfirmed'，板块整体处于弱势状态\",\n    \"evidence\": [\n      \"板块涨停家数为0，无资金集中攻击信号\",\n      \"主题扩散状态为'narrow'，板块内部联动性弱，缺乏主线逻辑支撑\",\n      \"龙头确认状态为'unconfirmed'，板块缺乏明确的核心领涨标的\"\n    ]\n  },\n  \"theme_heat\": {\n    \"state\": \"cold\",\n    \"summary\": \"食品板块当前交易热度极低，资金参与度处于低位，市场未在交易该板块逻辑\",\n    \"evidence\": [\n      \"crowding_proxy指标为0.108333，显示板块交易拥挤度处于极低水平\",\n      \"volume_vs_ma20为-0.609298，成交额较20日均值下降约61%\",\n      \"amount_vs_ma20为-0.623943，成交量较20日均值下降约62%\"\n    ]\n  },\n  \"crowding\": {\n    \"state\": \"low\",\n    \"summary\": \"板块交易拥挤度处于低位，资金撤离明显，换手率和成交额均处于历史低位\",\n    \"evidence\": [\n      \"turnover_percentile_20d为0.05，换手率处于近20日5%分位，处于极低水平\",\n      \"turnover_percentile_60d为0.216667，换手率处于近60日约22%分位，同样偏低\",\n      \"crowding_proxy为0.108333，板块整体拥挤度指标显示资金参与度低\"\n    ]\n  },\n  \"stock_role_in_theme\": {\n    \"state\": \"peripheral\",\n    \"summary\": \"梅花生物在食品板块中处于边缘位置，既非板块龙头也非核心跟随标的，资金关注度低\",\n    \"evidence\": [\n      \"板块潜在龙头列表包括京粮控股、红棉股份、广弘控股、西王食品、黑芝麻，梅花生物未在其中\",\n      \"net_mf_amount为-1830.23万元，主力资金呈净流出状态\",\n      \"turnover_rate为0.9408%，换手率处于板块内较低水平\"\n    ]\n  },\n  \"flow_persistence\": {\n    \"state\": \"fading\",\n    \"summary\": \"板块资金持续性差，资金正在流出，短期难以形成有效反弹\",\n    \"evidence\": [\n      \"moneyflow_persistence_3d为0，近3日资金流无持续性\",\n      \"rotation_state为'rotating_out'，显示资金正在从该板块轮动撤出\",\n      \"net_mf_amount为-1830.23万元，当日主力资金净流出\"\n    ]\n  },\n  \"sector_flow_compact_signals\": {\n    \"theme_strength\": \"weak\",\n    \"theme_heat\": \"cold\",\n    \"crowding_level\": \"low\",\n    \"stock_role\": \"peripheral\",\n    \"flow_persistence\": \"fading\",\n    \"rotation_state\": \"rotating_out\"\n  },\n  \"key_risks\": [\n    \"板块资金持续流出，rotation_state显示资金正在轮动撤离食品板块，短期缺乏资金回流信号\",\n    \"个股主力资金净流出1830万元，且处于板块边缘位置，若板块反弹可能无法获得资金青睐\",\n    \"成交量和成交额均较20日均值下降超60%，流动性萎缩风险\"\n  ],\n  \"tracking_points\": [\n    \"关注食品板块涨停家数变化，若出现2家以上涨停可能预示板块热度回升\",\n    \"监控moneyflow_persistence_5d指标，当前为1但3d为0，需观察资金持续性是否改善\",\n    \"跟踪板块潜在龙头（京粮控股、红棉股份等）的资金流向，判断板块逻辑是否重新激活\"\n  ],\n  \"flow_summary_zh\": \"食品板块当前处于弱势冷清状态，市场并未交易该板块逻辑。板块无涨停个股，成交量较20日均值下降超60%，资金拥挤度处于极低水平。梅花生物在板块中处于边缘位置，既非龙头也非核心标的，当日主力资金净流出1830万元。rotation_state显示资金正在从该板块轮动撤出，短期难以形成有效反弹。建议关注板块涨停家数变化和龙头个股资金流向，以判断板块逻辑是否重新激活。\"\n}\n```",
+  "trace": {
+    "run_id": "371ed3b1-b08b-4e5d-8b59-d387970b9819",
+    "agent_name": "SectorFlowAgent",
+    "agent_type": "agent",
+    "status": "success",
+    "started_at": 1775063612.5898628,
+    "finished_at": 1775063639.5764968,
+    "duration_ms": 26986,
+    "input_summary": {
+      "ticker": "600873.SH",
+      "analysis_date": "2026-04-02"
+    },
+    "output_summary": {
+      "effective_trade_date": "2026-04-02",
+      "theme_strength": "weak",
+      "theme_heat": "cold",
+      "stock_role": "peripheral"
+    },
+    "error": null,
+    "steps": [
+      {
+        "step_id": "95dbcc9c-b7e8-4548-a4e7-d969cc3eff4c",
+        "step_type": "bundle",
+        "name": "build_sector_flow_bundle",
+        "status": "success",
+        "started_at": 1775063612.589874,
+        "input": {
+          "ticker": "600873.SH",
+          "analysis_date": "2026-04-02"
+        },
+        "output": {
+          "effective_trade_date": "2026-04-02",
+          "sector_name": "食品",
+          "sector_member_count": 93
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775063612.905062,
+        "duration_ms": 315
+      },
+      {
+        "step_id": "23805cb6-c805-4331-916d-5fb8e1b530ca",
+        "step_type": "llm",
+        "name": "llm_invoke_round_1",
+        "status": "success",
+        "started_at": 1775063612.9073012,
+        "input": {
+          "round": 1,
+          "message_count": 2
+        },
+        "output": {
+          "has_tool_calls": true,
+          "content_preview": ""
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775063618.471552,
+        "duration_ms": 5564
+      },
+      {
+        "step_id": "7cd6f831-8c60-4cf8-9d7e-5bde7bb58b02",
+        "step_type": "tool_call",
+        "name": "tool_call_get_sector_activity_context",
+        "status": "success",
+        "started_at": 1775063618.471612,
+        "input": {
+          "tool_name": "get_sector_activity_context",
+          "args": {
+            "ticker": "600873.SH",
+            "analysis_date": "2026-04-02"
+          }
+        },
+        "output": {
+          "result_preview": "{\"ticker\": \"600873.SH\", \"effective_trade_date\": \"2026-04-02\", \"sector_snapshot\": {\"sector_pct_chg\": null, \"sector_volume_change\": null, \"sector_amount_change\": null, \"sector_breadth_up_ratio\": null, \"sector_limit_up_count\": 0, \"sector_limit_down_count\": 0, \"sector_top_inst_count\": 0}, \"theme_activity\": {\"leader_stock_names\": [\"京粮控股\", \"红棉股份\", \"广弘控股\", \"西王食品\", \"黑芝麻\"], \"leader_confirmation\": \"unconfirmed\", \"theme_expansion\": \"narrow\", \"theme_dispersion\": \"unknown\"}, \"sector_series\": [], \"sector_flow_compact_signals\": {\"theme_strength\": \"weak\", \"theme_heat\": \"cold\", \"crowding_level\": \"low\", \"stock_role\": \"peripheral\", \"flow_persistence\": \"fading\", \"rotation_state\": \"rotating_out\"}}"
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775063618.6249468,
+        "duration_ms": 153
+      },
+      {
+        "step_id": "e25a5fdd-7c69-4c6c-9ae0-0c26bafc59bb",
+        "step_type": "tool_call",
+        "name": "tool_call_get_sector_peer_context",
+        "status": "success",
+        "started_at": 1775063618.6249778,
+        "input": {
+          "tool_name": "get_sector_peer_context",
+          "args": {
+            "ticker": "600873.SH",
+            "analysis_date": "2026-04-02"
+          }
+        },
+        "output": {
+          "result_preview": "{\"ticker\": \"600873.SH\", \"effective_trade_date\": \"2026-04-02\", \"meta\": {\"name\": \"梅花生物\", \"industry\": \"食品\", \"market\": \"主板\", \"company_type\": \"consumer_healthcare_growth\", \"sector_index\": null, \"sector_name\": \"食品\", \"sector_level\": \"stock_basic_industry\", \"sector_member_count\": 93}, \"peer_rankings\": [{\"ts_code\": \"000505.SZ\", \"name\": \"京粮控股\", \"pct_chg\": null, \"turnover_rate\": null, \"net_mf_amount\": null}, {\"ts_code\": \"000523.SZ\", \"name\": \"红棉股份\", \"pct_chg\": null, \"turnover_rate\": null, \"net_mf_amount\": null}, {\"ts_code\": \"000529.SZ\", \"name\": \"广弘控股\", \"pct_chg\": null, \"turnover_rate\": null, \"net_mf_amount\": null}, {\"ts_code\": \"000639.SZ\", \"name\": \"西王食品\", \"pct_chg\": null, \"turnover_rate\": null, \"net_mf_amount\": null}, {\"ts_code\": \"000716.SZ\", \"name\": \"黑芝麻\", \"pct_chg\": null, \"turnover_rate\": null, \"net"
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775063618.7696042,
+        "duration_ms": 144
+      },
+      {
+        "step_id": "5aa79a8e-bf4d-4c64-9ab4-f4602123c17f",
+        "step_type": "llm",
+        "name": "llm_invoke_round_2",
+        "status": "success",
+        "started_at": 1775063618.7696362,
+        "input": {
+          "round": 2,
+          "message_count": 5
+        },
+        "output": {
+          "has_tool_calls": false,
+          "content_preview": "基于提供的板块资金面数据包和补充数据，完成分析如下：\n\n```json\n{\n  \"ticker\": \"600873.SH\",\n  \"effective_trade_date\": \"2026-04-02\",\n  \"theme_strength\": {\n    \"state\": \"weak\",\n    \"summary\": \"食品板块当前缺乏明确的板块逻辑驱动，板块内无涨停个股，龙头确认状态为'unconfirmed'，板块整体处于弱势状态\",\n    \"evidence\": [\n      \"板块涨停家数为0，无资金集中攻击信号\",\n      \"主题扩散状态为'narrow'，板块内部联动性弱，缺乏主线逻辑支撑\",\n      \"龙头确认状态为'unconfirmed'，板块缺乏明确的核心领涨标的\"\n    ]\n  },\n  \"theme_heat\": {\n    \"state\": \"cold\",\n    \"summary\": \"食品板块当前交易热度极低，资金参与度处于低位，市场未在交易该板块逻辑\",\n    \"evidence\": [\n      \"crowding_proxy指标为"
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775063639.574902,
+        "duration_ms": 20805
+      },
+      {
+        "step_id": "c35d31ab-1ec2-4eca-800d-fed0f9200836",
+        "step_type": "parse",
+        "name": "parse_json_response",
+        "status": "success",
+        "started_at": 1775063639.57523,
+        "input": {
+          "content_preview": "基于提供的板块资金面数据包和补充数据，完成分析如下：\n\n```json\n{\n  \"ticker\": \"600873.SH\",\n  \"effective_trade_date\": \"2026-04-02\",\n  \"theme_strength\": {\n    \"state\": \"weak\",\n    \"summary\": \"食品板块当前缺乏明确的板块逻辑驱动，板块内无涨停个股，龙头确认状态为'unconfirmed'，板块整体处于弱势状态\",\n    \"evidence\": [\n      \"板块涨停家数为0，无资金集中攻击信号\",\n      \"主题扩散状态为'narrow'，板块内部联动性弱，缺乏主线逻辑支撑\",\n      \"龙头确认状态为'unconfirmed'，板块缺乏明确的核心领涨标的\"\n    ]\n  },\n  \"theme_heat\": {\n    \"state\": \"cold\",\n    \"summary\": \"食品板块当前交易热度极低，资金参与度处于低位，市场未在交易该板块逻辑\",\n    \"evidence\": [\n      \"crowding_proxy指标为"
+        },
+        "output": {
+          "theme_strength": "weak",
+          "theme_heat": "cold",
+          "stock_role": "peripheral"
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775063639.576452,
+        "duration_ms": 1
+      },
+      {
+        "step_id": "d3d277de-6d5a-43d9-997f-03a20a1cfba4",
+        "step_type": "quality_gate",
+        "name": "quality_gate",
+        "status": "success",
+        "started_at": 1775063639.576467,
+        "input": {
+          "round": 2
+        },
+        "output": {
+          "is_sparse": false
+        },
+        "metrics": {
+          "key_risks_count": 3
+        },
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775063639.5764859,
+        "duration_ms": 0
+      }
+    ],
+    "observability": {
+      "langsmith_enabled": false,
+      "langsmith_project_name": null,
+      "otel_enabled": false
+    }
+  }
+}

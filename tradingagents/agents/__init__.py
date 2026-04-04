@@ -22,6 +22,8 @@ from .event_news import EventNewsAgent
 from .sector_flow import SectorFlowAgent
 from .investment_debate import InvestmentDebateAgent
 from .strategy_style import StrategyStyleAgent
+from .strategy_decision import StrategyDecisionAgent
+from .company_report import CompanyAnalysisReportAgent
 from .trading_analysis import TradingAnalysisAgent
 
 __all__ = [
@@ -46,5 +48,7 @@ __all__ = [
     "SectorFlowAgent",
     "InvestmentDebateAgent",
     "StrategyStyleAgent",
+    "StrategyDecisionAgent",
+    "CompanyAnalysisReportAgent",
     "TradingAnalysisAgent",
 ]

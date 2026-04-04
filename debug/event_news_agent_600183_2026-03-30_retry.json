@@ -1,0 +1,765 @@
+{
+  "query_plan": {
+    "sensitivity_variables": [
+      "覆铜板价格",
+      "铜箔/树脂/玻纤布成本",
+      "PCB 下游需求",
+      "产能利用率",
+      "高频高速材料进展",
+      "汇率与出口"
+    ],
+    "company_query": "生益科技 近期 公告 业绩 订单 产能 客户 新品 覆铜板 高频高速 风险",
+    "industry_query": "覆铜板 印制电路板 近期 价格 铜箔 树脂 玻纤布 需求 产能 开工率 库存 技术进展 国产替代",
+    "global_event_query": "近期 铜价 原油 汇率 关税 出口 半导体 服务器 汽车电子 供应链 成本",
+    "query_rationale": {
+      "company": "覆盖业绩、订单、产能、客户验证、新品进展及经营风险。",
+      "industry": "覆盖覆铜板/PCB 链的原材料成本、价格、需求、产能、库存及技术进展变量。",
+      "global": "覆盖大宗商品价格、汇率、关税及下游电子需求链对成本的传导。"
+    }
+  },
+  "company_search": {
+    "queries": [
+      "生益科技 近期 公告 业绩 订单 产能 客户 新品 覆铜板 高频高速 风险"
+    ],
+    "query_results": [
+      {
+        "query": "生益科技 近期 公告 业绩 订单 产能 客户 新品 覆铜板 高频高速 风险",
+        "results_count": 9,
+        "results": [
+          {
+            "title": "生益科技签订45亿元投资意向协议 加码高性能覆铜板布局",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": " AI算力核心材料！生益科技，拿下海外大厂订单的全球龙头_极致说股_市值风云",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "覆铜板量价齐升 生益科技2025年净利同比增超九成|财报解读",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "【招商电子】生益科技:拟45亿扩产高性能CCL,AI订单放量叠加涨价驱动高增长",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "生益科技：连续急跌后动能衰减，低位震荡筑底，下周超跌修复可期 - 今日头条Loading.",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "生益科技基本面全面分析（含AI+汽车电子+数据中心三核心驱动） - 今日头条Loading.",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "生益科技：去年业绩同比暴涨92%背后，藏着什么AI算力真相？ - 今日头条Loading.",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "生益科技：覆铜板行业龙头与估值预测（2026年） - 今日头条Loading.",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "生益科技 筹码、基本面与估值综合分析（含巴菲特净资产收益率标准 - 今日头条Loading.",
+            "trunk": "",
+            "secu_list": []
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "title": "【招商电子】生益科技:拟45亿扩产高性能CCL,AI订单放量叠加涨价驱动高增长",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": " AI算力核心材料！生益科技，拿下海外大厂订单的全球龙头_极致说股_市值风云",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "生益科技：去年业绩同比暴涨92%背后，藏着什么AI算力真相？ - 今日头条Loading.",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "生益科技签订45亿元投资意向协议 加码高性能覆铜板布局",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "覆铜板量价齐升 生益科技2025年净利同比增超九成|财报解读",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "生益科技：连续急跌后动能衰减，低位震荡筑底，下周超跌修复可期 - 今日头条Loading.",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "生益科技基本面全面分析（含AI+汽车电子+数据中心三核心驱动） - 今日头条Loading.",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "生益科技：覆铜板行业龙头与估值预测（2026年） - 今日头条Loading.",
+        "trunk": "",
+        "secu_list": []
+      }
+    ],
+    "deduped_results_count": 9,
+    "reranked_results_count": 8,
+    "retry_attempts": [
+      {
+        "attempt": 1,
+        "layer": "company",
+        "queries": [
+          "生益科技 近期 公告 业绩 订单 产能 客户 新品 覆铜板 高频高速 风险"
+        ],
+        "raw_results_count": 0,
+        "deduped_results_count": 0,
+        "reranked_results_count": 0,
+        "query_results": [
+          {
+            "query": "生益科技 近期 公告 业绩 订单 产能 客户 新品 覆铜板 高频高速 风险",
+            "results_count": 0,
+            "results": []
+          }
+        ]
+      },
+      {
+        "attempt": 2,
+        "layer": "company",
+        "queries": [
+          "生益科技 近期 公告 业绩 订单 产能 客户 新品 覆铜板 高频高速 风险"
+        ],
+        "raw_results_count": 0,
+        "deduped_results_count": 0,
+        "reranked_results_count": 0,
+        "query_results": [
+          {
+            "query": "生益科技 近期 公告 业绩 订单 产能 客户 新品 覆铜板 高频高速 风险",
+            "results_count": 0,
+            "results": []
+          }
+        ]
+      },
+      {
+        "attempt": 3,
+        "layer": "company",
+        "queries": [
+          "生益科技 近期 公告 业绩 订单 产能 客户 新品 覆铜板 高频高速 风险"
+        ],
+        "raw_results_count": 9,
+        "deduped_results_count": 9,
+        "reranked_results_count": 8,
+        "query_results": [
+          {
+            "query": "生益科技 近期 公告 业绩 订单 产能 客户 新品 覆铜板 高频高速 风险",
+            "results_count": 9,
+            "results": [
+              {
+                "title": "生益科技签订45亿元投资意向协议 加码高性能覆铜板布局",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": " AI算力核心材料！生益科技，拿下海外大厂订单的全球龙头_极致说股_市值风云",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "覆铜板量价齐升 生益科技2025年净利同比增超九成|财报解读",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "【招商电子】生益科技:拟45亿扩产高性能CCL,AI订单放量叠加涨价驱动高增长",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "生益科技：连续急跌后动能衰减，低位震荡筑底，下周超跌修复可期 - 今日头条Loading.",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "生益科技基本面全面分析（含AI+汽车电子+数据中心三核心驱动） - 今日头条Loading.",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "生益科技：去年业绩同比暴涨92%背后，藏着什么AI算力真相？ - 今日头条Loading.",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "生益科技：覆铜板行业龙头与估值预测（2026年） - 今日头条Loading.",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "生益科技 筹码、基本面与估值综合分析（含巴菲特净资产收益率标准 - 今日头条Loading.",
+                "trunk": "",
+                "secu_list": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "retry_used": true,
+    "final_attempt": 3
+  },
+  "industry_search": {
+    "queries": [
+      "覆铜板 印制电路板 近期 价格 铜箔 树脂 玻纤布 需求 产能 开工率 库存 技术进展 国产替代"
+    ],
+    "query_results": [
+      {
+        "query": "覆铜板 印制电路板 近期 价格 铜箔 树脂 玻纤布 需求 产能 开工率 库存 技术进展 国产替代",
+        "results_count": 13,
+        "results": [
+          {
+            "title": "聆訊後資料集(第一次呈交)(全文檔案)",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "计算机行业深度：AI驱动PCB升级，看好上游通胀材料环节",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "PCB（印制电路板）",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "PCB产业链掀涨价潮！AI+汽车双驱动，A股最受益公司及5家龙头？ - 今日头条Loading.",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "电力设备行业AIPCB铜箔：GTC大会上调收入指引+强调LPU架构 上游原材料有望受益上游原材料有望受益",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "价值投资 | A股2026年铜箔/覆铜板十大核心龙头股",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "来自北方的良：突发！覆铜板全球缺货+涨价30%，A股受益龙头全梳理，机构扎堆看好 日本两大巨头Resonac、三菱瓦斯相继官宣：覆铜板系列产品涨价30%，全球缺货加剧，交付周期拉长至6个月以上！AI算力爆发+上游材料紧缺，行业进入量价齐升主升浪，这一批公司直接受益！ 一、核心涨价逻辑 - 海外巨头带头涨价，国内龙头同步跟涨- AI服务器拉动高端M8/M9覆铜板需求暴增- 铜箔、电子.",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "涨价函满天飞！覆铜板开启全线涨价，国产替代的决战时刻到了|铜箔|材料|基板|玻纤布|环氧树脂_网易订阅",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "建滔集团覆铜板产品提价的具体幅度和原因是什么？|沪铜期货|铜箔|玻璃期货|AI|树脂_新浪新闻",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "HA投资日记：【覆铜板上游原材料（铜箔/玻纤布/环氧树脂）核心上市公司全景梳理｜2026年2月最新】覆铜板的三大核心原材料——铜箔、玻纤布、环氧树脂，合计占成本80%以上。2025-2026年受益AI算力需求爆发+上游涨价传导，相关公司业绩全面井喷。最新数据整理👇一、电子铜箔（成本占比35%-50%）铜箔是覆铜板的导电层，决定信号传输性能。高端HVLP铜箔供不应求，国产替代空间巨大。.",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "2006年A股 | 铜箔/覆铜板十大核心龙头股",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "储能需求非线性增长，储能电池ETF易方达涨5.07%|锂电|铜箔|etf|易方达基金_网易订阅",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "储能需求非线性增长，电池ETF广发涨1.03%",
+            "trunk": "",
+            "secu_list": []
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "title": "来自北方的良：突发！覆铜板全球缺货+涨价30%，A股受益龙头全梳理，机构扎堆看好 日本两大巨头Resonac、三菱瓦斯相继官宣：覆铜板系列产品涨价30%，全球缺货加剧，交付周期拉长至6个月以上！AI算力爆发+上游材料紧缺，行业进入量价齐升主升浪，这一批公司直接受益！ 一、核心涨价逻辑 - 海外巨头带头涨价，国内龙头同步跟涨- AI服务器拉动高端M8/M9覆铜板需求暴增- 铜箔、电子.",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "PCB产业链掀涨价潮！AI+汽车双驱动，A股最受益公司及5家龙头？ - 今日头条Loading.",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "HA投资日记：【覆铜板上游原材料（铜箔/玻纤布/环氧树脂）核心上市公司全景梳理｜2026年2月最新】覆铜板的三大核心原材料——铜箔、玻纤布、环氧树脂，合计占成本80%以上。2025-2026年受益AI算力需求爆发+上游涨价传导，相关公司业绩全面井喷。最新数据整理👇一、电子铜箔（成本占比35%-50%）铜箔是覆铜板的导电层，决定信号传输性能。高端HVLP铜箔供不应求，国产替代空间巨大。.",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "涨价函满天飞！覆铜板开启全线涨价，国产替代的决战时刻到了|铜箔|材料|基板|玻纤布|环氧树脂_网易订阅",
+        "trunk": "",
+        "secu_list": []
+      }
+    ],
+    "deduped_results_count": 13,
+    "reranked_results_count": 4,
+    "retry_attempts": [
+      {
+        "attempt": 1,
+        "layer": "industry",
+        "queries": [
+          "覆铜板 印制电路板 近期 价格 铜箔 树脂 玻纤布 需求 产能 开工率 库存 技术进展 国产替代"
+        ],
+        "raw_results_count": 13,
+        "deduped_results_count": 13,
+        "reranked_results_count": 4,
+        "query_results": [
+          {
+            "query": "覆铜板 印制电路板 近期 价格 铜箔 树脂 玻纤布 需求 产能 开工率 库存 技术进展 国产替代",
+            "results_count": 13,
+            "results": [
+              {
+                "title": "聆訊後資料集(第一次呈交)(全文檔案)",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "计算机行业深度：AI驱动PCB升级，看好上游通胀材料环节",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "PCB（印制电路板）",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "PCB产业链掀涨价潮！AI+汽车双驱动，A股最受益公司及5家龙头？ - 今日头条Loading.",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "电力设备行业AIPCB铜箔：GTC大会上调收入指引+强调LPU架构 上游原材料有望受益上游原材料有望受益",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "价值投资 | A股2026年铜箔/覆铜板十大核心龙头股",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "来自北方的良：突发！覆铜板全球缺货+涨价30%，A股受益龙头全梳理，机构扎堆看好 日本两大巨头Resonac、三菱瓦斯相继官宣：覆铜板系列产品涨价30%，全球缺货加剧，交付周期拉长至6个月以上！AI算力爆发+上游材料紧缺，行业进入量价齐升主升浪，这一批公司直接受益！ 一、核心涨价逻辑 - 海外巨头带头涨价，国内龙头同步跟涨- AI服务器拉动高端M8/M9覆铜板需求暴增- 铜箔、电子.",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "涨价函满天飞！覆铜板开启全线涨价，国产替代的决战时刻到了|铜箔|材料|基板|玻纤布|环氧树脂_网易订阅",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "建滔集团覆铜板产品提价的具体幅度和原因是什么？|沪铜期货|铜箔|玻璃期货|AI|树脂_新浪新闻",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "HA投资日记：【覆铜板上游原材料（铜箔/玻纤布/环氧树脂）核心上市公司全景梳理｜2026年2月最新】覆铜板的三大核心原材料——铜箔、玻纤布、环氧树脂，合计占成本80%以上。2025-2026年受益AI算力需求爆发+上游涨价传导，相关公司业绩全面井喷。最新数据整理👇一、电子铜箔（成本占比35%-50%）铜箔是覆铜板的导电层，决定信号传输性能。高端HVLP铜箔供不应求，国产替代空间巨大。.",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "2006年A股 | 铜箔/覆铜板十大核心龙头股",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "储能需求非线性增长，储能电池ETF易方达涨5.07%|锂电|铜箔|etf|易方达基金_网易订阅",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "储能需求非线性增长，电池ETF广发涨1.03%",
+                "trunk": "",
+                "secu_list": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "retry_used": false,
+    "final_attempt": 1
+  },
+  "global_search": {
+    "queries": [
+      "近期 铜价 原油 汇率 关税 出口 半导体 服务器 汽车电子 供应链 成本"
+    ],
+    "query_results": [
+      {
+        "query": "近期 铜价 原油 汇率 关税 出口 半导体 服务器 汽车电子 供应链 成本",
+        "results_count": 14,
+        "results": [
+          {
+            "title": "申請版本(第一次呈交)(全文檔案)",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "天津普林:2025年年度报告",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "发行人及中介机构回复意见(珠海越亚半导体股份有限公司)",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "2026年，成本终结“以价换量”？_央广网",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "西部矿业:西部矿业2025年年度报告摘要",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "中信建投 | 美伊冲突将重塑全球汇率格局",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "中信建投 | 美伊局势推动原油反弹,铜价上涨走势未定",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "新能源及有色金属日报：下游负反馈逐步显现 铜价陷入震荡格局",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "物流行业：美伊局势推动原油反弹，铜价上涨走势未定",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "新能源及有色金属周报：关税事宜再起波澜 铜价暂陷震荡格局",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "中国芯片出口额激增72.6%，单价跃升52%|华虹半导体|汽车电子|供应链|产能|澜起科技_新浪新闻",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "A股：周三夜晚传来2个特大级消息！周四或迎来史诗级巨变大行情？ - 今日头条Loading.",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "一文看懂一家上市公司:沪电股份|汽车电子|大陆集团|英伟达|AI|PCB_新浪新闻",
+            "trunk": "",
+            "secu_list": []
+          },
+          {
+            "title": "美国突发制裁，加征25%关税，瞄准半导体及设备出口？",
+            "trunk": "",
+            "secu_list": []
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "title": "新能源及有色金属周报：关税事宜再起波澜 铜价暂陷震荡格局",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "中信建投 | 美伊冲突将重塑全球汇率格局",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "中信建投 | 美伊局势推动原油反弹,铜价上涨走势未定",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "新能源及有色金属日报：下游负反馈逐步显现 铜价陷入震荡格局",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "物流行业：美伊局势推动原油反弹，铜价上涨走势未定",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "2026年，成本终结“以价换量”？_央广网",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "中国芯片出口额激增72.6%，单价跃升52%|华虹半导体|汽车电子|供应链|产能|澜起科技_新浪新闻",
+        "trunk": "",
+        "secu_list": []
+      },
+      {
+        "title": "美国突发制裁，加征25%关税，瞄准半导体及设备出口？",
+        "trunk": "",
+        "secu_list": []
+      }
+    ],
+    "deduped_results_count": 14,
+    "reranked_results_count": 8,
+    "retry_attempts": [
+      {
+        "attempt": 1,
+        "layer": "global",
+        "queries": [
+          "近期 铜价 原油 汇率 关税 出口 半导体 服务器 汽车电子 供应链 成本"
+        ],
+        "raw_results_count": 14,
+        "deduped_results_count": 14,
+        "reranked_results_count": 8,
+        "query_results": [
+          {
+            "query": "近期 铜价 原油 汇率 关税 出口 半导体 服务器 汽车电子 供应链 成本",
+            "results_count": 14,
+            "results": [
+              {
+                "title": "申請版本(第一次呈交)(全文檔案)",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "天津普林:2025年年度报告",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "发行人及中介机构回复意见(珠海越亚半导体股份有限公司)",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "2026年，成本终结“以价换量”？_央广网",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "西部矿业:西部矿业2025年年度报告摘要",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "中信建投 | 美伊冲突将重塑全球汇率格局",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "中信建投 | 美伊局势推动原油反弹,铜价上涨走势未定",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "新能源及有色金属日报：下游负反馈逐步显现 铜价陷入震荡格局",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "物流行业：美伊局势推动原油反弹，铜价上涨走势未定",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "新能源及有色金属周报：关税事宜再起波澜 铜价暂陷震荡格局",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "中国芯片出口额激增72.6%，单价跃升52%|华虹半导体|汽车电子|供应链|产能|澜起科技_新浪新闻",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "A股：周三夜晚传来2个特大级消息！周四或迎来史诗级巨变大行情？ - 今日头条Loading.",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "一文看懂一家上市公司:沪电股份|汽车电子|大陆集团|英伟达|AI|PCB_新浪新闻",
+                "trunk": "",
+                "secu_list": []
+              },
+              {
+                "title": "美国突发制裁，加征25%关税，瞄准半导体及设备出口？",
+                "trunk": "",
+                "secu_list": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "retry_used": false,
+    "final_attempt": 1
+  },
+  "analysis_result": {
+    "ticker": "600183.SH",
+    "effective_trade_date": "2026-03-30",
+    "event_overview": {
+      "state": "catalyst_positive",
+      "summary": "生益科技处于'量价齐升'的强景气周期中。核心催化来自AI算力需求爆发带动的高端覆铜板（CCL）缺货涨价，以及公司45亿扩产计划锁定未来增长。尽管全球地缘政治和原材料成本波动构成宏观扰动，但行业供需缺口的确定性使得公司层面的订单与业绩弹性成为主导变量。",
+      "confidence": 0.85
+    },
+    "company_specific_events": [
+      {
+        "event_type": "order",
+        "title": "拟45亿扩产高性能CCL，AI订单放量叠加涨价驱动高增长",
+        "direction": "bullish",
+        "importance": 0.9,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "capacity",
+          "orders",
+          "revenue_growth"
+        ],
+        "evidence": [
+          "【招商电子】生益科技:拟45亿扩产高性能CCL,AI订单放量叠加涨价驱动高增长",
+          "AI算力核心材料！生益科技，拿下海外大厂订单的全球龙头_极致说股_市值风云"
+        ],
+        "summary": "公司签订45亿元投资意向协议加码高性能覆铜板，直接响应AI服务器对M8/M9等级材料的爆发式需求。结合海外大厂订单落地，产能扩张将转化为实质性营收增量，且在高价位环境下显著增厚利润。"
+      },
+      {
+        "event_type": "earnings",
+        "title": "2025年净利同比增超九成，业绩验证量价齐升逻辑",
+        "direction": "bullish",
+        "importance": 0.85,
+        "time_horizon": "short_term",
+        "affected_variables": [
+          "earnings",
+          "margin",
+          "valuation_expectation"
+        ],
+        "evidence": [
+          "生益科技：去年业绩同比暴涨92%背后，藏着什么AI算力真相？",
+          "覆铜板量价齐升 生益科技2025年净利同比增超九成|财报解读"
+        ],
+        "summary": "2025年净利润同比增长超90%，强力验证了'销量增加+价格上涨'的双击逻辑。优异的财报表现消除了市场对概念炒作的疑虑，提升了估值容忍度，为后续股价表现提供基本面支撑。"
+      }
+    ],
+    "industry_macro_events": [
+      {
+        "event_type": "industry_cycle",
+        "title": "覆铜板全球缺货涨价30%，行业进入量价齐升主升浪",
+        "direction": "bullish",
+        "importance": 0.9,
+        "time_horizon": "medium_term",
+        "affected_variables": [
+          "price",
+          "supply_demand_balance",
+          "lead_time"
+        ],
+        "evidence": [
+          "来自北方的良：突发！覆铜板全球缺货+涨价30%，A股受益龙头全梳理",
+          "PCB产业链掀涨价潮！AI+汽车双驱动，A股最受益公司及5家龙头？"
+        ],
+        "summary": "受AI服务器及汽车电子驱动，全球覆铜板出现结构性缺货，日本巨头带头涨价30%，交付周期拉长至6个月以上。行业从'去库存'快速切换至'供不应求'，拥有高端产能的龙头企业掌握定价权，利润率中枢上移。"
+      },
+      {
+        "event_type": "commodity",
+        "title": "美伊局势推动原油反弹，铜价震荡加剧成本端不确定性",
+        "direction": "bearish",
+        "importance": 0.6,
+        "time_horizon": "short_term",
+        "affected_variables": [
+          "raw_material_cost",
+          "gross_margin"
+        ],
+        "evidence": [
+          "中信建投 | 美伊局势推动原油反弹,铜价上涨走势未定",
+          "新能源及有色金属周报：关税事宜再起波澜 铜价暂陷震荡格局"
+        ],
+        "summary": "地缘冲突导致原油反弹，铜价维持高位震荡。作为覆铜板主要原材料（铜箔占成本35%-50%），价格波动可能短期侵蚀毛利。但在当前强势卖方市场下，公司具备较强的成本传导能力，风险相对可控。"
+      }
+    ],
+    "event_compact_signals": {
+      "company_event_bias": "positive",
+      "macro_event_bias": "mixed",
+      "event_density": "high",
+      "policy_sensitivity": "medium",
+      "earnings_catalyst_state": "none",
+      "risk_event_level": "high"
+    },
+    "event_context_snapshot": {
+      "company_event_strength": "strong",
+      "industry_context_strength": "very_strong",
+      "global_context_strength": "moderate",
+      "chain_completeness": "complete",
+      "dominant_driver_layer": "industry",
+      "dominant_driver_type": "supply_shortage",
+      "primary_bullish_variable": "product_price_increase",
+      "primary_bearish_variable": "raw_material_volatility",
+      "most_actionable_catalyst": "45亿扩产计划落地及AI订单交付",
+      "most_critical_risk": "原材料价格暴涨超出传导能力"
+    },
+    "event_chain": {
+      "global_triggers": [
+        "AI算力基础设施全球性资本开支激增",
+        "美伊地缘冲突引发大宗商品（油、铜）价格波动"
+      ],
+      "industry_variables": [
+        "高端覆铜板（M8/M9）供需失衡，库存见底",
+        "头部厂商联合涨价30%，交付周期延长至6个月+",
+        "上游铜箔/树脂成本承压但可传导"
+      ],
+      "company_impacts": [
+        "生益科技获得海外大厂AI订单，销量有保障",
+        "产品单价提升直接拉动毛利率扩张",
+        "45亿扩产计划解决产能瓶颈，锁定中期增长",
+        "2025年业绩兑现高增长，验证逻辑"
+      ],
+      "missing_links": []
+    },
+    "key_catalysts": [
+      "AI服务器用高频高速覆铜板订单持续放量及交付进度",
+      "45亿扩产项目具体投产时间表及产能爬坡速度",
+      "后续季度财报中毛利率因涨价带来的改善幅度"
+    ],
+    "key_risks": [
+      "铜、原油等大宗商品价格非理性暴涨，成本传导滞后",
+      "地缘政治导致出口受限或汇率大幅波动",
+      "下游AI需求不及预期导致行业景气度快速回落"
+    ],
+    "tracking_points": [
+      "主要竞争对手（如建滔、台光电）的报价策略及开工率变化",
+      "公司高端产品（M8/M9等级）在总营收中的占比提升情况",
+      "月度经营数据中关于存货周转天数及应收账款的变化"
+    ],
+    "event_summary_zh": "生益科技当前处于典型的'量价齐升'景气周期。主导催化是AI算力爆发引发的全球高端覆铜板短缺，行业巨头涨价30%且交期拉长，确立了强卖方市场格局。公司层面，45亿扩产计划精准卡位高端需求，叠加已获海外大厂订单及2025年业绩大增90%的实证，形成了从'行业Beta'到'公司Alpha'的完整闭环。虽然美伊冲突带来的原材料成本波动构成潜在干扰，但在供不应求背景下，公司具备较强的成本转嫁能力。核心观察点在于扩产落地节奏及高端产品占比的提升，主要风险在于原材料价格失控或地缘政策突变。"
+  }
+}

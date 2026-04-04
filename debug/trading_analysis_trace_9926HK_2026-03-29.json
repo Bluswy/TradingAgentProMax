@@ -1,0 +1,181 @@
+{
+  "ticker": "9926.HK",
+  "analysis_date": "2026-03-29",
+  "failure": {
+    "node": "technical",
+    "message": "No market data found for 9926.HK up to 2026-03-27"
+  },
+  "trace": [
+    {
+      "node": "company_context",
+      "status": "success",
+      "started_at": 1774792708.894181,
+      "finished_at": 1774792708.918432,
+      "duration_seconds": 0.024,
+      "input_summary": {
+        "ticker": "9926.HK",
+        "analysis_date": "2026-03-29",
+        "has_company_context": false
+      },
+      "output_summary": {
+        "identity": {
+          "ticker": "9926.HK",
+          "company_name": "9926.HK",
+          "exchange": "HK",
+          "market": "A_share"
+        },
+        "classification": {
+          "industry": "",
+          "company_type": "general_corporate",
+          "style_tag": "general_corporate",
+          "size_bucket": "",
+          "liquidity_bucket": ""
+        },
+        "analysis_time": {
+          "requested_date": "2026-03-29",
+          "effective_date": "2026-03-29",
+          "date_mode": "natural_day"
+        }
+      },
+      "raw_debug": null
+    },
+    {
+      "node": "technical",
+      "status": "error",
+      "started_at": 1774792708.918957,
+      "finished_at": 1774792709.643344,
+      "duration_seconds": 0.724,
+      "input_summary": {
+        "ticker": "9926.HK",
+        "analysis_date": "2026-03-29",
+        "has_company_context": true,
+        "company_context_keys": [
+          "analysis_time",
+          "business_context",
+          "classification",
+          "data_quality",
+          "event_context",
+          "fundamental_context",
+          "identity",
+          "market_context",
+          "search_context",
+          "technical_context"
+        ]
+      },
+      "error_type": "RuntimeError",
+      "error_message": "No market data found for 9926.HK up to 2026-03-27",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/graph/structured_analysis_graph.py\", line 281, in _run_agent_node\n    result = call()\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/graph/structured_analysis_graph.py\", line 206, in <lambda>\n    call=lambda: self.technical_agent.analyze(\n                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\n        state[\"ticker\"],\n        ^^^^^^^^^^^^^^^^\n        state[\"analysis_date\"],\n        ^^^^^^^^^^^^^^^^^^^^^^^\n        company_context=state.get(\"company_context\"),\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ),\n    ^\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/agents/technical/technical_agent.py\", line 56, in analyze\n    bundle = build_technical_data_bundle(\n        ticker=ticker,\n    ...<2 lines>...\n        company_context=company_context,\n    )\n  File \"/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/tradingagents/dataflows/technical_bundle_service.py\", line 260, in build_technical_data_bundle\n    raise RuntimeError(f\"No market data found for {ts_code} up to {effective_date}\")\nRuntimeError: No market data found for 9926.HK up to 2026-03-27\n"
+    }
+  ],
+  "company_context": {
+    "identity": {
+      "ticker": "9926.HK",
+      "company_name": "9926.HK",
+      "exchange": "HK",
+      "market": "A_share"
+    },
+    "analysis_time": {
+      "requested_date": "2026-03-29",
+      "effective_date": "2026-03-29",
+      "date_mode": "natural_day"
+    },
+    "classification": {
+      "industry": "",
+      "company_type": "general_corporate",
+      "style_tag": "general_corporate",
+      "size_bucket": "",
+      "liquidity_bucket": ""
+    },
+    "business_context": {
+      "sub_industry": "",
+      "business_model": "",
+      "company_intro": "",
+      "core_products": [],
+      "main_business_items": [],
+      "demand_drivers": [],
+      "cost_drivers": [],
+      "policy_drivers": [],
+      "global_risk_drivers": []
+    },
+    "market_context": {
+      "valuation_style": "general",
+      "market_attention_points": [],
+      "trading_sensitivity": []
+    },
+    "technical_context": {
+      "trend": {},
+      "momentum": {},
+      "volatility": {},
+      "volume_confirmation": {},
+      "relative_strength": {},
+      "technical_compact_signals": {},
+      "key_levels": {},
+      "signals": [],
+      "confidence": null,
+      "technical_summary_zh": ""
+    },
+    "fundamental_context": {
+      "company_profile": {},
+      "growth": {},
+      "profitability": {},
+      "cashflow_quality": {},
+      "balance_sheet_health": {},
+      "valuation": {},
+      "fundamental_compact_signals": {},
+      "financial_snapshot": {},
+      "core_risks": [],
+      "fundamental_signals": [],
+      "confidence": null,
+      "fundamental_summary_zh": ""
+    },
+    "event_context": {
+      "event_overview": {},
+      "event_compact_signals": {},
+      "event_context_snapshot": {},
+      "event_chain": {},
+      "key_catalysts": [],
+      "key_risks": [],
+      "tracking_points": [],
+      "confidence": null,
+      "event_summary_zh": ""
+    },
+    "search_context": {
+      "search_aliases": [
+        "9926.HK"
+      ],
+      "seed_titles": [],
+      "ths_member_codes": [
+        "700012.TI",
+        "700012R.TI",
+        "700013.TI",
+        "700013R.TI",
+        "700018.TI",
+        "700019.TI",
+        "700020.TI",
+        "871043.TI"
+      ],
+      "ths_concepts": [
+        "871043.TI"
+      ],
+      "index_memberships": [],
+      "preferred_query_style": "keyword_cluster",
+      "language_bias": "cn_finance_media"
+    },
+    "data_quality": {
+      "missing_sections": [],
+      "stale_sections": [],
+      "source_summary": {
+        "stock_basic": true,
+        "stock_company": false,
+        "fina_mainbz": false,
+        "ths_member": true,
+        "index_member_all": false
+      }
+    }
+  },
+  "technical_result": null,
+  "fundamental_result": null,
+  "event_news_result": null,
+  "sector_flow_result": null,
+  "investment_debate_result": null
+}

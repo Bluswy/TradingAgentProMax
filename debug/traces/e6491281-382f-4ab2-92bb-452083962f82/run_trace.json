@@ -1,0 +1,287 @@
+{
+  "run_id": "e6491281-382f-4ab2-92bb-452083962f82",
+  "agent_name": "StructuredAnalysisGraph",
+  "agent_type": "graph",
+  "status": "success",
+  "started_at": 1774885004.851137,
+  "finished_at": 1774885093.704672,
+  "duration_ms": 88853,
+  "input_summary": {
+    "ticker": "601677.SH",
+    "analysis_date": "2026-03-29"
+  },
+  "output_summary": {
+    "failure": null,
+    "has_technical": true,
+    "has_fundamental": true,
+    "has_event_news": true,
+    "has_sector_flow": true,
+    "has_strategy_style": true
+  },
+  "error": null,
+  "steps": [
+    {
+      "step_id": "0ba12fbc-9582-4343-84be-e066f0047baf",
+      "step_type": "node",
+      "name": "company_context",
+      "status": "success",
+      "started_at": 1774885004.8544571,
+      "input": {
+        "ticker": "601677.SH",
+        "analysis_date": "2026-03-29",
+        "has_company_context": false
+      },
+      "output": {
+        "market": "A_share",
+        "exchange": "SH"
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {
+        "result": {
+          "relative_path": "nodes/company_context/result.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/e6491281-382f-4ab2-92bb-452083962f82/nodes/company_context/result.json"
+        }
+      },
+      "finished_at": 1774885004.8854558,
+      "duration_ms": 30
+    },
+    {
+      "step_id": "e04f618f-1edf-473e-9446-239a36c463e2",
+      "step_type": "node",
+      "name": "sector_flow",
+      "status": "success",
+      "started_at": 1774885004.886794,
+      "input": {
+        "ticker": "601677.SH",
+        "analysis_date": "2026-03-29",
+        "has_company_context": true,
+        "company_context_keys": [
+          "analysis_time",
+          "business_context",
+          "classification",
+          "data_quality",
+          "event_context",
+          "fundamental_context",
+          "identity",
+          "market_context",
+          "search_context",
+          "technical_context"
+        ]
+      },
+      "output": {
+        "effective_trade_date": "2026-03-27",
+        "theme_strength": "strong",
+        "theme_heat": "hot",
+        "stock_role": "peripheral"
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {
+        "node_trace": {
+          "relative_path": "nodes/sector_flow/node_trace.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/e6491281-382f-4ab2-92bb-452083962f82/nodes/sector_flow/node_trace.json"
+        },
+        "result": {
+          "relative_path": "nodes/sector_flow/result.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/e6491281-382f-4ab2-92bb-452083962f82/nodes/sector_flow/result.json"
+        }
+      },
+      "finished_at": 1774885026.25112,
+      "duration_ms": 21364
+    },
+    {
+      "step_id": "fc3ace38-5d56-4737-94a8-9bc7ac4876dd",
+      "step_type": "node",
+      "name": "technical",
+      "status": "success",
+      "started_at": 1774885004.8870552,
+      "input": {
+        "ticker": "601677.SH",
+        "analysis_date": "2026-03-29",
+        "has_company_context": true,
+        "company_context_keys": [
+          "analysis_time",
+          "business_context",
+          "classification",
+          "data_quality",
+          "event_context",
+          "fundamental_context",
+          "identity",
+          "market_context",
+          "search_context",
+          "technical_context"
+        ]
+      },
+      "output": {
+        "effective_trade_date": "2026-03-27",
+        "trend": "sideways",
+        "momentum": "weakening",
+        "confidence": 0.65
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {
+        "node_trace": {
+          "relative_path": "nodes/technical/node_trace.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/e6491281-382f-4ab2-92bb-452083962f82/nodes/technical/node_trace.json"
+        },
+        "result": {
+          "relative_path": "nodes/technical/result.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/e6491281-382f-4ab2-92bb-452083962f82/nodes/technical/result.json"
+        }
+      },
+      "finished_at": 1774885027.125023,
+      "duration_ms": 22237
+    },
+    {
+      "step_id": "c562de46-e7e1-4e5c-ae6d-6165f9aa0e34",
+      "step_type": "node",
+      "name": "fundamental",
+      "status": "success",
+      "started_at": 1774885004.886513,
+      "input": {
+        "ticker": "601677.SH",
+        "analysis_date": "2026-03-29",
+        "has_company_context": true,
+        "company_context_keys": [
+          "analysis_time",
+          "business_context",
+          "classification",
+          "data_quality",
+          "event_context",
+          "fundamental_context",
+          "identity",
+          "market_context",
+          "search_context",
+          "technical_context"
+        ]
+      },
+      "output": {
+        "effective_trade_date": "2026-03-27",
+        "growth": "stable",
+        "valuation": "fair",
+        "company_type": "cyclical_resources",
+        "confidence": 0.85
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {
+        "node_trace": {
+          "relative_path": "nodes/fundamental/node_trace.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/e6491281-382f-4ab2-92bb-452083962f82/nodes/fundamental/node_trace.json"
+        },
+        "result": {
+          "relative_path": "nodes/fundamental/result.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/e6491281-382f-4ab2-92bb-452083962f82/nodes/fundamental/result.json"
+        }
+      },
+      "finished_at": 1774885031.5417202,
+      "duration_ms": 26655
+    },
+    {
+      "step_id": "b029e400-fbf1-484a-98b9-70d6d91aa244",
+      "step_type": "node",
+      "name": "event_news",
+      "status": "success",
+      "started_at": 1774885004.886243,
+      "input": {
+        "ticker": "601677.SH",
+        "analysis_date": "2026-03-29",
+        "has_company_context": true,
+        "company_context_keys": [
+          "analysis_time",
+          "business_context",
+          "classification",
+          "data_quality",
+          "event_context",
+          "fundamental_context",
+          "identity",
+          "market_context",
+          "search_context",
+          "technical_context"
+        ]
+      },
+      "output": {
+        "effective_trade_date": "2026-03-29",
+        "event_state": "catalyst_positive",
+        "company_events": 2,
+        "industry_events": 2
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {
+        "node_trace": {
+          "relative_path": "nodes/event_news/node_trace.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/e6491281-382f-4ab2-92bb-452083962f82/nodes/event_news/node_trace.json"
+        },
+        "result": {
+          "relative_path": "nodes/event_news/result.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/e6491281-382f-4ab2-92bb-452083962f82/nodes/event_news/result.json"
+        }
+      },
+      "finished_at": 1774885064.863633,
+      "duration_ms": 59977
+    },
+    {
+      "step_id": "f7e77e59-7961-443c-b91e-3d7758742ac3",
+      "step_type": "node",
+      "name": "collect_results",
+      "status": "success",
+      "started_at": 1774885064.866128,
+      "input": {
+        "failures_count": 0,
+        "has_technical": true,
+        "has_fundamental": true,
+        "has_event_news": true,
+        "has_sector_flow": true
+      },
+      "output": {
+        "missing_results": [],
+        "selected_failure": null
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {},
+      "finished_at": 1774885064.866146,
+      "duration_ms": 0
+    },
+    {
+      "step_id": "b46d562f-efbd-4f53-856c-16a16a54e7ed",
+      "step_type": "node",
+      "name": "strategy_style",
+      "status": "success",
+      "started_at": 1774885064.866555,
+      "input": {
+        "ticker": "601677.SH",
+        "analysis_date": "2026-03-29",
+        "has_company_context": true,
+        "has_technical": true,
+        "has_fundamental": true,
+        "has_event_news": true,
+        "has_sector_flow": true
+      },
+      "output": {
+        "effective_date": "2026-03-29",
+        "primary_strategy": "macro_cycle_investing",
+        "holding_horizon": "medium_term",
+        "secondary_count": 1
+      },
+      "metrics": {},
+      "error": null,
+      "artifacts": {
+        "node_trace": {
+          "relative_path": "nodes/strategy_style/node_trace.json",
+          "absolute_path": "/Users/wysong/Documents/workspace/fintech/TradingAgentProMax/TradingAgents/debug/traces/e6491281-382f-4ab2-92bb-452083962f82/nodes/strategy_style/node_trace.json"
+        }
+      },
+      "finished_at": 1774885093.700105,
+      "duration_ms": 28833
+    }
+  ],
+  "observability": {
+    "langsmith_enabled": false,
+    "langsmith_project_name": null,
+    "otel_enabled": false
+  }
+}
