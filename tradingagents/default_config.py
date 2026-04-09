@@ -29,7 +29,7 @@ DEFAULT_CONFIG = {
     },
     # LLM settings
     "llm_provider": "bailian",
-    "deep_think_llm": "kimi-k2.5",
+    "deep_think_llm": "qwen3.6-plus-2026-04-02",
     "quick_think_llm": "qwen3.5-flash",
     "backend_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
     # Provider-specific thinking configuration

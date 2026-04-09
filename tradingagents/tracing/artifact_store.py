@@ -177,6 +177,8 @@ class TraceArtifactStore:
                     "company_report": state.get("company_report_result") is not None,
                     "final_report": state.get("final_report_result") is not None,
                 },
+                "ui_summary_schema_version": ((state.get("ui_summaries") or {}).get("technical") or {}).get("schema_version"),
+                "ui_summary_keys": sorted((state.get("ui_summaries") or {}).keys()),
             },
         )
         self._record_artifact(
@@ -202,6 +204,7 @@ class TraceArtifactStore:
                 "strategy_decision_result": state.get("strategy_decision_result"),
                 "company_report_result": state.get("company_report_result"),
                 "final_report_result": state.get("final_report_result"),
+                "ui_summaries": state.get("ui_summaries"),
             },
         )
         self._record_artifact(

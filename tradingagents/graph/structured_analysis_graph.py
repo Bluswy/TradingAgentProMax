@@ -3,7 +3,7 @@ from __future__ import annotations
 import operator
 import time
 import traceback
-from typing import Any
+from typing import Any, Callable
 
 from langgraph.graph import END, START, StateGraph
 from typing_extensions import Annotated, TypedDict
@@ -19,7 +19,29 @@ from tradingagents.agents import (
 )
 from tradingagents.dataflows.company_context_service import build_company_context
 from tradingagents.default_config import DEFAULT_CONFIG
+from tradingagents.presentation.ui_summary import (
+    attach_ui_summary,
+    build_company_context_ui_summary,
+    build_company_report_ui_summary,
+    build_event_news_ui_summary,
+    build_final_report_ui_summary,
+    build_fundamental_ui_summary,
+    build_sector_flow_ui_summary,
+    build_strategy_decision_ui_summary,
+    build_strategy_style_ui_summary,
+    build_technical_ui_summary,
+    build_ui_summaries,
+)
 from tradingagents.tracing import AgentTraceBuilder, TraceArtifactStore, trace_parent_scope
+
+
+def _merge_dicts(left: dict[str, Any] | None, right: dict[str, Any] | None) -> dict[str, Any]:
+    merged: dict[str, Any] = {}
+    if left:
+        merged.update(left)
+    if right:
+        merged.update(right)
+    return merged
 
 
 class StructuredAnalysisState(TypedDict, total=False):
@@ -37,6 +59,7 @@ class StructuredAnalysisState(TypedDict, total=False):
     strategy_decision_result: dict[str, Any] | None
     company_report_result: dict[str, Any] | None
     final_report_result: dict[str, Any] | None
+    ui_summaries: Annotated[dict[str, Any], _merge_dicts]
     run_trace: dict[str, Any] | None
     trace_artifacts: dict[str, Any] | None
 
@@ -121,6 +144,15 @@ def _trace_error(node_name: str, started_at: float, input_summary: dict[str, Any
 
 
 def _build_output_summary(node_name: str, result: dict[str, Any]) -> dict[str, Any]:
+    ui_summary = result.get("ui_summary") or {}
+    if ui_summary:
+        return {
+            "effective_date": ui_summary.get("effective_date"),
+            "primary_label": ui_summary.get("primary_label"),
+            "secondary_label": ui_summary.get("secondary_label"),
+            "confidence": ui_summary.get("confidence"),
+            "summary_preview": str(ui_summary.get("summary_zh", ""))[:160],
+        }
     analysis_result = result.get("analysis_result") or {}
     if node_name == "technical":
         return {
@@ -293,7 +325,11 @@ class StructuredAnalysisGraph:
                 "analysis_time": _snapshot_for_trace(company_context.get("analysis_time")),
             }
             trace_entry = _trace_success(node_name, started_at, input_summary, output_summary)
-            updates = {"company_context": company_context, "failure": None}
+            updates = {
+                "company_context": company_context,
+                "failure": None,
+                "ui_summaries": {"company_context": build_company_context_ui_summary(company_context)},
+            }
             self._end_graph_step(
                 graph_step_id,
                 output_summary={
@@ -529,10 +565,15 @@ class StructuredAnalysisGraph:
                 "execution_plan": execution_plan,
                 "report_markdown": report_markdown,
             }
-            output_summary = _build_output_summary(node_name, final_report)
+            final_report_ui = build_final_report_ui_summary(final_report)
+            output_summary = _build_output_summary(node_name, {"ui_summary": final_report_ui})
             trace_entry = _trace_success(node_name, started_at, input_summary, output_summary)
             self._end_graph_step(graph_step_id, output_summary=output_summary)
-            updates: dict[str, Any] = {"final_report_result": final_report, "failure": None}
+            updates: dict[str, Any] = {
+                "final_report_result": final_report,
+                "failure": None,
+                "ui_summaries": {"final_report": final_report_ui},
+            }
         except Exception as error:
             trace_entry = _trace_error(node_name, started_at, input_summary, error)
             self._end_graph_step(graph_step_id, error=error)
@@ -553,10 +594,22 @@ class StructuredAnalysisGraph:
         started_at = _now_ts()
         input_summary = _node_input_summary(state, node_name)
         graph_step_id = self._start_graph_step(node_name, input_summary)
+        ui_summary_builders = {
+            "technical": build_technical_ui_summary,
+            "fundamental": build_fundamental_ui_summary,
+            "event_news": build_event_news_ui_summary,
+            "sector_flow": build_sector_flow_ui_summary,
+            "strategy_style": build_strategy_style_ui_summary,
+            "strategy_decision": build_strategy_decision_ui_summary,
+            "company_report": build_company_report_ui_summary,
+        }
         try:
             with trace_parent_scope(self._graph_trace.run_id if self._graph_trace else None, node_name):
                 result = call()
-            updates: dict[str, Any] = {result_key: result}
+            builder = ui_summary_builders.get(node_name)
+            if builder is not None:
+                result = attach_ui_summary(result, builder)
+            updates: dict[str, Any] = {result_key: result, "ui_summaries": {node_name: result.get("ui_summary")}}
             if context_key and result.get("company_context") is not None:
                 updates[context_key] = result["company_context"]
             output_summary = _build_output_summary(node_name, result)
@@ -579,13 +632,20 @@ class StructuredAnalysisGraph:
         updates.update(_append_trace(trace_entry))
         return updates
 
-    def run(self, ticker: str, analysis_date: str) -> dict[str, Any]:
+    def run(
+        self,
+        ticker: str,
+        analysis_date: str,
+        on_run_created: Callable[[str], None] | None = None,
+    ) -> dict[str, Any]:
         self._graph_trace = AgentTraceBuilder(
             agent_name="StructuredAnalysisGraph",
             agent_type="graph",
             config=self.config,
             input_summary={"ticker": ticker, "analysis_date": analysis_date},
         )
+        if on_run_created is not None:
+            on_run_created(self._graph_trace.run_id)
         initial_state: StructuredAnalysisState = {
             "ticker": ticker,
             "analysis_date": analysis_date,
@@ -601,10 +661,12 @@ class StructuredAnalysisGraph:
             "strategy_decision_result": None,
             "company_report_result": None,
             "final_report_result": None,
+            "ui_summaries": None,
             "run_trace": None,
             "trace_artifacts": None,
         }
         final_state = self.graph.invoke(initial_state)
+        final_state["ui_summaries"] = build_ui_summaries(final_state)
         run_error = None
         if final_state.get("failure"):
             run_error = RuntimeError(str(final_state["failure"].get("message")))

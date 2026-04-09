@@ -77,11 +77,26 @@ def _load_project_tushare_token() -> str | None:
 
 
 def _normalize_symbol(symbol: str) -> str:
-    raw = symbol.strip().upper()
+    raw_text = symbol.strip()
+    raw = raw_text.upper()
     if "." in raw:
         return raw
     digits = "".join(ch for ch in raw if ch.isdigit())
     if len(digits) != 6:
+        pro = _require_tushare()
+        basic = _read_or_query(
+            "stock_basic_active_lookup",
+            {"list_status": "L"},
+            lambda: pro.stock_basic(list_status="L", fields="ts_code,symbol,name"),
+        )
+        if not basic.empty:
+            matches = basic[basic["name"].astype(str).str.strip() == raw_text]
+            if matches.empty:
+                matches = basic[basic["symbol"].astype(str).str.upper() == raw]
+            if not matches.empty:
+                ts_code = str(matches.iloc[0].get("ts_code") or "").strip().upper()
+                if ts_code:
+                    return ts_code
         raise ValueError(
             f"Unsupported A-share symbol '{symbol}'. Expected ts_code like 600519.SH or 000001.SZ."
         )

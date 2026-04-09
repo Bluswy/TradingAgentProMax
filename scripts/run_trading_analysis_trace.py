@@ -24,9 +24,10 @@ def _json_default(value):
 
 
 def _build_summary(result: dict) -> dict:
-    strategy_style = ((result.get("strategy_style_result") or {}).get("analysis_result") or {})
-    strategy_decision = ((result.get("strategy_decision_result") or {}).get("analysis_result") or {})
-    company_report = ((result.get("company_report_result") or {}).get("analysis_result") or {})
+    ui_summaries = result.get("ui_summaries") or {}
+    strategy_style = ui_summaries.get("strategy_style") or {}
+    strategy_decision = ui_summaries.get("strategy_decision") or {}
+    company_report = ui_summaries.get("company_report") or {}
     final_report = result.get("final_report_result") or {}
     run_trace = result.get("run_trace") or {}
 
@@ -43,10 +44,11 @@ def _build_summary(result: dict) -> dict:
         "has_strategy_decision": result.get("strategy_decision_result") is not None,
         "has_company_report": result.get("company_report_result") is not None,
         "has_final_report": result.get("final_report_result") is not None,
-        "primary_strategy": (strategy_style.get("primary_strategy") or {}).get("type"),
-        "decision_action": (strategy_decision.get("decision") or {}).get("action"),
-        "decision_priority": (strategy_decision.get("execution_plan") or {}).get("priority"),
-        "report_title": final_report.get("report_title") or company_report.get("report_title"),
+        "ui_summary_schema_version": strategy_style.get("schema_version"),
+        "primary_strategy": strategy_style.get("primary_label"),
+        "decision_action": strategy_decision.get("primary_label"),
+        "decision_priority": strategy_decision.get("secondary_label"),
+        "report_title": final_report.get("report_title") or company_report.get("primary_label"),
         "final_report_markdown_length": len(final_report.get("report_markdown", "")),
         "trace_nodes": [step.get("node") for step in result.get("trace", [])],
     }

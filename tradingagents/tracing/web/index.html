@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TradingAgentProMax Viewer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-card">
+          <div class="brand-kicker">TradingAgentProMax</div>
+          <div class="brand-title">Research Cockpit</div>
+          <div class="brand-subtitle">实时研究与 Agent Trace 工作台</div>
+        </div>
+
+        <section class="sidebar-section">
+          <div class="section-title">模式</div>
+          <div class="mode-switch">
+            <button id="mode-user" class="mode-btn is-active" data-mode="user">用户模式</button>
+            <button id="mode-dev" class="mode-btn" data-mode="dev">开发模式</button>
+          </div>
+        </section>
+
+        <section class="sidebar-section">
+          <div class="section-row">
+            <div class="section-title">研究</div>
+            <button id="new-conversation-btn" class="ghost-btn">新建</button>
+          </div>
+          <div id="conversation-list" class="list-panel"></div>
+        </section>
+
+        <section class="sidebar-section">
+          <div class="section-row">
+            <div class="section-title">最近 Runs</div>
+            <button id="refresh-runs-btn" class="ghost-btn">刷新</button>
+          </div>
+          <div id="run-list" class="list-panel"></div>
+        </section>
+      </aside>
+
+      <main class="main-stage">
+        <header class="topbar">
+          <div class="topbar-left">
+            <div class="topbar-title">Agent Workspace</div>
+            <div id="current-run-label" class="topbar-subtitle">未选择 run</div>
+          </div>
+          <div class="topbar-right">
+            <span id="global-status" class="status-badge status-queued">idle</span>
+          </div>
+        </header>
+
+        <section id="user-workspace" class="workspace-pane is-active">
+          <div id="research-header" class="research-header panel-card"></div>
+          <div class="user-grid">
+            <div class="panel-card thread-panel">
+              <div class="panel-header">
+                <div>
+                  <div class="panel-title">研究追问</div>
+                  <div class="panel-subtitle">基于当前研究的 active run 继续追问</div>
+                </div>
+                <span id="chat-context-pill" class="signal-pill">未绑定上下文</span>
+              </div>
+              <div id="progress-stream" class="progress-stream"></div>
+              <div id="conversation-thread" class="conversation-thread"></div>
+              <div class="chat-input-shell">
+                <div id="context-bar" class="context-bar">当前上下文: 未选择 run</div>
+                <div class="followup-chips">
+                  <button class="chip-btn" data-prompt="为什么当前是这个主策略？">追问策略</button>
+                  <button class="chip-btn" data-prompt="当前最重要的风险是什么？">追问风险</button>
+                  <button class="chip-btn" data-prompt="请用更通俗的语言解释这份报告。">追问报告</button>
+                </div>
+                <div class="chat-composer">
+                  <textarea id="chat-input" rows="3" placeholder="基于当前研究结果继续提问..."></textarea>
+                  <button id="chat-send-btn" class="primary-btn">发送</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="user-right-column">
+              <div class="panel-card">
+                <div class="panel-header">
+                  <div class="panel-title">策略与动作</div>
+                </div>
+                <div id="result-card-grid" class="result-card-grid"></div>
+              </div>
+              <div class="panel-card report-panel">
+                <div class="panel-header">
+                  <div class="panel-title">完整研究报告</div>
+                </div>
+                <div id="report-viewer" class="markdown-viewer"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="dev-workspace" class="workspace-pane">
+          <div class="dev-grid">
+            <div class="dev-main">
+              <div class="panel-card">
+                <div class="panel-header">
+                  <div class="panel-title">Graph DAG</div>
+                  <div class="panel-subtitle">当前运行链路与节点状态</div>
+                </div>
+                <div id="dag-canvas" class="dag-canvas"></div>
+              </div>
+              <div class="panel-card">
+                <div class="panel-header">
+                  <div class="panel-title">Execution Timeline</div>
+                  <div class="panel-subtitle">节点耗时与并行关系</div>
+                </div>
+                <div id="timeline-panel" class="timeline-panel"></div>
+              </div>
+              <div class="panel-card">
+                <div class="panel-header">
+                  <div class="panel-title">Live Events</div>
+                  <div class="panel-subtitle">实时 trace 事件流</div>
+                </div>
+                <div id="event-feed" class="event-feed"></div>
+              </div>
+            </div>
+            <div class="dev-side">
+              <div class="panel-card inspector-card">
+                <div class="panel-header">
+                  <div class="panel-title">Node Inspector</div>
+                  <div id="selected-node-label" class="panel-subtitle">未选择节点</div>
+                </div>
+                <div id="node-summary" class="inspector-section"></div>
+                <div id="step-trace" class="inspector-section"></div>
+                <div id="artifact-list" class="inspector-section"></div>
+                <div id="error-panel" class="inspector-section"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <template id="run-item-template">
+      <button class="list-item run-item">
+        <div class="item-main">
+          <div class="item-title"></div>
+          <div class="item-subtitle"></div>
+        </div>
+        <span class="status-badge"></span>
+      </button>
+    </template>
+
+    <template id="conversation-item-template">
+      <button class="list-item conversation-item">
+        <div class="item-main">
+          <div class="item-title"></div>
+          <div class="item-subtitle"></div>
+        </div>
+      </button>
+    </template>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

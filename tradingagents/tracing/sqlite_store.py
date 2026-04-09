@@ -8,6 +8,9 @@ from pathlib import Path
 from typing import Any
 
 
+_UNSET = object()
+
+
 def _coerce_jsonable(value: Any, limit: int = 4000) -> Any:
     if value is None or isinstance(value, (str, int, float, bool)):
         if isinstance(value, str) and len(value) > limit:
@@ -164,6 +167,30 @@ class SQLiteTraceStore:
                         created_at REAL NOT NULL
                     );
 
+                    CREATE TABLE IF NOT EXISTS viewer_researches (
+                        research_id TEXT PRIMARY KEY,
+                        title TEXT NOT NULL,
+                        query_text TEXT,
+                        ticker TEXT,
+                        company_name TEXT,
+                        analysis_date TEXT,
+                        parse_result_json TEXT,
+                        status TEXT NOT NULL,
+                        active_run_id TEXT,
+                        created_at REAL NOT NULL,
+                        updated_at REAL NOT NULL
+                    );
+
+                    CREATE TABLE IF NOT EXISTS viewer_research_messages (
+                        message_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        research_id TEXT NOT NULL,
+                        role TEXT NOT NULL,
+                        content TEXT NOT NULL,
+                        run_id TEXT,
+                        metadata_json TEXT,
+                        created_at REAL NOT NULL
+                    );
+
                     CREATE INDEX IF NOT EXISTS idx_trace_runs_started_at ON trace_runs(started_at DESC);
                     CREATE INDEX IF NOT EXISTS idx_trace_runs_parent ON trace_runs(parent_run_id, parent_node_name);
                     CREATE INDEX IF NOT EXISTS idx_trace_nodes_run_id ON trace_nodes(run_id);
@@ -171,6 +198,8 @@ class SQLiteTraceStore:
                     CREATE INDEX IF NOT EXISTS idx_trace_steps_node_name ON trace_steps(run_id, node_name);
                     CREATE INDEX IF NOT EXISTS idx_trace_events_run_id ON trace_events(run_id, event_id);
                     CREATE INDEX IF NOT EXISTS idx_trace_artifacts_run_id ON trace_artifacts(run_id, node_name);
+                    CREATE INDEX IF NOT EXISTS idx_viewer_researches_updated_at ON viewer_researches(updated_at DESC);
+                    CREATE INDEX IF NOT EXISTS idx_viewer_research_messages_research_id ON viewer_research_messages(research_id, message_id ASC);
                     """
                 )
 
@@ -671,6 +700,187 @@ class SQLiteTraceStore:
             row = conn.execute("SELECT * FROM trace_artifacts WHERE artifact_id = ?", (artifact_id,)).fetchone()
         return dict(row) if row else None
 
+    def create_research(
+        self,
+        *,
+        research_id: str,
+        title: str,
+        query_text: str | None = None,
+        ticker: str | None = None,
+        company_name: str | None = None,
+        analysis_date: str | None = None,
+        parse_result: dict[str, Any] | None = None,
+        status: str = "draft",
+        active_run_id: str | None = None,
+    ) -> dict[str, Any]:
+        now = time.time()
+        with self._connect() as conn:
+            conn.execute(
+                """
+                INSERT INTO viewer_researches (
+                    research_id, title, query_text, ticker, company_name, analysis_date, parse_result_json,
+                    status, active_run_id, created_at, updated_at
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    research_id,
+                    title,
+                    query_text,
+                    ticker,
+                    company_name,
+                    analysis_date,
+                    _json_dumps(parse_result),
+                    status,
+                    active_run_id,
+                    now,
+                    now,
+                ),
+            )
+        return self.get_research(research_id) or {}
+
+    def list_researches(self, *, limit: int = 100) -> list[dict[str, Any]]:
+        with self._connect() as conn:
+            rows = conn.execute(
+                """
+                SELECT * FROM viewer_researches
+                ORDER BY updated_at DESC
+                LIMIT ?
+                """,
+                (limit,),
+            ).fetchall()
+        return [self._row_to_research(row) for row in rows]
+
+    def get_research(self, research_id: str) -> dict[str, Any] | None:
+        with self._connect() as conn:
+            row = conn.execute(
+                "SELECT * FROM viewer_researches WHERE research_id = ?",
+                (research_id,),
+            ).fetchone()
+        return self._row_to_research(row) if row else None
+
+    def update_research(
+        self,
+        research_id: str,
+        *,
+        title: str | None | object = _UNSET,
+        query_text: str | None | object = _UNSET,
+        ticker: str | None | object = _UNSET,
+        company_name: str | None | object = _UNSET,
+        analysis_date: str | None | object = _UNSET,
+        parse_result: dict[str, Any] | None | object = _UNSET,
+        status: str | None | object = _UNSET,
+        active_run_id: str | None | object = _UNSET,
+    ) -> dict[str, Any] | None:
+        updates: list[str] = []
+        values: list[Any] = []
+        if title is not _UNSET:
+            updates.append("title = ?")
+            values.append(title)
+        if query_text is not _UNSET:
+            updates.append("query_text = ?")
+            values.append(query_text)
+        if ticker is not _UNSET:
+            updates.append("ticker = ?")
+            values.append(ticker)
+        if company_name is not _UNSET:
+            updates.append("company_name = ?")
+            values.append(company_name)
+        if analysis_date is not _UNSET:
+            updates.append("analysis_date = ?")
+            values.append(analysis_date)
+        if parse_result is not _UNSET:
+            updates.append("parse_result_json = ?")
+            values.append(_json_dumps(parse_result))
+        if status is not _UNSET:
+            updates.append("status = ?")
+            values.append(status)
+        if active_run_id is not _UNSET:
+            updates.append("active_run_id = ?")
+            values.append(active_run_id)
+        if not updates:
+            return self.get_research(research_id)
+        updates.append("updated_at = ?")
+        values.append(time.time())
+        values.append(research_id)
+        with self._connect() as conn:
+            conn.execute(
+                f"UPDATE viewer_researches SET {', '.join(updates)} WHERE research_id = ?",
+                values,
+            )
+        return self.get_research(research_id)
+
+    def append_research_message(
+        self,
+        *,
+        research_id: str,
+        role: str,
+        content: str,
+        run_id: str | None = None,
+        metadata: dict[str, Any] | None = None,
+    ) -> dict[str, Any]:
+        now = time.time()
+        with self._connect() as conn:
+            cur = conn.execute(
+                """
+                INSERT INTO viewer_research_messages (
+                    research_id, role, content, run_id, metadata_json, created_at
+                ) VALUES (?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    research_id,
+                    role,
+                    content,
+                    run_id,
+                    _json_dumps(metadata),
+                    now,
+                ),
+            )
+            conn.execute(
+                """
+                UPDATE viewer_researches
+                SET updated_at = ?, active_run_id = COALESCE(?, active_run_id)
+                WHERE research_id = ?
+                """,
+                (now, run_id, research_id),
+            )
+            message_id = int(cur.lastrowid)
+            row = conn.execute(
+                "SELECT * FROM viewer_research_messages WHERE message_id = ?",
+                (message_id,),
+            ).fetchone()
+        return self._row_to_research_message(row) if row else {}
+
+    def list_research_messages(self, research_id: str) -> list[dict[str, Any]]:
+        with self._connect() as conn:
+            rows = conn.execute(
+                """
+                SELECT * FROM viewer_research_messages
+                WHERE research_id = ?
+                ORDER BY message_id ASC
+                """,
+                (research_id,),
+            ).fetchall()
+        return [self._row_to_research_message(row) for row in rows]
+
+    def claim_research_ready_for_run(self, research_id: str) -> dict[str, Any] | None:
+        now = time.time()
+        with self._connect() as conn:
+            cur = conn.execute(
+                """
+                UPDATE viewer_researches
+                SET status = 'running', updated_at = ?
+                WHERE research_id = ? AND status = 'ready'
+                """,
+                (now, research_id),
+            )
+            if cur.rowcount != 1:
+                return None
+            row = conn.execute(
+                "SELECT * FROM viewer_researches WHERE research_id = ?",
+                (research_id,),
+            ).fetchone()
+        return self._row_to_research(row) if row else None
+
     def _row_to_run(self, row: sqlite3.Row) -> dict[str, Any]:
         return {
             **dict(row),
@@ -701,3 +911,15 @@ class SQLiteTraceStore:
             **dict(row),
             "payload": _json_loads(row["payload_json"]),
         }
+
+    def _row_to_research_message(self, row: sqlite3.Row) -> dict[str, Any]:
+        return {
+            **dict(row),
+            "metadata": _json_loads(row["metadata_json"]),
+        }
+
+    def _row_to_research(self, row: sqlite3.Row) -> dict[str, Any]:
+        payload = dict(row)
+        payload["parse_result"] = _json_loads(payload.get("parse_result_json"))
+        payload.pop("parse_result_json", None)
+        return payload
