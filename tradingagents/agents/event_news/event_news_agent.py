@@ -15,9 +15,69 @@ from tradingagents.default_config import DEFAULT_CONFIG
 from tradingagents.llm_clients import create_llm_client
 from tradingagents.tracing import AgentTraceBuilder
 
+from ..utils import parse_json_object
 from .prompts import EVENT_NEWS_SYSTEM_PROMPT, build_event_news_user_prompt
 from .schema import EVENT_NEWS_OUTPUT_TEMPLATE
 from .tools import EVENT_NEWS_TOOLS
+
+EVENT_SUMMARY_ITEM_SPECS = (
+    ("event_bias", "事件倾向"),
+    ("core_catalyst", "核心催化"),
+    ("bullish_factor", "利好"),
+    ("bearish_factor", "利空"),
+)
+
+
+def _normalize_module_brief(value: Any) -> dict[str, str]:
+    if not isinstance(value, dict):
+        return {"conclusion_zh": "", "rationale_zh": ""}
+    return {
+        "conclusion_zh": str(value.get("conclusion_zh", "")).strip(),
+        "rationale_zh": str(value.get("rationale_zh", "")).strip(),
+    }
+
+
+def _is_valid_module_brief(value: Any) -> bool:
+    if not isinstance(value, dict):
+        return False
+    conclusion = str(value.get("conclusion_zh", "")).strip()
+    rationale = str(value.get("rationale_zh", "")).strip()
+    return 2 <= len(conclusion) <= 8 and 12 <= len(rationale) <= 24
+
+
+def _normalize_module_summary_items(value: Any) -> list[dict[str, str]]:
+    if not isinstance(value, list):
+        return []
+    normalized: list[dict[str, str]] = []
+    for item in value:
+        if not isinstance(item, dict):
+            continue
+        normalized.append(
+            {
+                "key": str(item.get("key", "")).strip(),
+                "label_zh": str(item.get("label_zh", "")).strip(),
+                "conclusion_zh": str(item.get("conclusion_zh", "")).strip(),
+                "rationale_zh": str(item.get("rationale_zh", "")).strip(),
+            }
+        )
+    return normalized[: len(EVENT_SUMMARY_ITEM_SPECS)]
+
+
+def _is_valid_module_summary_items(value: Any) -> bool:
+    if not isinstance(value, list) or len(value) != len(EVENT_SUMMARY_ITEM_SPECS):
+        return False
+    for item, (expected_key, expected_label) in zip(value, EVENT_SUMMARY_ITEM_SPECS, strict=True):
+        if not isinstance(item, dict):
+            return False
+        if str(item.get("key", "")).strip() != expected_key:
+            return False
+        if str(item.get("label_zh", "")).strip() != expected_label:
+            return False
+        conclusion = str(item.get("conclusion_zh", "")).strip()
+        rationale = str(item.get("rationale_zh", "")).strip()
+        if not (2 <= len(conclusion) <= 8 and 12 <= len(rationale) <= 24):
+            return False
+    return True
 
 
 class EventNewsAgent:
@@ -186,7 +246,10 @@ class EventNewsAgent:
                                 "5. 如果证据链不完整，必须把缺失项写进 missing_links；\n"
                                 "6. key_catalysts、key_risks、tracking_points 至少各2条；\n"
                                 "7. event_summary_zh 必须非空；\n"
-                                "8. 不要输出任何解释文字，只输出一个完整JSON对象。"
+                                "8. module_brief 必须包含 conclusion_zh(2-8字) 与 rationale_zh(12-24字)；\n"
+                                "9. module_summary_items 必须按固定顺序返回4条：event_bias/事件倾向、core_catalyst/核心催化、bullish_factor/利好、bearish_factor/利空；\n"
+                                "10. 每条都必须有 conclusion_zh(2-8字) 和 rationale_zh(12-24字)；\n"
+                                "11. 不要输出任何解释文字，只输出一个完整JSON对象。"
                             )
                         )
                     )
@@ -220,19 +283,7 @@ class EventNewsAgent:
             raise
 
     def _parse_json_response(self, content: str, bundle: dict[str, Any]) -> dict[str, Any]:
-        text = content.strip()
-        if text.startswith("```"):
-            lines = [line for line in text.splitlines() if not line.strip().startswith("```")]
-            text = "\n".join(lines).strip()
-
-        try:
-            parsed = json.loads(text)
-        except json.JSONDecodeError:
-            start = text.find("{")
-            end = text.rfind("}")
-            if start == -1 or end == -1 or end <= start:
-                raise ValueError(f"EventNewsAgent did not return valid JSON:\n{text}")
-            parsed = json.loads(text[start : end + 1])
+        parsed = parse_json_object(content, source="EventNewsAgent output")
 
         normalized = json.loads(json.dumps(EVENT_NEWS_OUTPUT_TEMPLATE, ensure_ascii=False))
         normalized.update(
@@ -245,6 +296,8 @@ class EventNewsAgent:
                 "key_catalysts": parsed.get("key_catalysts", normalized["key_catalysts"]),
                 "key_risks": parsed.get("key_risks", normalized["key_risks"]),
                 "tracking_points": parsed.get("tracking_points", normalized["tracking_points"]),
+                "module_brief": _normalize_module_brief(parsed.get("module_brief")),
+                "module_summary_items": _normalize_module_summary_items(parsed.get("module_summary_items")),
                 "event_summary_zh": parsed.get("event_summary_zh", normalized["event_summary_zh"]),
             }
         )
@@ -342,6 +395,10 @@ class EventNewsAgent:
                 return True
 
         if not str(parsed.get("event_summary_zh", "")).strip():
+            return True
+        if not _is_valid_module_brief(parsed.get("module_brief")):
+            return True
+        if not _is_valid_module_summary_items(parsed.get("module_summary_items")):
             return True
 
         return False

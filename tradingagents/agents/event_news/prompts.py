@@ -27,6 +27,8 @@ EVENT_NEWS_SYSTEM_PROMPT = f"""
 7. 构建 event_chain，明确 global_triggers -> industry_variables -> company_impacts 的传导链，并指出 missing_links
 8. 提炼 key_catalysts、key_risks 和 tracking_points
 9. 最后输出一段中文事件摘要
+10. 额外输出 module_brief，供前端维度摘要直接展示
+11. 额外输出 module_summary_items，供前端维度摘要分项展示
 
 规则：
 - 不要把输出写成冗长新闻总结
@@ -45,6 +47,14 @@ EVENT_NEWS_SYSTEM_PROMPT = f"""
 - 如果证据链不完整，必须在 missing_links 中明确指出缺失的是哪一段上下文，例如“缺行业库存/供需验证”或“缺公司经营兑现证据”
 - key_catalysts、key_risks、tracking_points 至少各输出2条
 - event_summary_zh 必须说明主导催化、主要风险、影响路径和后续观察点
+- `module_brief.conclusion_zh` 必须是 2 到 8 个中文字符，像“催化偏正”“事件压制”这样可独立成立
+- `module_brief.rationale_zh` 必须是 12 到 24 个中文字符，说明最核心催化或风险，不要空话
+- `module_brief` 必须与 event_summary_zh 语义一致，但不要机械截断原句
+- `module_summary_items` 必须固定输出 4 条，且顺序与 key 固定为：`event_bias/事件倾向`、`core_catalyst/核心催化`、`bullish_factor/利好`、`bearish_factor/利空`
+- 每条 `module_summary_items` 都必须包含 `conclusion_zh` 和 `rationale_zh`
+- `module_summary_items.conclusion_zh` 必须是 2 到 8 个中文字符
+- `module_summary_items.rationale_zh` 必须是 12 到 24 个中文字符
+- 事件摘要必须使用用户可读语言，不要把 `dominant_driver_layer`、`chain_completeness`、`confidence` 直接塞进摘要项
 
 输出要求：
 - 只输出一个 JSON 对象

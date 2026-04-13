@@ -72,6 +72,36 @@ TECHNICAL_OUTPUT_TEMPLATE = {
     "risk_flags": [],
     "invalidations": [],
     "confidence": 0.0,
+    "module_brief": {
+        "conclusion_zh": "",
+        "rationale_zh": "",
+    },
+    "module_summary_items": [
+        {
+            "key": "trend",
+            "label_zh": "趋势",
+            "conclusion_zh": "",
+            "rationale_zh": "",
+        },
+        {
+            "key": "momentum",
+            "label_zh": "动量",
+            "conclusion_zh": "",
+            "rationale_zh": "",
+        },
+        {
+            "key": "volume_confirmation",
+            "label_zh": "量价",
+            "conclusion_zh": "",
+            "rationale_zh": "",
+        },
+        {
+            "key": "key_levels",
+            "label_zh": "关键位",
+            "conclusion_zh": "",
+            "rationale_zh": "",
+        },
+    ],
     "technical_summary_zh": "",
 }
 

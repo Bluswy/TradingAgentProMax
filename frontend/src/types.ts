@@ -136,10 +136,47 @@ export type FinalState = {
   strategy_decision_result?: Record<string, unknown>;
   company_report_result?: Record<string, unknown>;
   final_report_result?: Record<string, unknown>;
+  _report_artifact_status?: Record<string, unknown>;
 };
 
 export type ReportSection = {
   id: string;
   title: string;
   body: string;
+};
+
+export type DecisionEvidence = {
+  module?: string;
+  title?: string;
+  fact?: string;
+  importance?: number;
+};
+
+export type ModuleContribution = {
+  stance?: string;
+  weight?: number;
+  summary?: string;
+};
+
+export type DecisionWatchItem = {
+  variable?: string;
+  reason?: string;
+  window?: string;
+  bull_case_if_met?: string;
+  bear_case_if_missed?: string;
+};
+
+export type StructuredInvalidation = {
+  type?: string;
+  label?: string;
+  condition?: string;
+  action_after_trigger?: string;
+  severity?: string;
+};
+
+export type StructuredRisk = {
+  label?: string;
+  category?: string;
+  impact_path?: string;
+  risk_level?: string;
 };

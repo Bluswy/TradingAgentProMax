@@ -1,0 +1,1668 @@
+{
+  "ticker": "688682.SH",
+  "analysis_date": "2026-04-09",
+  "company_context": {
+    "identity": {
+      "ticker": "688682.SH",
+      "company_name": "霍莱沃",
+      "exchange": "SH",
+      "market": "A_share"
+    },
+    "analysis_time": {
+      "requested_date": "2026-04-09",
+      "effective_date": "2026-04-09",
+      "date_mode": "trade_day"
+    },
+    "classification": {
+      "industry": "软件服务",
+      "company_type": "tmt_growth",
+      "style_tag": "tmt_growth",
+      "size_bucket": "small_cap",
+      "liquidity_bucket": "medium"
+    },
+    "business_context": {
+      "sub_industry": "军工电子Ⅲ",
+      "business_model": "致力于电磁场与微波技术各类应用技术的测试和仿真,主要从事无线通信和雷达领域的测试,仿真和整体设备系统的业务.具体而言,公司依托自主研发的电磁场仿真分析与相控阵校准测试核心算法,围绕相控阵的设计,研发,生产和应用阶段,提供相应软件,系统和相关产品.",
+      "company_intro": "公司2007年7月成立，总部位于张江科学城，于科创板挂牌上市，并在上海、成都、西安、北京和香港等地设有子公司。公司获得上海市高新技术企业、专精特新企业、浦东新区企业研发机构等资质，成立了上海市专家工作站，与天线与微波技术重点实验室建立天线测量技术联合实验室。公司长期致力于工业软件的研发，聚焦于电磁仿真及校准测量技术的研发及应用，依托自主研发的核心算法，主要为航空航天、电子信息、通信等领域提供用于电磁仿真及电磁测量的软件和系统，并研制相控阵产品。公司在行业细分领域研发能力强，参与制定了多个国家标准，代表性技术成果“高精度多通道相控阵测量系统”经中国电子学会",
+      "core_products": [
+        "电磁测量系统业务",
+        "电磁测量",
+        "相控阵校准测试系统业务",
+        "通用测试业务",
+        "电磁场仿真分析验证业务"
+      ],
+      "main_business_items": [
+        "电磁测量系统业务",
+        "电磁测量",
+        "相控阵校准测试系统业务",
+        "通用测试业务",
+        "电磁场仿真分析验证业务",
+        "相控阵相关产品业务",
+        "电磁场仿真软件及应用",
+        "半实物仿真验证系统"
+      ],
+      "demand_drivers": [],
+      "cost_drivers": [],
+      "policy_drivers": [],
+      "global_risk_drivers": []
+    },
+    "market_context": {
+      "valuation_style": "growth",
+      "market_attention_points": [],
+      "trading_sensitivity": []
+    },
+    "technical_context": {
+      "trend": {
+        "short_term": "sideways",
+        "medium_term": "bearish",
+        "strength": 0.3,
+        "summary": "短期价格在20日均线附近震荡，中期受制于50日均线压制，整体处于下跌后的整理阶段。",
+        "evidence": [
+          "收盘价44.13元，略高于SMA20（43.81元），偏离度+0.73%。",
+          "收盘价低于SMA50（48.06元），偏离度-8.17%，中期趋势向下。",
+          "SMA20位于SMA50下方，均线系统呈空头排列或纠缠状态，未形成金叉。",
+          "近5日收益率+0.34%，近20日收益率-6.21%，显示短期企稳但中期弱势。"
+        ]
+      },
+      "momentum": {
+        "state": "neutral",
+        "strength": 0.4,
+        "summary": "MACD绿柱缩短并出现轻微底背离迹象，RSI处于中性区域，动量暂无明确方向，处于修复期。",
+        "evidence": [
+          "MACD值为-1.28，信号线为-1.66，MACD柱状图为+0.38，且柱状图变化为正（0.055），显示下行动能减弱。",
+          "RSI(14)为47.0，处于50中轴下方附近，既非超买也非超卖。",
+          "MFI(14)为48.0，资金流向指标中性。",
+          "当日收盘价44.13元低于前一日收盘45.01元，短线动能略有回落。"
+        ]
+      },
+      "volatility": {
+        "state": "contracting",
+        "summary": "波动率处于收缩状态，布林带收口，价格在中轨附近运行，预示变盘前夕的平静。",
+        "evidence": [
+          "ATR(14)为2.27，占收盘价比例约5.15%，处于中等偏低水平。",
+          "布林带上轨47.12元，下轨40.50元，带宽约15%，相较于前期大幅波动有所收敛。",
+          "当前价格44.13元位于布林带中轨（43.81元）上方，Boll_Position为0.55，处于通道中部偏上位置。"
+        ]
+      },
+      "volume_confirmation": {
+        "state": "diverging",
+        "summary": "成交量低于20日均量，上涨缩量，下跌亦缩量，缺乏主力资金积极介入确认，量价配合一般。",
+        "evidence": [
+          "当日成交量11152手，低于20日均量12901手，量比0.97。",
+          "4月8日上涨时成交量15804手，4月9日下跌时成交量11152手，呈现缩量调整特征。",
+          "净流入资金-514.4万元，资金面呈现小幅流出。",
+          "收盘价44.13元高于VWMA20（43.75元），表明近期平均持仓成本略低于现价，但量能不足支撑大幅突破。"
+        ]
+      },
+      "relative_strength": {
+        "vs_benchmark": "weaker",
+        "vs_sector": "neutral",
+        "summary": "相对沪深300指数表现较弱，20日和60日相对收益均为负值，跑输大盘。",
+        "evidence": [
+          "20日相对基准收益率为-5.94%，显示近期走势弱于沪深300。",
+          "60日相对基准收益率为-15.56%，中期显著跑输基准。",
+          "所属军工电子/软件服务板块近期表现需结合行业指数，但个股Alpha为负。"
+        ]
+      },
+      "technical_compact_signals": {
+        "price_vs_sma20": 0.0073,
+        "price_vs_sma50": -0.0817,
+        "price_vs_ema10": 0.0124,
+        "sma20_vs_sma50": -0.0883,
+        "macd": -1.2824,
+        "macd_signal": -1.6583,
+        "macd_hist": 0.3759,
+        "macd_hist_change": 0.055,
+        "rsi_14": 47.0,
+        "mfi_14": 48.0,
+        "atr_14": 2.2734,
+        "atr_pct_of_close": 0.0515,
+        "boll_position": 0.5482,
+        "volume_vs_ma20": -0.1356,
+        "close_vs_vwma20": 0.0087,
+        "rs_vs_benchmark_20d": -0.0594,
+        "rs_vs_benchmark_60d": -0.1556
+      },
+      "key_levels": {
+        "support": [
+          43.81,
+          42.46,
+          40.5
+        ],
+        "resistance": [
+          45.02,
+          47.12,
+          48.06
+        ],
+        "breakout_level": 47.12,
+        "breakdown_level": 42.46
+      },
+      "signals": [
+        {
+          "type": "mean_reversion",
+          "direction": "bullish",
+          "strength": 0.4,
+          "description": "MACD低位金叉预期与布林带中轨支撑形成的短线反弹信号。",
+          "evidence": [
+            "MACD柱状图连续转正且数值增加，快线有上穿慢线趋势。",
+            "股价站稳布林带中轨（43.81元）及20日均线之上。",
+            "RSI从低位回升至47，脱离超卖区。"
+          ]
+        },
+        {
+          "type": "trend_following",
+          "direction": "bearish",
+          "strength": 0.6,
+          "description": "中期均线压制下的弱势整理，反弹空间受限。",
+          "evidence": [
+            "股价始终运行在50日均线（48.06元）下方。",
+            "20日均线仍低于50日均线，长期趋势未扭转。",
+            "相对沪深300持续走弱，缺乏板块效应支持。"
+          ]
+        }
+      ],
+      "confidence": 0.6,
+      "technical_summary_zh": "霍莱沃（688682.SH）在2026年4月9日处于中期下跌趋势中的短线震荡整理阶段。股价收于44.13元，勉强站稳20日均线（43.81元）和布林带中轨，但受制于50日均线（48.06元）的强压。技术指标显示下行动能减弱（MACD绿柱缩短），RSI回归中性，但成交量萎缩（低于20日均量）且相对沪深300表现疲弱，表明市场观望情绪浓厚，缺乏主动买盘。关键支撑位在42.46-43.81元区间，压力位在45.02-47.12元。短期内若无放量突破，大概率维持区间震荡或阴跌寻底。"
+    },
+    "fundamental_context": {
+      "company_profile": {},
+      "growth": {},
+      "profitability": {},
+      "cashflow_quality": {},
+      "balance_sheet_health": {},
+      "valuation": {},
+      "fundamental_compact_signals": {},
+      "financial_snapshot": {},
+      "core_risks": [],
+      "fundamental_signals": [],
+      "confidence": null,
+      "fundamental_summary_zh": ""
+    },
+    "event_context": {
+      "event_overview": {},
+      "event_compact_signals": {},
+      "event_context_snapshot": {},
+      "event_chain": {},
+      "key_catalysts": [],
+      "key_risks": [],
+      "tracking_points": [],
+      "confidence": null,
+      "event_summary_zh": ""
+    },
+    "search_context": {
+      "search_aliases": [
+        "霍莱沃",
+        "上海霍莱沃电子系统技术股份有限公司",
+        "电磁测量系统业务",
+        "电磁测量",
+        "相控阵校准测试系统业务",
+        "通用测试业务",
+        "国防军工",
+        "军工电子Ⅱ",
+        "军工电子Ⅲ"
+      ],
+      "seed_titles": [],
+      "ths_member_codes": [
+        "700001.TI",
+        "700002.TI",
+        "700008.TI",
+        "700009.TI",
+        "700030.TI",
+        "700033.TI",
+        "700037.TI",
+        "700038.TI",
+        "700042.TI",
+        "700081.TI",
+        "700082.TI",
+        "700308.TI"
+      ],
+      "ths_concepts": [
+        "信息技术(A股)",
+        "软件与服务(A股)",
+        "软件(A股)",
+        "系统软件(A股)",
+        "军工电子",
+        "浦东",
+        "高市盈率",
+        "军工电子Ⅲ",
+        "融资融券",
+        "5G",
+        "卫星导航",
+        "军工"
+      ],
+      "index_memberships": [
+        "国防军工",
+        "军工电子Ⅱ",
+        "军工电子Ⅲ"
+      ],
+      "preferred_query_style": "keyword_cluster",
+      "language_bias": "cn_finance_media"
+    },
+    "data_quality": {
+      "missing_sections": [],
+      "stale_sections": [],
+      "source_summary": {
+        "stock_basic": true,
+        "stock_company": true,
+        "fina_mainbz": true,
+        "ths_member": true,
+        "index_member_all": true
+      }
+    }
+  },
+  "technical_data_bundle": {
+    "ticker": "688682.SH",
+    "requested_date": "2026-04-09",
+    "effective_trade_date": "2026-04-09",
+    "meta": {
+      "name": "霍莱沃",
+      "industry": "软件服务",
+      "market": "A_share",
+      "sub_industry": "军工电子Ⅲ",
+      "business_model": "致力于电磁场与微波技术各类应用技术的测试和仿真,主要从事无线通信和雷达领域的测试,仿真和整体设备系统的业务.具体而言,公司依托自主研发的电磁场仿真分析与相控阵校准测试核心算法,围绕相控阵的设计,研发,生产和应用阶段,提供相应软件,系统和相关产品.",
+      "benchmark": "000300.SH",
+      "sector_index": null
+    },
+    "company_context": {
+      "identity": {
+        "ticker": "688682.SH",
+        "company_name": "霍莱沃",
+        "exchange": "SH",
+        "market": "A_share"
+      },
+      "analysis_time": {
+        "requested_date": "2026-04-09",
+        "effective_date": "2026-04-09",
+        "date_mode": "trade_day"
+      },
+      "classification": {
+        "industry": "软件服务",
+        "company_type": "tmt_growth",
+        "style_tag": "tmt_growth",
+        "size_bucket": "small_cap",
+        "liquidity_bucket": "medium"
+      },
+      "business_context": {
+        "sub_industry": "军工电子Ⅲ",
+        "business_model": "致力于电磁场与微波技术各类应用技术的测试和仿真,主要从事无线通信和雷达领域的测试,仿真和整体设备系统的业务.具体而言,公司依托自主研发的电磁场仿真分析与相控阵校准测试核心算法,围绕相控阵的设计,研发,生产和应用阶段,提供相应软件,系统和相关产品.",
+        "company_intro": "公司2007年7月成立，总部位于张江科学城，于科创板挂牌上市，并在上海、成都、西安、北京和香港等地设有子公司。公司获得上海市高新技术企业、专精特新企业、浦东新区企业研发机构等资质，成立了上海市专家工作站，与天线与微波技术重点实验室建立天线测量技术联合实验室。公司长期致力于工业软件的研发，聚焦于电磁仿真及校准测量技术的研发及应用，依托自主研发的核心算法，主要为航空航天、电子信息、通信等领域提供用于电磁仿真及电磁测量的软件和系统，并研制相控阵产品。公司在行业细分领域研发能力强，参与制定了多个国家标准，代表性技术成果“高精度多通道相控阵测量系统”经中国电子学会",
+        "core_products": [
+          "电磁测量系统业务",
+          "电磁测量",
+          "相控阵校准测试系统业务",
+          "通用测试业务",
+          "电磁场仿真分析验证业务"
+        ],
+        "main_business_items": [
+          "电磁测量系统业务",
+          "电磁测量",
+          "相控阵校准测试系统业务",
+          "通用测试业务",
+          "电磁场仿真分析验证业务",
+          "相控阵相关产品业务",
+          "电磁场仿真软件及应用",
+          "半实物仿真验证系统"
+        ],
+        "demand_drivers": [],
+        "cost_drivers": [],
+        "policy_drivers": [],
+        "global_risk_drivers": []
+      },
+      "market_context": {
+        "valuation_style": "growth",
+        "market_attention_points": [],
+        "trading_sensitivity": []
+      },
+      "technical_context": {
+        "trend": {},
+        "momentum": {},
+        "volatility": {},
+        "volume_confirmation": {},
+        "relative_strength": {},
+        "technical_compact_signals": {},
+        "key_levels": {},
+        "signals": [],
+        "confidence": null,
+        "technical_summary_zh": ""
+      },
+      "fundamental_context": {
+        "company_profile": {},
+        "growth": {},
+        "profitability": {},
+        "cashflow_quality": {},
+        "balance_sheet_health": {},
+        "valuation": {},
+        "fundamental_compact_signals": {},
+        "financial_snapshot": {},
+        "core_risks": [],
+        "fundamental_signals": [],
+        "confidence": null,
+        "fundamental_summary_zh": ""
+      },
+      "event_context": {
+        "event_overview": {},
+        "event_compact_signals": {},
+        "event_context_snapshot": {},
+        "event_chain": {},
+        "key_catalysts": [],
+        "key_risks": [],
+        "tracking_points": [],
+        "confidence": null,
+        "event_summary_zh": ""
+      },
+      "search_context": {
+        "search_aliases": [
+          "霍莱沃",
+          "上海霍莱沃电子系统技术股份有限公司",
+          "电磁测量系统业务",
+          "电磁测量",
+          "相控阵校准测试系统业务",
+          "通用测试业务",
+          "国防军工",
+          "军工电子Ⅱ",
+          "军工电子Ⅲ"
+        ],
+        "seed_titles": [],
+        "ths_member_codes": [
+          "700001.TI",
+          "700002.TI",
+          "700008.TI",
+          "700009.TI",
+          "700030.TI",
+          "700033.TI",
+          "700037.TI",
+          "700038.TI",
+          "700042.TI",
+          "700081.TI",
+          "700082.TI",
+          "700308.TI"
+        ],
+        "ths_concepts": [
+          "信息技术(A股)",
+          "软件与服务(A股)",
+          "软件(A股)",
+          "系统软件(A股)",
+          "军工电子",
+          "浦东",
+          "高市盈率",
+          "军工电子Ⅲ",
+          "融资融券",
+          "5G",
+          "卫星导航",
+          "军工"
+        ],
+        "index_memberships": [
+          "国防军工",
+          "军工电子Ⅱ",
+          "军工电子Ⅲ"
+        ],
+        "preferred_query_style": "keyword_cluster",
+        "language_bias": "cn_finance_media"
+      },
+      "data_quality": {
+        "missing_sections": [],
+        "stale_sections": [],
+        "source_summary": {
+          "stock_basic": true,
+          "stock_company": true,
+          "fina_mainbz": true,
+          "ths_member": true,
+          "index_member_all": true
+        }
+      }
+    },
+    "price_series": {
+      "frequency": "1d",
+      "adjustment": "qfq",
+      "window_days": 90,
+      "bars": [
+        {
+          "trade_date": "2025-11-24",
+          "open": 31.62,
+          "high": 34.2,
+          "low": 31.4,
+          "close": 33.86,
+          "pre_close": 31.08,
+          "volume": 35980.82,
+          "amount": 118990.503
+        },
+        {
+          "trade_date": "2025-11-25",
+          "open": 33.93,
+          "high": 35.98,
+          "low": 33.93,
+          "close": 35.52,
+          "pre_close": 33.86,
+          "volume": 39087.85,
+          "amount": 137724.544
+        },
+        {
+          "trade_date": "2025-11-26",
+          "open": 36.0,
+          "high": 36.68,
+          "low": 34.68,
+          "close": 35.37,
+          "pre_close": 35.52,
+          "volume": 30986.95,
+          "amount": 110174.203
+        },
+        {
+          "trade_date": "2025-11-27",
+          "open": 35.6,
+          "high": 37.57,
+          "low": 34.6,
+          "close": 36.75,
+          "pre_close": 35.37,
+          "volume": 42689.79,
+          "amount": 155209.457
+        },
+        {
+          "trade_date": "2025-11-28",
+          "open": 37.01,
+          "high": 38.53,
+          "low": 36.62,
+          "close": 37.64,
+          "pre_close": 36.75,
+          "volume": 45862.67,
+          "amount": 172615.844
+        },
+        {
+          "trade_date": "2025-12-01",
+          "open": 38.18,
+          "high": 38.8,
+          "low": 37.25,
+          "close": 37.45,
+          "pre_close": 37.64,
+          "volume": 34413.54,
+          "amount": 130257.794
+        },
+        {
+          "trade_date": "2025-12-02",
+          "open": 37.16,
+          "high": 38.2,
+          "low": 36.5,
+          "close": 37.54,
+          "pre_close": 37.45,
+          "volume": 29943.87,
+          "amount": 112230.496
+        },
+        {
+          "trade_date": "2025-12-03",
+          "open": 37.45,
+          "high": 38.33,
+          "low": 36.06,
+          "close": 37.36,
+          "pre_close": 37.54,
+          "volume": 33451.12,
+          "amount": 124365.052
+        },
+        {
+          "trade_date": "2025-12-04",
+          "open": 36.4,
+          "high": 38.13,
+          "low": 36.4,
+          "close": 37.62,
+          "pre_close": 37.36,
+          "volume": 25080.49,
+          "amount": 93353.219
+        },
+        {
+          "trade_date": "2025-12-05",
+          "open": 38.12,
+          "high": 40.95,
+          "low": 37.5,
+          "close": 39.8,
+          "pre_close": 37.62,
+          "volume": 64554.96,
+          "amount": 253564.575
+        },
+        {
+          "trade_date": "2025-12-08",
+          "open": 40.09,
+          "high": 43.97,
+          "low": 40.09,
+          "close": 41.22,
+          "pre_close": 39.8,
+          "volume": 62566.84,
+          "amount": 261696.587
+        },
+        {
+          "trade_date": "2025-12-09",
+          "open": 41.02,
+          "high": 45.48,
+          "low": 41.02,
+          "close": 42.88,
+          "pre_close": 41.22,
+          "volume": 52920.15,
+          "amount": 227809.931
+        },
+        {
+          "trade_date": "2025-12-10",
+          "open": 45.43,
+          "high": 51.46,
+          "low": 45.0,
+          "close": 51.46,
+          "pre_close": 42.88,
+          "volume": 108148.09,
+          "amount": 536786.752
+        },
+        {
+          "trade_date": "2025-12-11",
+          "open": 53.0,
+          "high": 53.0,
+          "low": 48.01,
+          "close": 48.5,
+          "pre_close": 51.46,
+          "volume": 98943.13,
+          "amount": 486847.967
+        },
+        {
+          "trade_date": "2025-12-12",
+          "open": 47.61,
+          "high": 55.0,
+          "low": 47.61,
+          "close": 53.45,
+          "pre_close": 48.5,
+          "volume": 111314.44,
+          "amount": 566993.537
+        },
+        {
+          "trade_date": "2025-12-15",
+          "open": 50.0,
+          "high": 55.99,
+          "low": 49.74,
+          "close": 52.36,
+          "pre_close": 53.45,
+          "volume": 93290.18,
+          "amount": 487117.723
+        },
+        {
+          "trade_date": "2025-12-16",
+          "open": 50.0,
+          "high": 52.87,
+          "low": 46.74,
+          "close": 50.83,
+          "pre_close": 52.36,
+          "volume": 78608.22,
+          "amount": 384338.11
+        },
+        {
+          "trade_date": "2025-12-17",
+          "open": 49.9,
+          "high": 51.99,
+          "low": 48.0,
+          "close": 49.03,
+          "pre_close": 50.83,
+          "volume": 59299.76,
+          "amount": 291092.34
+        },
+        {
+          "trade_date": "2025-12-18",
+          "open": 48.0,
+          "high": 52.3,
+          "low": 47.75,
+          "close": 50.9,
+          "pre_close": 49.03,
+          "volume": 72187.37,
+          "amount": 366075.389
+        },
+        {
+          "trade_date": "2025-12-19",
+          "open": 51.51,
+          "high": 52.98,
+          "low": 49.33,
+          "close": 51.5,
+          "pre_close": 50.9,
+          "volume": 57401.04,
+          "amount": 291732.279
+        },
+        {
+          "trade_date": "2025-12-22",
+          "open": 52.21,
+          "high": 53.5,
+          "low": 51.01,
+          "close": 51.3,
+          "pre_close": 51.5,
+          "volume": 57605.0,
+          "amount": 300402.87
+        },
+        {
+          "trade_date": "2025-12-23",
+          "open": 50.6,
+          "high": 52.27,
+          "low": 48.0,
+          "close": 48.94,
+          "pre_close": 51.3,
+          "volume": 56459.98,
+          "amount": 280234.057
+        },
+        {
+          "trade_date": "2025-12-24",
+          "open": 48.94,
+          "high": 54.98,
+          "low": 48.5,
+          "close": 53.04,
+          "pre_close": 48.94,
+          "volume": 73852.6,
+          "amount": 385752.765
+        },
+        {
+          "trade_date": "2025-12-25",
+          "open": 54.28,
+          "high": 57.79,
+          "low": 53.85,
+          "close": 54.9,
+          "pre_close": 53.04,
+          "volume": 73814.39,
+          "amount": 406732.944
+        },
+        {
+          "trade_date": "2025-12-26",
+          "open": 55.1,
+          "high": 58.0,
+          "low": 53.6,
+          "close": 55.95,
+          "pre_close": 54.9,
+          "volume": 73033.85,
+          "amount": 405451.527
+        },
+        {
+          "trade_date": "2025-12-29",
+          "open": 55.06,
+          "high": 55.06,
+          "low": 53.1,
+          "close": 53.54,
+          "pre_close": 55.95,
+          "volume": 45673.01,
+          "amount": 246223.073
+        },
+        {
+          "trade_date": "2025-12-30",
+          "open": 52.59,
+          "high": 54.18,
+          "low": 51.61,
+          "close": 51.85,
+          "pre_close": 53.54,
+          "volume": 41730.15,
+          "amount": 220123.776
+        },
+        {
+          "trade_date": "2025-12-31",
+          "open": 51.2,
+          "high": 54.15,
+          "low": 50.64,
+          "close": 52.91,
+          "pre_close": 51.85,
+          "volume": 40166.41,
+          "amount": 211552.873
+        },
+        {
+          "trade_date": "2026-01-05",
+          "open": 54.5,
+          "high": 55.8,
+          "low": 52.36,
+          "close": 54.99,
+          "pre_close": 52.91,
+          "volume": 64419.23,
+          "amount": 350374.958
+        },
+        {
+          "trade_date": "2026-01-06",
+          "open": 53.18,
+          "high": 56.87,
+          "low": 52.0,
+          "close": 55.9,
+          "pre_close": 54.99,
+          "volume": 57370.79,
+          "amount": 313447.326
+        },
+        {
+          "trade_date": "2026-01-07",
+          "open": 55.1,
+          "high": 57.9,
+          "low": 53.02,
+          "close": 57.63,
+          "pre_close": 55.9,
+          "volume": 54535.01,
+          "amount": 305837.659
+        },
+        {
+          "trade_date": "2026-01-08",
+          "open": 57.0,
+          "high": 64.3,
+          "low": 56.6,
+          "close": 62.18,
+          "pre_close": 57.63,
+          "volume": 74767.0,
+          "amount": 456793.741
+        },
+        {
+          "trade_date": "2026-01-09",
+          "open": 61.49,
+          "high": 67.5,
+          "low": 60.29,
+          "close": 61.81,
+          "pre_close": 62.18,
+          "volume": 71942.91,
+          "amount": 457061.053
+        },
+        {
+          "trade_date": "2026-01-12",
+          "open": 63.56,
+          "high": 73.0,
+          "low": 62.15,
+          "close": 69.83,
+          "pre_close": 61.81,
+          "volume": 71920.79,
+          "amount": 490769.626
+        },
+        {
+          "trade_date": "2026-01-13",
+          "open": 67.0,
+          "high": 67.4,
+          "low": 59.85,
+          "close": 62.26,
+          "pre_close": 69.83,
+          "volume": 71449.54,
+          "amount": 453740.346
+        },
+        {
+          "trade_date": "2026-01-14",
+          "open": 62.0,
+          "high": 67.76,
+          "low": 59.96,
+          "close": 62.3,
+          "pre_close": 62.26,
+          "volume": 66368.28,
+          "amount": 421063.435
+        },
+        {
+          "trade_date": "2026-01-15",
+          "open": 61.0,
+          "high": 64.6,
+          "low": 58.2,
+          "close": 59.98,
+          "pre_close": 62.3,
+          "volume": 53047.9,
+          "amount": 320690.853
+        },
+        {
+          "trade_date": "2026-01-16",
+          "open": 60.0,
+          "high": 62.19,
+          "low": 58.95,
+          "close": 59.2,
+          "pre_close": 59.98,
+          "volume": 41518.88,
+          "amount": 250096.336
+        },
+        {
+          "trade_date": "2026-01-19",
+          "open": 58.1,
+          "high": 63.0,
+          "low": 58.1,
+          "close": 61.23,
+          "pre_close": 59.2,
+          "volume": 42205.27,
+          "amount": 257991.341
+        },
+        {
+          "trade_date": "2026-01-20",
+          "open": 61.32,
+          "high": 62.8,
+          "low": 58.59,
+          "close": 59.88,
+          "pre_close": 61.23,
+          "volume": 41770.63,
+          "amount": 251298.464
+        },
+        {
+          "trade_date": "2026-01-21",
+          "open": 59.78,
+          "high": 60.73,
+          "low": 57.06,
+          "close": 57.26,
+          "pre_close": 59.88,
+          "volume": 35114.69,
+          "amount": 205116.206
+        },
+        {
+          "trade_date": "2026-01-22",
+          "open": 57.01,
+          "high": 59.18,
+          "low": 57.01,
+          "close": 58.2,
+          "pre_close": 57.26,
+          "volume": 29931.7,
+          "amount": 174769.0
+        },
+        {
+          "trade_date": "2026-01-23",
+          "open": 58.42,
+          "high": 63.9,
+          "low": 57.5,
+          "close": 62.3,
+          "pre_close": 58.2,
+          "volume": 58827.01,
+          "amount": 358884.265
+        },
+        {
+          "trade_date": "2026-01-26",
+          "open": 62.3,
+          "high": 62.3,
+          "low": 53.53,
+          "close": 54.74,
+          "pre_close": 62.3,
+          "volume": 54369.51,
+          "amount": 309314.356
+        },
+        {
+          "trade_date": "2026-01-27",
+          "open": 54.1,
+          "high": 56.18,
+          "low": 53.33,
+          "close": 55.54,
+          "pre_close": 54.74,
+          "volume": 31046.36,
+          "amount": 170356.424
+        },
+        {
+          "trade_date": "2026-01-28",
+          "open": 55.57,
+          "high": 56.77,
+          "low": 53.68,
+          "close": 54.32,
+          "pre_close": 55.54,
+          "volume": 30333.41,
+          "amount": 165402.781
+        },
+        {
+          "trade_date": "2026-01-29",
+          "open": 54.0,
+          "high": 54.78,
+          "low": 52.51,
+          "close": 52.51,
+          "pre_close": 54.32,
+          "volume": 20878.61,
+          "amount": 111578.646
+        },
+        {
+          "trade_date": "2026-01-30",
+          "open": 51.16,
+          "high": 52.0,
+          "low": 49.7,
+          "close": 50.36,
+          "pre_close": 52.51,
+          "volume": 34425.13,
+          "amount": 173691.865
+        },
+        {
+          "trade_date": "2026-02-02",
+          "open": 50.71,
+          "high": 51.88,
+          "low": 49.24,
+          "close": 49.24,
+          "pre_close": 50.36,
+          "volume": 20065.73,
+          "amount": 100858.42
+        },
+        {
+          "trade_date": "2026-02-03",
+          "open": 49.9,
+          "high": 51.15,
+          "low": 49.75,
+          "close": 50.85,
+          "pre_close": 49.24,
+          "volume": 22694.38,
+          "amount": 114605.692
+        },
+        {
+          "trade_date": "2026-02-04",
+          "open": 51.1,
+          "high": 51.22,
+          "low": 48.95,
+          "close": 49.68,
+          "pre_close": 50.85,
+          "volume": 20966.69,
+          "amount": 104773.791
+        },
+        {
+          "trade_date": "2026-02-05",
+          "open": 49.36,
+          "high": 50.89,
+          "low": 48.96,
+          "close": 49.72,
+          "pre_close": 49.68,
+          "volume": 16982.71,
+          "amount": 84822.55
+        },
+        {
+          "trade_date": "2026-02-06",
+          "open": 49.1,
+          "high": 49.88,
+          "low": 48.11,
+          "close": 48.82,
+          "pre_close": 49.72,
+          "volume": 20266.78,
+          "amount": 99475.38
+        },
+        {
+          "trade_date": "2026-02-09",
+          "open": 49.49,
+          "high": 50.97,
+          "low": 49.0,
+          "close": 50.39,
+          "pre_close": 48.82,
+          "volume": 17500.58,
+          "amount": 87750.082
+        },
+        {
+          "trade_date": "2026-02-10",
+          "open": 50.37,
+          "high": 50.39,
+          "low": 48.81,
+          "close": 49.0,
+          "pre_close": 50.39,
+          "volume": 17416.31,
+          "amount": 85807.422
+        },
+        {
+          "trade_date": "2026-02-11",
+          "open": 49.0,
+          "high": 49.4,
+          "low": 48.5,
+          "close": 48.57,
+          "pre_close": 49.0,
+          "volume": 13112.89,
+          "amount": 63979.916
+        },
+        {
+          "trade_date": "2026-02-12",
+          "open": 48.57,
+          "high": 50.48,
+          "low": 48.22,
+          "close": 49.82,
+          "pre_close": 48.57,
+          "volume": 17775.37,
+          "amount": 88080.88
+        },
+        {
+          "trade_date": "2026-02-13",
+          "open": 49.71,
+          "high": 50.79,
+          "low": 49.35,
+          "close": 49.82,
+          "pre_close": 49.82,
+          "volume": 14913.51,
+          "amount": 74969.419
+        },
+        {
+          "trade_date": "2026-02-24",
+          "open": 50.48,
+          "high": 50.48,
+          "low": 48.46,
+          "close": 48.73,
+          "pre_close": 49.82,
+          "volume": 11954.95,
+          "amount": 58647.614
+        },
+        {
+          "trade_date": "2026-02-25",
+          "open": 49.04,
+          "high": 49.59,
+          "low": 48.0,
+          "close": 49.41,
+          "pre_close": 48.73,
+          "volume": 13759.37,
+          "amount": 67450.39
+        },
+        {
+          "trade_date": "2026-02-26",
+          "open": 49.75,
+          "high": 50.99,
+          "low": 48.8,
+          "close": 50.41,
+          "pre_close": 49.41,
+          "volume": 18111.82,
+          "amount": 90839.742
+        },
+        {
+          "trade_date": "2026-02-27",
+          "open": 49.93,
+          "high": 51.86,
+          "low": 49.4,
+          "close": 51.04,
+          "pre_close": 50.41,
+          "volume": 20742.09,
+          "amount": 105388.726
+        },
+        {
+          "trade_date": "2026-03-02",
+          "open": 50.88,
+          "high": 53.62,
+          "low": 50.4,
+          "close": 51.97,
+          "pre_close": 51.04,
+          "volume": 35238.02,
+          "amount": 183993.154
+        },
+        {
+          "trade_date": "2026-03-03",
+          "open": 51.88,
+          "high": 51.94,
+          "low": 46.0,
+          "close": 46.11,
+          "pre_close": 51.97,
+          "volume": 32863.44,
+          "amount": 158545.449
+        },
+        {
+          "trade_date": "2026-03-04",
+          "open": 46.87,
+          "high": 48.6,
+          "low": 46.2,
+          "close": 47.51,
+          "pre_close": 46.11,
+          "volume": 21724.58,
+          "amount": 104083.536
+        },
+        {
+          "trade_date": "2026-03-05",
+          "open": 47.9,
+          "high": 49.44,
+          "low": 47.43,
+          "close": 48.42,
+          "pre_close": 47.51,
+          "volume": 16190.3,
+          "amount": 78442.144
+        },
+        {
+          "trade_date": "2026-03-06",
+          "open": 47.76,
+          "high": 49.24,
+          "low": 47.63,
+          "close": 48.43,
+          "pre_close": 48.42,
+          "volume": 10899.08,
+          "amount": 53067.286
+        },
+        {
+          "trade_date": "2026-03-09",
+          "open": 48.51,
+          "high": 48.51,
+          "low": 46.0,
+          "close": 47.63,
+          "pre_close": 48.43,
+          "volume": 13969.92,
+          "amount": 65732.299
+        },
+        {
+          "trade_date": "2026-03-10",
+          "open": 47.67,
+          "high": 49.84,
+          "low": 47.67,
+          "close": 48.73,
+          "pre_close": 47.63,
+          "volume": 11824.33,
+          "amount": 57813.868
+        },
+        {
+          "trade_date": "2026-03-11",
+          "open": 48.6,
+          "high": 49.9,
+          "low": 47.0,
+          "close": 47.05,
+          "pre_close": 48.73,
+          "volume": 15819.64,
+          "amount": 75646.531
+        },
+        {
+          "trade_date": "2026-03-12",
+          "open": 48.45,
+          "high": 48.45,
+          "low": 45.85,
+          "close": 46.5,
+          "pre_close": 47.05,
+          "volume": 12740.81,
+          "amount": 59255.897
+        },
+        {
+          "trade_date": "2026-03-13",
+          "open": 46.08,
+          "high": 46.68,
+          "low": 45.01,
+          "close": 45.05,
+          "pre_close": 46.5,
+          "volume": 9870.2,
+          "amount": 45142.522
+        },
+        {
+          "trade_date": "2026-03-16",
+          "open": 45.24,
+          "high": 46.94,
+          "low": 45.05,
+          "close": 46.26,
+          "pre_close": 45.05,
+          "volume": 12420.23,
+          "amount": 56872.919
+        },
+        {
+          "trade_date": "2026-03-17",
+          "open": 46.5,
+          "high": 46.99,
+          "low": 44.5,
+          "close": 44.58,
+          "pre_close": 46.26,
+          "volume": 9279.54,
+          "amount": 42412.266
+        },
+        {
+          "trade_date": "2026-03-18",
+          "open": 44.53,
+          "high": 46.49,
+          "low": 44.44,
+          "close": 46.48,
+          "pre_close": 44.58,
+          "volume": 12397.65,
+          "amount": 56736.514
+        },
+        {
+          "trade_date": "2026-03-19",
+          "open": 45.96,
+          "high": 46.6,
+          "low": 45.2,
+          "close": 45.68,
+          "pre_close": 46.48,
+          "volume": 10825.89,
+          "amount": 49523.321
+        },
+        {
+          "trade_date": "2026-03-20",
+          "open": 46.0,
+          "high": 46.0,
+          "low": 43.68,
+          "close": 43.92,
+          "pre_close": 45.68,
+          "volume": 12465.08,
+          "amount": 55830.066
+        },
+        {
+          "trade_date": "2026-03-23",
+          "open": 43.0,
+          "high": 44.01,
+          "low": 40.6,
+          "close": 40.97,
+          "pre_close": 43.92,
+          "volume": 18929.04,
+          "amount": 79841.82
+        },
+        {
+          "trade_date": "2026-03-24",
+          "open": 42.67,
+          "high": 42.67,
+          "low": 39.93,
+          "close": 41.43,
+          "pre_close": 40.97,
+          "volume": 14932.32,
+          "amount": 61044.208
+        },
+        {
+          "trade_date": "2026-03-25",
+          "open": 41.2,
+          "high": 43.5,
+          "low": 41.2,
+          "close": 42.2,
+          "pre_close": 41.43,
+          "volume": 13613.79,
+          "amount": 57970.963
+        },
+        {
+          "trade_date": "2026-03-26",
+          "open": 42.91,
+          "high": 43.29,
+          "low": 41.27,
+          "close": 41.94,
+          "pre_close": 42.2,
+          "volume": 12045.94,
+          "amount": 50792.49
+        },
+        {
+          "trade_date": "2026-03-27",
+          "open": 41.66,
+          "high": 42.8,
+          "low": 41.2,
+          "close": 42.59,
+          "pre_close": 41.94,
+          "volume": 10838.2,
+          "amount": 45632.189
+        },
+        {
+          "trade_date": "2026-03-30",
+          "open": 42.0,
+          "high": 44.65,
+          "low": 41.86,
+          "close": 43.96,
+          "pre_close": 42.59,
+          "volume": 17661.82,
+          "amount": 77268.634
+        },
+        {
+          "trade_date": "2026-03-31",
+          "open": 44.51,
+          "high": 46.5,
+          "low": 43.92,
+          "close": 44.04,
+          "pre_close": 43.96,
+          "volume": 21198.95,
+          "amount": 95900.355
+        },
+        {
+          "trade_date": "2026-04-01",
+          "open": 44.5,
+          "high": 45.26,
+          "low": 43.16,
+          "close": 43.98,
+          "pre_close": 44.04,
+          "volume": 11736.26,
+          "amount": 51360.79
+        },
+        {
+          "trade_date": "2026-04-02",
+          "open": 43.94,
+          "high": 44.66,
+          "low": 42.75,
+          "close": 43.1,
+          "pre_close": 43.98,
+          "volume": 10029.42,
+          "amount": 43732.281
+        },
+        {
+          "trade_date": "2026-04-03",
+          "open": 43.57,
+          "high": 43.71,
+          "low": 42.23,
+          "close": 42.46,
+          "pre_close": 43.1,
+          "volume": 9282.15,
+          "amount": 39729.09
+        },
+        {
+          "trade_date": "2026-04-07",
+          "open": 42.98,
+          "high": 42.98,
+          "low": 41.38,
+          "close": 41.94,
+          "pre_close": 42.46,
+          "volume": 10799.88,
+          "amount": 45409.567
+        },
+        {
+          "trade_date": "2026-04-08",
+          "open": 42.77,
+          "high": 45.02,
+          "low": 42.77,
+          "close": 45.01,
+          "pre_close": 41.94,
+          "volume": 15804.23,
+          "amount": 70174.519
+        },
+        {
+          "trade_date": "2026-04-09",
+          "open": 44.27,
+          "high": 44.82,
+          "low": 43.89,
+          "close": 44.13,
+          "pre_close": 45.01,
+          "volume": 11152.07,
+          "amount": 49300.148
+        }
+      ]
+    },
+    "market_snapshot": {
+      "open": 44.27,
+      "high": 44.82,
+      "low": 43.89,
+      "close": 44.13,
+      "pre_close": 45.01,
+      "volume": 11152.07,
+      "amount": 49300.148,
+      "turnover_rate": 1.0951,
+      "volume_ratio": 0.97,
+      "up_limit": 54.01,
+      "down_limit": 36.01,
+      "net_mf_amount": -514.4
+    },
+    "indicators": {
+      "sma_20": 43.811,
+      "sma_50": 48.056,
+      "ema_10": 43.590558,
+      "macd": -1.282381,
+      "macd_signal": -1.658297,
+      "macd_hist": 0.375916,
+      "rsi_14": 47.001942,
+      "atr_14": 2.273354,
+      "boll_mid": 43.811,
+      "boll_upper": 47.121123,
+      "boll_lower": 40.500877,
+      "vwma_20": 43.748169,
+      "volume_ma_20": 12901.1735,
+      "mfi_14": 47.968522
+    },
+    "indicator_context": {
+      "returns": {
+        "1d": -0.019551,
+        "5d": 0.003411,
+        "20d": -0.062062,
+        "60d": -0.210555
+      },
+      "price_vs_moving_averages": {
+        "close_vs_sma_20": 0.007281,
+        "close_vs_sma_50": -0.081696,
+        "close_vs_ema_10": 0.012375,
+        "sma_20_vs_sma_50": -0.088334
+      },
+      "momentum_context": {
+        "macd": -1.282381,
+        "macd_signal": -1.658297,
+        "macd_hist": 0.375916,
+        "macd_hist_change": 0.05503,
+        "rsi_14": 47.001942,
+        "mfi_14": 47.968522
+      },
+      "volatility_context": {
+        "atr_14": 2.273354,
+        "atr_pct_of_close": 0.051515,
+        "boll_mid": 43.811,
+        "boll_upper": 47.121123,
+        "boll_lower": 40.500877,
+        "boll_position": 0.548186
+      },
+      "volume_context": {
+        "volume": 11152.07,
+        "volume_ma_20": 12901.1735,
+        "volume_vs_ma_20": -0.135577,
+        "volume_ratio": 0.97,
+        "turnover_rate": 1.0951,
+        "vwma_20": 43.748169,
+        "close_vs_vwma_20": 0.008728,
+        "net_mf_amount": -514.4
+      }
+    },
+    "price_structure": {
+      "high_20": 48.45,
+      "low_20": 39.93,
+      "high_60": 73.0,
+      "low_60": 39.93,
+      "high_90": 73.0,
+      "low_90": 31.4
+    },
+    "relative_strength": {
+      "vs_benchmark_20d": -0.059397,
+      "vs_benchmark_60d": -0.155588,
+      "vs_sector_20d": null,
+      "vs_sector_60d": null
+    },
+    "data_quality": {
+      "is_trade_date_aligned": true,
+      "missing_fields": [],
+      "source": "tushare",
+      "adjustment": "qfq"
+    }
+  },
+  "analysis_result": {
+    "ticker": "688682.SH",
+    "effective_trade_date": "2026-04-09",
+    "trend": {
+      "short_term": "sideways",
+      "medium_term": "bearish",
+      "strength": 0.3,
+      "summary": "短期价格在20日均线附近震荡，中期受制于50日均线压制，整体处于下跌后的整理阶段。",
+      "evidence": [
+        "收盘价44.13元，略高于SMA20（43.81元），偏离度+0.73%。",
+        "收盘价低于SMA50（48.06元），偏离度-8.17%，中期趋势向下。",
+        "SMA20位于SMA50下方，均线系统呈空头排列或纠缠状态，未形成金叉。",
+        "近5日收益率+0.34%，近20日收益率-6.21%，显示短期企稳但中期弱势。"
+      ]
+    },
+    "momentum": {
+      "state": "neutral",
+      "strength": 0.4,
+      "summary": "MACD绿柱缩短并出现轻微底背离迹象，RSI处于中性区域，动量暂无明确方向，处于修复期。",
+      "evidence": [
+        "MACD值为-1.28，信号线为-1.66，MACD柱状图为+0.38，且柱状图变化为正（0.055），显示下行动能减弱。",
+        "RSI(14)为47.0，处于50中轴下方附近，既非超买也非超卖。",
+        "MFI(14)为48.0，资金流向指标中性。",
+        "当日收盘价44.13元低于前一日收盘45.01元，短线动能略有回落。"
+      ]
+    },
+    "volatility": {
+      "state": "contracting",
+      "summary": "波动率处于收缩状态，布林带收口，价格在中轨附近运行，预示变盘前夕的平静。",
+      "evidence": [
+        "ATR(14)为2.27，占收盘价比例约5.15%，处于中等偏低水平。",
+        "布林带上轨47.12元，下轨40.50元，带宽约15%，相较于前期大幅波动有所收敛。",
+        "当前价格44.13元位于布林带中轨（43.81元）上方，Boll_Position为0.55，处于通道中部偏上位置。"
+      ]
+    },
+    "volume_confirmation": {
+      "state": "diverging",
+      "summary": "成交量低于20日均量，上涨缩量，下跌亦缩量，缺乏主力资金积极介入确认，量价配合一般。",
+      "evidence": [
+        "当日成交量11152手，低于20日均量12901手，量比0.97。",
+        "4月8日上涨时成交量15804手，4月9日下跌时成交量11152手，呈现缩量调整特征。",
+        "净流入资金-514.4万元，资金面呈现小幅流出。",
+        "收盘价44.13元高于VWMA20（43.75元），表明近期平均持仓成本略低于现价，但量能不足支撑大幅突破。"
+      ]
+    },
+    "relative_strength": {
+      "vs_benchmark": "weaker",
+      "vs_sector": "neutral",
+      "summary": "相对沪深300指数表现较弱，20日和60日相对收益均为负值，跑输大盘。",
+      "evidence": [
+        "20日相对基准收益率为-5.94%，显示近期走势弱于沪深300。",
+        "60日相对基准收益率为-15.56%，中期显著跑输基准。",
+        "所属军工电子/软件服务板块近期表现需结合行业指数，但个股Alpha为负。"
+      ]
+    },
+    "indicator_snapshot": {
+      "price_vs_sma20": 0.0073,
+      "price_vs_sma50": -0.0817,
+      "price_vs_ema10": 0.0124,
+      "sma20_vs_sma50": -0.0883,
+      "macd": -1.2824,
+      "macd_signal": -1.6583,
+      "macd_hist": 0.3759,
+      "macd_hist_change": 0.055,
+      "rsi_14": 47.0,
+      "mfi_14": 48.0,
+      "atr_14": 2.2734,
+      "atr_pct_of_close": 0.0515,
+      "boll_position": 0.5482,
+      "volume_vs_ma20": -0.1356,
+      "close_vs_vwma20": 0.0087,
+      "rs_vs_benchmark_20d": -0.0594,
+      "rs_vs_benchmark_60d": -0.1556
+    },
+    "key_levels": {
+      "support": [
+        43.81,
+        42.46,
+        40.5
+      ],
+      "resistance": [
+        45.02,
+        47.12,
+        48.06
+      ],
+      "breakout_level": 47.12,
+      "breakdown_level": 42.46
+    },
+    "signals": [
+      {
+        "type": "mean_reversion",
+        "direction": "bullish",
+        "strength": 0.4,
+        "description": "MACD低位金叉预期与布林带中轨支撑形成的短线反弹信号。",
+        "evidence": [
+          "MACD柱状图连续转正且数值增加，快线有上穿慢线趋势。",
+          "股价站稳布林带中轨（43.81元）及20日均线之上。",
+          "RSI从低位回升至47，脱离超卖区。"
+        ]
+      },
+      {
+        "type": "trend_following",
+        "direction": "bearish",
+        "strength": 0.6,
+        "description": "中期均线压制下的弱势整理，反弹空间受限。",
+        "evidence": [
+          "股价始终运行在50日均线（48.06元）下方。",
+          "20日均线仍低于50日均线，长期趋势未扭转。",
+          "相对沪深300持续走弱，缺乏板块效应支持。"
+        ]
+      }
+    ],
+    "risk_flags": [
+      "成交量持续萎缩，若无法补量突破45元压力位，可能再次探底。",
+      "中期趋势依然向下，任何反弹均视为超跌修复而非反转。",
+      "相对强弱指标持续为负，资金关注度下降。"
+    ],
+    "invalidations": [
+      "若收盘价有效跌破42.46元（近期低点及心理关口），则短线企稳逻辑失效，看向布林下轨40.50元。",
+      "若放量突破47.12元（布林上轨）并站稳，则短线弱势格局改变，可能挑战50日均线。"
+    ],
+    "confidence": 0.6,
+    "technical_summary_zh": "霍莱沃（688682.SH）在2026年4月9日处于中期下跌趋势中的短线震荡整理阶段。股价收于44.13元，勉强站稳20日均线（43.81元）和布林带中轨，但受制于50日均线（48.06元）的强压。技术指标显示下行动能减弱（MACD绿柱缩短），RSI回归中性，但成交量萎缩（低于20日均量）且相对沪深300表现疲弱，表明市场观望情绪浓厚，缺乏主动买盘。关键支撑位在42.46-43.81元区间，压力位在45.02-47.12元。短期内若无放量突破，大概率维持区间震荡或阴跌寻底。"
+  },
+  "raw_response": "{\n  \"ticker\": \"688682.SH\",\n  \"effective_trade_date\": \"2026-04-09\",\n  \"trend\": {\n    \"short_term\": \"sideways\",\n    \"medium_term\": \"bearish\",\n    \"strength\": 0.3,\n    \"summary\": \"短期价格在20日均线附近震荡，中期受制于50日均线压制，整体处于下跌后的整理阶段。\",\n    \"evidence\": [\n      \"收盘价44.13元，略高于SMA20（43.81元），偏离度+0.73%。\",\n      \"收盘价低于SMA50（48.06元），偏离度-8.17%，中期趋势向下。\",\n      \"SMA20位于SMA50下方，均线系统呈空头排列或纠缠状态，未形成金叉。\",\n      \"近5日收益率+0.34%，近20日收益率-6.21%，显示短期企稳但中期弱势。\"\n    ]\n  },\n  \"momentum\": {\n    \"state\": \"neutral\",\n    \"strength\": 0.4,\n    \"summary\": \"MACD绿柱缩短并出现轻微底背离迹象，RSI处于中性区域，动量暂无明确方向，处于修复期。\",\n    \"evidence\": [\n      \"MACD值为-1.28，信号线为-1.66，MACD柱状图为+0.38，且柱状图变化为正（0.055），显示下行动能减弱。\",\n      \"RSI(14)为47.0，处于50中轴下方附近，既非超买也非超卖。\",\n      \"MFI(14)为48.0，资金流向指标中性。\",\n      \"当日收盘价44.13元低于前一日收盘45.01元，短线动能略有回落。\"\n    ]\n  },\n  \"volatility\": {\n    \"state\": \"contracting\",\n    \"summary\": \"波动率处于收缩状态，布林带收口，价格在中轨附近运行，预示变盘前夕的平静。\",\n    \"evidence\": [\n      \"ATR(14)为2.27，占收盘价比例约5.15%，处于中等偏低水平。\",\n      \"布林带上轨47.12元，下轨40.50元，带宽约15%，相较于前期大幅波动有所收敛。\",\n      \"当前价格44.13元位于布林带中轨（43.81元）上方，Boll_Position为0.55，处于通道中部偏上位置。\"\n    ]\n  },\n  \"volume_confirmation\": {\n    \"state\": \"diverging\",\n    \"summary\": \"成交量低于20日均量，上涨缩量，下跌亦缩量，缺乏主力资金积极介入确认，量价配合一般。\",\n    \"evidence\": [\n      \"当日成交量11152手，低于20日均量12901手，量比0.97。\",\n      \"4月8日上涨时成交量15804手，4月9日下跌时成交量11152手，呈现缩量调整特征。\",\n      \"净流入资金-514.4万元，资金面呈现小幅流出。\",\n      \"收盘价44.13元高于VWMA20（43.75元），表明近期平均持仓成本略低于现价，但量能不足支撑大幅突破。\"\n    ]\n  },\n  \"relative_strength\": {\n    \"vs_benchmark\": \"weaker\",\n    \"vs_sector\": \"neutral\",\n    \"summary\": \"相对沪深300指数表现较弱，20日和60日相对收益均为负值，跑输大盘。\",\n    \"evidence\": [\n      \"20日相对基准收益率为-5.94%，显示近期走势弱于沪深300。\",\n      \"60日相对基准收益率为-15.56%，中期显著跑输基准。\",\n      \"所属军工电子/软件服务板块近期表现需结合行业指数，但个股Alpha为负。\"\n    ]\n  },\n  \"indicator_snapshot\": {\n    \"price_vs_sma20\": 0.0073,\n    \"price_vs_sma50\": -0.0817,\n    \"price_vs_ema10\": 0.0124,\n    \"sma20_vs_sma50\": -0.0883,\n    \"macd\": -1.2824,\n    \"macd_signal\": -1.6583,\n    \"macd_hist\": 0.3759,\n    \"macd_hist_change\": 0.055,\n    \"rsi_14\": 47.0,\n    \"mfi_14\": 48.0,\n    \"atr_14\": 2.2734,\n    \"atr_pct_of_close\": 0.0515,\n    \"boll_position\": 0.5482,\n    \"volume_vs_ma20\": -0.1356,\n    \"close_vs_vwma20\": 0.0087,\n    \"rs_vs_benchmark_20d\": -0.0594,\n    \"rs_vs_benchmark_60d\": -0.1556\n  },\n  \"key_levels\": {\n    \"support\": [\n      43.81,\n      42.46,\n      40.5\n    ],\n    \"resistance\": [\n      45.02,\n      47.12,\n      48.06\n    ],\n    \"breakout_level\": 47.12,\n    \"breakdown_level\": 42.46\n  },\n  \"signals\": [\n    {\n      \"type\": \"mean_reversion\",\n      \"direction\": \"bullish\",\n      \"strength\": 0.4,\n      \"description\": \"MACD低位金叉预期与布林带中轨支撑形成的短线反弹信号。\",\n      \"evidence\": [\n        \"MACD柱状图连续转正且数值增加，快线有上穿慢线趋势。\",\n        \"股价站稳布林带中轨（43.81元）及20日均线之上。\",\n        \"RSI从低位回升至47，脱离超卖区。\"\n      ]\n    },\n    {\n      \"type\": \"trend_following\",\n      \"direction\": \"bearish\",\n      \"strength\": 0.6,\n      \"description\": \"中期均线压制下的弱势整理，反弹空间受限。\",\n      \"evidence\": [\n        \"股价始终运行在50日均线（48.06元）下方。\",\n        \"20日均线仍低于50日均线，长期趋势未扭转。\",\n        \"相对沪深300持续走弱，缺乏板块效应支持。\"\n      ]\n    }\n  ],\n  \"risk_flags\": [\n    \"成交量持续萎缩，若无法补量突破45元压力位，可能再次探底。\",\n    \"中期趋势依然向下，任何反弹均视为超跌修复而非反转。\",\n    \"相对强弱指标持续为负，资金关注度下降。\"\n  ],\n  \"invalidations\": [\n    \"若收盘价有效跌破42.46元（近期低点及心理关口），则短线企稳逻辑失效，看向布林下轨40.50元。\",\n    \"若放量突破47.12元（布林上轨）并站稳，则短线弱势格局改变，可能挑战50日均线。\"\n  ],\n  \"confidence\": 0.6,\n  \"technical_summary_zh\": \"霍莱沃（688682.SH）在2026年4月9日处于中期下跌趋势中的短线震荡整理阶段。股价收于44.13元，勉强站稳20日均线（43.81元）和布林带中轨，但受制于50日均线（48.06元）的强压。技术指标显示下行动能减弱（MACD绿柱缩短），RSI回归中性，但成交量萎缩（低于20日均量）且相对沪深300表现疲弱，表明市场观望情绪浓厚，缺乏主动买盘。关键支撑位在42.46-43.81元区间，压力位在45.02-47.12元。短期内若无放量突破，大概率维持区间震荡或阴跌寻底。\"\n}",
+  "trace": {
+    "run_id": "552c3efb-8ae7-47e2-95e0-7e2d1278f0ab",
+    "agent_name": "TechnicalAgent",
+    "agent_type": "agent",
+    "status": "success",
+    "started_at": 1775745830.7320142,
+    "finished_at": 1775745869.8700302,
+    "duration_ms": 39138,
+    "input_summary": {
+      "ticker": "688682.SH",
+      "analysis_date": "2026-04-09",
+      "has_company_context": false
+    },
+    "output_summary": {
+      "effective_trade_date": "2026-04-09",
+      "trend": "sideways",
+      "momentum": "neutral",
+      "confidence": 0.6
+    },
+    "error": null,
+    "steps": [
+      {
+        "step_id": "6828612d-788e-48af-b36d-e6d5f588d2dc",
+        "step_type": "context",
+        "name": "build_company_context",
+        "status": "success",
+        "started_at": 1775745830.7384179,
+        "input": {
+          "ticker": "688682.SH",
+          "analysis_date": "2026-04-09",
+          "date_mode": "trade_day"
+        },
+        "output": {
+          "market": "A_share",
+          "exchange": "SH"
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775745832.146846,
+        "duration_ms": 1408
+      },
+      {
+        "step_id": "3a3b267d-2604-4f57-bec5-a8bfaaf35949",
+        "step_type": "bundle",
+        "name": "build_technical_bundle",
+        "status": "success",
+        "started_at": 1775745832.147724,
+        "input": {
+          "ticker": "688682.SH",
+          "analysis_date": "2026-04-09",
+          "lookback_trading_days": 90
+        },
+        "output": {
+          "effective_trade_date": "2026-04-09",
+          "indicator_snapshot_keys": 0,
+          "signal_count": 0
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775745833.066092,
+        "duration_ms": 918
+      },
+      {
+        "step_id": "098d5cf6-7eea-40e2-8b84-727a979b23f7",
+        "step_type": "llm",
+        "name": "llm_invoke_round_1",
+        "status": "success",
+        "started_at": 1775745833.073031,
+        "input": {
+          "round": 1,
+          "message_count": 2
+        },
+        "output": {
+          "has_tool_calls": false,
+          "content_preview": "{\n  \"ticker\": \"688682.SH\",\n  \"effective_trade_date\": \"2026-04-09\",\n  \"trend\": {\n    \"short_term\": \"sideways\",\n    \"medium_term\": \"bearish\",\n    \"strength\": 0.3,\n    \"summary\": \"短期价格在20日均线附近震荡，中期受制于50日均线压制，整体处于下跌后的整理阶段。\",\n    \"evidence\": [\n      \"收盘价44.13元，略高于SMA20（43.81元），偏离度+0.73%。\",\n      \"收盘价低于SMA50（48.06元），偏离度-8.17%，中期趋势向下。\",\n      \"SMA20位于SMA50下方，均线系统呈空头排列或纠缠状态，未形成金叉。\",\n      \"近5日收益率+0.34%，近20日收益率-6.21%，显示短期企稳但中期弱势。\"\n    ]\n  },\n  \"momentum\": {\n    \"state\": \"neutral\",\n    \"strength\": 0.4,\n  "
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775745869.864578,
+        "duration_ms": 36791
+      },
+      {
+        "step_id": "9c27a08e-f484-43e0-8352-c23c2e268a8c",
+        "step_type": "parse",
+        "name": "parse_json_response",
+        "status": "success",
+        "started_at": 1775745869.866876,
+        "input": {
+          "content_preview": "{\n  \"ticker\": \"688682.SH\",\n  \"effective_trade_date\": \"2026-04-09\",\n  \"trend\": {\n    \"short_term\": \"sideways\",\n    \"medium_term\": \"bearish\",\n    \"strength\": 0.3,\n    \"summary\": \"短期价格在20日均线附近震荡，中期受制于50日均线压制，整体处于下跌后的整理阶段。\",\n    \"evidence\": [\n      \"收盘价44.13元，略高于SMA20（43.81元），偏离度+0.73%。\",\n      \"收盘价低于SMA50（48.06元），偏离度-8.17%，中期趋势向下。\",\n      \"SMA20位于SMA50下方，均线系统呈空头排列或纠缠状态，未形成金叉。\",\n      \"近5日收益率+0.34%，近20日收益率-6.21%，显示短期企稳但中期弱势。\"\n    ]\n  },\n  \"momentum\": {\n    \"state\": \"neutral\",\n    \"strength\": 0.4,\n  "
+        },
+        "output": {
+          "trend": "sideways",
+          "momentum": "neutral",
+          "confidence": 0.6
+        },
+        "metrics": {},
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775745869.868309,
+        "duration_ms": 1
+      },
+      {
+        "step_id": "25de1d36-7b7b-4c23-b400-26b24ae76b0d",
+        "step_type": "quality_gate",
+        "name": "quality_gate",
+        "status": "success",
+        "started_at": 1775745869.8687758,
+        "input": {
+          "round": 1
+        },
+        "output": {
+          "is_sparse": false
+        },
+        "metrics": {
+          "signal_count": 2
+        },
+        "error": null,
+        "artifacts": {},
+        "finished_at": 1775745869.869323,
+        "duration_ms": 0
+      }
+    ],
+    "observability": {
+      "langsmith_enabled": false,
+      "langsmith_project_name": null,
+      "otel_enabled": false
+    }
+  }
+}

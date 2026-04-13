@@ -1,10 +1,13 @@
-import type { ReactNode } from "react";
+import type { HTMLAttributes, ReactNode } from "react";
 
-type PanelCardProps = {
+type PanelCardProps = HTMLAttributes<HTMLDivElement> & {
   children: ReactNode;
-  className?: string;
 };
 
-export function PanelCard({ children, className = "" }: PanelCardProps) {
-  return <div className={`panel-card ${className}`.trim()}>{children}</div>;
+export function PanelCard({ children, className = "", ...props }: PanelCardProps) {
+  return (
+    <div {...props} className={`panel-card ${className}`.trim()}>
+      {children}
+    </div>
+  );
 }

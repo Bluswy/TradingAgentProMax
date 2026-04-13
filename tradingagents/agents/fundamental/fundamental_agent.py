@@ -15,9 +15,69 @@ from tradingagents.default_config import DEFAULT_CONFIG
 from tradingagents.llm_clients import create_llm_client
 from tradingagents.tracing import AgentTraceBuilder
 
+from ..utils import parse_json_object
 from .prompts import FUNDAMENTAL_SYSTEM_PROMPT, build_fundamental_user_prompt
 from .schema import FUNDAMENTAL_OUTPUT_TEMPLATE
 from .tools import FUNDAMENTAL_TOOLS
+
+FUNDAMENTAL_SUMMARY_ITEM_SPECS = (
+    ("growth", "增长"),
+    ("profitability", "盈利"),
+    ("cashflow_quality", "现金流"),
+    ("valuation", "估值"),
+)
+
+
+def _normalize_module_brief(value: Any) -> dict[str, str]:
+    if not isinstance(value, dict):
+        return {"conclusion_zh": "", "rationale_zh": ""}
+    return {
+        "conclusion_zh": str(value.get("conclusion_zh", "")).strip(),
+        "rationale_zh": str(value.get("rationale_zh", "")).strip(),
+    }
+
+
+def _is_valid_module_brief(value: Any) -> bool:
+    if not isinstance(value, dict):
+        return False
+    conclusion = str(value.get("conclusion_zh", "")).strip()
+    rationale = str(value.get("rationale_zh", "")).strip()
+    return 2 <= len(conclusion) <= 8 and 12 <= len(rationale) <= 24
+
+
+def _normalize_module_summary_items(value: Any) -> list[dict[str, str]]:
+    if not isinstance(value, list):
+        return []
+    normalized: list[dict[str, str]] = []
+    for item in value:
+        if not isinstance(item, dict):
+            continue
+        normalized.append(
+            {
+                "key": str(item.get("key", "")).strip(),
+                "label_zh": str(item.get("label_zh", "")).strip(),
+                "conclusion_zh": str(item.get("conclusion_zh", "")).strip(),
+                "rationale_zh": str(item.get("rationale_zh", "")).strip(),
+            }
+        )
+    return normalized[: len(FUNDAMENTAL_SUMMARY_ITEM_SPECS)]
+
+
+def _is_valid_module_summary_items(value: Any) -> bool:
+    if not isinstance(value, list) or len(value) != len(FUNDAMENTAL_SUMMARY_ITEM_SPECS):
+        return False
+    for item, (expected_key, expected_label) in zip(value, FUNDAMENTAL_SUMMARY_ITEM_SPECS, strict=True):
+        if not isinstance(item, dict):
+            return False
+        if str(item.get("key", "")).strip() != expected_key:
+            return False
+        if str(item.get("label_zh", "")).strip() != expected_label:
+            return False
+        conclusion = str(item.get("conclusion_zh", "")).strip()
+        rationale = str(item.get("rationale_zh", "")).strip()
+        if not (2 <= len(conclusion) <= 8 and 12 <= len(rationale) <= 24):
+            return False
+    return True
 
 
 class FundamentalAgent:
@@ -183,7 +243,9 @@ class FundamentalAgent:
                                 "4. fundamental_compact_signals 的6个字段都必须填写非空短标签；\n"
                                 "5. fundamental_signals 至少2条，每条都必须有 description 和 evidence；\n"
                                 "6. financial_snapshot.common 至少8个非空字段；\n"
-                                "7. 不要输出任何解释文字，只输出一个完整JSON对象。"
+                                "7. module_summary_items 必须按固定顺序返回4条：growth/增长、profitability/盈利、cashflow_quality/现金流、valuation/估值；\n"
+                                "8. 每条都必须有 conclusion_zh(2-8字) 和 rationale_zh(12-24字)；\n"
+                                "9. 不要输出任何解释文字，只输出一个完整JSON对象。"
                             )
                         )
                     )
@@ -217,19 +279,7 @@ class FundamentalAgent:
             raise
 
     def _parse_json_response(self, content: str, bundle: dict[str, Any]) -> dict[str, Any]:
-        text = content.strip()
-        if text.startswith("```"):
-            lines = [line for line in text.splitlines() if not line.strip().startswith("```")]
-            text = "\n".join(lines).strip()
-
-        try:
-            parsed = json.loads(text)
-        except json.JSONDecodeError:
-            start = text.find("{")
-            end = text.rfind("}")
-            if start == -1 or end == -1 or end <= start:
-                raise ValueError(f"FundamentalAgent did not return valid JSON:\n{text}")
-            parsed = json.loads(text[start : end + 1])
+        parsed = parse_json_object(content, source="FundamentalAgent output")
 
         normalized = json.loads(json.dumps(FUNDAMENTAL_OUTPUT_TEMPLATE, ensure_ascii=False))
         bundle_company_profile = bundle.get("company_profile", {})
@@ -245,6 +295,8 @@ class FundamentalAgent:
                 ),
                 "fundamental_signals": parsed.get("fundamental_signals", normalized["fundamental_signals"]),
                 "confidence": parsed.get("confidence", normalized["confidence"]),
+                "module_brief": _normalize_module_brief(parsed.get("module_brief")),
+                "module_summary_items": _normalize_module_summary_items(parsed.get("module_summary_items")),
                 "fundamental_summary_zh": parsed.get("fundamental_summary_zh", normalized["fundamental_summary_zh"]),
             }
         )
@@ -306,6 +358,10 @@ class FundamentalAgent:
                 return True
 
         if not str(parsed.get("fundamental_summary_zh", "")).strip():
+            return True
+        if not _is_valid_module_brief(parsed.get("module_brief")):
+            return True
+        if not _is_valid_module_summary_items(parsed.get("module_summary_items")):
             return True
 
         return False

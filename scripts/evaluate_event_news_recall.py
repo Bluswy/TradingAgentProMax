@@ -16,6 +16,7 @@ if str(ROOT) not in sys.path:
 from tradingagents.dataflows.config import set_config
 from tradingagents.dataflows.event_news_bundle_service import build_event_news_data_bundle
 from tradingagents.default_config import DEFAULT_CONFIG
+from tradingagents.agents.utils import parse_json_object
 
 
 NOISE_KEYWORDS = [
@@ -768,19 +769,7 @@ def _apply_common_json_repairs(text: str) -> str:
 
 
 def _parse_json_with_fallback(text: str) -> dict[str, Any]:
-    cleaned = _strip_code_fences(text)
-    candidates = [cleaned]
-    balanced = _extract_balanced_json(cleaned)
-    if balanced and balanced not in candidates:
-        candidates.append(balanced)
-
-    for candidate in candidates:
-        for variant in (candidate, _apply_common_json_repairs(candidate)):
-            try:
-                return json.loads(variant)
-            except json.JSONDecodeError:
-                continue
-    raise json.JSONDecodeError("Unable to parse JSON", cleaned, 0)
+    return parse_json_object(text, source="Event recall evaluator output")
 
 
 def _repair_json_with_llm(llm: Any, text: str) -> dict[str, Any]:

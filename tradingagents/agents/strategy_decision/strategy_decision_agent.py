@@ -10,6 +10,7 @@ from tradingagents.default_config import DEFAULT_CONFIG
 from tradingagents.llm_clients import create_llm_client
 from tradingagents.tracing import AgentTraceBuilder
 
+from ..utils import parse_json_object
 from .prompts import (
     STRATEGY_DECISION_SYSTEM_PROMPT,
     build_strategy_decision_context_payload,
@@ -22,6 +23,11 @@ VALID_ACTIONS = {"buy", "sell", "hold", "wait"}
 VALID_PRIORITIES = {"high", "medium", "low"}
 VALID_HORIZONS = {"short_term", "medium_term", "long_term"}
 VALID_POSITIONING = {"aggressive", "balanced", "conservative"}
+VALID_MODULES = {"technical", "fundamental", "event_news", "sector_flow"}
+VALID_STANCES = {"supporting", "neutral", "conflicting"}
+VALID_INVALIDATION_TYPES = {"price", "fundamental", "event", "flow", "valuation"}
+VALID_RISK_CATEGORIES = {"technical", "fundamental", "event", "flow", "valuation"}
+VALID_SEVERITIES = {"high", "medium", "low"}
 ACTION_LABELS = {
     "buy": "买入",
     "sell": "卖出",
@@ -205,18 +211,7 @@ class StrategyDecisionAgent:
             raise
 
     def _parse_json(self, content: str) -> dict[str, Any]:
-        text = content.strip()
-        if text.startswith("```"):
-            lines = [line for line in text.splitlines() if not line.strip().startswith("```")]
-            text = "\n".join(lines).strip()
-        try:
-            return json.loads(text)
-        except json.JSONDecodeError:
-            start = text.find("{")
-            end = text.rfind("}")
-            if start == -1 or end == -1 or end <= start:
-                raise ValueError(f"StrategyDecisionAgent did not return valid JSON:\n{text}")
-            return json.loads(text[start : end + 1])
+        return parse_json_object(content, source="StrategyDecisionAgent output")
 
     def _parse_json_response(self, content: str, *, ticker: str, effective_date: str) -> dict[str, Any]:
         parsed = self._parse_json(content)
@@ -232,11 +227,95 @@ class StrategyDecisionAgent:
             normalized["decision_rationale"].update(parsed["decision_rationale"])
         if isinstance(parsed.get("execution_plan"), dict):
             normalized["execution_plan"].update(parsed["execution_plan"])
+        normalized["top_supporting_evidence"] = self._normalize_evidence_list(parsed.get("top_supporting_evidence"))
+        normalized["top_conflicting_evidence"] = self._normalize_evidence_list(parsed.get("top_conflicting_evidence"))
+        normalized["module_contributions"] = self._normalize_module_contributions(parsed.get("module_contributions"))
+        normalized["watchlist"] = self._normalize_watchlist(parsed.get("watchlist"))
         normalized["trigger_conditions"] = parsed.get("trigger_conditions", normalized["trigger_conditions"])
         normalized["invalidations"] = parsed.get("invalidations", normalized["invalidations"])
+        normalized["invalidations_structured"] = self._normalize_invalidation_list(
+            parsed.get("invalidations_structured")
+        )
         normalized["risk_flags"] = parsed.get("risk_flags", normalized["risk_flags"])
+        normalized["primary_risk"] = self._normalize_risk_item(parsed.get("primary_risk"))
+        normalized["secondary_risks"] = self._normalize_secondary_risks(parsed.get("secondary_risks"))
         normalized["decision_summary_zh"] = parsed.get("decision_summary_zh", normalized["decision_summary_zh"])
         return normalized
+
+    def _normalize_evidence_list(self, value: Any) -> list[dict[str, Any]]:
+        items = value if isinstance(value, list) else []
+        normalized_items: list[dict[str, Any]] = []
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            normalized_items.append(
+                {
+                    "module": item.get("module", ""),
+                    "title": item.get("title", ""),
+                    "fact": item.get("fact", ""),
+                    "importance": item.get("importance", 0.0),
+                }
+            )
+        return normalized_items
+
+    def _normalize_module_contributions(self, value: Any) -> dict[str, dict[str, Any]]:
+        normalized = json.loads(json.dumps(STRATEGY_DECISION_OUTPUT_TEMPLATE["module_contributions"], ensure_ascii=False))
+        if not isinstance(value, dict):
+            return normalized
+        for module in normalized.keys():
+            module_value = value.get(module)
+            if isinstance(module_value, dict):
+                normalized[module].update(module_value)
+        return normalized
+
+    def _normalize_watchlist(self, value: Any) -> list[dict[str, Any]]:
+        items = value if isinstance(value, list) else []
+        normalized_items: list[dict[str, Any]] = []
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            normalized_items.append(
+                {
+                    "variable": item.get("variable", ""),
+                    "reason": item.get("reason", ""),
+                    "window": item.get("window", ""),
+                    "bull_case_if_met": item.get("bull_case_if_met", ""),
+                    "bear_case_if_missed": item.get("bear_case_if_missed", ""),
+                }
+            )
+        return normalized_items
+
+    def _normalize_invalidation_list(self, value: Any) -> list[dict[str, Any]]:
+        items = value if isinstance(value, list) else []
+        normalized_items: list[dict[str, Any]] = []
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            normalized_items.append(
+                {
+                    "type": item.get("type", ""),
+                    "label": item.get("label", ""),
+                    "condition": item.get("condition", ""),
+                    "action_after_trigger": item.get("action_after_trigger", ""),
+                    "severity": item.get("severity", ""),
+                }
+            )
+        return normalized_items
+
+    def _normalize_risk_item(self, value: Any) -> dict[str, Any]:
+        normalized = json.loads(json.dumps(STRATEGY_DECISION_OUTPUT_TEMPLATE["primary_risk"], ensure_ascii=False))
+        if isinstance(value, dict):
+            normalized.update(value)
+        return normalized
+
+    def _normalize_secondary_risks(self, value: Any) -> list[dict[str, Any]]:
+        items = value if isinstance(value, list) else []
+        normalized_items: list[dict[str, Any]] = []
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            normalized_items.append(self._normalize_risk_item(item))
+        return normalized_items
 
     def _validate_output(self, parsed: dict[str, Any]) -> list[str]:
         errors: list[str] = []
@@ -279,6 +358,108 @@ class StrategyDecisionAgent:
             values = parsed.get(key, [])
             if not isinstance(values, list) or len(values) < 2:
                 errors.append(f"{key} 至少2条")
+
+        top_supporting = parsed.get("top_supporting_evidence", [])
+        if not isinstance(top_supporting, list) or len(top_supporting) < 2:
+            errors.append("top_supporting_evidence 至少2条")
+        else:
+            for index, item in enumerate(top_supporting[:3], start=1):
+                if not isinstance(item, dict):
+                    errors.append(f"top_supporting_evidence[{index}] 必须为对象")
+                    continue
+                if str(item.get("module", "")).strip() not in VALID_MODULES:
+                    errors.append(f"top_supporting_evidence[{index}].module 非法")
+                if not str(item.get("title", "")).strip():
+                    errors.append(f"top_supporting_evidence[{index}].title 不能为空")
+                if not str(item.get("fact", "")).strip():
+                    errors.append(f"top_supporting_evidence[{index}].fact 不能为空")
+
+        top_conflicting = parsed.get("top_conflicting_evidence", [])
+        if not isinstance(top_conflicting, list):
+            errors.append("top_conflicting_evidence 必须为数组")
+        else:
+            for index, item in enumerate(top_conflicting[:3], start=1):
+                if not isinstance(item, dict):
+                    errors.append(f"top_conflicting_evidence[{index}] 必须为对象")
+                    continue
+                if str(item.get("module", "")).strip() not in VALID_MODULES:
+                    errors.append(f"top_conflicting_evidence[{index}].module 非法")
+                if not str(item.get("title", "")).strip():
+                    errors.append(f"top_conflicting_evidence[{index}].title 不能为空")
+                if not str(item.get("fact", "")).strip():
+                    errors.append(f"top_conflicting_evidence[{index}].fact 不能为空")
+
+        module_contributions = parsed.get("module_contributions", {})
+        if not isinstance(module_contributions, dict):
+            errors.append("module_contributions 必须为对象")
+        else:
+            for module in VALID_MODULES:
+                module_value = module_contributions.get(module)
+                if not isinstance(module_value, dict):
+                    errors.append(f"module_contributions.{module} 必须为对象")
+                    continue
+                if str(module_value.get("stance", "")).strip() not in VALID_STANCES:
+                    errors.append(f"module_contributions.{module}.stance 非法")
+                if not isinstance(module_value.get("weight"), (int, float)):
+                    errors.append(f"module_contributions.{module}.weight 必须为数值")
+                if not str(module_value.get("summary", "")).strip():
+                    errors.append(f"module_contributions.{module}.summary 不能为空")
+
+        watchlist = parsed.get("watchlist", [])
+        if not isinstance(watchlist, list) or len(watchlist) < 2:
+            errors.append("watchlist 至少2条")
+        else:
+            for index, item in enumerate(watchlist[:3], start=1):
+                if not isinstance(item, dict):
+                    errors.append(f"watchlist[{index}] 必须为对象")
+                    continue
+                for field in ("variable", "reason", "window", "bull_case_if_met", "bear_case_if_missed"):
+                    if not str(item.get(field, "")).strip():
+                        errors.append(f"watchlist[{index}].{field} 不能为空")
+
+        invalidations_structured = parsed.get("invalidations_structured", [])
+        if not isinstance(invalidations_structured, list) or len(invalidations_structured) < 1:
+            errors.append("invalidations_structured 至少1条")
+        else:
+            for index, item in enumerate(invalidations_structured[:3], start=1):
+                if not isinstance(item, dict):
+                    errors.append(f"invalidations_structured[{index}] 必须为对象")
+                    continue
+                if str(item.get("type", "")).strip() not in VALID_INVALIDATION_TYPES:
+                    errors.append(f"invalidations_structured[{index}].type 非法")
+                if str(item.get("severity", "")).strip() not in VALID_SEVERITIES:
+                    errors.append(f"invalidations_structured[{index}].severity 非法")
+                for field in ("label", "condition", "action_after_trigger"):
+                    if not str(item.get(field, "")).strip():
+                        errors.append(f"invalidations_structured[{index}].{field} 不能为空")
+
+        primary_risk = parsed.get("primary_risk", {})
+        if not isinstance(primary_risk, dict):
+            errors.append("primary_risk 必须为对象")
+        else:
+            if str(primary_risk.get("category", "")).strip() not in VALID_RISK_CATEGORIES:
+                errors.append("primary_risk.category 非法")
+            if str(primary_risk.get("risk_level", "")).strip() not in VALID_SEVERITIES:
+                errors.append("primary_risk.risk_level 非法")
+            for field in ("label", "impact_path"):
+                if not str(primary_risk.get(field, "")).strip():
+                    errors.append(f"primary_risk.{field} 不能为空")
+
+        secondary_risks = parsed.get("secondary_risks", [])
+        if not isinstance(secondary_risks, list) or len(secondary_risks) < 1:
+            errors.append("secondary_risks 至少1条")
+        else:
+            for index, item in enumerate(secondary_risks[:3], start=1):
+                if not isinstance(item, dict):
+                    errors.append(f"secondary_risks[{index}] 必须为对象")
+                    continue
+                if str(item.get("category", "")).strip() not in VALID_RISK_CATEGORIES:
+                    errors.append(f"secondary_risks[{index}].category 非法")
+                if str(item.get("risk_level", "")).strip() not in VALID_SEVERITIES:
+                    errors.append(f"secondary_risks[{index}].risk_level 非法")
+                for field in ("label", "impact_path"):
+                    if not str(item.get(field, "")).strip():
+                        errors.append(f"secondary_risks[{index}].{field} 不能为空")
 
         if not str(parsed.get("decision_summary_zh", "")).strip():
             errors.append("decision_summary_zh 不能为空")

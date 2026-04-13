@@ -180,6 +180,8 @@ def update_company_context_with_technical(
                 "key_levels": analysis_result.get("key_levels", {}),
                 "signals": analysis_result.get("signals", []),
                 "confidence": analysis_result.get("confidence"),
+                "module_brief": analysis_result.get("module_brief", {}),
+                "module_summary_items": analysis_result.get("module_summary_items", []),
                 "technical_summary_zh": analysis_result.get("technical_summary_zh", ""),
             }
         },
@@ -205,6 +207,8 @@ def update_company_context_with_fundamental(
                 "core_risks": analysis_result.get("core_risks", []),
                 "fundamental_signals": analysis_result.get("fundamental_signals", []),
                 "confidence": analysis_result.get("confidence"),
+                "module_brief": analysis_result.get("module_brief", {}),
+                "module_summary_items": analysis_result.get("module_summary_items", []),
                 "fundamental_summary_zh": analysis_result.get("fundamental_summary_zh", ""),
             }
         },
@@ -227,8 +231,9 @@ def update_company_context_with_event(
                 "key_risks": analysis_result.get("key_risks", []),
                 "tracking_points": analysis_result.get("tracking_points", []),
                 "confidence": analysis_result.get("event_overview", {}).get("confidence"),
+                "module_brief": analysis_result.get("module_brief", {}),
+                "module_summary_items": analysis_result.get("module_summary_items", []),
                 "event_summary_zh": analysis_result.get("event_summary_zh", ""),
             }
         },
     )
-

@@ -1,4 +1,4 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, memo } from "react";
 
 type MarkdownContentProps = {
   content?: string | null;
@@ -18,7 +18,7 @@ const MarkdownRenderer = lazy(async () => {
   };
 });
 
-export function MarkdownContent({ content, className = "" }: MarkdownContentProps) {
+function MarkdownContentImpl({ content, className = "" }: MarkdownContentProps) {
   return (
     <div className={`markdown-content ${className}`.trim()}>
       <Suspense fallback={<div className="markdown-fallback">{content || ""}</div>}>
@@ -27,3 +27,8 @@ export function MarkdownContent({ content, className = "" }: MarkdownContentProp
     </div>
   );
 }
+
+export const MarkdownContent = memo(
+  MarkdownContentImpl,
+  (prevProps, nextProps) => prevProps.content === nextProps.content && prevProps.className === nextProps.className,
+);

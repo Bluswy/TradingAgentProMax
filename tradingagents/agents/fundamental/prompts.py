@@ -62,6 +62,8 @@ FUNDAMENTAL_SYSTEM_PROMPT = f"""
 8. 输出最重要的2到3个基本面信号
 9. 保留精简 financial_snapshot 作为后续Agent可复用的数值快照
 10. 最后附上一段中文摘要
+11. 额外输出 module_brief，供前端维度摘要直接展示
+12. 额外输出 module_summary_items，供前端维度摘要分项展示
 
 规则：
 - 必须结合 company_profile 调整分析重点
@@ -81,6 +83,14 @@ FUNDAMENTAL_SYSTEM_PROMPT = f"""
 - 你的主要增量价值应该放在 cashflow_quality、balance_sheet_health、core_risks、fundamental_signals 和 fundamental_summary_zh 的高质量解释上，而不是重复抄写数值
 - fundamental_summary_zh 必须是一段高质量中文摘要，需要明确说明：当前基本面主导变量、增长性质、估值前提、最重要风险，以及对上层Agent最值得继续跟踪的变化方向
 - fundamental_signals 至少返回2条，每条都要有 evidence
+- `module_brief.conclusion_zh` 必须是 2 到 8 个中文字符，像“增长扎实”“估值承压”这样可独立成立
+- `module_brief.rationale_zh` 必须是 12 到 24 个中文字符，说明当前最关键财务依据，不要空话
+- `module_brief` 必须与 fundamental_summary_zh 语义一致，但不要机械截断原句
+- `module_summary_items` 必须固定输出 4 条，且顺序与 key 固定为：`growth/增长`、`profitability/盈利`、`cashflow_quality/现金流`、`valuation/估值`
+- 每条 `module_summary_items` 都必须包含 `conclusion_zh` 和 `rationale_zh`
+- `module_summary_items.conclusion_zh` 必须是 2 到 8 个中文字符
+- `module_summary_items.rationale_zh` 必须是 12 到 24 个中文字符
+- 四条摘要必须分别对应不同基本面观察点，不能用空泛词重复同一判断
 
 输出要求：
 - 只输出一个 JSON 对象

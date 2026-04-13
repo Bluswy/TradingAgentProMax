@@ -202,6 +202,15 @@ def build_strategy_decision_ui_summary(analysis_result: dict[str, Any] | None) -
     analysis_result = analysis_result or {}
     decision = analysis_result.get("decision", {})
     execution = analysis_result.get("execution_plan", {})
+    watchlist = analysis_result.get("watchlist", [])
+    structured_invalidations = analysis_result.get("invalidations_structured", [])
+    watch_points = []
+    for item in watchlist[:3]:
+        if isinstance(item, dict) and item.get("variable"):
+            watch_points.append(str(item.get("variable")))
+    for item in structured_invalidations[:2]:
+        if isinstance(item, dict) and item.get("label"):
+            watch_points.append(str(item.get("label")))
     return _summary_base(
         agent="strategy_decision",
         title="策略决策",
@@ -218,10 +227,14 @@ def build_strategy_decision_ui_summary(analysis_result: dict[str, Any] | None) -
             {"key": "positioning_bias", "label": "仓位倾向", "value": execution.get("positioning_bias"), "tone": "neutral"},
         ],
         risks=analysis_result.get("risk_flags", [])[:5],
-        watch_points=analysis_result.get("trigger_conditions", [])[:5] + analysis_result.get("invalidations", [])[:5],
+        watch_points=watch_points or analysis_result.get("trigger_conditions", [])[:5] + analysis_result.get("invalidations", [])[:5],
         extra={
             "core_reasons": analysis_result.get("decision_rationale", {}).get("core_reasons", []),
             "key_conflicts": analysis_result.get("decision_rationale", {}).get("key_conflicts", []),
+            "top_supporting_evidence": analysis_result.get("top_supporting_evidence", []),
+            "module_contributions": analysis_result.get("module_contributions", {}),
+            "primary_risk": analysis_result.get("primary_risk", {}),
+            "watchlist": watchlist,
         },
     )
 

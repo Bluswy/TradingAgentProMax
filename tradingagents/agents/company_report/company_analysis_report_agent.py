@@ -10,6 +10,7 @@ from tradingagents.default_config import DEFAULT_CONFIG
 from tradingagents.llm_clients import create_llm_client
 from tradingagents.tracing import AgentTraceBuilder
 
+from ..utils import parse_json_object
 from .prompts import (
     COMPANY_ANALYSIS_REPORT_SYSTEM_PROMPT,
     build_company_report_context_payload,
@@ -131,8 +132,9 @@ class CompanyAnalysisReportAgent:
                                         "1. 只输出一个合法 JSON 对象；\n"
                                         "2. 不要输出 Markdown 代码块；\n"
                                         "3. report_markdown 必须是 JSON 字符串，内部换行需要由模型正确转义；\n"
-                                        "4. 不要在 JSON 之外输出任何解释文字；\n"
-                                        f"5. 当前解析错误：{parse_error}"
+                                        "4. report_markdown 中如果需要双引号，必须使用 \\\" 转义；\n"
+                                        "5. 不要在 JSON 之外输出任何解释文字；\n"
+                                        f"6. 当前解析错误：{parse_error}"
                                     )
                                 ),
                             ]
@@ -199,18 +201,7 @@ class CompanyAnalysisReportAgent:
             raise
 
     def _parse_json(self, content: str) -> dict[str, Any]:
-        text = content.strip()
-        if text.startswith("```"):
-            lines = [line for line in text.splitlines() if not line.strip().startswith("```")]
-            text = "\n".join(lines).strip()
-        try:
-            return json.loads(text)
-        except json.JSONDecodeError:
-            start = text.find("{")
-            end = text.rfind("}")
-            if start == -1 or end == -1 or end <= start:
-                raise ValueError(f"CompanyAnalysisReportAgent did not return valid JSON:\n{text}")
-            return json.loads(text[start : end + 1])
+        return parse_json_object(content, source="CompanyAnalysisReportAgent output")
 
     def _parse_json_response(self, content: str, *, ticker: str, effective_date: str) -> dict[str, Any]:
         parsed = self._parse_json(content)

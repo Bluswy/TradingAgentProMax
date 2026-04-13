@@ -57,6 +57,7 @@ export function App() {
   const [isDraftingResearch, setIsDraftingResearch] = useState(false);
   const [isParsingResearch, setIsParsingResearch] = useState(false);
   const [isStartingResearch, setIsStartingResearch] = useState(false);
+  const [deletingResearchId, setDeletingResearchId] = useState<string | null>(null);
   const [isBootstrapping, setIsBootstrapping] = useState(true);
   const [appError, setAppError] = useState<string | null>(null);
   const [errorAction, setErrorAction] = useState<ErrorAction>(null);
@@ -100,6 +101,12 @@ export function App() {
     (runResults?.final_report_result as Record<string, unknown> | undefined)?.report_markdown ||
     (((runResults?.company_report_result as Record<string, unknown> | undefined)?.analysis_result as Record<string, unknown> | undefined)
       ?.report_markdown as string | undefined);
+  const reportArtifactStatus = asRecord(runResults?._report_artifact_status);
+  const reportIsTruncated =
+    Boolean(reportArtifactStatus?.truncated) || (typeof reportMarkdown === "string" && reportMarkdown.includes("...<truncated>"));
+  const reportNotice = reportIsTruncated
+    ? "这次历史研究的完整报告在旧版持久化链路中已被截断，当前只能展示已保存部分。重新运行一次研究可获取完整报告。"
+    : null;
 
   const reportSections = useMemo<ReportSection[]>(
     () => extractReportSections(typeof reportMarkdown === "string" ? reportMarkdown : ""),
@@ -352,6 +359,64 @@ export function App() {
     setSelectedResearchId(researchId);
   }
 
+  async function deleteResearch(researchId: string) {
+    if (deletingResearchId) return;
+    const currentItems = researches;
+    const index = currentItems.findIndex((item) => item.research_id === researchId);
+    if (index < 0) return;
+    const remaining = currentItems.filter((item) => item.research_id !== researchId);
+    const fallbackResearch = remaining[index] || remaining[index - 1] || null;
+
+    setDeletingResearchId(researchId);
+    try {
+      await api.deleteResearch(researchId);
+      clearAppError();
+      setResearches(remaining);
+
+      if (selectedResearchId === researchId) {
+        eventSourceRef.current?.close();
+        eventSourceRef.current = null;
+        setSelectedResearch(null);
+        setParseResult(null);
+        setMessages([]);
+        clearRunContext();
+
+        if (fallbackResearch) {
+          setIsDraftingResearch(false);
+          setSelectedResearchId(fallbackResearch.research_id);
+        } else {
+          setSelectedResearchId(null);
+          setIsDraftingResearch(true);
+        }
+      }
+    } catch (error) {
+      logDevError(error);
+      if (isNotFoundError(error)) {
+        setResearches(remaining);
+        if (selectedResearchId === researchId) {
+          eventSourceRef.current?.close();
+          eventSourceRef.current = null;
+          setSelectedResearch(null);
+          setParseResult(null);
+          setMessages([]);
+          clearRunContext();
+          if (fallbackResearch) {
+            setIsDraftingResearch(false);
+            setSelectedResearchId(fallbackResearch.research_id);
+          } else {
+            setSelectedResearchId(null);
+            setIsDraftingResearch(true);
+          }
+        }
+        showAppError("这条研究已不存在，研究列表已刷新。", "reloadResearches");
+        return;
+      }
+      showAppError(describeError(error, "删除研究失败，请稍后重试。"));
+    } finally {
+      setDeletingResearchId(null);
+    }
+  }
+
   async function selectNode(nodeName: string) {
     const runId = selectedResearch?.active_run_id;
     if (!runId) return;
@@ -469,6 +534,10 @@ export function App() {
   }
 
   const run = runDetail?.run || null;
+  const technical = (asRecord(runResults?.technical_result)?.analysis_result as LooseRecord | undefined) || {};
+  const fundamental = (asRecord(runResults?.fundamental_result)?.analysis_result as LooseRecord | undefined) || {};
+  const eventNews = (asRecord(runResults?.event_news_result)?.analysis_result as LooseRecord | undefined) || {};
+  const sectorFlow = (asRecord(runResults?.sector_flow_result)?.analysis_result as LooseRecord | undefined) || {};
   const strategy = (asRecord(runResults?.strategy_style_result)?.analysis_result as LooseRecord | undefined) || {};
   const decision = (asRecord(runResults?.strategy_decision_result)?.analysis_result as LooseRecord | undefined) || {};
   const company = asRecord(runResults?.company_context) || {};
@@ -483,6 +552,8 @@ export function App() {
         isLoading={isBootstrapping}
         selectedResearchId={selectedResearchId}
         onSelectResearch={handleSelectResearch}
+        onDeleteResearch={(researchId) => void deleteResearch(researchId)}
+        deletingResearchId={deletingResearchId}
       />
 
       <main className="main-stage">
@@ -526,11 +597,16 @@ export function App() {
               readString(company.name) ||
               ""
             }
+            technical={technical}
+            fundamental={fundamental}
+            eventNews={eventNews}
+            sectorFlow={sectorFlow}
             strategy={strategy}
             decision={decision}
             parseResult={parseResult}
             messages={messages}
             events={events}
+            runNodes={runDetail?.graph.nodes || []}
             chatInput={chatInput}
             chatLoading={chatLoading || isParsingResearch || isStartingResearch}
             isParsingResearch={isParsingResearch}
@@ -539,6 +615,7 @@ export function App() {
             setChatInput={setChatInput}
             onSendChat={() => void sendChat()}
             reportSections={reportSections}
+            reportNotice={reportNotice}
           />
         ) : (
           <Suspense fallback={<div className="workspace-loading">正在加载开发工作区...</div>}>

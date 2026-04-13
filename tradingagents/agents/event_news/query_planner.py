@@ -5,6 +5,7 @@ from typing import Any
 
 from langchain_core.messages import HumanMessage, SystemMessage
 
+from tradingagents.agents.utils import parse_json_object
 from tradingagents.default_config import DEFAULT_CONFIG
 from tradingagents.llm_clients import create_llm_client
 
@@ -266,23 +267,30 @@ class EventQueryPlanner:
             SystemMessage(content=QUERY_PLANNER_SYSTEM_PROMPT),
             HumanMessage(content=build_query_planner_user_prompt(context)),
         ]
-        response = self.llm.invoke(messages)
-        return self._parse_json(response.content)
+        repair_attempted = False
+        for _ in range(2):
+            response = self.llm.invoke(messages)
+            try:
+                return self._parse_json(response.content)
+            except json.JSONDecodeError as parse_error:
+                if repair_attempted:
+                    raise
+                repair_attempted = True
+                messages.extend(
+                    [
+                        response,
+                        HumanMessage(
+                            content=(
+                                "你的上一版输出不是合法 JSON。请只输出一个合法 JSON 对象，不要输出 Markdown 代码块，不要输出任何解释文字。\n"
+                                f"当前解析错误：{parse_error}"
+                            )
+                        ),
+                    ]
+                )
+        raise RuntimeError("EventQueryPlanner exceeded max iterations without producing valid JSON.")
 
     def _parse_json(self, content: str) -> dict[str, Any]:
-        text = content.strip()
-        if text.startswith("```"):
-            lines = [line for line in text.splitlines() if not line.strip().startswith("```")]
-            text = "\n".join(lines).strip()
-
-        try:
-            parsed = json.loads(text)
-        except json.JSONDecodeError:
-            start = text.find("{")
-            end = text.rfind("}")
-            if start == -1 or end == -1 or end <= start:
-                raise ValueError(f"EventQueryPlanner did not return valid JSON:\n{text}")
-            parsed = json.loads(text[start : end + 1])
+        parsed = parse_json_object(content, source="EventQueryPlanner output")
 
         normalized = json.loads(json.dumps(QUERY_PLANNER_OUTPUT_TEMPLATE, ensure_ascii=False))
         value = parsed.get("sensitivity_variables", [])

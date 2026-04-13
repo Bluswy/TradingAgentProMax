@@ -26,6 +26,8 @@ SECTOR_FLOW_SYSTEM_PROMPT = f"""
 6. 输出 sector_flow_compact_signals，供上层Agent直接消费
 7. 提炼 key_risks 和 tracking_points
 8. 输出中文摘要
+9. 额外输出 module_brief，供前端维度摘要直接展示
+10. 额外输出 module_summary_items，供前端维度摘要分项展示
 
 规则：
 - 优先使用系统已提供的数据包
@@ -36,6 +38,14 @@ SECTOR_FLOW_SYSTEM_PROMPT = f"""
 - evidence 必须是具体的板块活跃度、换手率、成交额、涨停家数、资金流或相对板块表现事实
 - 每个分析部分至少提供2条 evidence
 - key_risks 和 tracking_points 至少各输出2条
+- `module_brief.conclusion_zh` 必须是 2 到 8 个中文字符，像“资金偏弱”“热度回升”这样可独立成立
+- `module_brief.rationale_zh` 必须是 12 到 24 个中文字符，说明最核心的板块/资金依据，不要空话
+- `module_brief` 必须与 flow_summary_zh 语义一致，但不要机械截断原句
+- `module_summary_items` 必须固定输出 4 条，且顺序与 key 固定为：`theme_strength/板块强弱`、`theme_heat/热度`、`crowding/拥挤`、`stock_role_in_theme/个股位置`
+- 每条 `module_summary_items` 都必须包含 `conclusion_zh` 和 `rationale_zh`
+- `module_summary_items.conclusion_zh` 必须是 2 到 8 个中文字符
+- `module_summary_items.rationale_zh` 必须是 12 到 24 个中文字符
+- 资金面摘要必须是交易语言，不要直接复写工程状态词
 - 输出必须为 JSON
 
 {get_output_template_json()}

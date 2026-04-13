@@ -9,9 +9,9 @@ from .schema import AgentTraceRun, TraceArtifactManifest, TraceArtifactRef
 from .sqlite_store import SQLiteTraceStore
 
 
-def _coerce_jsonable(value: Any, limit: int = 4000) -> Any:
+def _coerce_jsonable(value: Any, limit: int | None = 4000) -> Any:
     if value is None or isinstance(value, (str, int, float, bool)):
-        if isinstance(value, str) and len(value) > limit:
+        if isinstance(value, str) and limit is not None and len(value) > limit:
             return value[:limit] + "...<truncated>"
         return value
     if hasattr(value, "item"):
@@ -26,7 +26,9 @@ def _coerce_jsonable(value: Any, limit: int = 4000) -> Any:
     if isinstance(value, (list, tuple, set)):
         return [_coerce_jsonable(item, limit=limit) for item in list(value)]
     text = str(value)
-    return text if len(text) <= limit else text[:limit] + "...<truncated>"
+    if limit is None or len(text) <= limit:
+        return text
+    return text[:limit] + "...<truncated>"
 
 
 class TraceArtifactStore:
@@ -41,11 +43,11 @@ class TraceArtifactStore:
             project_dir = Path(self.config.get("project_dir", ".")).resolve()
             self.base_dir = (project_dir.parent / "debug" / "traces").resolve()
 
-    def _write_json(self, run_dir: Path, relative_path: str, payload: Any) -> TraceArtifactRef:
+    def _write_json(self, run_dir: Path, relative_path: str, payload: Any, *, truncate: bool = True) -> TraceArtifactRef:
         target = run_dir / relative_path
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(
-            json.dumps(_coerce_jsonable(payload), ensure_ascii=False, indent=2),
+            json.dumps(_coerce_jsonable(payload, limit=4000 if truncate else None), ensure_ascii=False, indent=2),
             encoding="utf-8",
         )
         return {
@@ -70,11 +72,11 @@ class TraceArtifactStore:
             ref=ref,
         )
 
-    def rewrite_ref(self, ref: TraceArtifactRef, payload: Any) -> None:
+    def rewrite_ref(self, ref: TraceArtifactRef, payload: Any, *, truncate: bool = True) -> None:
         target = Path(ref["absolute_path"])
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(
-            json.dumps(_coerce_jsonable(payload), ensure_ascii=False, indent=2),
+            json.dumps(_coerce_jsonable(payload, limit=4000 if truncate else None), ensure_ascii=False, indent=2),
             encoding="utf-8",
         )
 
@@ -128,6 +130,7 @@ class TraceArtifactStore:
                     run_dir,
                     f"nodes/{node_name}/result.json",
                     node_result,
+                    truncate=False,
                 )
                 self._record_artifact(
                     run_id=run_id,
@@ -206,6 +209,7 @@ class TraceArtifactStore:
                 "final_report_result": state.get("final_report_result"),
                 "ui_summaries": state.get("ui_summaries"),
             },
+            truncate=False,
         )
         self._record_artifact(
             run_id=run_id,

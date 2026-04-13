@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react";
 import type { Research } from "../../types";
 import { displayResearchStatus, formatDateMinute } from "../../utils";
 import { EmptyState } from "../common/EmptyState";
+import { TrashIcon } from "../common/Icons";
 
 type SidebarProps = {
   mode: "user" | "dev";
@@ -9,6 +11,8 @@ type SidebarProps = {
   isLoading?: boolean;
   selectedResearchId: string | null;
   onSelectResearch: (researchId: string) => void;
+  onDeleteResearch: (researchId: string) => void;
+  deletingResearchId?: string | null;
 };
 
 function researchDisplayName(research: Research) {
@@ -30,7 +34,17 @@ export function Sidebar({
   isLoading = false,
   selectedResearchId,
   onSelectResearch,
+  onDeleteResearch,
+  deletingResearchId = null,
 }: SidebarProps) {
+  const [confirmingResearchId, setConfirmingResearchId] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (confirmingResearchId && !researches.some((item) => item.research_id === confirmingResearchId)) {
+      setConfirmingResearchId(null);
+    }
+  }, [confirmingResearchId, researches]);
+
   return (
     <aside className="sidebar">
       <div className="brand-card">
@@ -50,6 +64,7 @@ export function Sidebar({
             <span className="mode-switch-track" aria-hidden="true" />
             <button
               className={`mode-btn ${mode === "user" ? "is-active" : ""}`}
+              type="button"
               onClick={() => onModeChange("user")}
               aria-pressed={mode === "user"}
             >
@@ -57,6 +72,7 @@ export function Sidebar({
             </button>
             <button
               className={`mode-btn ${mode === "dev" ? "is-active" : ""}`}
+              type="button"
               onClick={() => onModeChange("dev")}
               aria-pressed={mode === "dev"}
             >
@@ -74,19 +90,64 @@ export function Sidebar({
           {isLoading ? (
             <EmptyState title="正在加载研究" text="正在同步最新研究列表，请稍候。" compact />
           ) : researches.length ? (
-            researches.map((research) => (
-              <button
-                key={research.research_id}
-                className={`list-item nav-list-item conversation-item ${selectedResearchId === research.research_id ? "is-selected" : ""}`}
-                onClick={() => onSelectResearch(research.research_id)}
-                aria-current={selectedResearchId === research.research_id ? "page" : undefined}
-              >
-                <div className="item-main">
-                  <div className="item-title conversation-title">{researchDisplayName(research)}</div>
-                  <div className="item-subtitle conversation-time">{researchMetaLine(research)}</div>
+            researches.map((research) => {
+              const isSelected = selectedResearchId === research.research_id;
+              const isRunning = research.status === "running" || research.run_status === "running";
+              const isConfirming = confirmingResearchId === research.research_id;
+              const isDeleting = deletingResearchId === research.research_id;
+              return (
+                <div
+                  key={research.research_id}
+                  className={`sidebar-research-entry ${isConfirming ? "is-confirming" : ""}`.trim()}
+                >
+                  <button
+                    className={`list-item nav-list-item conversation-item has-side-action ${isSelected ? "is-selected" : ""}`}
+                    type="button"
+                    onClick={() => onSelectResearch(research.research_id)}
+                    aria-current={isSelected ? "page" : undefined}
+                  >
+                    <div className="item-main">
+                      <div className="item-title conversation-title">{researchDisplayName(research)}</div>
+                      <div className="item-subtitle conversation-time">{researchMetaLine(research)}</div>
+                    </div>
+                  </button>
+                  <button
+                    className={`sidebar-item-icon-btn ${isConfirming ? "is-visible" : ""}`.trim()}
+                    type="button"
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      setConfirmingResearchId((current) => (current === research.research_id ? null : research.research_id));
+                    }}
+                    disabled={isRunning || isDeleting}
+                    title={isRunning ? "研究进行中，暂不支持删除" : "删除这条研究"}
+                    aria-label={isRunning ? "研究进行中，暂不支持删除" : "删除这条研究"}
+                  >
+                    <TrashIcon />
+                  </button>
+                  {isConfirming ? (
+                    <div className="sidebar-item-confirm">
+                      <div className="sidebar-item-confirm-copy">删除后，这条研究以及对应的分析记录都会一起移除。</div>
+                      <div className="sidebar-item-confirm-actions">
+                        <button className="ghost-btn ghost-btn-small" type="button" onClick={() => setConfirmingResearchId(null)}>
+                          取消
+                        </button>
+                        <button
+                          className="ghost-btn ghost-btn-small danger-btn"
+                          type="button"
+                          onClick={() => {
+                            onDeleteResearch(research.research_id);
+                            setConfirmingResearchId(null);
+                          }}
+                          disabled={isDeleting}
+                        >
+                          {isDeleting ? "删除中..." : "删除"}
+                        </button>
+                      </div>
+                    </div>
+                  ) : null}
                 </div>
-              </button>
-            ))
+              );
+            })
           ) : (
             <EmptyState title="暂无研究" text="点击右上角“新的研究”开始分析。" compact />
           )}

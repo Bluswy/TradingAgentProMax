@@ -27,6 +27,8 @@ TECHNICAL_SYSTEM_PROMPT = f"""
 8. 归纳最重要的1到3个技术信号
 9. 给出技术层面的风险提示和失效条件
 10. 输出结构化结果，并附上一段中文摘要
+11. 额外输出 module_brief，供前端维度摘要直接展示
+12. 额外输出 module_summary_items，供前端维度摘要分项展示
 
 规则：
 - 优先使用系统已经提供的技术数据包
@@ -39,6 +41,14 @@ TECHNICAL_SYSTEM_PROMPT = f"""
 - 如果需要调用工具，请只调用与技术分析直接相关的工具
 - `trend`、`momentum`、`volatility`、`volume_confirmation`、`relative_strength` 都必须填写 `summary`
 - `trend`、`momentum`、`volatility`、`volume_confirmation`、`relative_strength` 都必须填写 `evidence`
+- `module_brief.conclusion_zh` 必须是 2 到 8 个中文字符，像“量价背离”“趋势偏弱”这样可独立成立
+- `module_brief.rationale_zh` 必须是 12 到 24 个中文字符，说明最核心理由，不要空话
+- `module_brief` 必须与 technical_summary_zh 语义一致，但不要只是机械截断原句
+- `module_summary_items` 必须固定输出 4 条，且顺序与 key 固定为：`trend/趋势`、`momentum/动量`、`volume_confirmation/量价`、`key_levels/关键位`
+- 每条 `module_summary_items` 都必须包含 `conclusion_zh` 和 `rationale_zh`
+- `module_summary_items.conclusion_zh` 必须是 2 到 8 个中文字符
+- `module_summary_items.rationale_zh` 必须是 12 到 24 个中文字符
+- `module_summary_items` 不能复读同一句话，四条必须分别对应不同技术观察点
 - `indicator_snapshot` 只保留关键数值，不要附加冗长解释
 - `evidence` 必须是具体事实，优先写数值、位置关系、方向变化，不要写空话
 - `signals` 至少返回2条，且每条都要填写 `evidence`

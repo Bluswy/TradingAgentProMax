@@ -348,11 +348,11 @@ class SQLiteTraceStore:
         if not self.enabled:
             return
         with self._connect() as conn:
-            conn.execute(
+            cur = conn.execute(
                 """
                 UPDATE trace_runs
                 SET status=?, finished_at=?, duration_ms=?, output_summary_json=?, error_json=?, updated_at=?
-                WHERE run_id=?
+                WHERE run_id=? AND status='running'
                 """,
                 (
                     run_trace.get("status"),
@@ -364,6 +364,8 @@ class SQLiteTraceStore:
                     run_trace.get("run_id"),
                 ),
             )
+            if cur.rowcount != 1:
+                return
             self._append_event(
                 conn=conn,
                 run_id=run_trace["run_id"],
@@ -456,11 +458,11 @@ class SQLiteTraceStore:
         if not self.enabled:
             return
         with self._connect() as conn:
-            conn.execute(
+            cur = conn.execute(
                 """
                 UPDATE trace_steps
                 SET status=?, finished_at=?, duration_ms=?, output_json=?, metrics_json=?, updated_at=?
-                WHERE step_id=?
+                WHERE step_id=? AND status='running'
                 """,
                 (
                     step.get("status"),
@@ -472,6 +474,8 @@ class SQLiteTraceStore:
                     step["step_id"],
                 ),
             )
+            if cur.rowcount != 1:
+                return
             event_id = self._append_event(
                 conn=conn,
                 run_id=run_id,
@@ -509,11 +513,11 @@ class SQLiteTraceStore:
         if not self.enabled:
             return
         with self._connect() as conn:
-            conn.execute(
+            cur = conn.execute(
                 """
                 UPDATE trace_steps
                 SET status=?, finished_at=?, duration_ms=?, error_json=?, updated_at=?
-                WHERE step_id=?
+                WHERE step_id=? AND status='running'
                 """,
                 (
                     step.get("status"),
@@ -524,6 +528,8 @@ class SQLiteTraceStore:
                     step["step_id"],
                 ),
             )
+            if cur.rowcount != 1:
+                return
             event_id = self._append_event(
                 conn=conn,
                 run_id=run_id,
@@ -758,6 +764,40 @@ class SQLiteTraceStore:
             ).fetchone()
         return self._row_to_research(row) if row else None
 
+    def _collect_run_tree_ids(self, conn: sqlite3.Connection, root_run_id: str) -> set[str]:
+        pending = [root_run_id]
+        collected: set[str] = set()
+        while pending:
+            run_id = pending.pop()
+            if not run_id or run_id in collected:
+                continue
+            collected.add(run_id)
+            rows = conn.execute(
+                "SELECT run_id FROM trace_runs WHERE parent_run_id = ?",
+                (run_id,),
+            ).fetchall()
+            pending.extend(str(row["run_id"]) for row in rows if row["run_id"])
+        return collected
+
+    def _cleanup_artifact_files(self, paths: list[str]) -> None:
+        directories: set[Path] = set()
+        for raw_path in paths:
+            if not raw_path:
+                continue
+            path = Path(raw_path).expanduser()
+            try:
+                if path.exists() and path.is_file():
+                    path.unlink()
+            except OSError:
+                continue
+            directories.update(path.parents)
+
+        for directory in sorted(directories, key=lambda item: len(item.parts), reverse=True):
+            try:
+                directory.rmdir()
+            except OSError:
+                continue
+
     def update_research(
         self,
         research_id: str,
@@ -862,6 +902,63 @@ class SQLiteTraceStore:
             ).fetchall()
         return [self._row_to_research_message(row) for row in rows]
 
+    def delete_research(self, research_id: str) -> bool:
+        artifact_paths: list[str] = []
+        with self._connect() as conn:
+            research = conn.execute(
+                "SELECT * FROM viewer_researches WHERE research_id = ?",
+                (research_id,),
+            ).fetchone()
+            if not research:
+                return False
+
+            run_ids: set[str] = set()
+            active_run_id = research["active_run_id"]
+            if active_run_id:
+                run_ids.update(self._collect_run_tree_ids(conn, str(active_run_id)))
+
+            message_runs = conn.execute(
+                """
+                SELECT DISTINCT run_id
+                FROM viewer_research_messages
+                WHERE research_id = ? AND run_id IS NOT NULL
+                """,
+                (research_id,),
+            ).fetchall()
+            for row in message_runs:
+                run_id = row["run_id"]
+                if run_id:
+                    run_ids.update(self._collect_run_tree_ids(conn, str(run_id)))
+
+            if run_ids:
+                placeholders = ",".join("?" for _ in run_ids)
+                artifact_rows = conn.execute(
+                    f"""
+                    SELECT absolute_path
+                    FROM trace_artifacts
+                    WHERE run_id IN ({placeholders}) AND absolute_path IS NOT NULL
+                    """,
+                    tuple(run_ids),
+                ).fetchall()
+                artifact_paths = [str(row["absolute_path"]) for row in artifact_rows if row["absolute_path"]]
+                conn.execute(f"DELETE FROM trace_artifacts WHERE run_id IN ({placeholders})", tuple(run_ids))
+                conn.execute(f"DELETE FROM trace_events WHERE run_id IN ({placeholders})", tuple(run_ids))
+                conn.execute(f"DELETE FROM trace_steps WHERE run_id IN ({placeholders})", tuple(run_ids))
+                conn.execute(f"DELETE FROM trace_nodes WHERE run_id IN ({placeholders})", tuple(run_ids))
+                conn.execute(f"DELETE FROM trace_runs WHERE run_id IN ({placeholders})", tuple(run_ids))
+
+            conn.execute(
+                "DELETE FROM viewer_research_messages WHERE research_id = ?",
+                (research_id,),
+            )
+            conn.execute(
+                "DELETE FROM viewer_researches WHERE research_id = ?",
+                (research_id,),
+            )
+
+        self._cleanup_artifact_files(artifact_paths)
+        return True
+
     def claim_research_ready_for_run(self, research_id: str) -> dict[str, Any] | None:
         now = time.time()
         with self._connect() as conn:
@@ -880,6 +977,196 @@ class SQLiteTraceStore:
                 (research_id,),
             ).fetchone()
         return self._row_to_research(row) if row else None
+
+    def recover_stale_runs(
+        self,
+        *,
+        timeout_seconds: int,
+        grace_seconds: int = 60,
+    ) -> list[dict[str, Any]]:
+        if not self.enabled:
+            return []
+
+        now = time.time()
+        cutoff = now - max(1, timeout_seconds + grace_seconds)
+        recovered: list[dict[str, Any]] = []
+        processed_run_ids: set[str] = set()
+
+        with self._connect() as conn:
+            candidate_rows = conn.execute(
+                """
+                SELECT run_id
+                FROM trace_runs
+                WHERE status = 'running' AND started_at <= ?
+                ORDER BY started_at ASC
+                """,
+                (cutoff,),
+            ).fetchall()
+
+            for candidate in candidate_rows:
+                run_id = str(candidate["run_id"])
+                if not run_id or run_id in processed_run_ids:
+                    continue
+
+                tree_run_ids = self._collect_run_tree_ids(conn, run_id)
+                if not tree_run_ids:
+                    tree_run_ids = {run_id}
+                placeholders = ",".join("?" for _ in tree_run_ids)
+                running_rows = conn.execute(
+                    f"SELECT * FROM trace_runs WHERE run_id IN ({placeholders}) AND status = 'running'",
+                    tuple(tree_run_ids),
+                ).fetchall()
+                if not running_rows:
+                    processed_run_ids.update(tree_run_ids)
+                    continue
+
+                error_payload = {
+                    "error_type": "RecoveredTimeoutError",
+                    "error_message": (
+                        f"Run exceeded timeout threshold ({timeout_seconds}s) and was recovered automatically."
+                    ),
+                }
+                error_json = _json_dumps(error_payload)
+
+                running_step_rows = conn.execute(
+                    f"SELECT * FROM trace_steps WHERE run_id IN ({placeholders}) AND status = 'running'",
+                    tuple(tree_run_ids),
+                ).fetchall()
+                for step_row in running_step_rows:
+                    finished_at = now
+                    duration_ms = None
+                    if step_row["started_at"] is not None:
+                        duration_ms = max(0, int((finished_at - float(step_row["started_at"])) * 1000))
+                    conn.execute(
+                        """
+                        UPDATE trace_steps
+                        SET status = 'failed', finished_at = ?, duration_ms = ?, error_json = ?, updated_at = ?
+                        WHERE step_id = ?
+                        """,
+                        (finished_at, duration_ms, error_json, now, step_row["step_id"]),
+                    )
+                    event_id = self._append_event(
+                        conn=conn,
+                        run_id=str(step_row["run_id"]),
+                        agent_name=str(step_row["agent_name"]),
+                        agent_type=str(step_row["agent_type"]),
+                        event_type="step_failed",
+                        node_name=str(step_row["node_name"]) if step_row["node_name"] else None,
+                        step_id=str(step_row["step_id"]),
+                        payload={
+                            "step_name": step_row["step_name"],
+                            "step_type": step_row["step_type"],
+                            "status": "failed",
+                            "finished_at": finished_at,
+                            "duration_ms": duration_ms,
+                            "error": error_payload,
+                            "recovered": True,
+                        },
+                        created_at=finished_at,
+                    )
+                    if step_row["agent_type"] == "graph" and step_row["step_type"] == "node" and step_row["node_name"]:
+                        self._upsert_node(
+                            conn=conn,
+                            run_id=str(step_row["run_id"]),
+                            node_name=str(step_row["node_name"]),
+                            status="failed",
+                            started_at=step_row["started_at"],
+                            finished_at=finished_at,
+                            duration_ms=duration_ms,
+                            input_summary=_json_loads(step_row["input_json"]),
+                            error=error_payload,
+                            latest_event_id=event_id,
+                        )
+
+                conn.execute(
+                    f"""
+                    UPDATE trace_nodes
+                    SET status = 'failed',
+                        finished_at = COALESCE(finished_at, ?),
+                        duration_ms = CASE
+                            WHEN started_at IS NOT NULL THEN CAST((? - started_at) * 1000 AS INTEGER)
+                            ELSE duration_ms
+                        END,
+                        error_json = COALESCE(error_json, ?),
+                        updated_at = ?
+                    WHERE run_id IN ({placeholders}) AND status = 'running'
+                    """,
+                    (now, now, error_json, now, *tree_run_ids),
+                )
+
+                for running_row in running_rows:
+                    finished_at = now
+                    duration_ms = None
+                    if running_row["started_at"] is not None:
+                        duration_ms = max(0, int((finished_at - float(running_row["started_at"])) * 1000))
+                    conn.execute(
+                        """
+                        UPDATE trace_runs
+                        SET status = 'failed', finished_at = ?, duration_ms = ?, error_json = ?, updated_at = ?
+                        WHERE run_id = ?
+                        """,
+                        (finished_at, duration_ms, error_json, now, running_row["run_id"]),
+                    )
+                    self._append_event(
+                        conn=conn,
+                        run_id=str(running_row["run_id"]),
+                        agent_name=str(running_row["agent_name"]),
+                        agent_type=str(running_row["agent_type"]),
+                        event_type="run_finished",
+                        node_name=None,
+                        step_id=None,
+                        payload={
+                            "status": "failed",
+                            "finished_at": finished_at,
+                            "duration_ms": duration_ms,
+                            "error": error_payload,
+                            "recovered": True,
+                        },
+                        created_at=finished_at,
+                    )
+
+                research_rows = conn.execute(
+                    f"""
+                    SELECT * FROM viewer_researches
+                    WHERE active_run_id IN ({placeholders}) AND status = 'running'
+                    """,
+                    tuple(tree_run_ids),
+                ).fetchall()
+                for research_row in research_rows:
+                    conn.execute(
+                        """
+                        UPDATE viewer_researches
+                        SET status = 'failed', active_run_id = NULL, updated_at = ?
+                        WHERE research_id = ?
+                        """,
+                        (now, research_row["research_id"]),
+                    )
+                    conn.execute(
+                        """
+                        INSERT INTO viewer_research_messages (
+                            research_id, role, content, run_id, metadata_json, created_at
+                        ) VALUES (?, ?, ?, ?, ?, ?)
+                        """,
+                        (
+                            research_row["research_id"],
+                            "assistant",
+                            "研究执行失败：本次分析超过超时阈值，系统已自动回收。你可以基于当前研究重新发起一次分析。",
+                            research_row["active_run_id"],
+                            _json_dumps({"source": "viewer_research_status", "kind": "failed", "recovered": True}),
+                            now,
+                        ),
+                    )
+
+                recovered.append(
+                    {
+                        "root_run_id": run_id,
+                        "run_ids": sorted(str(item["run_id"]) for item in running_rows),
+                        "research_ids": [str(item["research_id"]) for item in research_rows],
+                    }
+                )
+                processed_run_ids.update(tree_run_ids)
+
+        return recovered
 
     def _row_to_run(self, row: sqlite3.Row) -> dict[str, Any]:
         return {

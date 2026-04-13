@@ -64,6 +64,36 @@ EVENT_NEWS_OUTPUT_TEMPLATE = {
     "key_catalysts": [],
     "key_risks": [],
     "tracking_points": [],
+    "module_brief": {
+        "conclusion_zh": "",
+        "rationale_zh": "",
+    },
+    "module_summary_items": [
+        {
+            "key": "event_bias",
+            "label_zh": "事件倾向",
+            "conclusion_zh": "",
+            "rationale_zh": "",
+        },
+        {
+            "key": "core_catalyst",
+            "label_zh": "核心催化",
+            "conclusion_zh": "",
+            "rationale_zh": "",
+        },
+        {
+            "key": "bullish_factor",
+            "label_zh": "利好",
+            "conclusion_zh": "",
+            "rationale_zh": "",
+        },
+        {
+            "key": "bearish_factor",
+            "label_zh": "利空",
+            "conclusion_zh": "",
+            "rationale_zh": "",
+        },
+    ],
     "event_summary_zh": "",
 }
 

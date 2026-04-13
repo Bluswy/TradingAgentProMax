@@ -49,6 +49,8 @@ COMPANY_CONTEXT_TEMPLATE: dict[str, Any] = {
         "key_levels": {},
         "signals": [],
         "confidence": None,
+        "module_brief": {},
+        "module_summary_items": [],
         "technical_summary_zh": "",
     },
     "fundamental_context": {
@@ -63,6 +65,8 @@ COMPANY_CONTEXT_TEMPLATE: dict[str, Any] = {
         "core_risks": [],
         "fundamental_signals": [],
         "confidence": None,
+        "module_brief": {},
+        "module_summary_items": [],
         "fundamental_summary_zh": "",
     },
     "event_context": {
@@ -74,6 +78,8 @@ COMPANY_CONTEXT_TEMPLATE: dict[str, Any] = {
         "key_risks": [],
         "tracking_points": [],
         "confidence": None,
+        "module_brief": {},
+        "module_summary_items": [],
         "event_summary_zh": "",
     },
     "search_context": {
@@ -115,4 +121,3 @@ def merge_company_context(base: dict[str, Any] | None, updates: dict[str, Any] |
     if updates:
         _merge(result, updates)
     return result
-

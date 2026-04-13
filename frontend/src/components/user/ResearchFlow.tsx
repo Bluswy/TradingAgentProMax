@@ -1,5 +1,5 @@
 import type { CSSProperties } from "react";
-import type { EventItem, Research } from "../../types";
+import type { EventItem, GraphNode, Research } from "../../types";
 import { displayResearchStatus, statusClass } from "../../utils";
 
 type FlowStatus = "queued" | "running" | "success" | "failed";
@@ -49,6 +49,7 @@ type ResearchFlowProps = {
   companyName: string;
   research: Research | null;
   events: EventItem[];
+  runNodes: GraphNode[];
 };
 
 type FlowStyle = CSSProperties & {
@@ -107,6 +108,19 @@ function eventToStatus(eventType?: string | null): FlowStatus {
   }
 }
 
+function nodeToStatus(status?: string | null): FlowStatus {
+  switch (status) {
+    case "running":
+      return "running";
+    case "success":
+      return "success";
+    case "failed":
+      return "failed";
+    default:
+      return "queued";
+  }
+}
+
 function mergeStatuses(statuses: FlowStatus[]): FlowStatus {
   if (statuses.some((status) => status === "failed")) return "failed";
   if (statuses.some((status) => status === "running")) return "running";
@@ -128,8 +142,12 @@ function statusLabel(status: FlowStatus): string {
   }
 }
 
-function buildNodeStatusMap(events: EventItem[]): Map<string, FlowStatus> {
+function buildNodeStatusMap(runNodes: GraphNode[], events: EventItem[]): Map<string, FlowStatus> {
   const map = new Map<string, FlowStatus>();
+  runNodes.forEach((node) => {
+    if (!node.node_name) return;
+    map.set(node.node_name, nodeToStatus(node.status));
+  });
   [...events]
     .reverse()
     .filter((event) => ["step_started", "step_finished", "step_failed"].includes(event.event_type))
@@ -145,8 +163,8 @@ function resolveLeafStatus(nodeStatusMap: Map<string, FlowStatus>, nodeKeys: str
   return mergeStatuses(statuses);
 }
 
-function buildFlowStages(events: EventItem[]): FlowStageView[] {
-  const nodeStatusMap = buildNodeStatusMap(events);
+function buildFlowStages(runNodes: GraphNode[], events: EventItem[]): FlowStageView[] {
+  const nodeStatusMap = buildNodeStatusMap(runNodes, events);
   return RESEARCH_FLOW_CONFIG.map((stage) => {
     if (stage.kind === "single") {
       return {
@@ -227,8 +245,8 @@ function flowStyle(order: number): FlowStyle {
   return { "--flow-order": order };
 }
 
-export function ResearchFlow({ companyName, research, events }: ResearchFlowProps) {
-  const stages = buildFlowStages(events);
+export function ResearchFlow({ companyName, research, events, runNodes }: ResearchFlowProps) {
+  const stages = buildFlowStages(runNodes, events);
   const summary = buildProgressSummary(stages);
   const currentProgress = buildCurrentProgress(stages);
   const researchState = displayResearchStatus(research?.status, research?.run_status);

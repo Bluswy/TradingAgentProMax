@@ -57,13 +57,72 @@ def _load_json_file(path: str | None) -> dict[str, Any] | None:
         return None
 
 
+def _is_truncated_text(value: Any) -> bool:
+    return isinstance(value, str) and "...<truncated>" in value
+
+
+def _read_report_markdown(payload: dict[str, Any] | None, result_key: str) -> str:
+    if not isinstance(payload, dict):
+        return ""
+    if result_key == "final_report_result":
+        return str((payload.get("report_markdown") or ""))
+    if result_key == "company_report_result":
+        analysis_result = payload.get("analysis_result")
+        if isinstance(analysis_result, dict):
+            return str((analysis_result.get("report_markdown") or ""))
+    return ""
+
+
+def _recover_report_payload(
+    payload: dict[str, Any],
+    artifacts: list[dict[str, Any]],
+) -> dict[str, Any]:
+    artifact_map = {
+        (str(artifact.get("artifact_type")), str(artifact.get("node_name") or "")): artifact for artifact in artifacts
+    }
+    report_status: dict[str, Any] = {
+        "recovered": False,
+        "truncated": False,
+        "recovered_nodes": [],
+        "missing_nodes": [],
+    }
+
+    report_targets = (
+        ("final_report_result", "final_report"),
+        ("company_report_result", "company_report"),
+    )
+    for result_key, node_name in report_targets:
+        current_payload = payload.get(result_key)
+        current_markdown = _read_report_markdown(current_payload if isinstance(current_payload, dict) else None, result_key)
+        needs_recovery = not current_markdown or _is_truncated_text(current_markdown)
+        if not needs_recovery:
+            continue
+        artifact = artifact_map.get(("result", node_name))
+        node_payload = _load_json_file((artifact or {}).get("absolute_path"))
+        recovered_markdown = _read_report_markdown(node_payload, result_key)
+        if node_payload and recovered_markdown and not _is_truncated_text(recovered_markdown):
+            payload[result_key] = node_payload
+            report_status["recovered"] = True
+            report_status["recovered_nodes"].append(node_name)
+            continue
+        report_status["missing_nodes"].append(node_name)
+
+    final_report_markdown = _read_report_markdown(payload.get("final_report_result"), "final_report_result")
+    company_report_markdown = _read_report_markdown(payload.get("company_report_result"), "company_report_result")
+    report_status["truncated"] = _is_truncated_text(final_report_markdown) or _is_truncated_text(company_report_markdown)
+
+    if report_status["recovered"] or report_status["truncated"]:
+        payload["_report_artifact_status"] = report_status
+    return payload
+
+
 def _load_run_results(store: SQLiteTraceStore, run_id: str) -> dict[str, Any] | None:
     artifacts = store.list_artifacts(run_id)
     final_state = next((artifact for artifact in artifacts if artifact.get("artifact_type") == "final_state"), None)
     if final_state:
         payload = _load_json_file(final_state.get("absolute_path"))
         if payload:
-            return payload
+            return _recover_report_payload(payload, artifacts)
     return None
 
 
@@ -409,6 +468,25 @@ def create_trace_viewer_app(config: dict[str, Any] | None = None) -> FastAPI:
             "research": research,
             "messages": store.list_research_messages(research_id),
         }
+
+    @app.delete("/api/researches/{research_id}")
+    def delete_research(research_id: str) -> dict[str, Any]:
+        research = store.get_research(research_id)
+        if not research:
+            raise HTTPException(status_code=404, detail="research not found")
+
+        active_run_id = research.get("active_run_id")
+        if research.get("status") == "running" or research.get("run_status") == "running":
+            raise HTTPException(status_code=409, detail="研究进行中，暂不支持删除")
+        if active_run_id:
+            run = store.get_run(str(active_run_id))
+            if run and run.get("status") == "running":
+                raise HTTPException(status_code=409, detail="研究进行中，暂不支持删除")
+
+        deleted = store.delete_research(research_id)
+        if not deleted:
+            raise HTTPException(status_code=404, detail="research not found")
+        return {"deleted": True, "research_id": research_id}
 
     @app.post("/api/researches/{research_id}/parse")
     def parse_research(research_id: str, payload: ParseResearchRequest) -> dict[str, Any]:

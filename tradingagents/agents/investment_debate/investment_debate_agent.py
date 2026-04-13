@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import json
-from typing import Any
+from typing import Any, Callable
 
 from langchain_core.messages import HumanMessage, SystemMessage
 
@@ -10,6 +10,7 @@ from tradingagents.default_config import DEFAULT_CONFIG
 from tradingagents.llm_clients import create_llm_client
 from tradingagents.tracing import AgentTraceBuilder
 
+from ..utils import parse_json_object
 from .prompts import (
     BEAR_SYSTEM_PROMPT,
     BULL_SYSTEM_PROMPT,
@@ -93,69 +94,46 @@ class InvestmentDebateAgent:
                 },
             )
 
-            bull_step = trace.start_step(
-                name="bull_case_llm",
-                step_type="llm",
+            bull_response, bull_case = self._invoke_json_stage(
+                trace=trace,
+                stage_name="bull_case",
+                system_prompt=BULL_SYSTEM_PROMPT,
+                user_prompt=build_bull_user_prompt(context),
                 input_payload={"ticker": ticker, "effective_date": context.get("effective_date")},
-            )
-            bull_response = self.llm.invoke(
-                [
-                    SystemMessage(content=BULL_SYSTEM_PROMPT),
-                    HumanMessage(content=build_bull_user_prompt(context)),
-                ]
-            )
-            trace.end_step(bull_step, output_payload={"content_preview": str(bull_response.content)[:500]})
-            bull_parse_step = trace.start_step(name="parse_bull_case", step_type="parse")
-            bull_case = self._parse_case_json(bull_response.content, role="bull")
-            trace.end_step(
-                bull_parse_step,
-                output_payload={
-                    "confidence": bull_case.get("confidence"),
-                    "core_points_count": len(bull_case.get("core_points", [])),
+                parse_fn=lambda content: self._parse_case_json(content, role="bull"),
+                output_summary_builder=lambda parsed: {
+                    "confidence": parsed.get("confidence"),
+                    "core_points_count": len(parsed.get("core_points", [])),
                 },
             )
 
-            bear_step = trace.start_step(
-                name="bear_case_llm",
-                step_type="llm",
+            bear_response, bear_case = self._invoke_json_stage(
+                trace=trace,
+                stage_name="bear_case",
+                system_prompt=BEAR_SYSTEM_PROMPT,
+                user_prompt=build_bear_user_prompt(context, bull_case),
                 input_payload={"ticker": ticker, "bull_case_summary": bull_case.get("summary")},
-            )
-            bear_response = self.llm.invoke(
-                [
-                    SystemMessage(content=BEAR_SYSTEM_PROMPT),
-                    HumanMessage(content=build_bear_user_prompt(context, bull_case)),
-                ]
-            )
-            trace.end_step(bear_step, output_payload={"content_preview": str(bear_response.content)[:500]})
-            bear_parse_step = trace.start_step(name="parse_bear_case", step_type="parse")
-            bear_case = self._parse_case_json(bear_response.content, role="bear")
-            trace.end_step(
-                bear_parse_step,
-                output_payload={
-                    "confidence": bear_case.get("confidence"),
-                    "core_points_count": len(bear_case.get("core_points", [])),
+                parse_fn=lambda content: self._parse_case_json(content, role="bear"),
+                output_summary_builder=lambda parsed: {
+                    "confidence": parsed.get("confidence"),
+                    "core_points_count": len(parsed.get("core_points", [])),
                 },
             )
 
-            judge_step = trace.start_step(
-                name="judge_llm",
-                step_type="llm",
-                input_payload={"ticker": ticker, "bull_confidence": bull_case.get("confidence"), "bear_confidence": bear_case.get("confidence")},
-            )
-            judge_response = self.llm.invoke(
-                [
-                    SystemMessage(content=JUDGE_SYSTEM_PROMPT),
-                    HumanMessage(content=build_judge_user_prompt(context, bull_case, bear_case)),
-                ]
-            )
-            trace.end_step(judge_step, output_payload={"content_preview": str(judge_response.content)[:500]})
-            judge_parse_step = trace.start_step(name="parse_judge_output", step_type="parse")
-            judge_output = self._parse_judge_json(judge_response.content)
-            trace.end_step(
-                judge_parse_step,
-                output_payload={
-                    "lean": judge_output.get("debate_conclusion", {}).get("lean"),
-                    "main_conflicts_count": len(judge_output.get("debate_focus", {}).get("main_conflicts", [])),
+            judge_response, judge_output = self._invoke_json_stage(
+                trace=trace,
+                stage_name="judge",
+                system_prompt=JUDGE_SYSTEM_PROMPT,
+                user_prompt=build_judge_user_prompt(context, bull_case, bear_case),
+                input_payload={
+                    "ticker": ticker,
+                    "bull_confidence": bull_case.get("confidence"),
+                    "bear_confidence": bear_case.get("confidence"),
+                },
+                parse_fn=self._parse_judge_json,
+                output_summary_builder=lambda parsed: {
+                    "lean": parsed.get("debate_conclusion", {}).get("lean"),
+                    "main_conflicts_count": len(parsed.get("debate_focus", {}).get("main_conflicts", [])),
                 },
             )
 
@@ -217,18 +195,68 @@ class InvestmentDebateAgent:
             raise
 
     def _parse_json(self, content: str) -> dict[str, Any]:
-        text = content.strip()
-        if text.startswith("```"):
-            lines = [line for line in text.splitlines() if not line.strip().startswith("```")]
-            text = "\n".join(lines).strip()
-        try:
-            return json.loads(text)
-        except json.JSONDecodeError:
-            start = text.find("{")
-            end = text.rfind("}")
-            if start == -1 or end == -1 or end <= start:
-                raise ValueError(f"InvestmentDebateAgent did not return valid JSON:\n{text}")
-            return json.loads(text[start : end + 1])
+        return parse_json_object(content, source="InvestmentDebateAgent output")
+
+    def _invoke_json_stage(
+        self,
+        *,
+        trace: AgentTraceBuilder,
+        stage_name: str,
+        system_prompt: str,
+        user_prompt: str,
+        input_payload: dict[str, Any],
+        parse_fn: Callable[[str], dict[str, Any]],
+        output_summary_builder: Callable[[dict[str, Any]], dict[str, Any]],
+    ) -> tuple[Any, dict[str, Any]]:
+        messages = [
+            SystemMessage(content=system_prompt),
+            HumanMessage(content=user_prompt),
+        ]
+        repair_attempted = False
+
+        for round_idx in range(2):
+            llm_step = trace.start_step(
+                name=f"{stage_name}_llm" if round_idx == 0 else f"{stage_name}_llm_retry",
+                step_type="llm",
+                input_payload=input_payload | {"round": round_idx + 1},
+            )
+            response = self.llm.invoke(messages)
+            trace.end_step(llm_step, output_payload={"content_preview": str(response.content)[:500]})
+
+            parse_step = trace.start_step(
+                name=f"parse_{stage_name}" if round_idx == 0 else f"parse_{stage_name}_retry",
+                step_type="parse",
+            )
+            try:
+                parsed = parse_fn(response.content)
+            except json.JSONDecodeError as parse_error:
+                trace.fail_step(parse_step, parse_error)
+                if repair_attempted:
+                    raise
+                repair_attempted = True
+                repair_step = trace.start_step(
+                    name=f"{stage_name}_repair_prompt",
+                    step_type="repair",
+                    input_payload={"reason": "json_parse_failed", "error": str(parse_error)},
+                )
+                messages.extend(
+                    [
+                        response,
+                        HumanMessage(
+                            content=(
+                                "你的上一版输出不是合法 JSON。请只输出一个合法 JSON 对象，不要输出 Markdown 代码块，不要输出任何解释文字。\n"
+                                f"当前解析错误：{parse_error}"
+                            )
+                        ),
+                    ]
+                )
+                trace.end_step(repair_step, output_payload={"repair_attempted": True})
+                continue
+
+            trace.end_step(parse_step, output_payload=output_summary_builder(parsed))
+            return response, parsed
+
+        raise RuntimeError(f"InvestmentDebateAgent {stage_name} exceeded max iterations without valid JSON.")
 
     def _parse_case_json(self, content: str, role: str) -> dict[str, Any]:
         parsed = self._parse_json(content)

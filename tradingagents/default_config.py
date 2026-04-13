@@ -23,13 +23,16 @@ DEFAULT_CONFIG = {
     "bailian_thinking_budget": None,
     "event_query_planner_enable_thinking": True,
     "event_query_planner_thinking_budget": 2048,
+    "agent_timeout_seconds": 180,
+    "agent_retry_max_attempts": 2,
+    "agent_timeout_recovery_grace_seconds": 60,
     "fundamental_report_periods": 8,
     "fundamental_report_periods_by_type": {
         "cyclical_resources": 12,
     },
     # LLM settings
     "llm_provider": "bailian",
-    "deep_think_llm": "qwen3.6-plus-2026-04-02",
+    "deep_think_llm": "qwen3.5-397b-a17b",
     "quick_think_llm": "qwen3.5-flash",
     "backend_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
     # Provider-specific thinking configuration

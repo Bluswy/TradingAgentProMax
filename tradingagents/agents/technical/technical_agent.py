@@ -15,9 +15,69 @@ from tradingagents.default_config import DEFAULT_CONFIG
 from tradingagents.llm_clients import create_llm_client
 from tradingagents.tracing import AgentTraceBuilder
 
+from ..utils import parse_json_object
 from .prompts import TECHNICAL_SYSTEM_PROMPT, build_technical_user_prompt
 from .schema import TECHNICAL_OUTPUT_TEMPLATE
 from .tools import TECHNICAL_TOOLS
+
+TECHNICAL_SUMMARY_ITEM_SPECS = (
+    ("trend", "趋势"),
+    ("momentum", "动量"),
+    ("volume_confirmation", "量价"),
+    ("key_levels", "关键位"),
+)
+
+
+def _normalize_module_brief(value: Any) -> dict[str, str]:
+    if not isinstance(value, dict):
+        return {"conclusion_zh": "", "rationale_zh": ""}
+    return {
+        "conclusion_zh": str(value.get("conclusion_zh", "")).strip(),
+        "rationale_zh": str(value.get("rationale_zh", "")).strip(),
+    }
+
+
+def _is_valid_module_brief(value: Any) -> bool:
+    if not isinstance(value, dict):
+        return False
+    conclusion = str(value.get("conclusion_zh", "")).strip()
+    rationale = str(value.get("rationale_zh", "")).strip()
+    return 2 <= len(conclusion) <= 8 and 12 <= len(rationale) <= 24
+
+
+def _normalize_module_summary_items(value: Any) -> list[dict[str, str]]:
+    if not isinstance(value, list):
+        return []
+    normalized: list[dict[str, str]] = []
+    for item in value:
+        if not isinstance(item, dict):
+            continue
+        normalized.append(
+            {
+                "key": str(item.get("key", "")).strip(),
+                "label_zh": str(item.get("label_zh", "")).strip(),
+                "conclusion_zh": str(item.get("conclusion_zh", "")).strip(),
+                "rationale_zh": str(item.get("rationale_zh", "")).strip(),
+            }
+        )
+    return normalized[: len(TECHNICAL_SUMMARY_ITEM_SPECS)]
+
+
+def _is_valid_module_summary_items(value: Any) -> bool:
+    if not isinstance(value, list) or len(value) != len(TECHNICAL_SUMMARY_ITEM_SPECS):
+        return False
+    for item, (expected_key, expected_label) in zip(value, TECHNICAL_SUMMARY_ITEM_SPECS, strict=True):
+        if not isinstance(item, dict):
+            return False
+        if str(item.get("key", "")).strip() != expected_key:
+            return False
+        if str(item.get("label_zh", "")).strip() != expected_label:
+            return False
+        conclusion = str(item.get("conclusion_zh", "")).strip()
+        rationale = str(item.get("rationale_zh", "")).strip()
+        if not (2 <= len(conclusion) <= 8 and 12 <= len(rationale) <= 24):
+            return False
+    return True
 
 
 class TechnicalAgent:
@@ -187,7 +247,9 @@ class TechnicalAgent:
                                 "2. 上述各部分都必须包含至少2条 evidence；\n"
                                 "3. indicator_snapshot 必须填写足够多的关键数值字段，至少10个非空字段；\n"
                                 "4. signals 至少2条，每条都必须有 description 和 evidence；\n"
-                                "5. 不要输出任何解释文字，只输出一个完整JSON对象。"
+                                "5. module_summary_items 必须按固定顺序返回4条：trend/趋势、momentum/动量、volume_confirmation/量价、key_levels/关键位；\n"
+                                "6. 每条都必须有 conclusion_zh(2-8字) 和 rationale_zh(12-24字)；\n"
+                                "7. 不要输出任何解释文字，只输出一个完整JSON对象。"
                             )
                         )
                     )
@@ -219,19 +281,7 @@ class TechnicalAgent:
             raise
 
     def _parse_json_response(self, content: str) -> dict[str, Any]:
-        text = content.strip()
-        if text.startswith("```"):
-            lines = [line for line in text.splitlines() if not line.strip().startswith("```")]
-            text = "\n".join(lines).strip()
-
-        try:
-            parsed = json.loads(text)
-        except json.JSONDecodeError:
-            start = text.find("{")
-            end = text.rfind("}")
-            if start == -1 or end == -1 or end <= start:
-                raise ValueError(f"TechnicalAgent did not return valid JSON:\n{text}")
-            parsed = json.loads(text[start : end + 1])
+        parsed = parse_json_object(content, source="TechnicalAgent output")
 
         normalized = json.loads(json.dumps(TECHNICAL_OUTPUT_TEMPLATE, ensure_ascii=False))
         normalized.update(
@@ -242,6 +292,8 @@ class TechnicalAgent:
                 "risk_flags": parsed.get("risk_flags", normalized["risk_flags"]),
                 "invalidations": parsed.get("invalidations", normalized["invalidations"]),
                 "signals": parsed.get("signals", normalized["signals"]),
+                "module_brief": _normalize_module_brief(parsed.get("module_brief")),
+                "module_summary_items": _normalize_module_summary_items(parsed.get("module_summary_items")),
                 "technical_summary_zh": parsed.get(
                     "technical_summary_zh", normalized["technical_summary_zh"]
                 ),
@@ -305,6 +357,10 @@ class TechnicalAgent:
                 return True
 
         if not str(parsed.get("technical_summary_zh", "")).strip():
+            return True
+        if not _is_valid_module_brief(parsed.get("module_brief")):
+            return True
+        if not _is_valid_module_summary_items(parsed.get("module_summary_items")):
             return True
 
         return False

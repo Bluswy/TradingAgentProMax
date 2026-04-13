@@ -72,6 +72,36 @@ FUNDAMENTAL_OUTPUT_TEMPLATE = {
         "profile_specific": {},
     },
     "confidence": 0.0,
+    "module_brief": {
+        "conclusion_zh": "",
+        "rationale_zh": "",
+    },
+    "module_summary_items": [
+        {
+            "key": "growth",
+            "label_zh": "增长",
+            "conclusion_zh": "",
+            "rationale_zh": "",
+        },
+        {
+            "key": "profitability",
+            "label_zh": "盈利",
+            "conclusion_zh": "",
+            "rationale_zh": "",
+        },
+        {
+            "key": "cashflow_quality",
+            "label_zh": "现金流",
+            "conclusion_zh": "",
+            "rationale_zh": "",
+        },
+        {
+            "key": "valuation",
+            "label_zh": "估值",
+            "conclusion_zh": "",
+            "rationale_zh": "",
+        },
+    ],
     "fundamental_summary_zh": "",
 }
 

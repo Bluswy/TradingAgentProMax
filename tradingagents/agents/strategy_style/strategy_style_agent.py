@@ -10,6 +10,7 @@ from tradingagents.default_config import DEFAULT_CONFIG
 from tradingagents.llm_clients import create_llm_client
 from tradingagents.tracing import AgentTraceBuilder
 
+from ..utils import parse_json_object
 from .prompts import (
     STRATEGY_STYLE_SYSTEM_PROMPT,
     build_strategy_style_context_payload,
@@ -188,18 +189,7 @@ class StrategyStyleAgent:
             raise
 
     def _parse_json(self, content: str) -> dict[str, Any]:
-        text = content.strip()
-        if text.startswith("```"):
-            lines = [line for line in text.splitlines() if not line.strip().startswith("```")]
-            text = "\n".join(lines).strip()
-        try:
-            return json.loads(text)
-        except json.JSONDecodeError:
-            start = text.find("{")
-            end = text.rfind("}")
-            if start == -1 or end == -1 or end <= start:
-                raise ValueError(f"StrategyStyleAgent did not return valid JSON:\n{text}")
-            return json.loads(text[start : end + 1])
+        return parse_json_object(content, source="StrategyStyleAgent output")
 
     def _parse_json_response(self, content: str, *, ticker: str, effective_date: str) -> dict[str, Any]:
         parsed = self._parse_json(content)

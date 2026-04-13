@@ -41,6 +41,36 @@ SECTOR_FLOW_OUTPUT_TEMPLATE = {
     },
     "key_risks": [],
     "tracking_points": [],
+    "module_brief": {
+        "conclusion_zh": "",
+        "rationale_zh": "",
+    },
+    "module_summary_items": [
+        {
+            "key": "theme_strength",
+            "label_zh": "板块强弱",
+            "conclusion_zh": "",
+            "rationale_zh": "",
+        },
+        {
+            "key": "theme_heat",
+            "label_zh": "热度",
+            "conclusion_zh": "",
+            "rationale_zh": "",
+        },
+        {
+            "key": "crowding",
+            "label_zh": "拥挤",
+            "conclusion_zh": "",
+            "rationale_zh": "",
+        },
+        {
+            "key": "stock_role_in_theme",
+            "label_zh": "个股位置",
+            "conclusion_zh": "",
+            "rationale_zh": "",
+        },
+    ],
     "flow_summary_zh": "",
 }
 

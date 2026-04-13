@@ -17,6 +17,7 @@ from tradingagents.agents import (
     StrategyStyleAgent,
     TechnicalAgent,
 )
+from tradingagents.agents.utils.resilient_runner import AgentExecutionTimeoutError, run_with_timeout_and_retry
 from tradingagents.dataflows.company_context_service import build_company_context
 from tradingagents.default_config import DEFAULT_CONFIG
 from tradingagents.presentation.ui_summary import (
@@ -228,6 +229,9 @@ class StructuredAnalysisGraph:
         self.company_report_agent = CompanyAnalysisReportAgent(config=self.config, debug=debug)
         self._graph_trace: AgentTraceBuilder | None = None
         self._artifact_store = TraceArtifactStore(self.config)
+        self.agent_timeout_seconds = int(self.config.get("agent_timeout_seconds", 180))
+        max_attempts = int(self.config.get("agent_retry_max_attempts", 2))
+        self.agent_retry_max_retries = max(0, max_attempts - 1)
         self.graph = self._build_graph()
 
     def _latest_agent_trace(self, node_name: str) -> dict[str, Any] | None:
@@ -594,6 +598,7 @@ class StructuredAnalysisGraph:
         started_at = _now_ts()
         input_summary = _node_input_summary(state, node_name)
         graph_step_id = self._start_graph_step(node_name, input_summary)
+        attempt_step_ids: dict[int, str] = {}
         ui_summary_builders = {
             "technical": build_technical_ui_summary,
             "fundamental": build_fundamental_ui_summary,
@@ -604,8 +609,53 @@ class StructuredAnalysisGraph:
             "company_report": build_company_report_ui_summary,
         }
         try:
+            def on_attempt_start(attempt: int, max_attempts: int) -> None:
+                if self._graph_trace is None:
+                    return
+                attempt_step_ids[attempt] = self._graph_trace.start_step(
+                    name=f"{node_name}_attempt_{attempt}",
+                    step_type="attempt",
+                    input_payload={
+                        "node_name": node_name,
+                        "attempt": attempt,
+                        "max_attempts": max_attempts,
+                        "timeout_seconds": self.agent_timeout_seconds,
+                    },
+                )
+
+            def on_attempt_end(attempt: int, payload: dict[str, Any]) -> None:
+                step_id = attempt_step_ids.pop(attempt, None)
+                if self._graph_trace is None or step_id is None:
+                    return
+                metrics = {
+                    "attempt": payload.get("attempt"),
+                    "timeout_seconds": payload.get("timeout_seconds"),
+                    "duration_ms": payload.get("duration_ms"),
+                    "will_retry": payload.get("will_retry", False),
+                }
+                if payload.get("status") == "success":
+                    self._graph_trace.end_step(step_id, output_payload=payload, metrics=metrics)
+                else:
+                    error_message = str(payload.get("error_message") or f"{node_name} attempt failed")
+                    error: Exception
+                    if payload.get("error_type") == "AgentExecutionTimeoutError":
+                        error = AgentExecutionTimeoutError(error_message)
+                    else:
+                        error = RuntimeError(error_message)
+                    self._graph_trace.fail_step(
+                        step_id,
+                        error,
+                    )
+
             with trace_parent_scope(self._graph_trace.run_id if self._graph_trace else None, node_name):
-                result = call()
+                result, attempts = run_with_timeout_and_retry(
+                    call=call,
+                    agent_name=node_name,
+                    timeout_seconds=self.agent_timeout_seconds,
+                    max_retries=self.agent_retry_max_retries,
+                    on_attempt_start=on_attempt_start,
+                    on_attempt_end=on_attempt_end,
+                )
             builder = ui_summary_builders.get(node_name)
             if builder is not None:
                 result = attach_ui_summary(result, builder)
@@ -613,20 +663,29 @@ class StructuredAnalysisGraph:
             if context_key and result.get("company_context") is not None:
                 updates[context_key] = result["company_context"]
             output_summary = _build_output_summary(node_name, result)
+            output_summary["attempt_count"] = len(attempts)
+            output_summary["retry_used"] = len(attempts) > 1
             raw_debug = result.get("trace") or result.get("debug_trace") or result.get("raw_response")
             trace_entry = _trace_success(
                 node_name=node_name,
                 started_at=started_at,
                 input_summary=input_summary,
                 output_summary=output_summary,
-                raw_debug=_snapshot_for_trace(raw_debug),
+                raw_debug={"attempts": attempts, "agent_debug": _snapshot_for_trace(raw_debug)},
             )
-            self._end_graph_step(graph_step_id, output_summary=output_summary, raw_debug=raw_debug)
+            self._end_graph_step(
+                graph_step_id,
+                output_summary=output_summary,
+                raw_debug={"attempts": attempts, "agent_debug": _snapshot_for_trace(raw_debug)},
+            )
         except Exception as error:
             trace_entry = _trace_error(node_name, started_at, input_summary, error)
             latest_trace = self._latest_agent_trace(node_name)
+            attempts = getattr(error, "attempts", None)
             if latest_trace is not None:
                 trace_entry["raw_debug"] = _snapshot_for_trace(latest_trace)
+            if attempts:
+                trace_entry["attempts"] = _snapshot_for_trace(attempts)
             self._end_graph_step(graph_step_id, error=error, raw_debug=latest_trace)
             updates = _append_failure(node_name, str(error))
         updates.update(_append_trace(trace_entry))

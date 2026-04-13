@@ -74,6 +74,10 @@ export const api = {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
     }),
+  deleteResearch: (researchId: string) =>
+    requestJson<{ deleted: boolean; research_id: string }>(`/api/researches/${researchId}`, {
+      method: "DELETE",
+    }),
   getResearch: (researchId: string) =>
     requestJson<{ research: Research; messages: ResearchMessage[] }>(`/api/researches/${researchId}`),
   parseResearch: (researchId: string, payload: { query_text: string; analysis_date?: string }) =>
